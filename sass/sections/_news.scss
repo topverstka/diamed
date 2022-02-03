@@ -1,0 +1,36 @@
+.news {
+    margin-bottom: 100px;
+    &_header-line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        & .link {
+            font-size: 14px;
+        }
+    }
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        &-item {
+            &-picture {
+                width: 413px;
+                height: 308px;
+                object-fit: cover;
+                margin-bottom: 16px;
+                border-radius: $radius2;
+            }
+            &-header {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 12px;
+            }
+            &-date {
+                font-size: 16px;
+                color: $accent2;
+                font-weight: 500;
+            }
+        }
+    }
+}

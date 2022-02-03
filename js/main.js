@@ -310,6 +310,7 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
     loop: true,
     spaceBetween: 16,
     slidesPerView: 5,
+    slideToClickedSlide: true,
     navigation: {
         nextEl: ".our_doctors__arrow-next",
         prevEl: ".our_doctors__arrow-prev",
@@ -317,6 +318,17 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
     thumbs: {
         swiper: swiper_doctors,
     },
+});
+
+const swiper_otzivy = new Swiper('.otzivy_wrapp__slider', {
+    speed: 400,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: ".otzivy__arrow-next",
+        prevEl: ".otzivy__arrow-prev",
+    }
 });
 
 

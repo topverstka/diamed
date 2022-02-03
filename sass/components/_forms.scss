@@ -7,14 +7,20 @@
 .form-elem {
     position: relative;
     width: 100%;
-
     &:not(:first-child) {
         margin: 8px 0 0 0;
     }
 }
 
 .form-elem input {
-    height: 60px;
+    height: 59px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.form-elem input::placeholder {
+    color: #fff;
 }
 
 .form-elem textarea {
@@ -26,39 +32,32 @@
 
 .form-elem__area {
     width: 100%;
-    background: #F9F9F9;
-    border-radius: 8px;
-    padding: 30px 12px 12px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px 12px 12px 0px;
     transition: $tr;
-
     &:hover {
-        background: #F4F4F4;
+        //  background: #F4F4F4;
     }
-
     &:focus {
-
-        & + .form-elem__label {
-            font-size: 10px;
-            color: $second;
+        &+.form-elem__label {
+            font-size: 12px;
+            color: #fff;
+            opacity: .5;
+            transform: translate(0, calc(-50% - 44px));
+        }
+    }
+    &:not(:placeholder-shown).form-elem__area:not(:focus) {
+        // border: 1px solid $accent;
+        &+.form-elem__label {
+            font-size: 12px;
+            color: #fff;
+            opacity: .5;
             transform: translate(0, calc(-50% - 9px));
         }
     }
-
-    &:not(:placeholder-shown).form-elem__area:not(:focus) {
-        // border: 1px solid $accent;
-
-        & + .form-elem__label {
-            font-size: 10px;
-            color: $second;
-            transform: translate(0, calc(-50% - 9px)); 
-        }
-    }
-
     &._error {
         border: 1px solid $error !important;
-
-        & + .form-elem__label {
-
+        &+.form-elem__label {
             &::after {
                 opacity: 1;
             }
@@ -68,15 +67,16 @@
 
 .form-elem__label {
     position: absolute;
-    top: 30px;
-    left: 12px;
+    color: #fff;
+    opacity: .5;
+    bottom: 4px;
+    left: 0;
     width: 100%;
     transform: translate(0, -50%);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     pointer-events: none;
     transition: $tr;
-
     &::after {
         content: 'Error';
         font-size: inherit;

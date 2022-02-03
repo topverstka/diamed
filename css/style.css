@@ -39,6 +39,7 @@
   --ffHeader: sans-serif;
   --tr: .3s;
   --radius: 8px;
+  --radius2: 12px;
 }
 
 :root {
@@ -224,6 +225,7 @@ body._lock {
   --ffHeader: sans-serif;
   --tr: .3s;
   --radius: 8px;
+  --radius2: 12px;
 }
 
 :root {
@@ -346,6 +348,55 @@ body._lock {
   margin-left: 16px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: var(--tr) linear;
+  transition: var(--tr) linear;
+}
+
+.link-otzyv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.link-otzyv:hover .link-otzyv-top {
+  -webkit-transform: translate(17px, -7px);
+          transform: translate(17px, -7px);
+}
+
+.link-otzyv:hover .link-otzyv-bottom {
+  -webkit-transform: translate(0px, 2px);
+          transform: translate(0px, 2px);
+}
+
+.link-otzyv span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 13px;
+}
+
+.link-otzyv-top {
+  -webkit-transform: translate(14px, -4px);
+          transform: translate(14px, -4px);
+}
+
+.link-otzyv-bottom {
+  -webkit-transform: translate(4px, -3px);
+          transform: translate(4px, -3px);
+}
+
+.link-otzyv img {
+  width: 9px;
+  height: 9px;
   -webkit-transition: var(--tr) linear;
   transition: var(--tr) linear;
 }
@@ -513,7 +564,26 @@ body._lock {
 }
 
 .form-elem input {
-  height: 60px;
+  height: 59px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-elem input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form-elem input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-elem input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-elem input::placeholder {
+  color: #fff;
 }
 
 .form-elem textarea {
@@ -526,27 +596,24 @@ body._lock {
 
 .form-elem__area {
   width: 100%;
-  background: #F9F9F9;
-  border-radius: 8px;
-  padding: 30px 12px 12px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 12px 12px 0px;
   -webkit-transition: var(--tr);
   transition: var(--tr);
 }
 
-.form-elem__area:hover {
-  background: #F4F4F4;
-}
-
 .form-elem__area:focus + .form-elem__label {
-  font-size: 10px;
-  color: var(--second);
-  -webkit-transform: translate(0, calc(-50% - 9px));
-          transform: translate(0, calc(-50% - 9px));
+  font-size: 12px;
+  color: #fff;
+  opacity: .5;
+  -webkit-transform: translate(0, calc(-50% - 44px));
+          transform: translate(0, calc(-50% - 44px));
 }
 
 .form-elem__area:not(:placeholder-shown).form-elem__area:not(:focus) + .form-elem__label {
-  font-size: 10px;
-  color: var(--second);
+  font-size: 12px;
+  color: #fff;
+  opacity: .5;
   -webkit-transform: translate(0, calc(-50% - 9px));
           transform: translate(0, calc(-50% - 9px));
 }
@@ -561,12 +628,14 @@ body._lock {
 
 .form-elem__label {
   position: absolute;
-  top: 30px;
-  left: 12px;
+  color: #fff;
+  opacity: .5;
+  bottom: 4px;
+  left: 0;
   width: 100%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   pointer-events: none;
   -webkit-transition: var(--tr);
@@ -723,7 +792,7 @@ body._lock {
   padding: 12px 18px;
   font-weight: 600;
   font-size: 14px;
-  border-radius: 12px;
+  border-radius: var(--radius2);
   cursor: pointer;
 }
 
@@ -826,6 +895,7 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: 600;
+  line-height: 49px;
 }
 
 @media (max-width: 425px) {
@@ -1003,6 +1073,7 @@ h2 {
 
 .footer {
   margin: auto 0 0 0;
+  background: var(--second);
 }
 
 .main_top__wrapper {
@@ -1332,7 +1403,7 @@ h2 {
 .our_doctors__slider-all img {
   width: 139px;
   height: 139px;
-  border-radius: 12px;
+  border-radius: var(--radius2);
 }
 
 .our_doctors .tabs_wrapper {
@@ -1418,7 +1489,7 @@ h2 {
 
 .number_proud__elements-column {
   background: #FFFFFF;
-  border-radius: 12px;
+  border-radius: var(--radius2);
   padding: 32px 24px 24px;
 }
 
@@ -1446,11 +1517,226 @@ h2 {
   margin-bottom: 40px;
 }
 
-.useful__wrapp {
+.useful_wrapp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 308px;
+}
+
+.useful_wrapp > div:not(:last-child) {
+  margin-right: 20px;
+}
+
+.useful_wrapp__smart {
+  width: 630px;
+  background: #F8F7FC;
+  border-radius: var(--radius2);
+  padding: 32px 32px 37px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.useful_wrapp__smart h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+.useful_wrapp__smart p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--accent2);
+  margin-bottom: 63px;
+  width: 280px;
+}
+
+.useful_wrapp__smart svg {
+  width: 26px;
+  height: 31px;
+}
+
+.useful_wrapp__smart-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.useful_wrapp__smart-link a:first-child {
+  margin: 0 33px 0 6px;
+}
+
+.useful_wrapp__smart-picture {
+  position: absolute;
+  top: -72px;
+  right: -234px;
+  width: 752px;
+  height: 551px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.useful_wrapp__elems {
+  width: 305px;
+  border: 1px solid #F0EFEF;
+  background: #fff;
+  border-radius: var(--radius2);
+  padding: 40px 48px 32px 32px;
+}
+
+.useful_wrapp__elems-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 40px;
+}
+
+.useful_wrapp__elems-header {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.news {
+  margin-bottom: 100px;
+}
+
+.news_header-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.news_header-line .link {
+  font-size: 14px;
+}
+
+.news_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.news_wrapper-item-picture {
+  width: 413px;
+  height: 308px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
+  border-radius: var(--radius2);
+}
+
+.news_wrapper-item-header {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.news_wrapper-item-date {
+  font-size: 16px;
+  color: var(--accent2);
+  font-weight: 500;
+}
+
+.otzivy {
+  background: var(--header-bg);
+  padding: 64px 0;
+}
+
+.otzivy h2 {
+  margin-bottom: 32px;
+  width: 85%;
+}
+
+.otzivy__arrows {
+  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.otzivy_wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.otzivy_wrapp__text {
+  width: 413px;
+  margin-right: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.otzivy_wrapp__slider {
+  width: 848px;
+  overflow: hidden;
+}
+
+.otzivy_wrapp__slider .swiper-slide {
+  background: #fff;
+  border-radius: var(--radius2);
+  padding: 24px 24px 28px 24px;
+}
+
+.otzivy_wrapp__slider-name {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--accent2);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.otzivy_wrapp__slider-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 32px;
+  height: 140px;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.otzivy_wrapp__slider-job {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--accent2);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.otzivy_wrapp__slider-name-doctor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--second);
+  border-bottom: 1px solid #F0EFEF;
+  padding-bottom: 32px;
+  margin-bottom: 35px;
+  display: block;
+}
+
+.otzivy_wrapp__btn {
+  margin-top: auto;
 }
 
 @font-face {

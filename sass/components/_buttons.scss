@@ -68,7 +68,7 @@
     pointer-events: none;
 }
 
-// Ссылки
+// Ссылка подробнее
 .link {
     display: flex;
     align-items: center;
@@ -82,6 +82,36 @@
         height: 16px;
         margin-left: 16px;
         transform: rotate( -45deg);
+        transition: $tr linear;
+    }
+}
+
+// Ссылка отзывы
+.link-otzyv {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    &:hover &-top {
+        transform: translate(17px, -7px);
+    }
+    &:hover &-bottom {
+        transform: translate(0px, 2px);
+    }
+    & span {
+        display: flex;
+        flex-direction: column;
+        margin-left: 13px;
+    }
+    &-top {
+        transform: translate(14px, -4px);
+    }
+    &-bottom {
+        transform: translate(4px, -3px);
+    }
+    & img {
+        width: 9px;
+        height: 9px;
         transition: $tr linear;
     }
 }

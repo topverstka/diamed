@@ -1,0 +1,68 @@
+.otzivy {
+    background: $header-bg;
+    padding: 64px 0;
+    & h2 {
+        margin-bottom: 32px;
+        width: 85%
+    }
+    &__arrows {
+        position: relative;
+        justify-content: flex-end;
+    }
+    &_wrapp {
+        display: flex;
+        &__text {
+            width: 413px;
+            margin-right: 19px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__slider {
+            width: 848px;
+            overflow: hidden;
+            & .swiper-slide {
+                background: #fff;
+                border-radius: $radius2;
+                padding: 24px 24px 28px 24px
+            }
+            &-name {
+                font-size: 16px;
+                line-height: 24px;
+                color: $accent2;
+                margin-bottom: 24px;
+                display: block
+            }
+            &-text {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 32px;
+                height: 140px;
+                overflow: hidden;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+            }
+            &-job {
+                font-size: 16px;
+                line-height: 24px;
+                color: $accent2;
+                margin-bottom: 12px;
+                display: block
+            }
+            &-name-doctor {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: $second;
+                border-bottom: 1px solid #F0EFEF;
+                padding-bottom: 32px;
+                margin-bottom: 35px;
+                display: block
+            }
+        }
+        &__btn {
+            margin-top: auto;
+        }
+    }
+}
