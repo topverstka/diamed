@@ -1,0 +1,10 @@
+.useful {
+    padding: 100px 0;
+    & h2 {
+        margin-bottom: 40px;
+    }
+    &__wrapp {
+        display: flex;
+        height: 308px
+    }
+}

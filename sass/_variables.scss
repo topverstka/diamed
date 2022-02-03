@@ -1,0 +1,52 @@
+// Пользовательские переменные
+:root {
+    --ffMain: 'Montserat';
+    --ffHeader: sans-serif;
+    --tr: .3s; // Плавность перехода
+    --radius: 8px; // border-radius
+}
+
+$ffMain: var(--ffMain);
+$ffHeader: var(--ffHeader);
+$tr: var(--tr);
+$minHover: 769px; // Минимальное разрешения экрана для hover-эффекта
+$container: 1280px;
+$radius: var(--radius);
+$laptop-l: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile-l: 425px;
+$mobile-m: 375px;
+$mobile-s: 320px;
+// Цвета
+:root {
+    --main: #313033;
+    --second: #4BB9B5;
+    --accent: #EAE9EF;
+    --accent2: #686868;
+    --btn-gray: #F0EFEF;
+    --color-gray: #828282;
+    --header-bg: #F8F7FC;
+    --accent-hover: #44BD99;
+    --accent-active: #37866E;
+    --accent2-active: #C27B29;
+    --outline: #C0C0C0;
+    --bg-page: #FFF;
+    --bg-block: #F8F8F8;
+    --error: #E83D3D;
+}
+
+$main: var(--main);
+$second: var(--second);
+$accent: var(--accent);
+$btn-gray: var(--btn-gray);
+$color-gray: var(--color-gray);
+$header-bg: var(--header-bg);
+$accent-hover: var(--accent-hover);
+$accent-active: var(--accent-active);
+$accent2: var(--accent2);
+$accent2-active: var(--accent2-active);
+$outline: var(--outline);
+$bg-page: var(--bg-page);
+$bg-block: var(--bg-block);
+$error: var(--error);

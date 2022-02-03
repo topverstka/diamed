@@ -1,0 +1,29 @@
+.why_choose {
+    padding: 100px 0;
+    &__wrapp {
+        display: flex
+    }
+    &__left {
+        width: 42%;
+        margin-right: 25px;
+        position: relative;
+        & h2 {
+            width: 305px;
+            line-height: 49px;
+        }
+        &-picture-all {
+            position: absolute;
+            top: 48px;
+            right: 94px;
+            width: 151px;
+            height: 151px;
+            object-fit: cover;
+        }
+        &-picture-main {
+            margin-top: 39px
+        }
+    }
+    &__right {
+        width: 60%
+    }
+}

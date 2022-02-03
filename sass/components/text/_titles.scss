@@ -1,0 +1,15 @@
+h1 {
+    font-size: 56px;
+    font-weight: 600;
+    @media (max-width: $mobile-l) {
+        font-size: 32px
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    @media (max-width: $mobile-l) {
+        font-size: 24px
+    }
+}

@@ -1,0 +1,94 @@
+.our_doctors {
+    background: #F8F7FC;
+    overflow: hidden;
+    & h2 {
+        padding: 50px 0 34px 0
+    }
+    &__wrapp {
+        display: flex
+    }
+    & .container {
+        position: relative;
+    }
+    &__background {
+        position: absolute;
+        bottom: -148px;
+        opacity: 0.2;
+        left: 79px;
+        width: 773px;
+        height: 820px;
+    }
+    &__info {
+        margin-right: 69px;
+        display: flex;
+        flex-direction: column;
+        z-index: 9;
+        & .swiper__arrow {
+            justify-content: flex-end;
+            margin-top: 32px;
+        }
+        & .link {
+            margin: auto 0 54px;
+            font-size: 14px;
+        }
+    }
+    &__slider {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 600px;
+        height: 704px;
+        & .swiper-wrapper {
+            flex-direction: column;
+            height: 704px
+        }
+        & .swiper-slide {
+            height: 100%
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        &-main {
+            width: 544px;
+            height: 100%;
+            overflow: hidden;
+            margin-right: 63px;
+        }
+        &-all {
+            width: 139px;
+            height: 100%;
+            overflow: hidden;
+            // margin-top: 40px;
+            & .swiper-slide {
+                opacity: 0.6;
+                height: 139px !important
+            }
+            & .swiper-slide.swiper-slide-active {
+                opacity: 1
+            }
+            & img {
+                width: 139px;
+                height: 139px;
+                border-radius: 12px;
+            }
+        }
+    }
+    & .tabs_wrapper {
+        margin-bottom: 80px;
+    }
+    &__info-initial {
+        &-header {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 12px;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
