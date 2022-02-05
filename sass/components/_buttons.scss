@@ -34,6 +34,7 @@
     transition: $tr linear;
     &:hover {
         background: $second;
+        color: #fff;
     }
 }
 
@@ -77,7 +78,7 @@
     &:hover img {
         transform: rotate(0deg);
     }
-    & img {
+    img {
         width: 16px;
         height: 16px;
         margin-left: 16px;
@@ -98,23 +99,28 @@
     &:hover &-bottom {
         transform: translate(0px, 2px);
     }
-    & span {
+    span {
         display: flex;
         flex-direction: column;
         margin-left: 13px;
     }
-    &-top {
-        transform: translate(14px, -4px);
-    }
-    &-bottom {
-        transform: translate(4px, -3px);
-    }
-    & img {
+    
+    img {
         width: 9px;
         height: 9px;
         transition: $tr linear;
     }
 }
+
+.link-otzyv-top {
+    transform: translate(14px, -4px);
+}
+
+.link-otzyv-bottom {
+    transform: translate(4px, -3px);
+}
+
+
 
 // Ссылка со стрелкой
 .link-arrow {
@@ -134,8 +140,8 @@
     height: 16px;
     display: inline-block;
     margin: 0 0 0 8px;
-    & svg,
-    & svg path {
+    svg,
+    svg path {
         transition: $tr;
     }
 }
@@ -143,11 +149,11 @@
 // Включает hover-эффект при наведении на ссылку
 .link-arrow_hover:hover {
     @media (min-width: $minHover) {
-        & .link-arrow__text {
+        .link-arrow__text {
             color: $accent;
         }
-        & .link-arrow__icon {
-            & svg {
+        .link-arrow__icon {
+            svg {
                 animation: linkArrowIconHover .4s linear forwards;
                 @keyframes linkArrowIconHover {
                     0% {
@@ -161,48 +167,14 @@
                     }
                 }
             }
-            & svg path {
+            svg path {
                 stroke: #fff;
             }
         }
     }
 }
 
-// Стрелка в слайдерах
-.slider-arrow {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $accent;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
-    padding: 14px;
-    & span {
-        display: flex;
-        align-items: center;
-    }
-    &:hover {
-        @media (min-width: $minHover) {
-            background: $second;
-        }
-        & svg path {
-            stroke: #fff;
-        }
-    }
-    &:active {
-        background: $second;
-    }
-    &.swiper-button-disabled {
-        background: #F8F8F8;
-        // pointer-events: none;
-        & svg path {
-            stroke: #fff;
-        }
-    }
-}
+
 
 // Кнопк/ссылка "Подробнее" у разделов
 .section-more {

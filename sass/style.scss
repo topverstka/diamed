@@ -6,32 +6,6 @@
     @return $px/(1920 / 100vw);
 }
 
-// Общие стили для страниц
-// Стиль выделения элементов на странице
-// ::selection {
-//     // background: #CCF2E9;
-//     background: $accent-hover;
-//     color: #fff;
-// }
-// ::-moz-selection {
-//     // background: #CCF2E9;
-//     background: $accent-hover;
-//     color: #fff;
-// }
-// Стиль скроллбара
-// body::-webkit-scrollbar {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     width: .6em;
-//     height: 100%;
-// }
-// body::-webkit-scrollbar-track {
-//     background: #FEF1EB;
-// }
-// body::-webkit-scrollbar-thumb {
-//     background-color: #CAC1BC;
-// }
 body {
     font-family: $ffMain;
     color: $main;
@@ -62,12 +36,12 @@ body {
 @import 'components/_modal';
 @import 'components/_tabs';
 @import 'components/_accordion';
+@import 'components/_sliders';
 // Текстовые компоненты
 @import 'components/text/_text';
 @import 'components/text/_titles';
 // Секции
 @import 'sections/_header';
-@import 'sections/_footer';
 @import 'sections/_main-top';
 @import 'sections/_actual-offer';
 @import 'sections/_our-doctors';
@@ -76,6 +50,8 @@ body {
 @import 'sections/_useful';
 @import 'sections/_news';
 @import 'sections/_otzivy';
+@import 'sections/cat';
+@import 'sections/_footer';
 // Страницы
 // Библиотеки
 //@import 'libs/_aos';

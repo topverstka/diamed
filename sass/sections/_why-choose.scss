@@ -1,29 +1,34 @@
 .why_choose {
     padding: 100px 0;
-    &__wrapp {
-        display: flex
+}
+
+.why_choose__wrapp {
+    display: flex
+}
+
+.why_choose__left {
+    width: 42%;
+    margin-right: 25px;
+    position: relative;
+    h2 {
+        width: 305px;
+        line-height: 49px;
     }
-    &__left {
-        width: 42%;
-        margin-right: 25px;
-        position: relative;
-        & h2 {
-            width: 305px;
-            line-height: 49px;
-        }
-        &-picture-all {
-            position: absolute;
-            top: 48px;
-            right: 94px;
-            width: 151px;
-            height: 151px;
-            object-fit: cover;
-        }
-        &-picture-main {
-            margin-top: 39px
-        }
-    }
-    &__right {
-        width: 60%
-    }
+}
+
+.why_choose__left-picture-all {
+    position: absolute;
+    top: 48px;
+    right: 94px;
+    width: 151px;
+    height: 151px;
+    object-fit: cover;
+}
+
+.why_choose__left-picture-main {
+    margin-top: 39px
+}
+
+.why_choose__right {
+    width: 60%
 }

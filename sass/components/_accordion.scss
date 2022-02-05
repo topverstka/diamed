@@ -4,61 +4,71 @@
     border-bottom: 1px solid #F0EFEF;
     padding-bottom: 32px;
     margin-bottom: 32px;
-    & .accordion_container-list-icons__minus {
-        display: none
-    }
     &.active {
-        & .accordion_container-list-icons-btn {
+        .accordion_container-list-icons-btn {
             background: $second;
-            & svg path {
-                stroke: #fff
+            span{
+                background-color: #fff;
+                &:last-child{
+                    transform: translate(-50%,-50%) rotate(0deg);
+                }
             }
-        }
-        & .accordion_container-list-icons__plus {
-            display: none
-        }
-        & .accordion_container-list-icons__minus {
-            display: block
-        }
-    }
-    &-header {
-        font-weight: 600;
-        font-size: 20px;
-        width: 200px
-    }
-    &-content {
-        overflow: hidden;
-        height: 0;
-        margin-left: auto;
-        margin-right: 69px;
-        width: 303px;
-        transition: $tr linear;
-        & p {
-            font-size: 16px;
-            line-height: 24px;
-            margin-bottom: 35px;
-            font-weight: 500;
-        }
-        & .accordion_container-list-link {
-            font-size: 14px
         }
     }
 }
 
-.accordion_container-list-icons {
-    &-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #fff;
-        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
-        padding: 8px;
-        transition: $tr linear;
-        &:hover {
-            background: $second;
-            & path {
-                stroke: #fff
-            }
+
+.accordion_container-list-header {
+    font-weight: 600;
+    font-size: 20px;
+    width: 200px
+}
+
+.accordion_container-list-content {
+    overflow: hidden;
+    height: 0;
+    margin-left: auto;
+    margin-right: 69px;
+    width: 303px;
+    transition: $tr linear;
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        font-weight: 500;
+    }
+    .accordion_container-list-link {
+        font-size: 14px
+    }
+}
+
+.accordion_container-list-icons-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
+    padding: 8px;
+    transition: $tr linear;
+    position: relative;
+    span{
+        width: 14px;
+        height: 1px;
+        background-color: $second;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: all 0.2s;
+        &:last-child{
+            transform: translate(-50%,-50%) rotate(90deg);
+        }
+    }
+    &:hover {
+        background: $second;
+        span {
+            background-color: #fff
         }
     }
 }

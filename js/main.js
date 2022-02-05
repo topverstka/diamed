@@ -39,6 +39,16 @@ function bodyLock(con) {
     }
 }
 
+// Поля форм
+
+// let allinputs = findAll('.form-elem');
+
+// for (let i = 0; i < allinputs.length; i++){
+//     allinputs[i].addEventListener('click', function(){
+//         this.classList.add('active');
+//     });
+// }
+
 // Валидация формы
 function validationForm() {
     const name = find('#user_name')
