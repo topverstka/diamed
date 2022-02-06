@@ -1,0 +1,80 @@
+.modal-search {
+    background: rgba(248, 247, 252, .5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-search__wrap {
+    align-items: flex-start;
+    padding: 0;
+    transform: translateY(-100%);
+}
+ 
+.modal-search__content {
+    max-width: none;
+    width: 100%;
+    background: $header-bg;
+    border-radius: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+// Шапка поиска
+.modal-search__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-search__close {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 32px;
+    height: 32px;
+}
+
+// Форма поиска
+.modal-search__form {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.modal-search__textfield {
+    position: relative;
+    width: 100%;
+    height: 52px;
+
+    & input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        color: $main;
+        background: #fff;
+        border-radius: $radius;
+        padding: 0 24px 0 42px;
+
+        &::placeholder {
+            color: $main;
+        }
+    }
+}
+
+.modal-search__textfield-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    pointer-events: none;
+}
+
+.modal-search__submit {
+    width: 185px;
+    margin-left: 10px;
+}

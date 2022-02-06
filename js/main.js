@@ -173,131 +173,119 @@ function menu() {
 // });
 
 // Функции для модальных окон
-// modal()
-function modal() {
-    // Открытие модального окна, если в url указан его id
-    openModalHash()
+// Открытие модальных окон при клике по кнопке
+openModalWhenClickingOnBtn()
+function openModalWhenClickingOnBtn() {
+    const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
 
-    function openModalHash() {
-        if (window.location.hash) {
-            const hash = window.location.hash.substring(1)
-            const modal = document.querySelector(`.modal#${hash}`)
+    for (let i = 0; i < btnsOpenModal.length; i++) {
+        const btn = btnsOpenModal[i];
 
-            if (modal) {
-                modal.classList.add('_show');
-                bodyLock(true)
-                closeWhenClickingOnBg(`#${hash} .modal__content`, modal);
+        btn.addEventListener('click', (e) => {
+            const dataBtn = btn.dataset.modalOpen;
+            const modal = document.querySelector(`#${dataBtn}`)
+
+            if (find('.modal._show')) {
+                closeModal()
             }
-        }
-    }
-
-    // Закрытие модальных окон при клике по крестику
-    closeModalWhenClickingOnCross()
-
-    function closeModalWhenClickingOnCross() {
-        const modalElems = document.querySelectorAll('.modal')
-        for (let i = 0; i < modalElems.length; i++) {
-            const modal = modalElems[i];
-            const closeThisModal = modal.querySelector('.modal__close')
-
-            closeThisModal.addEventListener('click', () => {
-                modal.classList.remove('_show')
-                bodyLock(false)
-                resetHash()
-            })
-        }
-    }
-
-    // Закрытие модальных окон при нажатии по клавише ESC
-    closeModalWhenClickingOnESC()
-
-    function closeModalWhenClickingOnESC() {
-        const modalElems = document.querySelectorAll('.modal')
-        for (let i = 0; i < modalElems.length; i++) {
-            const modal = modalElems[i];
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    modal.classList.remove('_show')
-                    bodyLock(false)
-                    resetHash()
-                }
-            })
-        }
-    }
-
-    // Сброс id модального окна в url
-    function resetHash() {
-        const windowTop = window.pageYOffset
-        window.location.hash = ''
-        window.scrollTo(0, windowTop)
-    }
-
-    // Открытие модальных окон
-    openModal()
-
-    function openModal() {
-        const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
-
-        for (let i = 0; i < btnsOpenModal.length; i++) {
-            const btn = btnsOpenModal[i];
-
-            btn.addEventListener('click', (e) => {
-                const dataBtn = btn.dataset.modalOpen;
-                const modalThatOpens = document.querySelector(`#${dataBtn}`)
-
-                btn.classList.add('modal-show');
-                modalThatOpens.classList.add('_show');
-                bodyLock(true)
-                closeWhenClickingOnBg(`#${dataBtn} .modal__content`, modalThatOpens);
+            else {
+                openModal(modal)
                 window.location.hash = dataBtn
-            });
+            }
+        });
+    }
+}
+
+// Открытие модального окна, если в url указан его id
+openModalHash()
+function openModalHash() {
+    if (window.location.hash) {
+        const hash = window.location.hash.substring(1)
+        const modal = document.querySelector(`.modal#${hash}`)
+
+        if (modal) openModal(modal)
+    }
+}
+
+// Показываем/убираем модальное окно при изменения хеша в адресной строке
+checkHash()
+function checkHash() {
+    window.addEventListener('hashchange', e => {
+        const hash = window.location.hash
+        const modal = document.querySelector(`.modal${hash}`)
+
+        if (find('.modal._show')) find('.modal._show').classList.remove('_show')
+        if (modal && hash != '') openModal(modal)
+    })
+}
+
+// Закрытие модального окна при клике по заднему фону
+closeModalWhenClickingOnBg()
+function closeModalWhenClickingOnBg() {
+    document.addEventListener('click', (e) => {
+        const target = e.target
+        const modal = document.querySelector('.modal._show')
+
+        if (modal && !modal.classList.contains('modal-auth') && target.classList.contains('modal__wrap')) closeModal()
+    })
+}
+
+// Закрытие модальных окон при клике по крестику
+closeModalWhenClickingOnCross()
+function closeModalWhenClickingOnCross() {
+    const modalElems = document.querySelectorAll('.modal')
+    for (let i = 0; i < modalElems.length; i++) {
+        const modal = modalElems[i];
+        const closeThisModal = modal.querySelector('.modal__close')
+
+        if (closeThisModal) {
+            closeThisModal.addEventListener('click', () => {
+                closeModal(modal)
+            })
         }
     }
+}
 
-    // Закрытие модального окна при клике по заднему фону
-    function closeWhenClickingOnBg(itemArray, itemParent, classShow = '_show') {
-        document.addEventListener('click', (e) => {
-            let itemElems = document.querySelectorAll(itemArray)
+// Закрытие модальных окон при нажатии по клавише ESC
+closeModalWhenClickingOnESC()
+function closeModalWhenClickingOnESC() {
+    const modalElems = document.querySelectorAll('.modal')
+    for (let i = 0; i < modalElems.length; i++) {
+        const modal = modalElems[i];
 
-            for (let i = 0; i < itemElems.length; i++) {
-                const item = itemElems[i];
-
-                const target = e.target,
-                    itsItem = target == item || item.contains(target),
-                    itemIsShow = item.classList.contains(classShow);
-
-                if (itemParent) {
-                    const itsItemParent = target == itemParent || itemParent.contains(target),
-                        itemParentIsShow = itemParent.classList.contains(classShow);
-
-                    if (!itsItem && itsItemParent && itemParentIsShow) {
-                        itemParent.classList.remove(classShow);
-
-                        if (body.classList.contains('_lock')) {
-                            bodyLock(false)
-                        }
-
-                        if (window.location.hash === '#' + itemParent.getAttribute('id')) {
-                            resetHash()
-                        }
-                    }
-                } else {
-                    if (!itsItem && itemIsShow) {
-                        item.classList.remove(classShow);
-                        if (body.classList.contains('_lock')) {
-                            bodyLock(false)
-                        }
-
-                        if (window.location.hash === '#' + itemParent.getAttribute('id')) {
-                            resetHash()
-                        }
-                    }
-                }
-
-            }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal(modal)
         })
     }
+}
+
+// Сброс id модального окна в url
+function resetHash() {
+    const windowTop = window.pageYOffset
+    window.location.hash = ''
+    window.scrollTo(0, windowTop)
+}
+
+// Открытие модального окна
+function openModal(modal) {
+    if (find('.modal._show')) {
+        find('.modal._show').classList.remove('_show')
+    }
+    
+    modal.classList.add('_show')
+    bodyLock(true)
+}
+
+// Закрытие модального окна
+function closeModal(modal) {
+    if (modal == undefined) {
+        modal = find('.modal._show')
+
+        if (!modal) return
+    }
+    modal.classList.remove('_show')
+    bodyLock(false)
+    resetHash()
 }
 
 

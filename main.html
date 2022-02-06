@@ -18,7 +18,7 @@
             <div class="header_info">
                 <div class="container">
                     <div class="header_info__tel">
-                        Единый телефон сети
+                        <span class="header_info__tel-text">Единый телефон сети</span>
                         <a class="header_info__tel-link" href="tel:+73822609010">8 (3822) 60 90 10</a>
                     </div>
                     <div class="header_info__text">
@@ -27,35 +27,29 @@
                         <p>Университетская клиника МГМУ имени И.М. Сеченова</p>
                     </div>
                     <div class="header_info__time">
-                        Часы работы
+                        <span class="header_info__time-text">Часы работы</span>
                         <svg>
-                            <use xlink:href="./img/icons/icons-sprite.svg#time"></use>
+                            <use xlink:href="./img/sprite.svg#time"></use>
                         </svg>
                     </svg>
 					</svg>
                     </div>
                     <div class="header_info__icons">
-                        <svg class="eye_icon">
-                            <use xlink:href="./img/icons/icons-sprite.svg#eye"></use>
-                        </svg>
-                        
-                        <svg class="search_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#313033" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17.5 17.5L13.875 13.875" stroke="#313033" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <button class="eye_icon"><svg><use xlink:href="./img/sprite.svg#eye"></use></svg></button>
+                        <button class="search_icon" data-modal-open="search"><svg><use href='./img/sprite.svg#search_icon'></use></svg></button>
                     </div>
                 </div>
             </div>
             <div class="container">
 
                 <div class="header_main">
-                    <svg class="header_main__mobile-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M18 12.5999V17.9999L21.6 19.7999" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-						<rect x="0.5" y="0.5" width="35" height="35" rx="7.5" stroke="#DAEBEF"/>
-					</svg>
-
-                    
+                    <button class="header_main__mobile-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 12.5999V17.9999L21.6 19.7999" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="0.5" y="0.5" width="35" height="35" rx="7.5" stroke="#DAEBEF"/>
+                        </svg>
+                    </button>
                     <img class="header_main__logo" src="./img/logo.svg" alt="">
                     <nav class="header_main__menu">
                         <ul>
@@ -75,9 +69,7 @@
                 </div>
             </div>
         </header>
-
         <main class="main">
-
             <div class="main_top__wrapper">
                 <div class="container">
                     <h1 class="main_top__wrapper-header">
@@ -554,8 +546,6 @@
             </section>
 
         </main>
-
-
         <section class="cat">
             <div class="container">
                 <h2>Скажите «А-а-а-а»</h2>
@@ -641,8 +631,6 @@
                 </div>
             </div>
         </section>
-
-
         <footer class="footer">
             <div class="container">
                 <div class="footer-top">
@@ -671,43 +659,23 @@
     </div>
 
     <!-- Модальные окна -->
-    <div class="modal" id="consultation">
-        <div class="modal__body">
-            <div class="modal__content">
-                <h2 class="modal__title">Запись на консультацию</h2>
-                <form action="#" method="POST" class="form modal__form" id="modal__form">
-                    <div class="form-elem">
-                        <input class="form-elem__area _required" type="text" id="user_name" name="name" placeholder=" ">
-                        <label class="form-elem__label" for="name">Имя</label>
+    <div class="modal modal-search" id="search">
+        <div class="modal__wrap modal-search__wrap">
+            <div class="modal__content modal-search__content">
+                <div class="modal-search__header">
+                    <h2 class="modal-search__title">Поиск</h2>
+                    <button class="modal__close modal-search__close">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <form action="#" class="modal-search__form">
+                    <div class="modal-search__textfield">
+                        <input type="text" id="search" placeholder="Лечение кариеса">
+                        <span class="modal-search__textfield-icon"><svg><use href='./img/sprite.svg#search-form_icon'></use></svg></span>
                     </div>
-                    <div class="form-elem">
-                        <input class="form-elem__area _required" type="tel" id="user_phone" name="phone" placeholder=" ">
-                        <label class="form-elem__label" for="phone">Номер телефона</label>
-                    </div>
-                    <div class="form-elem">
-                        <input class="form-elem__area _required" type="email" id="user_email" name="email" placeholder=" ">
-                        <label class="form-elem__label" for="email">E-mail</label>
-                    </div>
-                    <div class="form-elem">
-                        <input class="form-elem__area" type="text" id="user_company" name="company" placeholder=" ">
-                        <label class="form-elem__label" for="company">Название вашей компании</label>
-                    </div>
-                    <div class="form-elem">
-                        <input class="form-elem__area" type="text" id="user_working_pos" name="working_pos" placeholder=" ">
-                        <label class="form-elem__label" for="working_pos">Ваша должность</label>
-                    </div>
-                    <div class="form-elem">
-                        <textarea class="form-elem__area" type="text" id="user_message" name="message" placeholder=" "></textarea>
-                        <label class="form-elem__label" for="message">Комментарий</label>
-                    </div>
-                    <span class="modal__attention">Нажав на кнопку, вы соглашаетесь с обработкой персональных
-						данных.</span>
-                    <button class="btn modal__submit" type="submit">Проконсультироваться</button>
+                    <button class="btn modal-search__submit" type="submit">Найти</button>
                 </form>
-                <button class="modal__close">
-					<span></span>
-					<span></span>
-				</button>
             </div>
         </div>
     </div>

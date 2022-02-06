@@ -11,15 +11,20 @@ $ffMain: var(--ffMain);
 $ffHeader: var(--ffHeader);
 $tr: var(--tr);
 $minHover: 769px; // Минимальное разрешения экрана для hover-эффекта
-$container: 1280px;
+$container: 1328px;
 $radius: var(--radius);
 $radius2: var(--radius2);
-$laptop-l: 1280px;
+
+$laptop-l: 1440px;
+$laptop-m: 1280px;
 $laptop: 1024px;
+$tablet-l: 920px;
 $tablet: 768px;
+$tablet-s: 500px;
 $mobile-l: 425px;
 $mobile-m: 375px;
-$mobile-s: 320px;
+$mobile: 320px;
+
 // Цвета
 :root {
     --main: #313033;

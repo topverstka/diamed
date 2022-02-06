@@ -16,13 +16,13 @@
         opacity: 1;
         overflow-y: auto;
 
-        & .modal__body {
+        & .modal__wrap {
             transform: translate(0, 0);
         }
     }
 }
 
-.modal__body {
+.modal__wrap {
     min-height: 100%;
     transform: translate(0, 100vh);
     display: flex;
@@ -30,10 +30,6 @@
     align-items: center;
     padding: 30px 16px;
     transition: $tr;
-
-    & h2 {
-        margin: 0 0 8px 0;
-    }
 }
 
 .modal__content {
