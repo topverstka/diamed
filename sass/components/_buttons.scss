@@ -16,6 +16,11 @@
     }
 }
 
+.btn--white{
+    background-color: #fff;
+    color: $second;
+}
+
 .btn_disabled {
     color: $color-gray;
     background: $btn-gray;
@@ -79,11 +84,14 @@
         transform: rotate(0deg);
     }
     img {
-        width: 16px;
-        height: 16px;
-        margin-left: 16px;
+        width: 14px;
+        height: 14px;
+        margin-left: 12px;
         transform: rotate( -45deg);
         transition: $tr linear;
+        position: relative;
+        top: -2px;
+        left: 2px;
     }
 }
 
@@ -102,22 +110,22 @@
     span {
         display: flex;
         flex-direction: column;
-        margin-left: 13px;
+        margin-left: 8px;
     }
     
     img {
-        width: 9px;
-        height: 9px;
+        width: 6px;
+        height: 6px;
         transition: $tr linear;
     }
 }
 
 .link-otzyv-top {
-    transform: translate(14px, -4px);
+    transform: translate(13px, -4px);
 }
 
 .link-otzyv-bottom {
-    transform: translate(4px, -3px);
+    transform: translate(6px, -3px);
 }
 
 

@@ -20,7 +20,9 @@
     @media (min-width: $tablet){
         .swiper-slide {
             padding: 32px;
-            height: 305px
+            height: 305px;
+            padding-top: 31px;
+            padding-right: 46px;
         }
     }
 }
@@ -28,12 +30,14 @@
 .actual_offer__slider-header {
     display: flex;
     img {
-        width: 27px
+        position: relative;
+        top: 6px;
     }
     @media (min-width: $tablet){
         flex-direction: row-reverse;
         img {
-            width: 34px
+            height: 47px;
+            width: auto;
         }
     }
 }
@@ -78,13 +82,14 @@
 
 .actual_offer__slider-info {
     line-height: 24px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .actual_offer__slider-link {
-    margin-top: 40px;
+    margin-top: 36px;
 }
 .actual_offer__arrows {
-    top: 10px;
+    top: 4px;
     right: 0;
 }

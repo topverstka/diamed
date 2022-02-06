@@ -2,7 +2,7 @@
     display: flex;
     align-items: flex-start;
     border-bottom: 1px solid #F0EFEF;
-    padding-bottom: 32px;
+    padding-bottom: 31px;
     margin-bottom: 32px;
     &.active {
         .accordion_container-list-icons-btn {
@@ -21,7 +21,8 @@
 .accordion_container-list-header {
     font-weight: 600;
     font-size: 20px;
-    width: 200px
+    width: 200px;
+    line-height: 28px;
 }
 
 .accordion_container-list-content {
@@ -38,7 +39,8 @@
         font-weight: 500;
     }
     .accordion_container-list-link {
-        font-size: 14px
+        font-size: 14px;
+        
     }
 }
 

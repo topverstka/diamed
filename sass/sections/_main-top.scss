@@ -22,11 +22,11 @@
 }
 
 .main_top__wrapper-text {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 57px;
     font-weight: 500;
-    width: 300px;
+    width: 439px;
 }
 
 .main_top__wrapper-link {
@@ -78,18 +78,18 @@
 
 .main_top__wrapper-list-picture {
     position: absolute;
-    right: -4px;
+    right: -3px;
     left: auto;
-    width: 66px;
-    height: 66px;
+    width: 70px;
 }
 
 .main_top__wrapper-list-header {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 26px;
     padding-left: 24px;
     @media (min-width:$tablet){
-        padding-right: 49%;
+        padding-right: 43%;
     }
 }
 
