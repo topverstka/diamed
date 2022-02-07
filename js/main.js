@@ -312,6 +312,7 @@ function closeModal(modal) {
 const swiper_slider = new Swiper('.actual_offer__slider', {
     speed: 400,
     spaceBetween: 20,
+    slidesPerView: 2,
 
     breakpoints: {
         1200: {
@@ -335,6 +336,8 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
 const swiper_news = new Swiper('.news-slider', {
     speed: 400,
     spaceBetween: 20,
+    slidesPerView: 3,
+    allowTouchMove: false,
 
     breakpoints: {
         1200: {
@@ -517,7 +520,10 @@ function tabRollers() {
 
     for (let i = 0; i < tabListElems.length; i++) {
         const tabList = tabListElems[i];
-        swipeRoller(tabList)
+
+        window.addEventListener('load', e => {
+            swipeRoller(tabList)
+        })
     }
 }
 
@@ -526,8 +532,8 @@ function swipeRoller(tabList) {
     const roller = tabList.querySelector('.tab__roller')
     const tabActive = tabList.querySelector('.tab._active')
     
-    roller.style.width = tabActive.scrollWidth + 'px' // Определяем ширину ползунка
-    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+        roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
+        roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 }
 
 // tabBlockActive()
@@ -542,6 +548,34 @@ function tabBlockActive() {
       blockShowElems[i].classList.add('_show')
     }
 }
+
+// Анимация пересчета цифр
+// appearAnimationNumber()
+function appearAnimationNumber() {
+    const appearElems = findAll('[data-appear-animation=number]')
+
+    for (let i = 0; i < appearElems.length; i++) {
+        const elem = appearElems[i];
+        const number = elem.innerText
+        const nums = generatorFreeNum(number)
+
+        console.log(nums)
+    }
+}
+
+// Сгенерировать 3 цифры, идущие за аргументом
+function generatorFreeNum(num) {
+    num = parseInt(num)
+    let arr = []
+
+    for (let i = 1; i < 3; i++) {
+        arr.push(num--)
+    }
+
+    return arr
+}
+
+// 
 
 // Аккордеоны
 accordions()

@@ -77,5 +77,8 @@
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.2em;
-    text-align: left;
+
+    @media (max-width: $tablet) {
+        text-align: left;
+    }
 }

@@ -67,7 +67,12 @@
 
 .review_wrapp__slider {
     width: 848px;
-    overflow: hidden;
+    overflow-x: clip;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
     .swiper-slide {
         background: #fff;
         border-radius: $radius2;

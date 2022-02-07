@@ -141,3 +141,91 @@
         transform: translateX(0);
     }
 }
+
+// Анимация появления загаловков
+.showTitle {
+    animation-name: showTitle;
+    // animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-timing-function: ease-in-out;
+    display: block;
+}
+
+@keyframes showTitle {
+    from {
+        transform: translateY(80%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+// Анимация зуба
+.showTooth {
+    animation-name: showTooth;
+    // animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes showTooth {
+    from {
+        opacity: 0;
+        transform: translateY(100%) rotate(45deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+// Плавное отображение карточек
+.showCard {
+    animation-name: showCard;
+    animation-fill-mode: forwards;
+    transform: translateY(200px);
+    /* Это приводит к выполнению анимации
+        в обратном порядке на каждой нечётной итерации */
+    animation-direction: alternate;
+}
+@keyframes showCard {
+    0% {
+        // transform: translate3d(0px, 200px, 0px);
+        transform: translateY(200px);
+    }
+    50% {
+        // transform: translate3d(0px, -5px, 0px);
+        transform: translateY(-10px);
+    }
+    70% {
+        // transform: translate3d(0px, -5px, 0px);
+        transform: translateY(10px);
+    }
+    100% {
+        // transform: translate3d(0px, 0px, 0px);
+        transform: translateY(0px);
+    }
+}
+
+// Аккордеоны
+// .showAcc {
+
+//     &::after {
+//         width: 100%;
+//     }
+
+//     & .accordion_container-list-title {
+//         animation: showAccTitle .8s ease-in-out forwards;
+//     }
+// }
+
+// .showAccTitle {
+//     animation-name: showAccTitle;
+// }
+// @keyframes showAccTitle {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(30%);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+// }

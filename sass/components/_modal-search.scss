@@ -16,6 +16,10 @@
     border-radius: 0;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @media (max-width: $tablet) {
+        padding: 40px 20px;
+    }
 }
 
 // Шапка поиска
@@ -23,6 +27,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.modal-search__title {
+
 }
 
 .modal-search__close {

@@ -2,11 +2,22 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    border-bottom: 1px solid #F0EFEF;
     padding-bottom: 31px;
 
     &:not(:last-child) {
         margin-bottom: 32px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 1px;
+        display: block;
+        background: #F0EFEF;
+        transition: .5s;
     }
 
     @media (max-width: $tablet-s) {
@@ -30,6 +41,7 @@
     max-width: 270px;
     width: 100%;
     line-height: 28px;
+    // opacity: 0;
     
     @media (max-width: $tablet-l) {
         text-overflow: ellipsis;
