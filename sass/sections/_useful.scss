@@ -8,8 +8,24 @@
 .useful_wrapp {
     display: flex;
     height: 308px;
+    
     &>div:not(:last-child) {
         margin-right: 20px;
+
+        @media (max-width: $laptop) {
+            margin: 0;
+        }
+    }
+
+    @media (max-width: $laptop) {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 21px;
+
+        @media (max-width: 560px) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -19,6 +35,12 @@
     background: #fff;
     border-radius: $radius2;
     padding: 30px 48px 32px 32px;
+
+    @media (max-width: $laptop) {
+        width: auto;
+
+
+    }
 }
 
 .useful_wrapp__elems-icon {
@@ -41,6 +63,23 @@
     padding: 32px 32px 37px 32px;
     position: relative;
     overflow: hidden;
+
+    @media (max-width: $laptop) {
+        width: auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    @media (max-width: 560px) {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+}
+
+.userful_wrapp__smart-content {
+    position: relative;
+    z-index: 1;
+
     h3 {
         font-weight: 600;
         font-size: 20px;
@@ -76,4 +115,5 @@
     width: 752px;
     height: 551px;
     object-fit: cover;
+    pointer-events: none;
 }

@@ -1,33 +1,71 @@
-.otzivy {
+.review {
     background: $header-bg;
     padding: 64px 0;
+
+    & .container {
+
+        @media (max-width: 1200px) {
+            padding-right: 0; 
+        }
+
+        @media (max-width: $tablet-l) {
+            padding-right: 24px;
+        }
+    }
+
     h2 {
         margin-bottom: 32px;
-        width: 85%
+        width: 85%;
+        
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
     }
 }
 
-.otzivy__arrows {
+.review__arrows {
     position: relative;
     justify-content: flex-end;
 }
 
-.otzivy_wrapp {
+.review_wrapp {
     display: flex;
+
+    @media (max-width: $tablet-l) {
+        flex-direction: column;
+    }
 }
 
-.otzivy_wrapp__btn {
+.review_wrapp__btn {
     margin-top: auto;
+
+    @media (max-width: $tablet-l) {
+        display: none;
+    }
 }
 
-.otzivy_wrapp__text {
+.review_wrapp__btn-mobile {
+    display: none;
+
+    @media (max-width: $tablet-l) {
+        display: block;
+        margin-top: 32px;
+    }
+}
+
+.review_wrapp__text {
     width: 413px;
     margin-right: 19px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $laptop) {
+        max-width: 340px;
+        width: 100%;
+    }
 }
 
-.otzivy_wrapp__slider {
+.review_wrapp__slider {
     width: 848px;
     overflow: hidden;
     .swiper-slide {
@@ -35,9 +73,15 @@
         border-radius: $radius2;
         padding: 24px 24px 24px 24px
     }
+
+    @media (max-width: $tablet-l) {
+        width: 100%;
+        margin-top: 32px;
+        overflow: initial;
+    }
 }
 
-.otzivy_wrapp__slider-name {
+.review_wrapp__slider-name {
     font-size: 16px;
     line-height: 24px;
     color: $accent2;
@@ -45,7 +89,7 @@
     display: block
 }
 
-.otzivy_wrapp__slider-text {
+.review_wrapp__slider-text {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
@@ -55,16 +99,20 @@
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     display: -webkit-box;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+    }
 }
 
-.otzivy_wrapp__slider-job {
+.review_wrapp__slider-job {
     font-size: 16px;
     line-height: 24px;
     color: $accent2;
     margin-bottom: 12px;
     display: block
 }
-.otzivy_wrapp__slider-name-doctor {
+.review_wrapp__slider-name-doctor {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;

@@ -23,6 +23,10 @@
 .cat__columns{
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+    }
 }
 
 .cat-form{
@@ -30,6 +34,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 1100px) {
+        max-width: none;
+    }
 }
 
 .form-elem{
@@ -90,10 +98,19 @@
     margin-top: 23px;
     width: 100%;
     align-items: center;
+
+    @media (max-width: 700px) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
 
 .form-footer__btn{
     margin-right: 20px;
+
+    @media (max-width: 700px) {
+        margin-top: 16px;
+    }
 }
 
 .form-footer__privacy{
@@ -120,18 +137,49 @@
     width: 521px;
     position: relative;
     bottom: 8px;
+    margin-left: 16px;
+
+    @media (max-width: 1100px) {
+        bottom: 0;
+        width: 100%;
+        margin: 56px 0 0 0;
+    }
 }
 
 .cat__columns-info{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @media (max-width: $tablet-s) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 17px;
+    }
 }
 
 .cat__elem{
     flex-basis: 42%;
     color: #fff;
     margin-bottom: 40px;
+
+    @media (max-width: 1100px) {
+        flex-basis: 33.333%;
+    }
+
+    @media (max-width: $tablet) {
+        flex-basis: 40%;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin: 0;
+        
+        &:nth-child(2) {
+            order: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
 }
 
 
@@ -147,10 +195,20 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
+
     a{
         font-size: 20px;
         position: relative;
         line-height: 32px;
+
+        @media (max-width: $mobile-l) {
+            font-size: 14px;
+        }
+
         &:after{
             content: '';
             display: block;
@@ -172,6 +230,12 @@
     position: absolute;
     bottom: -21px;
     left: 0;
+
+    @media (max-width: $mobile-l) {
+        position: initial;
+        margin-top: 40px;
+    }
+
     a{
         opacity: 0.5;
         margin-right: 31px;

@@ -1,3 +1,8 @@
+.header {
+    position: relative;
+    z-index: 1;
+}
+
 .header_info {
     position: relative;
     z-index: 2;
@@ -97,11 +102,17 @@
 
 
 .header_main {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.header_main__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 24px 0;
-
+    
     @media (max-width: $tablet) {
         padding: 16px 0;
     }
@@ -184,22 +195,51 @@
     }
 }
 .header_main__gamburger {
+    position: relative;
     width: 41px;
     height: 41px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 0;
-    flex-direction: column;
     span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         width: 16px;
         border-bottom: 2px solid #FFFFFF;
         display: block;
         border-radius: $radius;
+        transition: $tr;
+
+        &:nth-child(1) {
+            transform: translate(-50%, calc(-50% + 4px));
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -50%);
+        }
+
+        &:nth-child(3) {
+            transform: translate(-50%, calc(-50% - 4px));
+        }
     }
-    span:not(:last-child) {
-        margin-bottom: 4px;
+    
+    &.burger_close {
+
+        & span {
+
+            &:nth-child(1) {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                width: 0;
+            }
+
+            &:nth-child(3) {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
     }
+
     @media (max-width: $tablet){
         width: 36px;
         height: 36px;

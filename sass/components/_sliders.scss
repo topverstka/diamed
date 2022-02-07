@@ -14,13 +14,14 @@
         display: flex;
         align-items: center;
     }
-    &:hover {
-        @media (min-width: $minHover) {
+    
+    @media (min-width: $minHover) {
+        &:hover {
             background: $second;
             
-        }
-        & svg path {
-            stroke: #fff;
+            & svg path {
+                stroke: #fff;
+            }
         }
     }
     &:active {

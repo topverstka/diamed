@@ -10,11 +10,17 @@
     flex-wrap: wrap;
     position: relative;
     align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $tablet-l) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
 .footer-logo{
-    margin-right: 181px;
+    // margin-right: 181px;
     img{
         width: 146px;
     }
@@ -23,15 +29,20 @@
 .footer-menu{
     position: relative;
     top: 3px;
+
+    @media (max-width: $tablet-l) {
+        margin-top: 40px;
+    }
+
     ul{
         padding: 0;
         margin: 0;
         display: flex;
+        flex-wrap: wrap;
     }
     li{
-        margin-right: 51px;
-        &:last-child{
-            margin-right: 0;
+        &:not(:last-child) {
+            margin-right: 51px;
         }
     }
     a{
@@ -44,9 +55,13 @@
 }
 
 .footer-creator{
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
     margin-bottom: -10px;
+
+    @media (max-width: $tablet-l) {
+        margin: 40px 0 0 0;
+    }
 }
 
 .footer-bottom{
@@ -62,5 +77,5 @@
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.2em;
-
+    text-align: left;
 }

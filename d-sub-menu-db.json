@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Профессиональная чистка полости рта",
+        "category": "hygienic_dentistry",
+        "child": false
+    },
+    {
+        "title": "Удаление зубного камня",
+        "category": "hygienic_dentistry",
+        "child": false
+    },
+    {
+        "title": "Чистка Air Flow",
+        "category": "hygienic_dentistry",
+        "child": false
+    },
+    {
+        "title": "Фторирование и ремотерапия",
+        "category": "hygienic_dentistry",
+        "child": false
+    },
+    {
+        "title": "Отбеливание зубов по технологии ZOOM 4",
+        "category": "hygienic_dentistry",
+        "child": false
+    },
+
+    {
+        "title": "Вырвать зуб без боли и слез",
+        "category": "pediatric_dentistry",
+        "child": false
+    },
+    {
+        "title": "Местная анастезия",
+        "category": "pediatric_dentistry",
+        "child": false
+    },
+    {
+        "title": "Акция! 2 зуба по цене 1",
+        "category": "pediatric_dentistry",
+        "child": false
+    },
+
+    {
+        "title": "Слепок челюсти",
+        "category": "orthodontist",
+        "child": false
+    },
+    {
+        "title": "Брэкеты",
+        "category": "orthodontist",
+        "child": false
+    },
+    {
+        "title": "Детская пластинка для ровных зубов",
+        "category": "orthodontist",
+        "child": false
+    }
+]

@@ -8,8 +8,12 @@
     .container {
         position: relative;
     }
-    .tabs_wrapper {
+    .our_doctors__tabs {
         margin-bottom: 80px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -24,6 +28,7 @@
     left: 79px;
     width: 773px;
     height: 820px;
+    pointer-events: none;
 }
 
 .our_doctors__info {
@@ -35,10 +40,11 @@
         justify-content: flex-end;
         margin-top: 32px;
     }
-    .link {
-        margin: auto 0 52px;
-        font-size: 14px;
-    }
+}
+
+.our_doctors__more {
+    margin: auto 0 52px;
+    font-size: 14px;
 }
 
 .our_doctors__info-initial-header {

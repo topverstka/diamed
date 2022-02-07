@@ -1,0 +1,73 @@
+[
+    {
+        "title": "Диагностика",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Терапевтическая стоматология",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Эстетическая стоматология",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Хирургическая стоматология и имплантация",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Ортопедическая стоматология",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Цифровая стоматология",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Ортодонтия",
+        "category": "services",
+        "child": "orthodontist"
+    },
+    {
+        "title": "Антистресс-лечение",
+        "category": "services",
+        "child": false
+    },
+    {
+        "title": "Детская стоматология",
+        "category": "services",
+        "child": "pediatric_dentistry"
+    },
+    {
+        "title": "Гигиеническая стоматология",
+        "category": "services",
+        "child": "hygienic_dentistry"
+    },
+    {
+        "title": "Пародонтология",
+        "category": "services",
+        "child": false
+    },
+
+    {
+        "title": "Ортодонт",
+        "category": "vacancy",
+        "child": false
+    },
+    {
+        "title": "Детский стоматолог",
+        "category": "vacancy",
+        "child": false
+    },
+    {
+        "title": "Уборщица",
+        "category": "vacancy",
+        "child": false
+    }
+]

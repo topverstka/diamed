@@ -24,7 +24,7 @@
         "../sass/sections/_number-proud.scss",
         "../sass/sections/_useful.scss",
         "../sass/sections/_news.scss",
-        "../sass/sections/_otzivy.scss",
+        "../sass/sections/_review.scss",
         "../sass/libs/_lightgallery.scss",
         "../sass/libs/_swiper.scss"
     ],

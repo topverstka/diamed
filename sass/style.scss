@@ -30,6 +30,10 @@ body {
 
 @import '_grid'; // Сетка
 @import '_variables';
+
+// Анимация
+@import 'components/_animation';
+
 // Компоненты
 @import 'components/_buttons';
 @import 'components/_forms';
@@ -43,6 +47,7 @@ body {
 @import 'components/text/_titles';
 // Секции
 @import 'sections/_header';
+@import 'sections/_menu';
 @import 'sections/_main-top';
 @import 'sections/_actual-offer';
 @import 'sections/_our-doctors';
@@ -50,7 +55,7 @@ body {
 @import 'sections/_number-proud';
 @import 'sections/_useful';
 @import 'sections/_news';
-@import 'sections/_otzivy';
+@import 'sections/_review';
 @import 'sections/cat';
 @import 'sections/_footer';
 // Страницы
@@ -58,5 +63,3 @@ body {
 //@import 'libs/_aos';
 @import 'libs/_lightgallery';
 @import 'libs/_swiper';
-// Анимация
-//@import 'components/_animation';

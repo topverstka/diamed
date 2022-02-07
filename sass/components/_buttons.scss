@@ -7,12 +7,16 @@
     padding: 16px 24px;
     background: $second;
     border-radius: $radius;
-    transition: $tr linear;
+    transition: $tr;
     &:hover {
-        opacity: 0.6;
+        
+        @media (min-width: $minHover) {
+            transform: translateY(-2px);
+        }
     }
     &:active {
-        background: $accent-active;
+        // background: $accent-active;
+        transform: translateY(-2px) scale(.98);
     }
 }
 
@@ -75,28 +79,110 @@
 }
 
 // Ссылка подробнее
+// .link {
+//     display: flex;
+//     align-items: center;
+//     font-weight: 600;
+//     font-size: 12px;
+//     &:hover img {
+//         transform: rotate(0deg);
+//     }
+//     img {
+//         width: 14px;
+//         height: 14px;
+//         margin-left: 12px;
+//         transform: rotate( -45deg);
+//         transition: $tr linear;
+//         position: relative;
+//         top: -2px;
+//         left: 2px;
+//     }
+// }
+
 .link {
+
+    &:hover {
+        
+        @media (min-width: $minHover) {
+            color: $accent-hover;
+        }
+    }
+
+    &:active {
+        color: $accent-active;
+    }
+}
+
+// Ссылка со стрелкой
+.link_arrow {
+    width: fit-content;
     display: flex;
     align-items: center;
+    font-size: 14px;
     font-weight: 600;
-    font-size: 12px;
-    &:hover img {
-        transform: rotate(0deg);
+    color: $main;
+    // white-space: nowrap;
+
+    &::after {
+        content: '';
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        margin-left: 8px;
+        transition: $tr;
     }
-    img {
-        width: 14px;
-        height: 14px;
-        margin-left: 12px;
-        transform: rotate( -45deg);
-        transition: $tr linear;
-        position: relative;
-        top: -2px;
-        left: 2px;
+
+    &:hover {
+        
+        @media (min-width: $minHover) {
+            
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+// Белая ссылка
+.link_arrow-light {
+    color: #fff;
+    opacity: .7;
+    transition: $tr;
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &:hover {
+        
+        @media (min-width: $minHover) {
+            opacity: 1;
+        }
+    }
+}
+
+// Ссылка в sub-menu
+.link_arrow-sub {
+    color: $main;
+    opacity: .7;
+    transition: $tr;
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &:hover {
+        
+        @media (min-width: $minHover) {
+            opacity: 1;
+        }
     }
 }
 
 // Ссылка отзывы
-.link-otzyv {
+.link-review {
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -120,11 +206,11 @@
     }
 }
 
-.link-otzyv-top {
+.link-review-top {
     transform: translate(13px, -4px);
 }
 
-.link-otzyv-bottom {
+.link-review-bottom {
     transform: translate(6px, -3px);
 }
 

@@ -1,46 +1,85 @@
 .accordion_container-list {
+    position: relative;
     display: flex;
     align-items: flex-start;
     border-bottom: 1px solid #F0EFEF;
     padding-bottom: 31px;
-    margin-bottom: 32px;
-    &.active {
-        .accordion_container-list-icons-btn {
-            background: $second;
-            span{
-                background-color: #fff;
-                &:last-child{
-                    transform: translate(-50%,-50%) rotate(0deg);
-                }
-            }
-        }
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: $tablet-s) {
+        flex-direction: column;
     }
 }
 
-
 .accordion_container-list-header {
+    width: 100%;
+
+    @media (max-width: $tablet-s) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.accordion_container-list-title {
     font-weight: 600;
     font-size: 20px;
-    width: 200px;
+    max-width: 270px;
+    width: 100%;
     line-height: 28px;
+    
+    @media (max-width: $tablet-l) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    @media (max-width: $tablet-s) {
+        max-width: none;
+    }
+}
+
+.accordion_container-list-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    @media (max-width: $tablet-s) {
+        position: initial;
+    }
 }
 
 .accordion_container-list-content {
+    max-width: 303px;
+    width: 100%;
+    max-height: 0;
     overflow: hidden;
-    height: 0;
     margin-left: auto;
     margin-right: 69px;
-    width: 303px;
     transition: $tr linear;
+
+    @media (max-width: 1300px) {
+        margin: 0 40px 0 8px;
+    }
+
+    @media (max-width: $tablet-s) {
+        margin: 24px 0 0 0;
+    }
+
     p {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 35px;
         font-weight: 500;
+
+        @media (max-width: $tablet-s) {
+            margin: 0;
+        }
     }
     .accordion_container-list-link {
         font-size: 14px;
-        
     }
 }
 
@@ -71,6 +110,16 @@
         background: $second;
         span {
             background-color: #fff
+        }
+    }
+    
+    &._show {
+        background: $second;
+        span{
+            background-color: #fff;
+            &:last-child{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
         }
     }
 }

@@ -4,16 +4,41 @@
 }
 
 .why_choose__wrapp {
-    display: flex
+    display: flex;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
 }
 
 .why_choose__left {
     width: 42%;
     margin-right: 25px;
     position: relative;
+
+    @media (max-width: $tablet-l) {
+        width: 40%;
+        margin: 0;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+
     h2 {
         width: 305px;
         line-height: 49px;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.why_choose__left-picture {
+
+    @media (max-width: $tablet) {
+        display: none;
     }
 }
 
@@ -31,5 +56,10 @@
 }
 
 .why_choose__right {
-    width: 60%
+    width: 60%;
+    
+    @media (max-width: $tablet) {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
 }

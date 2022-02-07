@@ -23,6 +23,24 @@ function removeAll(items, itemClass) {
     }
 }
 
+// Получаем все соседние элементы
+function getSiblings(elem) {
+    var siblings = [];
+    var sibling = elem;
+    while (sibling.previousSibling) {
+        sibling = sibling.previousSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
+    }
+
+    sibling = elem;
+    while (sibling.nextSibling) {
+        sibling = sibling.nextSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
+    }
+
+    return siblings;
+}
+
 function bodyLock(con) {
     if (con === true) {
         body.classList.add('_lock');
@@ -120,25 +138,27 @@ function sumbitForm() {
 }
 
 // Мобильное меню
-// menu()
+menu()
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');
 
     // Высота меню
-    window.addEventListener('resize', () => {
-        const headerHeight = find('.header').clientHeight
+    // window.addEventListener('resize', () => {
+    //     const headerHeight = find('.header').clientHeight
 
-        if (window.innerWidth <= 768) {
-            menu.style.paddingTop = headerHeight + 'px'
-        } else {
-            menu.style.paddingTop = 0
-        }
-    })
+    //     if (window.innerWidth <= 768) {
+    //         menu.style.paddingTop = headerHeight + 'px'
+    //     } else {
+    //         menu.style.paddingTop = 0
+    //     }
+    // })
 
     burger.addEventListener('click', (e) => {
         burger.classList.toggle('burger_close')
         menu.classList.toggle('_show')
+        menu.style.height = `calc(100vh - ${find('.header').offsetHeight}px)`
+        console.log(`calc(100vh - ${find('.header').offsetHeight}px)`)
         bodyLock()
     })
 }
@@ -291,10 +311,83 @@ function closeModal(modal) {
 
 const swiper_slider = new Swiper('.actual_offer__slider', {
     speed: 400,
-    slidesPerView: 2,
     spaceBetween: 20,
+
+    breakpoints: {
+        1200: {
+
+        },
+        769: {
+            slidesPerView: 2,
+        },
+        400: {
+            slidesPerView: 1.2,
+
+        }
+    },
+
+    navigation: {
+      nextEl: '.actual_offer__arrow-next',
+      prevEl: '.actual_offer__arrow-prev',
+    },
 });
 
+const swiper_news = new Swiper('.news-slider', {
+    speed: 400,
+    spaceBetween: 20,
+
+    breakpoints: {
+        1200: {
+
+        },
+        769: {
+            slidesPerView: 3,
+            allowTouchMove: false,
+        },
+        0: {
+            slidesPerView: 1.2,
+            allowTouchMove: true,
+        }
+    },
+
+    navigation: {
+      nextEl: '.actual_offer__arrow-next',
+      prevEl: '.actual_offer__arrow-prev',
+    },
+});
+
+// const swiper = new Swiper('.swiper-container', {
+  
+//   slidesPerView: 1, // Кол-во показываемых слайдов
+//   spaceBetween: 0, // Расстояние между слайдами
+//   loop: true, // Бесконечный слайдер
+//   freeMode: true, // Слайдеры не зафиксированны
+
+//   breakpoints: {
+//     1200: {
+
+//     },
+//     700: {
+
+//     },
+//     400: {
+
+//     }
+//   },
+
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   navigation: {
+//     nextEl: '.swiper__arrow-next',
+//     prevEl: '.swiper__arrow-prev',
+//   },
+
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
 
 const swiper_doctors = new Swiper(".our_doctors__slider-main", {
     direction: "vertical",
@@ -318,31 +411,388 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
     },
 });
 
-const swiper_otzivy = new Swiper('.otzivy_wrapp__slider', {
+const swiper_review = new Swiper('.review_wrapp__slider', {
     speed: 400,
     slidesPerView: 2,
     spaceBetween: 20,
     loop: true,
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 2,
+        },
+        920: {
+            slidesPerView: 1.6,
+        },
+        769: {
+            slidesPerView: 2,
+            allowTouchMove: false,
+        },
+        500: {
+            slidesPerView: 1.5,
+            allowTouchMove: false,
+        },
+        0: {
+            slidesPerView: 1,
+            allowTouchMove: true,
+        }
+    },
+
     navigation: {
-        nextEl: ".otzivy__arrow-next",
-        prevEl: ".otzivy__arrow-prev",
+        nextEl: ".review__arrow-next",
+        prevEl: ".review__arrow-prev",
     }
 });
 
+// Первый таб является активным
+firstTabIsActive()
+function firstTabIsActive() {
+  const tabList = document.querySelectorAll('.tab__list')
 
-// Аккордеон 
-function accord(element) {
-    if (element.closest('.accordion_container-list').classList.contains('active')) {
-        element.closest('.accordion_container-list').classList.remove('active');
-        element.closest('.accordion_container-list').querySelector('.accordion_container-list-content').style.height = 0;
-    } else {
-        removeAll('.accordion_container-list', 'active');
-        document.querySelectorAll('.accordion_container-list-content').forEach(el => el.style = null);
-        element.closest('.accordion_container-list').classList.add('active');
-        let height = element.closest('.accordion_container-list').querySelector('.accordion_container-list-content__container').offsetHeight;
-        element.closest('.accordion_container-list').querySelector('.accordion_container-list-content').style.height = height + 'px';
+  for (let i = 0; i < tabList.length; i++) {
+      const tab = tabList[i];
+      const tabElems = tab.querySelectorAll('.tab')
+
+      tabElems[0].classList.add('_active')
+  }
+}
+
+tabs()
+function tabs() {
+  const tabElems = document.querySelectorAll('.tab')
+  
+  for (let i = 0; i < tabElems.length; i++) {
+    const tab = tabElems[i]
+    tab.addEventListener('click', e => {
+        const tabList = tab.parentElement
+        removeAll(tabElems, '_active')
+        tab.classList.add('_active')
+      
+        // tabBlockActive()
+        swipeRoller(tabList)
+    })
+  }
+}
+
+tabRollers()
+function tabRollers() {
+    const tabListElems = findAll('.tab__list')
+
+    for (let i = 0; i < tabListElems.length; i++) {
+        const tabList = tabListElems[i];
+        swipeRoller(tabList)
     }
 }
-document.querySelectorAll('.accordion_container-list-icons').forEach(i => {
-    i.addEventListener('click', e => accord(i));
-});
+
+// swipeRoller()
+function swipeRoller(tabList) {
+    const roller = tabList.querySelector('.tab__roller')
+    const tabActive = tabList.querySelector('.tab._active')
+    
+    roller.style.width = tabActive.scrollWidth + 'px' // Определяем ширину ползунка
+    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+}
+
+// tabBlockActive()
+function tabBlockActive() {
+    const tabActive = document.querySelector('.tab._active'),
+          dataTab = tabActive.dataset.tab,
+          blockElems = document.querySelectorAll('.tabs__block'),
+          blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+      
+    removeAll(blockElems, '_show')
+    for (let i = 0; i < blockShowElems.length; i++) {
+      blockShowElems[i].classList.add('_show')
+    }
+}
+
+// Аккордеоны
+accordions()
+function accordions() {
+  const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
+  const accOpenElems = document.querySelectorAll('.acc-open')
+  
+  for (let i = 0; i < accOpenElems.length; i++) {
+    const accOpen = accOpenElems[i]
+    
+    accOpen.addEventListener('click', e => {
+      const container = (!accOpen.closest('.acc-body')) ? accOpen.parentElement.parentElement : accOpen.closest('.acc-body')
+      const parent = accOpen.closest('.acc')
+      const accBody = parent.querySelector('.acc-body')
+
+      parent.classList.toggle('_show') 
+      accOpen.classList.toggle('_show') 
+      
+      if (accBody.style.maxHeight) { 
+        accBody.style.maxHeight = null
+        parent.classList.remove('_show') 
+        accOpen.classList.remove('_show') 
+      }
+      else {
+        const adjacentElems = getSiblings(parent)
+        
+        if (hiddenSiblingAcc) {
+          for (let i = 0; i < adjacentElems.length; i++) {
+            const elem = adjacentElems[i]
+            const elemHeader = elem.querySelector('.acc-open')
+            const elemBody = elem.querySelector('.acc-body')
+
+            elem.classList.remove('_show') 
+            elemHeader.classList.remove('_show')  
+            elemBody.style.maxHeight = null
+          }
+        }
+        
+        accBody.style.maxHeight = accBody.scrollHeight + 'px'
+        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+      }
+    })
+  }
+}
+
+// Подгрузка данных в меню при наведении на пункты
+if (window.innerWidth >= 920) {
+    showSubMenuDesktop()
+}
+function showSubMenuDesktop() {
+    const menu = find('.menu')
+
+    menu.addEventListener('mousemove', e => {
+        let target = e.target
+        
+        if (target.classList.contains('menu__link') || target.classList.contains('sub-menu__link')) {
+            const item = target
+            const subMenu = item.dataset.subMenu
+            const dSubMenu = item.dataset.dSubMenu
+            const listSubMenu = document.getElementById('sub-menu')
+            const listDSubMenu = document.getElementById('d-sub-menu')
+
+            if (!item.classList.contains('_active')) {
+                
+                if (subMenu) {
+                    removeAll('.menu__link', '_active')
+                    item.classList.add('_active')
+
+                    fetch('../sub-menu-db.json')
+                        .then(res => res.json())
+                        .then(json => {
+                            let arr = []
+
+                            for (let i = 0; i < json.length; i++) {
+                                const elem = json[i];
+
+                                if (elem.category === subMenu) {
+                                    arr.push(elem)
+                                }
+                            }
+                            return arr
+                        })
+                        .then(arr => {
+                            setLinksToSubMenu(arr, listSubMenu)
+                        })
+                }
+                else if (subMenu === '') {
+                    removeAll('.menu__link', '_active')
+                    clearSubMenu()
+                    clearDSubMenu()
+                }
+
+                if (dSubMenu) {
+                    removeAll('.sub-menu__link', '_active')
+                    item.classList.add('_active')
+
+                    fetch('../d-sub-menu-db.json')
+                        .then(res => res.json())
+                        .then(json => {
+                            let arr = []
+
+                            for (let i = 0; i < json.length; i++) {
+                                const elem = json[i];
+
+                                if (elem.category === dSubMenu) {
+                                    arr.push(elem)
+                                }
+                            }
+                            return arr
+                        })
+                        .then(arr => {
+                            setLinksToSubMenu(arr, listDSubMenu, item)
+                        })
+
+                }
+                else if (dSubMenu === '') {
+                    removeAll('.sub-menu__link', '_active')
+                    clearDSubMenu()
+                }
+            }
+        }
+    })
+}
+
+// Показываем пункты меню на планшете
+if (window.innerWidth < 920) {
+    showSubMenuTablet()
+}
+function showSubMenuTablet() {
+    const itemElems = findAll('.menu__link')
+
+    for (let i = 0; i < itemElems.length; i++) {
+        const item = itemElems[i]
+        const subMenu = item.dataset.subMenu
+        const listSubMenu = document.getElementById('sub-menu')
+
+        item.addEventListener('click', e => {
+            if (!item.classList.contains('_active')) {
+            
+                if (subMenu) {
+                    removeAll('.menu__link', '_active')
+                    item.classList.add('_active')
+
+                    fetch('../sub-menu-db.json')
+                        .then(res => res.json())
+                        .then(json => {
+                            let arr = []
+
+                            for (let i = 0; i < json.length; i++) {
+                                const elem = json[i];
+
+                                if (elem.category === subMenu) {
+                                    arr.push(elem)
+                                }
+                            }
+                            return arr
+                        })
+                        .then(arr => {
+                            setBlocksToSubMenu(arr, listSubMenu)
+                        })
+                }
+                else if (subMenu === '') {
+                    removeAll('.menu__link', '_active')
+                    clearSubMenu()
+                    clearDSubMenu()
+                }
+            }
+        })
+    }
+}
+
+// Получаем данные исходя из активного элемента для создания подменю
+// getDataMenu()
+function getDataMenu(item) {
+}
+
+// Вставить полученные данные из БД в меню
+function setLinksToSubMenu(arr, list, selectedItem) {
+    list.innerHTML = ''
+    clearDSubMenu()
+
+    for (let i = 0; i < arr.length; i++) {
+        const elem = arr[i];
+        const item = document.createElement('li')
+        const delay = 20
+
+        // console.log(list)
+        if (list.dataset.menu === 'sub-menu') {
+            const childTitle = elem.child != false ? elem.child : ''
+
+            item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
+            // item.innerHTML = `<a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>`
+            item.innerHTML = `
+                <div class="acc-header sub-menu__item-header">
+                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
+                </div>
+                <ul class="acc-body sub-menu__item-list"></ul>
+            `
+        }
+        if (list.dataset.menu === 'd-sub-menu') {
+            const dSubMenuTitle = document.getElementById('d-sub-menu-title')
+            dSubMenuTitle.innerText = selectedItem.innerText
+
+            item.classList.add('d-sub-menu__item', 'show-menu-item')
+            item.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
+        }
+
+        item.style.animationDelay = (i+1)*delay + 'ms'
+        list.append(item)
+    }
+}
+
+// Вставить полученные данные из БД в меню сразу с подменю для мобильной версии и планшета
+function setBlocksToSubMenu(arr, list) {
+    list.innerHTML = ''
+    clearDSubMenu()
+
+    for (let i = 0; i < arr.length; i++) {
+        const elem = arr[i];
+        const item = document.createElement('li')
+        const delay = 20
+
+        if (list.dataset.menu === 'sub-menu') {
+            const childTitle = elem.child != false ? elem.child : ''
+
+            getDataDSubMenuForMobile(childTitle)
+                .then(arr => {
+                    const html = dataToHTML(arr)
+
+                    if (html != '') {
+                        item.classList.add('acc')
+                    }
+
+                    item.classList.add('sub-menu__item', 'show-menu-item')
+                    item.innerHTML = `
+                        <div class="${(html != '') ? 'acc-header' : ''} sub-menu__item-header">
+                            <a href="javascript:void(0)" class="${(html != '') ? 'acc-open' : ''} link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
+                        </div>
+                        <ul class="${(html != '') ? 'acc-body' : ''} sub-menu__item-list">${html}</ul>
+                    `
+                })
+                .then(e => {
+                    item.style.animationDelay = (i+1)*delay + 'ms'
+                    list.append(item)
+                })
+                .then(e => {
+                    accordions()
+                })
+        }
+    }
+}
+
+// Получить данные d-sub-menu для планшета и мобилы
+function getDataDSubMenuForMobile(cat) {
+    return fetch('../d-sub-menu-db.json')
+        .then(data => data.json())
+        .then(json => {
+            let arr = []
+
+            for (let i = 0; i < json.length; i++) {
+                const elem = json[i];
+
+                if (elem.category === cat) {
+                    arr.push(elem)
+                }
+            }
+
+            return arr
+        })
+}
+
+// Из полученных данных составляем html
+function dataToHTML(arr) {
+    return arr.map(elem => {
+        return `<li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">${elem.title}</a></li>`
+    }).join('')
+}
+
+// Отчистить sub-menu
+function clearSubMenu() {
+    const subMenu = document.getElementById('sub-menu')
+    subMenu.innerHTML = ''
+}
+
+// Отчистить d-sub-menu
+function clearDSubMenu() {
+    const dSubMenu = document.getElementById('d-sub-menu')
+    const dSubMenuTitle = document.getElementById('d-sub-menu-title')
+    dSubMenu.innerHTML = ''
+    dSubMenuTitle.innerText = ''
+}
