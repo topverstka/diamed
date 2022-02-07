@@ -321,9 +321,8 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
         769: {
             slidesPerView: 2,
         },
-        400: {
+        0: {
             slidesPerView: 1.2,
-
         }
     },
 
@@ -550,7 +549,7 @@ function tabBlockActive() {
 }
 
 // Анимация пересчета цифр
-// appearAnimationNumber()
+appearAnimationNumber()
 function appearAnimationNumber() {
     const appearElems = findAll('[data-appear-animation=number]')
 
@@ -558,8 +557,9 @@ function appearAnimationNumber() {
         const elem = appearElems[i];
         const number = elem.innerText
         const nums = generatorFreeNum(number)
+        const html = generatorHTMLFromNum(number)
 
-        console.log(nums)
+        console.log(nums, html)
     }
 }
 
@@ -575,7 +575,10 @@ function generatorFreeNum(num) {
     return arr
 }
 
-// 
+// Собирает массив из строки и генерирует html
+function generatorHTMLFromNum(value) {
+    return value.split('').map(e => `<span>${e}</span>`).join('')
+}
 
 // Аккордеоны
 accordions()

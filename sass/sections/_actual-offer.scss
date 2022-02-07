@@ -38,6 +38,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: row-reverse;
+    justify-content: space-between;
     margin-bottom: 37px;
 
     @media (max-width: $tablet-s) {
@@ -61,7 +62,7 @@
 }
 
 .actual_offer__slider-header-text {
-    margin-left: auto;
+    // margin-left: auto;
 
     @media (max-width: $tablet-s) {
         margin: 0;
