@@ -393,21 +393,58 @@ const swiper_doctors = new Swiper(".our_doctors__slider-main", {
     direction: "vertical",
     loop: true,
     slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     // freeMode: true,
     watchSlidesProgress: true,
 });
+
+swiper_doctors.on('slideChange', e => {
+    const slider = e.wrapperEl
+    const slideActive = slider.querySelector('.swiper-slide-next')
+    const elemName = document.getElementById('doctor-name')
+    const elemPost = document.getElementById('doctor-post')
+
+    elemName.innerText = slideActive.dataset.doctorName
+    elemPost.innerText = slideActive.dataset.doctorPost
+
+    // console.log(dName, dPost)
+})
+
 const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
-    direction: "vertical",
-    loop: true,
-    spaceBetween: 16,
-    slidesPerView: 5,
-    slideToClickedSlide: true,
+    // direction: "vertical",
+    // loop: true,
+    // spaceBetween: 16,
+    // slidesPerView: 'auto',
+    // slideToClickedSlide: true,
+    // centeredSlides: true,
     navigation: {
         nextEl: ".our_doctors__arrow-next",
         prevEl: ".our_doctors__arrow-prev",
     },
     thumbs: {
         swiper: swiper_doctors,
+    },
+
+    breakpoints: {
+        1200: {
+
+        },
+        930: {
+            // direction: "vertical",
+        },
+        0: {
+            loop: true,
+            allowTouchMove: false,
+            // direction: "horizontal",
+            slidesPerView: 'auto',
+            // slideToClickedSlide: true,
+            spaceBetween: 16,
+            // slidesPerView: 1.2,
+            // allowTouchMove: true,
+        }
     },
 });
 

@@ -1457,7 +1457,7 @@ h2 {
 
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header_info {
@@ -2604,6 +2604,12 @@ h2 {
   margin-bottom: 30px;
 }
 
+@media (max-width: 920px) {
+  .our_doctors h2 {
+    margin-bottom: 32px;
+  }
+}
+
 .our_doctors .container {
   position: relative;
 }
@@ -2612,9 +2618,15 @@ h2 {
   margin-bottom: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .our_doctors .our_doctors__tabs {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 920px) {
+  .our_doctors > .container {
+    padding: 0;
   }
 }
 
@@ -2623,6 +2635,16 @@ h2 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 920px) {
+  .our_doctors__wrapp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .our_doctors__background {
@@ -2649,6 +2671,19 @@ h2 {
   z-index: 9;
 }
 
+@media (max-width: 1050px) {
+  .our_doctors__info {
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 920px) {
+  .our_doctors__info {
+    padding: 0 24px;
+    margin: 0;
+  }
+}
+
 .our_doctors__info .swiper__arrow {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -2657,9 +2692,21 @@ h2 {
   margin-top: 32px;
 }
 
+@media (max-width: 920px) {
+  .our_doctors__info .swiper__arrow {
+    margin-bottom: 32px;
+  }
+}
+
 .our_doctors__more {
   margin: auto 0 52px;
   font-size: 14px;
+}
+
+@media (max-width: 920px) {
+  .our_doctors__more {
+    display: none;
+  }
 }
 
 .our_doctors__info-initial-header {
@@ -2678,10 +2725,65 @@ h2 {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  width: 600px;
+  -ms-grid-columns: 1fr 139px;
+      grid-template-columns: 1fr 139px;
+  -webkit-column-gap: 65px;
+     -moz-column-gap: 65px;
+          column-gap: 65px;
   height: 704px;
+}
+
+@media (max-width: 1200px) {
+  .our_doctors__slider {
+    -webkit-column-gap: 24px;
+       -moz-column-gap: 24px;
+            column-gap: 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .our_doctors__slider {
+    height: 600px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .our_doctors__slider {
+    -ms-grid-columns: 1fr 100px;
+        grid-template-columns: 1fr 100px;
+  }
+}
+
+@media (max-width: 930px) {
+  .our_doctors__slider {
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .our_doctors__slider {
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
 }
 
 .our_doctors__slider .swiper-wrapper {
@@ -2702,26 +2804,38 @@ h2 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
 }
 
 .our_doctors__slider-main {
-  width: 544px;
+  max-width: 544px;
   height: 100%;
   overflow: hidden;
-  margin-right: 65px;
+}
+
+@media (max-width: 920px) {
+  .our_doctors__slider-main {
+    max-width: none;
+    height: 525px;
+  }
 }
 
 .our_doctors__slider-all {
-  width: 139px;
   height: 100%;
+  margin-top: 40px;
   overflow: hidden;
 }
 
 .our_doctors__slider-all .swiper-slide {
   opacity: 0.6;
-  height: 139px !important;
+  width: 139px;
+  height: 139px;
+}
+
+@media (max-width: 1000px) {
+  .our_doctors__slider-all .swiper-slide {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .our_doctors__slider-all .swiper-slide.swiper-slide-active {
@@ -2729,8 +2843,6 @@ h2 {
 }
 
 .our_doctors__slider-all img {
-  width: 139px;
-  height: 139px;
   -webkit-border-radius: var(--radius2);
           border-radius: var(--radius2);
 }
