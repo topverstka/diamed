@@ -6027,12 +6027,7 @@ h2 {
 @media (max-width: 500px) {
   .menu-left {
     max-width: none;
-  }
-}
-
-@media (max-width: 425px) {
-  .menu-left {
-    padding: 10px 20px 70px;
+    padding: 10px 0 70px;
   }
 }
 
@@ -6050,6 +6045,12 @@ h2 {
   }
 }
 
+@media (max-width: 500px) {
+  .menu-left__item .menu__link {
+    border-bottom: 0.5px solid #C4E0E5;
+  }
+}
+
 .menu-left__item-list {
   max-height: 0;
   background: var(--header-bg);
@@ -6057,6 +6058,12 @@ h2 {
   -webkit-transition: var(--tr);
   -o-transition: var(--tr);
   transition: var(--tr);
+}
+
+@media (max-width: 500px) {
+  .menu-left__item-list {
+    padding: 0 20px;
+  }
 }
 
 .menu__link {
@@ -6076,7 +6083,8 @@ h2 {
 @media (max-width: 500px) {
   .menu__link {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 0;
+    margin: 0 20px;
   }
   .menu__link:not(:last-child) {
     display: block;
