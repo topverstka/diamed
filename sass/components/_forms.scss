@@ -31,18 +31,18 @@
             font-size: 12px;
             color: #fff;
             opacity: .5;
-            transform: translate(0, calc(-50% - 44px));
+            bottom: 34px;
         }
     }
-    &:not(:placeholder-shown).form-elem__area:not(:focus) {
-        // border: 1px solid $accent;
-        &+.form-elem__label {
-            font-size: 12px;
-            color: #fff;
-            opacity: .5;
-            transform: translate(0, calc(-50% - 9px));
-        }
-    }
+    // &:not(:placeholder-shown).form-elem__area:not(:focus) {
+    //     // border: 1px solid $accent;
+    //     &+.form-elem__label {
+    //         font-size: 12px;
+    //         color: #fff;
+    //         opacity: .5;
+    //         transform: translate(0, calc(-50% - 9px));
+    //     }
+    // }
     &._error {
         border: 1px solid $error !important;
         &+.form-elem__label {
