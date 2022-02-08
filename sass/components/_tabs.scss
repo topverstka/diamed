@@ -71,10 +71,14 @@
         color: $main;
     }
 
+    &:active{
+        opacity: 0.7;
+    }
+
     @media (min-width: $minHover) {
         
         &:hover {
-            color: $main;
+            color: $second; 
         }
     }
 }
