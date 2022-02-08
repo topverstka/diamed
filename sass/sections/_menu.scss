@@ -5,6 +5,7 @@
     width: 100%;
     transition: $tr;
     overflow-y: auto; 
+    // overflow-x: hidden; 
     
     &._show {
         transform: translate(0, 100%);
@@ -118,7 +119,7 @@
     @media (max-width: $tablet) {
         max-width: 374px;
         width: 100%;
-        padding: 40px 0 80px;
+        padding: 40px 20px 32px;
     }
 
     @media (max-width: 600px) {
@@ -132,15 +133,17 @@
 }
 
 .menu-left__list {
-
+    margin-bottom: 32px;
 }
 
 .menu-left__item {
 
     &._show {
 
-        & .menu-left__item-list {
-            padding: 24px 20px;
+        @media (max-width: $tablet-s) {
+            & .menu-left__item-list {
+                padding: 24px 20px;
+            }
         }
     }
 
@@ -153,21 +156,32 @@
     }
 
     @media (max-width: $tablet-s) {
-        // padding: 0 20px;
+        // position: relative;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 20px;
+        //     width: calc(100% - 40px);
+        //     height: .5px;
+        //     background: #C4E0E5;
+        // }
         
         & .menu__link {
-            border-bottom: 0.5px solid #C4E0E5;
         }
     }
 }
 
 .menu-left__item-list {
-    max-height: 0;
-    background: $header-bg;
-    overflow: hidden;
-    transition: $tr;
-
+    display: none;
+    
     @media (max-width: $tablet-s) {
+        display: block;
+        max-height: 0;
+        background: $header-bg;
+        overflow: hidden;
+        transition: $tr;
         padding: 0 20px;
     }
 }
@@ -185,12 +199,11 @@
 
     @media (max-width: $tablet-s) {
         width: 100%;
-        padding: 12px 0;
-        margin: 0 20px;
+        padding: 12px 20px;
 
         &:not(:last-child) {
-            display: block;
-            border-bottom: 0.5px solid #C4E0E5;
+            // display: block;
+            // border-bottom: 0.5px solid #C4E0E5;
         }
 
         &._show {
@@ -211,13 +224,13 @@
 .menu-left__footer {
     margin: auto 0 0 0;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-s) {
         padding: 0 20px;
     }
 
-    @media (max-width: $mobile-l) {
-        margin: 32px 0 0 0;
-    }
+    // @media (max-width: $mobile-l) {
+    //     margin: 32px 0 0 0;
+    // }
 }
 
 .menu-left__footer-bottom {

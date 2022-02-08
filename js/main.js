@@ -158,7 +158,6 @@ function menu() {
         burger.classList.toggle('burger_close')
         menu.classList.toggle('_show')
         menu.style.height = `calc(100vh - ${find('.header').offsetHeight}px)`
-        console.log(`calc(100vh - ${find('.header').offsetHeight}px)`)
         bodyLock()
     })
 }
