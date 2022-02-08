@@ -71,8 +71,11 @@
         color: $main;
     }
 
-    &:hover {
-        color: $main;
+    @media (min-width: $minHover) {
+        
+        &:hover {
+            color: $main;
+        }
     }
 }
 

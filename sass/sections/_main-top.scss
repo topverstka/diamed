@@ -84,13 +84,19 @@
         transition: $tr ease;
         cursor: pointer;
         border-bottom: 5px solid #fff;
-        &:hover {
-            border-bottom: 5px solid #4BB9B5;
-            & .main_top__wrapper-list-hover {
-                opacity: 1;
-            }
-            & .main_top__wrapper-list-picture {
-                display: none
+
+        @media (min-width: $minHover) {
+            
+            &:hover {
+                border-bottom: 5px solid #4BB9B5;
+
+                & .main_top__wrapper-list-hover {
+                    opacity: 1;
+                }
+
+                & .main_top__wrapper-list-picture {
+                    display: none
+                }
             }
         }
     }

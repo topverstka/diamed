@@ -7,6 +7,10 @@
 
     &:not(:last-child) {
         margin-bottom: 32px;
+
+        @media (max-width: $mobile-l) {
+            margin-bottom: 20px;
+        }
     }
 
     &::after {
@@ -19,8 +23,27 @@
         background: #F0EFEF;
     }
 
+    &._show {
+        
+        & .accordion_container-list-content {
+            margin-top: 24px;
+
+            @media (max-width: 1300px) {
+                margin-top: 40px;
+            }
+        
+            @media (max-width: $tablet-s) {
+                margin-top: 24px 0 0 0;
+            }
+        }
+    }
+
     @media (max-width: $tablet-s) {
         flex-direction: column;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding-bottom: 20px;
     }
 }
 
@@ -71,13 +94,13 @@
     margin-right: 69px;
     transition: $tr linear;
 
-    @media (max-width: 1300px) {
-        margin: 0 40px 0 8px;
-    }
+    // @media (max-width: 1300px) {
+    //     margin-right: 8px;
+    // }
 
-    @media (max-width: $tablet-s) {
-        margin: 24px 0 0 0;
-    }
+    // @media (max-width: $tablet-s) {
+    //     margin: 24px 0 0 0;
+    // }
 
     p {
         font-size: 16px;
@@ -117,10 +140,14 @@
             transform: translate(-50%,-50%) rotate(90deg);
         }
     }
-    &:hover {
-        background: $second;
-        span {
-            background-color: #fff
+
+    @media (min-width: $minHover) {
+        
+        &:hover {
+            background: $second;
+            span {
+                background-color: #fff
+            }
         }
     }
     

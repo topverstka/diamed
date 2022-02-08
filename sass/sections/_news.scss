@@ -35,10 +35,17 @@
 
 .news_wrapper-item {
 
-    &:hover{
+    @media (min-width: $minHover) {
+        
+        &:hover {
+            
+            .news_wrapper-item-header{
+                color: $second;
+            }
 
-        img{
-            transform: scale(1.1);
+            img {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -92,11 +99,5 @@
 
     @media (max-width: $mobile-l) {
         font-size: 14px;
-    }
-}
-
-.news_wrapper-item:hover{
-    .news_wrapper-item-header{
-        color: $second;
     }
 }

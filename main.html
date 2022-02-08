@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="menu">
+            <div class="menu _show">
                 <div class="menu__header">
                     <button class="btn menu__header-appointment">Записаться на прием</button>
                     <div class="menu__header-tel">
@@ -101,7 +101,7 @@
                 <div class="menu__wrap">
                     <div class="menu-left">
                         <ul class="menu-left__list">
-                            <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>О сети клиник</a></li>
+                            <!-- <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>О сети клиник</a></li>
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Акции и новости</a></li>
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Коллектив</a></li>
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Наши цены</a></li>
@@ -109,7 +109,48 @@
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a></li>
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Ответы на вопросы</a></li>
                             <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Отзывы</a></li>
-                            <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Контакты</a></li>
+                            <li class="menu-left__item"><a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link" data-sub-menu>Контакты</a></li> -->
+                            
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">О сети клиник</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Акции и новости</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Коллектив</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Наши цены</a>
+                            </li>
+                            <li class="acc menu-left__item">
+                                <div class="acc-header menu-left__header">
+                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
+                                </div>
+                                <ul class="acc-body menu-left__item-list"></ul>
+                            </li>
+                            <li class="acc menu-left__item">
+                                <div class="acc-header menu-left__header">
+                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
+                                </div>
+                                <ul class="acc-body menu-left__item-list"></ul>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Ответы на вопросы</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Отзывы</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Контакты</a>
+                            </li>
+
+                            <!-- <li class="acc sub-menu__item show-menu-item _show" style="animation-delay: 140ms; max-height: 144px;">
+                                <div class="acc-header sub-menu__item-header">
+                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link _show" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                </div>
+                                <ul class="acc-body sub-menu__item-list" style="max-height: 120px;"><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Брэкеты</a></li><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Детская пластинка для ровных зубов</a></li></ul>
+                            </li> -->
                         </ul>
                         <div class="menu-left__footer">
                             <div class="menu-left__schedule">
@@ -143,129 +184,11 @@
                     <div class="menu-right">
                         <div class="menu-right__body">
                             <div class="sub-menu">
-                                <ul class="sub-menu__list" id="sub-menu" data-menu="sub-menu">
-                                    <!-- <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Эстетическая стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list" data-menu="d-sub-menu">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Хирургическая стоматология и имплантация</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Ортопедическая стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Цифровая стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Антистресс-лечение</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Гигиеническая стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Пародонтология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                        </ul>
-                                    </li> -->
-                                    <!-- <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Хирургическая стоматология и имплантация</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Ортопедическая стоматология</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Цифровая стоматология</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Антистресс-лечение</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Гигиеническая стоматология</a></li>
-                                    <li class="sub-menu__item"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>Пародонтология</a></li> -->
-                                </ul>
+                                <ul class="sub-menu__list" id="sub-menu" data-menu="sub-menu"></ul>
                             </div>
                             <div class="d-sub-menu">
                                 <h3 class="d-sub-menu__title" id="d-sub-menu-title"></h3>
-                                <ul class="d-sub-menu__list" id="d-sub-menu" data-menu="d-sub-menu">
-                                    <!-- <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости рта</a></li>
-                                    <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                    <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                    <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                    <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM 4</a></li> -->
-                                </ul>
+                                <ul class="d-sub-menu__list" id="d-sub-menu" data-menu="d-sub-menu"></ul>
                             </div>
                         </div>
                         <div class="menu-right__footer">

@@ -22,33 +22,77 @@
     @media (max-width: $tablet) {
         display: flex;
     }
+
+    @media (max-width: $mobile-l) {
+        padding: 24px 20px 14px;
+    }
 }
 
 .menu__header-appointment {
     font-size: 14px;
     padding: 12px 16px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-l) {
+        max-width: 178px;
+        width: 100%;
+        font-size: 12px;
+        padding: 14px 8px;
+        white-space: initial;
+    }
 }
 
 .menu__header-tel {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @media (max-width: $mobile-l) {
+        min-width: 115px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 8px;
+    }
 }
 
 .menu__header-tel-text {
     font-size: 14px;
     font-weight: 400;
 
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+    }
 }
 
 .menu__header-tel-link {
     font-size: 14px;
     font-weight: 600;
     margin-left: 20px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+        margin-left: 0;
+    }
 }
 
 .menu__wrap {
-    display: flex;
     min-height: 750px;
     height: 750px;
+    display: flex;
+
+    @media (max-width: $tablet-s) {
+        position: relative; 
+    }
+
+    @media (max-width: $tablet-s) {
+        min-height: auto;
+        height: auto;
+    }
+
+    @media (max-width: $mobile-l) {
+        min-height: auto;
+        height: auto;
+    }
 }
 
 // Левая часть
@@ -74,11 +118,19 @@
     @media (max-width: $tablet) {
         max-width: 374px;
         width: 100%;
-        padding: 40px 20px 32px;
+        padding: 40px 0 80px;
     }
 
     @media (max-width: 600px) {
         max-width: 260px;
+    }
+
+    @media (max-width: $tablet-s) {
+        max-width: none;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 10px 20px 70px;
     }
 }
 
@@ -88,9 +140,38 @@
 
 .menu-left__item {
 
+    &._show {
+
+        & .menu-left__item-list {
+            padding: 24px 20px;
+        }
+    }
+
     &:not(:last-child) {
         margin-bottom: 22px;
+
+        @media (max-width: $tablet-s) {
+            margin: 0;
+        }
     }
+
+    @media (max-width: $tablet-s) {
+        
+        &:not(:first-child) {
+            
+        }
+    }
+}
+
+.menu-left__item-list {
+    max-height: 0;
+    background: $header-bg;
+    overflow: hidden;
+    transition: $tr;
+
+    // @media (max-width: $tablet-s) {
+    //     padding: 24px 20px;
+    // }
 }
 
 .menu__link {
@@ -104,6 +185,24 @@
         }
     }
 
+    @media (max-width: $tablet-s) {
+        width: 100%;
+        padding: 12px 20px;
+
+        &:not(:last-child) {
+            display: block;
+            border-bottom: 0.5px solid #C4E0E5;
+        }
+
+        &._show {
+            opacity: 1;
+    
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
     @media (max-width: 600px) {
         font-size: 16px;
     }
@@ -112,6 +211,14 @@
 // Подвал
 .menu-left__footer {
     margin: auto 0 0 0;
+
+    @media (max-width: $tablet) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin: 32px 0 0 0;
+    }
 }
 
 .menu-left__footer-bottom {
@@ -179,6 +286,8 @@
 
 // Заполните анкету
 .menu-left__schedule {
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-left__schedule-title {
@@ -193,6 +302,10 @@
 
     @media (max-width: $tablet) {
         font-size: 14px;
+    }
+
+    @media (max-width: $tablet-s) {
+        margin-top: 16px;
     }
 }
 
@@ -209,12 +322,21 @@
         padding: 54px 50px;
     }
 
+    @media (max-width: 1000px) {
+        padding-right: 12px;
+    }
+
     @media (max-width: $tablet-l) {
         padding: 42px 32px;
     }
 
     @media (max-width: $tablet) {
         padding: 42px 20px 32px 20px;
+    }
+
+    @media (max-width: $tablet-s) {
+        padding: 0;
+        width: 0;
     }
 }
 
@@ -225,6 +347,19 @@
     justify-content: space-between;
     margin: 0 0 24px 0;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #cecece;
+        border-radius: $radius;
+    }
+
+    @media (max-width: $tablet-s) {
+        display: none;
+    }
 }
 
 // Анимация появления пунктов меню
@@ -256,6 +391,10 @@
             margin: 16px 0 8px 12px;
         }
     }
+
+    // @media (max-width: $tablet-s) {
+    //     padding: 0 20px;
+    // }
 }
 
 .sub-menu__item-header {
@@ -336,6 +475,18 @@
 // Соц. сети
 .menu-right__footer {
     margin: auto 0 0 0;
+
+    @media (max-width: $tablet-s) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $header-bg;
+        padding: 16px 20px;
+    }
 }
 
 .menu-right__social-list {
@@ -372,6 +523,11 @@
 .menu-right__univer-icon {
     width: 32px;
     height: 32px;
+
+    @media (max-width: $tablet-s) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .menu-right__univer-text { 
@@ -380,4 +536,9 @@
     font-size: 14px;
     font-weight: 400;
     margin-left: 10px;
+
+    @media (max-width: $tablet-s) {
+        max-width: none;
+        font-size: 10px;
+    }
 }

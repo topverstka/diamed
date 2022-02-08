@@ -634,48 +634,101 @@ function doAnimWithDelay(array, _class, transition) {
     }, transition)
 }
 
-// Аккордеоны
-accordions()
-function accordions() {
-  const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
-  const accOpenElems = document.querySelectorAll('.acc-open')
-  
-  for (let i = 0; i < accOpenElems.length; i++) {
-    const accOpen = accOpenElems[i]
+// Показываем пункты меню на планшете
+if (window.innerWidth <= 500) {
+    showSubMenuMobile()
+}
+function showSubMenuMobile() {
+    const itemElems = findAll('[data-sub-menu]')
+
+    for (let i = 0; i < itemElems.length; i++) {
+        const item = itemElems[i];
+        const subMenu = item.dataset.subMenu
+        const listSubMenu = item.parentElement.nextElementSibling
+        
+        fetch('../sub-menu-db.json')
+            .then(res => res.json())
+            .then(json => {
+                let arr = []
     
-    accOpen.addEventListener('click', e => {
-      const container = (!accOpen.closest('.acc-body')) ? accOpen.parentElement.parentElement : accOpen.closest('.acc-body')
-      const parent = accOpen.closest('.acc')
-      const accBody = parent.querySelector('.acc-body')
-
-      parent.classList.toggle('_show') 
-      accOpen.classList.toggle('_show') 
-      
-      if (accBody.style.maxHeight) { 
-        accBody.style.maxHeight = null
-        parent.classList.remove('_show') 
-        accOpen.classList.remove('_show') 
-      }
-      else {
-        const adjacentElems = getSiblings(parent)
+                for (let i = 0; i < json.length; i++) {
+                    const elem = json[i];
+    
+                    if (elem.category === subMenu) {
+                        arr.push(elem)
+                    }
+                }
+                return arr
+            })
+            .then(arr => {
+                setSubMenuMobile(arr, listSubMenu)
+            })
+            .then(e => {
+                const dItemElems = item.parentElement.nextElementSibling.querySelectorAll('[data-d-sub-menu]')
         
-        if (hiddenSiblingAcc) {
-          for (let i = 0; i < adjacentElems.length; i++) {
-            const elem = adjacentElems[i]
-            const elemHeader = elem.querySelector('.acc-open')
-            const elemBody = elem.querySelector('.acc-body')
+                for (let i = 0; i < dItemElems.length; i++) {
+                    const dItem = dItemElems[i];
+                    const dItemData = dItem.dataset.dSubMenu
+                    const dItemList = dItem.parentElement.nextElementSibling
+                    console.log(dItem)
+        
+                    getDataDSubMenuForMobile(dItemData)
+                        .then(arr => {
+                            if (arr.length != 0) {
 
-            elem.classList.remove('_show') 
-            elemHeader.classList.remove('_show')  
-            elemBody.style.maxHeight = null
-          }
+                                for (let i = 0; i < arr.length; i++) {
+                                    const elem = arr[i];
+                                    
+                                    // console.log(elem)
+                                    const elemLI = document.createElement('li')
+                        
+                                    elemLI.classList.add('d-sub-menu__item', 'show-menu-item')
+                                    elemLI.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
+                                    
+                                    // console.log(elemLI)
+                                    dItemList.append(elemLI)
+                                }
+
+                                console.log(dItem.parentElement.parentElement.parentElement)
+                                // accordions(dItem.parentElement.parentElement.parentElement)
+                            }
+                        })
+                        
+                }
+            })
+            .then(e => {
+                accordions(listSubMenu)
+            })
+
+    }
+
+    function setSubMenuMobile(arr, list) {
+        
+        for (let i = 0; i < arr.length; i++) {
+            const elem = arr[i];
+            const item = document.createElement('li')
+            const childTitle = elem.child != false ? elem.child : ''
+            
+            if (elem.child === false) {
+                item.classList.add('sub-menu__item', 'show-menu-item')
+                item.innerHTML = `
+                    <a href="#" class="link_arrow link_arrow-sub sub-menu__link">${elem.title}</a>
+                `
+            }
+            else {
+                item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
+                item.innerHTML = `
+                    <div class="acc-header sub-menu__item-header">
+                        <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>
+                    </div>
+                    <ul class="acc-body sub-menu__item-list"></ul>
+                `
+            }
+
+            // console.log(item)
+            list.append(item)
         }
-        
-        accBody.style.maxHeight = accBody.scrollHeight + 'px'
-        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
-      }
-    })
-  }
+    }
 }
 
 // Подгрузка данных в меню при наведении на пункты
@@ -758,7 +811,7 @@ function showSubMenuDesktop() {
 }
 
 // Показываем пункты меню на планшете
-if (window.innerWidth < 920) {
+if (window.innerWidth < 920 && window.innerWidth > 500) {
     showSubMenuTablet()
 }
 function showSubMenuTablet() {
@@ -806,10 +859,10 @@ function showSubMenuTablet() {
 
 // Получаем данные исходя из активного элемента для создания подменю
 // getDataMenu()
-function getDataMenu(item) {
-}
+// function getDataMenu(item) {
+// }
 
-// Вставить полученные данные из БД в меню
+// Вставить полученные данные из БД в подменю
 function setLinksToSubMenu(arr, list, selectedItem) {
     list.innerHTML = ''
     clearDSubMenu()
@@ -819,18 +872,24 @@ function setLinksToSubMenu(arr, list, selectedItem) {
         const item = document.createElement('li')
         const delay = 20
 
-        // console.log(list)
         if (list.dataset.menu === 'sub-menu') {
             const childTitle = elem.child != false ? elem.child : ''
 
-            item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
-            // item.innerHTML = `<a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>`
-            item.innerHTML = `
-                <div class="acc-header sub-menu__item-header">
-                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
-                </div>
-                <ul class="acc-body sub-menu__item-list"></ul>
-            `
+            if (elem.child === false) {
+                item.classList.add('sub-menu__item', 'show-menu-item')
+                item.innerHTML = `
+                    <a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>${elem.title}</a>
+                `
+            }
+            else {
+                item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
+                item.innerHTML = `
+                    <div class="acc-header sub-menu__item-header">
+                        <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>
+                    </div>
+                    <ul class="acc-body sub-menu__item-list"></ul>
+                `
+            }
         }
         if (list.dataset.menu === 'd-sub-menu') {
             const dSubMenuTitle = document.getElementById('d-sub-menu-title')
@@ -862,28 +921,34 @@ function setBlocksToSubMenu(arr, list) {
                 .then(arr => {
                     const html = dataToHTML(arr)
 
+                    item.classList.add('sub-menu__item', 'show-menu-item')
+
                     if (html != '') {
                         item.classList.add('acc')
+                        item.innerHTML = `
+                            <div class="acc-header sub-menu__item-header">
+                                <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
+                            </div>
+                            <ul class="acc-body sub-menu__item-list">${html}</ul>
+                        `
+                    }
+                    else {
+                        item.innerHTML = `<a href="#" class="link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu>${elem.title}</a>`
                     }
 
-                    item.classList.add('sub-menu__item', 'show-menu-item')
-                    item.innerHTML = `
-                        <div class="${(html != '') ? 'acc-header' : ''} sub-menu__item-header">
-                            <a href="javascript:void(0)" class="${(html != '') ? 'acc-open' : ''} link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
-                        </div>
-                        <ul class="${(html != '') ? 'acc-body' : ''} sub-menu__item-list">${html}</ul>
-                    `
                 })
                 .then(e => {
                     item.style.animationDelay = (i+1)*delay + 'ms'
                     list.append(item)
                 })
-                .then(e => {
-                    accordions()
-                })
+                // .then(e => {
+                //     accordions()
+                // })
         }
     }
 }
+
+// function 
 
 // Получить данные d-sub-menu для планшета и мобилы
 function getDataDSubMenuForMobile(cat) {
@@ -923,4 +988,47 @@ function clearDSubMenu() {
     const dSubMenuTitle = document.getElementById('d-sub-menu-title')
     dSubMenu.innerHTML = ''
     dSubMenuTitle.innerText = ''
+}
+
+// Аккордеоны
+accordions()
+function accordions() {
+    const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (target.classList.contains('acc-open')) {
+            const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
+            const parent = target.closest('.acc')
+            const accBody = parent.querySelector('.acc-body')
+        
+            parent.classList.toggle('_show') 
+            target.classList.toggle('_show') 
+            
+            if (accBody.style.maxHeight) { 
+                accBody.style.maxHeight = null
+                parent.classList.remove('_show') 
+                target.classList.remove('_show') 
+            }
+            else {
+                const adjacentElems = getSiblings(parent)
+                
+                if (hiddenSiblingAcc) {
+                for (let i = 0; i < adjacentElems.length; i++) {
+                    const elem = adjacentElems[i]
+                    const elemHeader = elem.querySelector('.acc-open')
+                    const elemBody = elem.querySelector('.acc-body')
+        
+                    elem.classList.remove('_show') 
+                    elemHeader.classList.remove('_show')  
+                    elemBody.style.maxHeight = null
+                }
+                }
+                
+                accBody.style.maxHeight = accBody.scrollHeight + 'px'
+                container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+            }
+        }
+    })
 }
