@@ -8,6 +8,10 @@
         @media (max-width: $tablet) {
             margin-bottom: 32px;
         }
+
+        @media (max-width: $mobile-l) {
+            margin: 32px 0 24px;
+        }
     }
     .container {
         position: relative;
@@ -51,6 +55,10 @@
     width: 773px;
     height: 820px;
     pointer-events: none;
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
 }
 
 .our_doctors__info {
@@ -66,6 +74,14 @@
     @media (max-width: $tablet) {
         padding: 0 24px;
         margin: 0;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0 16px;
     }
 
     .swiper__arrow {
@@ -92,11 +108,21 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 12px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 8px;
+    }
 }
 
 .our_doctors__info-initial-text {
     font-size: 16px;
     line-height: 24px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
 }
 
 .our_doctors__slider {
@@ -133,6 +159,10 @@
         flex-direction: column;
         gap: 0;
         padding-bottom: 50px;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding-bottom: 20px;
     }
 
     // @media (max-width: ) {
@@ -208,6 +238,10 @@
     @media (max-width: $tablet) {
         max-width: none;
         padding: 0 20px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-top: 20px;
     }
 
     .swiper-slide {

@@ -58,6 +58,11 @@
     cursor: pointer;
     white-space: nowrap;
 
+    @media (max-width: $mobile-l) {
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
     &:not(:last-child) {
         margin-right: 4px;
     }

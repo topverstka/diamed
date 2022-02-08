@@ -434,10 +434,16 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
             slideToClickedSlide: true,
             slidesPerView: 'auto',
         },
-        300: {
+        425: {
             loop: true,
             spaceBetween: 16,
             slidesPerView: 5,
+            slideToClickedSlide: true,
+        },
+        0: {
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 4.5,
             slideToClickedSlide: true,
         }
     },
