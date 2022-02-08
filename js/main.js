@@ -551,33 +551,81 @@ function tabBlockActive() {
 // Анимация пересчета цифр
 appearAnimationNumber()
 function appearAnimationNumber() {
-    const appearElems = findAll('[data-appear-animation=number]')
+    const appearElems = findAll('[data-animation=number]')
 
     for (let i = 0; i < appearElems.length; i++) {
         const elem = appearElems[i];
         const number = elem.innerText
         const nums = generatorFreeNum(number)
-        const html = generatorHTMLFromNum(number)
 
-        console.log(nums, html)
+        elem.innerHTML = generatorHTMLFromNum(number)
+    }
+    
+    // Сгенерировать 3 цифры, идущие за аргументом
+    function generatorFreeNum(num) {
+        num = parseInt(num)
+        let arr = []
+    
+        for (let i = 1; i < 3; i++) {
+            arr.push(num--)
+        }
+    
+        return arr
+    }
+    
+    // Собирает массив из строки и генерирует html
+    function generatorHTMLFromNum(value) {
+        return value.split('').map(e => `<span>${e}</span>`).join('')
     }
 }
 
-// Сгенерировать 3 цифры, идущие за аргументом
-function generatorFreeNum(num) {
-    num = parseInt(num)
-    let arr = []
 
-    for (let i = 1; i < 3; i++) {
-        arr.push(num--)
+window.addEventListener('scroll', animation)
+window.addEventListener('load', animation)
+
+// Анимация
+animation()
+function animation() {
+    const elems = document.querySelectorAll('[data-animation]')
+    
+    for (let i = 0; i < elems.length; i++) {
+        const elem = elems[i];
+        const elemTop = elem.getBoundingClientRect().top
+    
+        if (elemTop < window.innerHeight && elemTop >= 0) {
+    
+            if (elem.dataset.animation === 'number' && !elem.classList.contains('_visible')) {
+                const numElems = elem.querySelectorAll('span')
+    
+                doAnimWithDelay(numElems, '_visible', 150)
+                elem.classList.add('_visible')
+            }
+    
+            if (elem.dataset.animation === 'acc' && !elem.classList.contains('_visible')) {
+                elem.classList.add('_visible')
+            }
+    
+            if (elem.dataset.animation === 'menu-item' && !elem.classList.contains('_visible')) {
+                const itemElems = elem.querySelectorAll('li')
+    
+                doAnimWithDelay(itemElems, '_visible', 150)
+                elem.classList.add('_visible')
+            }
+        }
     }
-
-    return arr
 }
 
-// Собирает массив из строки и генерирует html
-function generatorHTMLFromNum(value) {
-    return value.split('').map(e => `<span>${e}</span>`).join('')
+// Выполнение анимации элементов массива с задержкой
+function doAnimWithDelay(array, _class, transition) {
+    let i = 0
+    const interval = setInterval(e => {
+        array[i].classList.add(_class)
+        i++
+
+        if (i >= array.length) {
+            clearInterval(interval)
+        }
+    }, transition)
 }
 
 // Аккордеоны

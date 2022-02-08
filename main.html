@@ -16,7 +16,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="header_info">
-                <div class="container">
+                <div class="container wow fadeIn">
                     <div class="header_info__tel">
                         <span class="header_info__tel-text">Единый телефон сети</span>
                         <a class="header_info__tel-link" href="tel:+73822609010">8 (3822) 60 90 10</a>
@@ -64,15 +64,15 @@
             <div class="header_main">
                 <div class="container">
                     <div class="header_main__wrap">
-                        <button class="header_main__mobile-icon">
+                        <button class="header_main__mobile-icon wow fadeIn">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M18 12.5999V17.9999L21.6 19.7999" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <rect x="0.5" y="0.5" width="35" height="35" rx="7.5" stroke="#DAEBEF"/>
                             </svg>
                         </button>
-                        <img class="header_main__logo" src="./img/logo.svg" alt="">
-                        <nav class="header_main__menu">
+                        <img class="header_main__logo wow fadeIn" src="./img/logo.svg" alt="">
+                        <nav class="header_main__menu" data-animation="menu-item">
                             <ul>
                                 <li><a href="">О клиниках</a></li>
                                 <li><a href="">Услуги</a></li>
@@ -81,8 +81,8 @@
                                 <li><a href="">Контакты</a></li>
                             </ul>
                         </nav>
-                        <button class="header_main__enroll-btn btn">Записаться на прием</button>
-                        <button class="header_main__gamburger btn burger">
+                        <button class="header_main__enroll-btn btn wow fadeIn">Записаться на прием</button>
+                        <button class="header_main__gamburger btn burger wow fadeIn">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -481,7 +481,7 @@
                         </div>
                         <div class="why_choose__right">
                             <div class="accordion_container">
-                                <div class="accordion_container-list acc">
+                                <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Новейшее оборудование</p>
                                         <div class="accordion_container-list-icons acc-header">
@@ -498,7 +498,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion_container-list acc">
+                                <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Гарантия <br> на результат</p>
                                         <div class="accordion_container-list-icons acc-header">
@@ -515,7 +515,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion_container-list acc">
+                                <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Прогрессивные инновационные технологии</p>
                                         <div class="accordion_container-list-icons acc-header">
@@ -532,7 +532,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion_container-list acc">
+                                <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Высокая точность и качество работы</p>
                                         <div class="accordion_container-list-icons acc-header">
@@ -549,7 +549,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion_container-list acc">
+                                <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Высококвалифированные специалисты</p>
                                         <div class="accordion_container-list-icons acc-header">
@@ -577,23 +577,25 @@
             <section class="number_proud">
                 <div class="container">
                     <div class="number_proud__wrapp">
-                        <h2><span class="wow showTitle">Цифры, которыми <br>можно гордиться</span></h2>
+                        <div class="number_proud__title">
+                            <h2><span class="wow showTitle">Цифры, которыми <br>можно гордиться</span></h2>
+                        </div>
                         <div class="number_proud__elements">
                             <div class="number_proud__elements-column">
-                                <h3 class="number_proud__elements-column-header" data-appear-animation="number">30 000+</h3>
-                                <p class="number_proud__elements-column-text wow fadeIn">Счастливых пациентов</p>
+                                <span class="number_proud__elements-column-header" data-animation="number">30 000+</span>
+                                <p class="number_proud__elements-column-text wow fadeIn" data-wow-delay=".5s">Счастливых пациентов</p>
                             </div>
                             <div class="number_proud__elements-column">
-                                <h3 class="number_proud__elements-column-header" data-appear-animation="number">53</h3>
-                                <p class="number_proud__elements-column-text wow fadeIn">Специалиста в команде</p>
+                                <span class="number_proud__elements-column-header" data-animation="number">53</span>
+                                <p class="number_proud__elements-column-text wow fadeIn" data-wow-delay=".5s">Специалиста в команде</p>
                             </div>
                             <div class="number_proud__elements-column">
-                                <h3 class="number_proud__elements-column-header" data-appear-animation="number">92%</h3>
-                                <p class="number_proud__elements-column-text wow fadeIn">Индекс удовлетворенности клиентов</p>
+                                <span class="number_proud__elements-column-header" data-animation="number">92%</span>
+                                <p class="number_proud__elements-column-text wow fadeIn" data-wow-delay=".5s">Индекс удовлетворенности клиентов</p>
                             </div>
                             <div class="number_proud__elements-column">
-                                <h3 class="number_proud__elements-column-header" data-appear-animation="number">200+</h3>
-                                <p class="number_proud__elements-column-text wow fadeIn">Портфель сертификатов клиники</p>
+                                <span class="number_proud__elements-column-header" data-animation="number">200+</span>
+                                <p class="number_proud__elements-column-text wow fadeIn" data-wow-delay=".5s">Портфель сертификатов клиники</p>
                             </div>
                         </div>
                     </div>

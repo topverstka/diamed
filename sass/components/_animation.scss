@@ -229,3 +229,62 @@
 //         transform: translateX(0);
 //     }
 // }
+
+[data-animation=number] span {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+    transition: $tr;
+
+    &._visible {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+[data-animation=acc] {
+
+    &::after {
+        width: 0;
+        transition: 1.2s;
+    }
+
+    & .accordion_container-list-title {
+        transform: translateX(50px);
+        opacity: 0;
+        transition: 1s;
+    }
+
+    & .accordion_container-list-icons-btn {
+        transform: rotate(90deg) scale(.6);
+        opacity: 0;
+    }
+
+    &._visible {
+
+        &::after {
+            width: 100%;
+        }
+
+        & .accordion_container-list-title {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        & .accordion_container-list-icons-btn {
+            transform: rotate(0) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+[data-animation=menu-item] li {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: .8s;
+
+    &._visible {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
