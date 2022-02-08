@@ -5189,12 +5189,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .tab__roller {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 2px;
   width: -webkit-calc(100% - 4px);
   width: calc(100% - 4px);
-  height: -webkit-calc(100% - 4px);
-  height: calc(100% - 4px);
+  height: 100%;
   background: #fff;
   -webkit-border-radius: 12px;
           border-radius: 12px;

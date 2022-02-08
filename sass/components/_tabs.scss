@@ -81,10 +81,10 @@
 
 .tab__roller {
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 2px;
     width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    height: 100%;
     background: #fff;
     border-radius: 12px;
     transition: $tr;
