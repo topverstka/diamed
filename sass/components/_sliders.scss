@@ -25,7 +25,9 @@
         }
     }
     &:active {
-        background: $second;
+       // background: $second;
+
+        opacity: 0.7;
     }
     &.swiper-button-disabled {
         //background: #F8F8F8;

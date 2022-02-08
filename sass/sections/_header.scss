@@ -86,6 +86,21 @@
 .header_info__icons {
     margin-left: 32px;
 
+    button{
+        svg{
+            transition: all 0.2s;
+        }
+        &:hover{
+            svg{
+                fill: $second;
+                color: $second;
+            }
+        }
+        &:active{
+            opacity: 0.7;
+        }
+    }
+
     .eye_icon{
         width: 20px;
         height: 20px;
