@@ -195,19 +195,21 @@
     font-weight: 600;
     font-size: 14px;
 
-    @media (min-width: $minHover) {
-        
-        &:hover {
+    &:hover {
             
-            &-top {
-                transform: translate(17px, -7px);
-            }
+        .link-review-top {
+            transform: translate(13px, -7px);
+        }
 
-            &-bottom {
-                transform: translate(0px, 2px);
-            }
+        .link-review-bottom {
+            transform: translate(0px, 2px);
         }
     }
+
+    &:active{
+        opacity: 0.7;
+    }
+
     span {
         display: flex;
         flex-direction: column;
