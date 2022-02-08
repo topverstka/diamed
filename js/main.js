@@ -321,7 +321,7 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
             slidesPerView: 2,
         },
         0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.1,
         }
     },
 
@@ -997,7 +997,7 @@ function accordions() {
     window.addEventListener('click', e => {
         const target = e.target
 
-        if (target.classList.contains('acc-open')) {
+        if (target.classList.contains('acc-open') || target.closest('.acc-open')) {
             const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
             const parent = target.closest('.acc')
             const accBody = parent.querySelector('.acc-body')

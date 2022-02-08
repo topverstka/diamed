@@ -1,6 +1,11 @@
 .why_choose {
     padding-top: 100px;
     padding-bottom: 63px;
+
+    @media (max-width: $mobile-l) {
+        padding-top: 56px;
+        padding-bottom: 44px;
+    }
 }
 
 .why_choose__wrapp {
@@ -31,6 +36,7 @@
 
         @media (max-width: $tablet) {
             width: 100%;
+            line-height: 29px;
         }
     }
 }

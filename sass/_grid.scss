@@ -1,11 +1,14 @@
+$p-desk: 24px;
+$p-mob: 20px;
+
 .container {
     max-width: $container;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 $p-desk;
     margin: 0 auto;
     
     @media (max-width: $mobile-l) {
-        padding: 0 20px;
+        padding: 0 $p-mob;
     }
 }
 

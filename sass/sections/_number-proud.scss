@@ -11,7 +11,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: center/contain no-repeat url(../img/background_main.png);
+        background: -90px -17px/127% no-repeat url(../img/background_main.png);
 
         @media (max-width: $tablet-l) {
             background-position: 0 center;
@@ -106,5 +106,10 @@
     font-size: 16px;
     line-height: 25px;
     font-weight: 500;
-    width: 90%
+    width: 90%;
+    margin-top: 32px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 16px;
+    }
 }

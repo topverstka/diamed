@@ -16,7 +16,9 @@
     .container {
         position: relative;
     }
-    .our_doctors__tabs {
+    .our_doctors__tabs-container {
+        width: 100%;
+        overflow-x: auto;
         margin-bottom: 80px;
 
         @media (min-width: $tablet) and (max-width: $tablet-l) {
@@ -28,6 +30,7 @@
 
         @media (max-width: $tablet) {
             margin-bottom: 40px;
+            padding: 0 $p-mob;
         }
     }
 
@@ -72,16 +75,16 @@
     }
 
     @media (max-width: $tablet) {
-        padding: 0 24px;
+        padding: 0;
         margin: 0;
     }
 
     @media (max-width: $mobile-l) {
-        padding: 0 20px;
+        // padding: 0 20px;
     }
 
     @media (max-width: $mobile) {
-        padding: 0 16px;
+        // padding: 0 16px;
     }
 
     .swiper__arrow {
@@ -94,6 +97,13 @@
     }
 }
 
+.our_doctors__title {
+    
+    @media (max-width: $tablet) {
+        padding: 0 $p-mob;
+    }
+}
+
 .our_doctors__more {
     margin: auto 0 52px;
     font-size: 14px;
@@ -103,11 +113,19 @@
     }
 }
 
+.our_doctors__info-initial {
+
+    @media (max-width: $tablet) {
+        padding: 0 $p-mob;
+    }
+}
+
 .our_doctors__info-initial-header {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 12px;
+
 
     @media (max-width: $mobile-l) {
         font-size: 16px;
@@ -191,6 +209,13 @@
             top: 0;
             left: 0;
         }
+    }
+}
+
+.our_doctors__arrows {
+
+    @media (max-width: $tablet) {
+        padding: 0 $p-mob;
     }
 }
 
