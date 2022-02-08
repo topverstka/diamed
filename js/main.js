@@ -344,11 +344,6 @@ const swiper_news = new Swiper('.news-slider', {
             allowTouchMove: true,
         }
     },
-
-    navigation: {
-      nextEl: '.actual_offer__arrow-next',
-      prevEl: '.actual_offer__arrow-prev',
-    },
 });
 
 // const swiper = new Swiper('.swiper-container', {

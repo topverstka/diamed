@@ -9,6 +9,7 @@
     <title>Diamed</title>
     <meta name="description" content="Описание сайта">
 
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -757,12 +758,12 @@
                                 <p class="form-elem__error">Введите корректный телефон</p>
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="date" type="text">
+                                <input class="form-elem__area" id="datetimepicker1" name="date" type="text">
                                 <label class="form-elem__label">Выберите дату</label>
                                 <p class="form-elem__error">Введите корректную дату</p>
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="time" type="text">
+                                <input class="form-elem__area" id="datetimepicker2" name="time" type="text">
                                 <label class="form-elem__label">Выберите время</label>
                             </div>
                             <div class="form-elem">
@@ -856,6 +857,15 @@
     </script>
 
     <script src="./js/libs/swiper-bundle.min.js"></script>
+
+    <!-- Data Time Picker
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="./js/libs/jquery.datetimepicker.min.js"></script>
+    <script>
+        $('#datetimepicker1').datetimepicker();
+    </script> -->
+
+
     <script src="./js/main.js"></script>
 </body>
 
