@@ -32,6 +32,10 @@
         & .tab {
             color: #EAE9EF;
 
+            &:hover{
+                color: #fff;
+            }
+            
             &._active{
                 color: #686868;
             }
