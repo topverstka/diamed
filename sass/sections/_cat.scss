@@ -119,6 +119,9 @@
     max-width: 360px;
     a{
         position: relative;
+        &:active{
+            opacity: 0.8;
+        }
         &:after{
             display: block;
             width: 100%;
@@ -210,6 +213,10 @@
             font-size: 14px;
         }
 
+        &:active{
+            opacity: 0.7;
+        }
+
         &:after{
             content: '';
             display: block;
@@ -247,6 +254,10 @@
             &:hover {
                 opacity: 1;
             }
+        }
+
+        &:active{
+            opacity: 0.7;
         }
     }
     svg{

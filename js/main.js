@@ -1025,3 +1025,28 @@ function accordions() {
         }
     })
 }
+
+
+
+// Плейсхолдер текстовых полей
+labelTextfield()
+function labelTextfield() {
+    const textfieldElems = document.querySelectorAll('.form-elem')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const parent = textfieldElems[i];
+        const input = parent.querySelector('input, textarea')
+        const label = parent.querySelector('label')
+
+        input.addEventListener('focus', e => {
+            label.classList.add('_change-label')
+        })
+
+        input.addEventListener('blur', e => {
+            if (input.value === '') {
+                label.classList.remove('_change-label')
+            }
+        })
+    }
+}
+  

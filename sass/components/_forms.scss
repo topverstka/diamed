@@ -26,14 +26,7 @@
     padding: 30px 12px 12px 0px;
     transition: $tr;
     
-    &:focus {
-        &+.form-elem__label {
-            font-size: 12px;
-            color: #fff;
-            opacity: .5;
-            bottom: 34px;
-        }
-    }
+    
     // &:not(:placeholder-shown).form-elem__area:not(:focus) {
     //     // border: 1px solid $accent;
     //     &+.form-elem__label {
@@ -71,6 +64,13 @@
         color: $error;
         margin: 0 0 0 6px;
         opacity: 0;
+    }
+
+    &._change-label{
+        font-size: 12px;
+        color: #fff;
+        opacity: .5;
+        bottom: 34px;
     }
 }
 

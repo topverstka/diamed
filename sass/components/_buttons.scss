@@ -12,12 +12,11 @@
     @media (min-width: $minHover) {
     
         &:hover {
-            transform: translateY(-2px);
+            opacity: 0.9;
         }
     }
     &:active {
-        // background: $accent-active;
-        transform: translateY(-2px) scale(.98);
+        opacity: 0.8;
     }
 }
 
@@ -49,6 +48,10 @@
             background: $second;
             color: #fff;
         }
+    }
+
+    &:active{
+        opacity: 0.7;
     }
 }
 
