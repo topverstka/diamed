@@ -1,5 +1,6 @@
 .actual_offer {
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 98px;
 
     @media (max-width: $mobile-l) {
         margin: 56px 0;
@@ -31,7 +32,7 @@
         flex-direction: column;
         border: 1px solid #F0EFEF;
         border-radius: $radius;
-        padding: 31px 46px 32px 32px;
+        padding: 30px 31px 32px 32px;
 
         @media (max-width: $tablet-s) {
             padding: 24px 20px;

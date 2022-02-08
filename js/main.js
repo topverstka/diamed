@@ -314,9 +314,6 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
     slidesPerView: 2,
 
     breakpoints: {
-        1200: {
-
-        },
         769: {
             slidesPerView: 2,
         },
@@ -338,9 +335,6 @@ const swiper_news = new Swiper('.news-slider', {
     allowTouchMove: false,
 
     breakpoints: {
-        1200: {
-
-        },
         769: {
             slidesPerView: 3,
             allowTouchMove: false,

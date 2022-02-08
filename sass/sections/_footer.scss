@@ -10,7 +10,6 @@
     flex-wrap: wrap;
     position: relative;
     align-items: center;
-    justify-content: space-between;
 
     @media (max-width: $tablet-l) {
         flex-direction: column;
@@ -20,7 +19,7 @@
 
 
 .footer-logo{
-    // margin-right: 181px;
+    margin-right: 181px;
     img{
         width: 146px;
     }
@@ -55,8 +54,8 @@
 }
 
 .footer-creator{
-    // position: absolute;
-    // right: 0;
+    position: absolute;
+    right: 0;
     margin-bottom: -10px;
 
     @media (max-width: $tablet-l) {

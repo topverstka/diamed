@@ -28,7 +28,8 @@
         background: $second;
     }
     &.swiper-button-disabled {
-        background: #F8F8F8;
+        //background: #F8F8F8;
+        opacity: 0;
         // pointer-events: none;
         & svg path {
             stroke: #fff;
