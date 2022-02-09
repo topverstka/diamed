@@ -6,6 +6,10 @@ $p-mob: 20px;
     width: 100%;
     padding: 0 $p-desk;
     margin: 0 auto;
+
+    @media (max-width: $tablet){
+        padding: 0 20px;
+    }
     
     @media (max-width: $mobile-l) {
         padding: 0 $p-mob;

@@ -5,8 +5,11 @@
     background-repeat: no-repeat;
     background-position: 561px 216px;
 
-    & .container {
+    @media (max-width: $tablet){
+        padding-bottom: 50px;
+    }
 
+    .container {
         @media (max-width: 1200px) {
             padding-right: 0; 
         }
@@ -15,14 +18,14 @@
             padding-right: 24px;
         }
     }
+}
 
-    h2 {
-        margin-bottom: 32px;
-        width: 85%;
+.review-title{
+    margin-bottom: 32px;
+    width: 85%;
         
-        @media (max-width: 1200px) {
-            width: 100%;
-        }
+    @media (max-width: 1200px) {
+        width: 100%;
     }
 }
 

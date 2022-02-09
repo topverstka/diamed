@@ -1,5 +1,9 @@
 .news {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+
+    @media (max-width: $tablet){
+        padding-bottom: 80px;
+    }
 }
 
 .news_header-line {
@@ -9,6 +13,7 @@
 
     @media (max-width: $tablet) {
         flex-direction: column;
+        margin-bottom: 32px;
     }
 }
 

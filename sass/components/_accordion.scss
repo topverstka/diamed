@@ -94,9 +94,9 @@
     margin-right: 108px;
     transition: $tr linear;
 
-    // @media (max-width: 1300px) {
-    //     margin-right: 8px;
-    // }
+    @media (max-width: $tablet) {
+        margin-right: 97px;
+    }
 
     // @media (max-width: $tablet-s) {
     //     margin: 24px 0 0 0;

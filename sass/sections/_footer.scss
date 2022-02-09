@@ -29,8 +29,14 @@
     position: relative;
     top: 3px;
 
+    
+
     @media (max-width: $tablet-l) {
         margin-top: 40px;
+    }
+
+    @media (max-width: $tablet){
+        margin-top: 36px;
     }
 
     ul{
@@ -57,10 +63,18 @@
     position: absolute;
     right: 0;
     margin-bottom: -10px;
+    
 
-    @media (max-width: $tablet-l) {
-        margin: 40px 0 0 0;
+    @media (max-width: $laptop) {
+        position: static;
+        flex-basis: 100%;
+        margin-top: 40px;
     }
+
+    img{
+        width: 84px;
+    }
+
 }
 
 .footer-bottom{
@@ -68,6 +82,10 @@
     border-top: 1px solid #F0EFEF;
     text-align: center;
     padding-top: 20px;
+
+    @media (max-width: $tablet){
+        margin-top: 28px;
+    }
 }
 
 .footer-text{

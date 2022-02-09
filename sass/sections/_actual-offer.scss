@@ -1,16 +1,28 @@
 .actual_offer {
-    margin-top: 100px;
-    margin-bottom: 98px;
+    padding-top: 100px;
+    padding-bottom: 98px;
+
+
+    @media (max-width: $tablet){
+        padding-top: 81px;
+        padding-bottom: 78px;
+    }
 
     @media (max-width: $mobile-l) {
-        margin: 56px 0;
+        padding: 56px 0;
     }
 
-    h2 {
-        margin-bottom: 40px;
-    }
+    
     .container {
         position: relative;
+    }
+}
+
+.actual_offer-title {
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet){
+        margin-bottom: 32px;
     }
 }
 
@@ -47,11 +59,9 @@
     justify-content: space-between;
     margin-bottom: 37px;
 
-    @media (max-width: $tablet) {
-        justify-content: flex-start;
-    }
 
     @media (max-width: $tablet-s) {
+        justify-content: flex-start;
         flex-direction: row;
         margin-bottom: 24px;
         margin-left: -12px;
@@ -130,6 +140,10 @@
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 36px;
+
+    @media (max-width: $tablet){
+        margin-bottom: 38px;
+    }
 
     @media (max-width: $tablet-s) {
         font-size: 14px;

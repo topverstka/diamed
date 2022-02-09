@@ -2,11 +2,17 @@
     padding-top: 80px;
     padding-bottom: 78px;
     background: $second;
-    h2{
-        font-size: 40px;
-        margin-bottom: 32px;
-        color: #fff;
+
+    @media (max-width: $tablet){
+        padding-top: 41px;
+        padding-bottom: 58px;
     }
+}
+
+.cat-title{
+    font-size: 40px;
+    margin-bottom: 32px;
+    color: #fff;
 }
 
 .tabs_wrapper--cat{
@@ -172,13 +178,14 @@
     margin-bottom: 40px;
 
     @media (max-width: 1100px) {
-        flex-basis: 33.333%;
+        flex-basis: 29.333%;
         
     }
 
     @media (max-width: 720px) {
         flex-basis: 40%;
     }
+
 
     @media (max-width: $mobile-l) {
         margin: 0;

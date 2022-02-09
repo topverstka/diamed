@@ -1,8 +1,15 @@
 .useful {
-    padding: 100px 0;
-    h2 {
-        margin-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media(max-width: $tablet){
+        padding-top: 82px;
+        padding-bottom: 95px;
     }
+}
+
+.useful-title{
+    margin-bottom: 40px;
 }
 
 .useful_wrapp {
@@ -116,4 +123,8 @@
     height: 551px;
     object-fit: cover;
     pointer-events: none;
+
+    @media (max-width: $tablet){
+        right: -198px;
+    }
 }

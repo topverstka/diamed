@@ -318,7 +318,7 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
             slidesPerView: 2,
         },
         0: {
-            slidesPerView: 1.1,
+            slidesPerView: 1.15,
         }
     },
 
@@ -340,7 +340,7 @@ const swiper_news = new Swiper('.news-slider', {
             allowTouchMove: false,
         },
         0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.33,
             allowTouchMove: true,
         }
     },
@@ -424,8 +424,8 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
         },
         425: {
             loop: true,
-            spaceBetween: 16,
-            slidesPerView: 5,
+            spaceBetween: 20,
+            slidesPerView: 4.7,
             slideToClickedSlide: true,
         },
         0: {
@@ -462,7 +462,7 @@ const swiper_review = new Swiper('.review_wrapp__slider', {
             allowTouchMove: false,
         },
         500: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.7,
             allowTouchMove: false,
         },
         0: {

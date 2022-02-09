@@ -4,6 +4,10 @@
     padding-bottom: 62px;
     background-color: #F8F7FC;
 
+    @media (max-width: $tablet){
+        padding-bottom: 64px;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -109,6 +113,10 @@
     font-weight: 500;
     width: 90%;
     margin-top: 32px;
+
+    @media (max-width: $tablet){
+        margin-top: 29px;
+    }
 
     @media (max-width: $mobile-l) {
         margin-top: 16px;

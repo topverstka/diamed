@@ -2,6 +2,11 @@
     padding-top: 100px;
     padding-bottom: 97px;
 
+    @media (max-width: $tablet){
+        padding-top: 79px;
+        padding-bottom: 82px;
+    }
+
     @media (max-width: $mobile-l) {
         padding-top: 56px;
         padding-bottom: 44px;
@@ -29,15 +34,14 @@
     @media (max-width: $tablet) {
         width: 100%;
     }
+}
 
-    h2 {
-        width: 305px;
-        line-height: 49px;
+.why_choose-title{
+    width: 305px;
+    line-height: 49px;
 
-        @media (max-width: $tablet) {
-            width: 100%;
-            line-height: 29px;
-        }
+    @media (max-width: $tablet) {
+        width: 100%;
     }
 }
 
