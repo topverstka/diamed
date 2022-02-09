@@ -55,6 +55,7 @@
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 20px;
+        width: 95%;
     }
 }
 
@@ -80,7 +81,7 @@
         color: $main;
         background: none;
         padding: 0;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
 
         &::after {
             display: inline-block;
@@ -160,6 +161,10 @@
     right: 0px;
     left: auto;
     width: 70px;
+
+    @media (max-width: $tablet){
+        width: 60px;
+    }
 }
 
 .main_top__wrapper-list-header {
@@ -170,8 +175,12 @@
     line-height: 26px;
     padding-left: 24px;
     padding-right: 43%;
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet){
+        font-size: 16px;
         padding-right: 20%;
+    }
+    @media (max-width: $tablet-s){
+        
     }
 }
 

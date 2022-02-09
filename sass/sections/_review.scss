@@ -4,6 +4,7 @@
     background-image: url(../../img/background_reviews.png);
     background-repeat: no-repeat;
     background-position: 561px 216px;
+    padding-bottom: 63px;
 
     @media (max-width: $tablet){
         padding-bottom: 50px;
@@ -18,6 +19,11 @@
             padding-right: 24px;
         }
     }
+
+    @media (max-width: $tablet-s){
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 .review-title{
@@ -26,6 +32,13 @@
         
     @media (max-width: 1200px) {
         width: 100%;
+    }
+
+    @media (max-width: $tablet-s){
+        margin-bottom: 25px;
+        br{
+            display: none;
+        }
     }
 }
 
@@ -57,6 +70,10 @@
         display: block;
         margin-top: 32px;
     }
+
+    @media (max-width: $tablet-s){
+        margin-top: 36px;
+    }
 }
 
 .review_wrapp__text {
@@ -82,13 +99,21 @@
     .swiper-slide {
         background: #fff;
         border-radius: $radius2;
-        padding: 24px 24px 24px 24px
+        padding: 24px 24px 24px 24px;
+
+        @media (max-width: $tablet-s){
+            padding: 20px;
+        }
     }
 
     @media (max-width: $tablet-l) {
         width: 100%;
         margin-top: 32px;
         overflow: initial;
+    }
+
+    @media (max-width: $tablet-s){
+        margin-top: 20px;
     }
 }
 
@@ -97,7 +122,13 @@
     line-height: 24px;
     color: $accent2;
     margin-bottom: 24px;
-    display: block
+    display: block;
+
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
 }
 
 .review_wrapp__slider-text {
@@ -111,8 +142,11 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         font-size: 16px;
+        line-height: 26px;
+        height: 138px;
+        margin-bottom: 39px;
     }
 }
 
@@ -121,7 +155,11 @@
     line-height: 24px;
     color: $accent2;
     margin-bottom: 12px;
-    display: block
+    display: block;
+
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+    }
 }
 .review_wrapp__slider-name-doctor {
     font-weight: 600;
@@ -131,5 +169,10 @@
     border-bottom: 1px solid #F0EFEF;
     padding-bottom: 31px;
     margin-bottom: 33px;
-    display: block
+    display: block;
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+        padding-bottom: 19px;
+        margin-bottom: 22px;
+    }
 }

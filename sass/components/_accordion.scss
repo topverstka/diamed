@@ -8,8 +8,8 @@
     &:not(:last-child) {
         margin-bottom: 32px;
 
-        @media (max-width: $mobile-l) {
-            margin-bottom: 20px;
+        @media (max-width: $tablet-s) {
+            margin-bottom: 18px;
         }
     }
 
@@ -42,7 +42,7 @@
         flex-direction: column;
     }
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         padding-bottom: 20px;
     }
 }
@@ -72,6 +72,10 @@
 
     @media (max-width: $tablet-s) {
         max-width: none;
+        font-size: 16px;
+        br{
+            display: none;
+        }
     }
 }
 
@@ -109,14 +113,16 @@
         font-weight: 500;
 
         @media (max-width: $tablet-s) {
-            // margin: 0;
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 24px;
         }
     }
     .accordion_container-list-link {
         font-size: 14px;
 
-        @media (max-width: $tablet) {
-            // margin-top: 32px;
+        @media (max-width: $tablet-s) {
+            font-size: 12px;
         }
     }
 }
@@ -164,5 +170,10 @@
                 transform: translate(-50%,-50%) rotate(0deg);
             }
         }
+    }
+
+    @media (max-width: $tablet-s){
+        width: 32px;
+        height: 32px;
     }
 }

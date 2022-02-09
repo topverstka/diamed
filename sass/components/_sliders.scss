@@ -37,4 +37,13 @@
             stroke: #fff;
         }
     }
+
+    @media (max-width: $tablet-s){
+        width: 32px;
+        height: 32px;
+        svg{
+            height: 13px;
+            width: 13px;
+        }
+    }
 }

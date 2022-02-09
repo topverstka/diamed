@@ -62,9 +62,9 @@
     cursor: pointer;
     white-space: nowrap;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         font-size: 10px;
-        padding: 10px 12px;
+        padding: 10px 11px;
     }
 
     &:not(:last-child) {

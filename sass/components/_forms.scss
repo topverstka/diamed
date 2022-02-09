@@ -1,5 +1,16 @@
-.form-elem {
+.form-elem{
     position: relative;
+    flex-basis: 48%;
+    display: block;
+    margin-bottom: 16px;
+    &:first-child{
+        flex-basis: 100%;
+    }
+
+    @media (max-width: $tablet-s){
+        flex-basis: 100%;
+        margin-bottom: 7px;
+    }
 }
 
 .form-elem input {
@@ -7,6 +18,10 @@
     background: transparent;
     color: #fff;
     font-size: 16px;
+
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+    }
 }
 
 .form-elem input::placeholder {
@@ -22,7 +37,7 @@
 
 .form-elem__area {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     padding: 30px 12px 12px 0px;
     transition: $tr;
     
@@ -37,7 +52,7 @@
     //     }
     // }
     &._error {
-        border: 1px solid $error !important;
+        border: 2px solid $error !important;
         &+.form-elem__label {
             &::after {
                 opacity: 1;
@@ -71,6 +86,14 @@
         color: #fff;
         opacity: .5;
         bottom: 34px;
+        @media (max-width: $tablet-s){
+            bottom: 26px;
+        }
+    }
+
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+        bottom: 0;
     }
 }
 

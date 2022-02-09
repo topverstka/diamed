@@ -131,6 +131,10 @@
     @media (max-width: $tablet) {
         padding: 21px 0;
     }
+
+    @media (max-width: $tablet-s){
+        padding: 17px 0;
+    }
 }
 
 .header_main__mobile-icon {
@@ -139,6 +143,10 @@
 
     @media (max-width: $tablet) {
         display: block;
+    }
+
+    @media (max-width: $tablet-s){
+        width: 36px;
     }
 }
 
@@ -208,15 +216,16 @@
         display: none;
     }
 }
+
 .header_main__logo {
     width: 156px;
     height: 43px;
 
-    @media (min-width: 769px) and (max-width: $tablet-l) {
-        width: 120px;
-        height: auto;
+    @media (max-width: $tablet-s){
+        width: 129px;
     }
 }
+
 .header_main__gamburger {
     position: relative;
     width: 41px;

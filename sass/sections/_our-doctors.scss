@@ -9,7 +9,7 @@
             margin-bottom: 32px;
         }
 
-        @media (max-width: $mobile-l) {
+        @media (max-width: $tablet-s) {
             margin: 32px 0 24px;
         }
     }
@@ -79,7 +79,7 @@
         margin: 0;
     }
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         // padding: 0 20px;
     }
 
@@ -93,6 +93,10 @@
 
         @media (max-width: $tablet) {
             margin-bottom: 32px;
+        }
+        @media (max-width: $tablet-s) {
+            margin-top: 17px;
+            margin-bottom: 20px;
         }
     }
 }
@@ -127,7 +131,7 @@
     margin-bottom: 12px;
 
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 8px;
@@ -138,7 +142,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         font-size: 14px;
     }
 }
@@ -179,7 +183,7 @@
         padding-bottom: 50px;
     }
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         padding-bottom: 20px;
     }
 
@@ -243,6 +247,11 @@
         }
     }
 
+    @media (max-width: $tablet-s) {
+        height: 278px;
+        
+    }
+
     
 }
 
@@ -267,7 +276,7 @@
         padding: 0 20px;
     }
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $tablet-s) {
         margin-top: 20px;
     }
 
