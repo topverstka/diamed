@@ -155,10 +155,14 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    @media (max-width: $laptop){
+        justify-content: space-between;
+    }
+
     @media (max-width: $tablet-s) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px 17px;
+        gap: 24px 17px; 
     }
 }
 
@@ -169,9 +173,10 @@
 
     @media (max-width: 1100px) {
         flex-basis: 33.333%;
+        
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: 720px) {
         flex-basis: 40%;
     }
 
