@@ -39,6 +39,7 @@
 .why_choose-title{
     width: 305px;
     line-height: 49px;
+    position: relative;
 
     @media (max-width: $tablet) {
         width: 100%;
@@ -62,7 +63,8 @@
 }
 
 .why_choose__left-picture-main {
-    margin-top: 39px
+    margin-top: -167px;
+    margin-left: -52px;
 }
 
 .why_choose__right {

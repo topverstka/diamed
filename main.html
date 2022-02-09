@@ -399,15 +399,17 @@
                 </div>
             </section>
 
-
-            <section class="why_choose">
+            
+                <div id="trigger"></div>
+                <div id="trigger1"></div>
+            <section class="why_choose" id="pin1">
                 <div class="container">
                     <div class="why_choose__wrapp">
                         <div class="why_choose__left">
                             <h2 class="why_choose-title wow showTitle">Почему выбирают нас?</h2>
-                            <div class="why_choose__left-picture">
+                            <div class="why_choose__left-picture" >
                                 <img class="why_choose__left-picture-all wow fadeIn" data-wow-delay="1s" src="./img/why_choose/picture-1.png" alt="">
-                                <img class="why_choose__left-picture-main wow showTooth" data-wow-duration="1.5s" src="./img/why_choose/picture-main.png" alt="">
+                                <img id="myimg" class="why_choose__left-picture-main" src="./img/zub/0001.jpg" alt="">
                             </div>
                         </div>
                         <div class="why_choose__right">
@@ -463,6 +465,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="accordion_container-list acc" data-animation="acc">
                                     <div class="accordion_container-list-header">
                                         <p class="accordion_container-list-title">Высокая точность и качество работы</p>
@@ -502,7 +505,7 @@
                     </div>
                 </div>
             </section>
-
+            
 
 
             <section class="number_proud">
@@ -858,12 +861,199 @@
 
     <script src="./js/libs/swiper-bundle.min.js"></script>
 
-    <!-- Data Time Picker
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="./js/libs/jquery.datetimepicker.min.js"></script>
+   
+    <script src="./js/libs/jquery.js"></script>
+
+    <script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
     <script>
-        $('#datetimepicker1').datetimepicker();
-    </script> -->
+
+
+    if(window.innerWidth > 767){
+        // define images
+	var images = [
+		"./img/zub/0001.jpg",
+		"./img/zub/0002.jpg",
+        "./img/zub/0003.jpg",
+        "./img/zub/0004.jpg",
+        "./img/zub/0005.jpg",
+        "./img/zub/0006.jpg",
+        "./img/zub/0007.jpg",
+        "./img/zub/0008.jpg",
+        "./img/zub/0009.jpg",
+        "./img/zub/0010.jpg",
+        "./img/zub/0011.jpg",
+        "./img/zub/0012.jpg",
+        "./img/zub/0013.jpg",
+        "./img/zub/0014.jpg",
+        "./img/zub/0015.jpg",
+        "./img/zub/0016.jpg",
+        "./img/zub/0017.jpg",
+        "./img/zub/0018.jpg",
+        "./img/zub/0019.jpg",
+        "./img/zub/0020.jpg",
+        "./img/zub/0021.jpg",
+        "./img/zub/0022.jpg",
+        "./img/zub/0023.jpg",
+        "./img/zub/0024.jpg",
+        "./img/zub/0025.jpg",
+        "./img/zub/0026.jpg",
+        "./img/zub/0027.jpg",
+        "./img/zub/0028.jpg",
+        "./img/zub/0029.jpg",
+        "./img/zub/0030.jpg",
+        "./img/zub/0031.jpg",
+        "./img/zub/0032.jpg",
+        "./img/zub/0033.jpg",
+        "./img/zub/0034.jpg",
+        "./img/zub/0035.jpg",
+        "./img/zub/0036.jpg",
+        "./img/zub/0037.jpg",
+        "./img/zub/0038.jpg",
+        "./img/zub/0039.jpg",
+        "./img/zub/0040.jpg",
+        "./img/zub/0041.jpg",
+        "./img/zub/0042.jpg",
+        "./img/zub/0043.jpg",
+        "./img/zub/0044.jpg",
+        "./img/zub/0045.jpg",
+        "./img/zub/0046.jpg",
+        "./img/zub/0047.jpg",
+        "./img/zub/0048.jpg",
+        "./img/zub/0049.jpg",
+        "./img/zub/0050.jpg",
+        "./img/zub/0051.jpg",
+        "./img/zub/0052.jpg",
+        "./img/zub/0053.jpg",
+        "./img/zub/0054.jpg",
+        "./img/zub/0055.jpg",
+        "./img/zub/0056.jpg",
+        "./img/zub/0057.jpg",
+        "./img/zub/0058.jpg",
+        "./img/zub/0059.jpg",
+        "./img/zub/0060.jpg",
+        "./img/zub/0061.jpg",
+        "./img/zub/0062.jpg",
+        "./img/zub/0063.jpg",
+        "./img/zub/0064.jpg",
+        "./img/zub/0065.jpg",
+        "./img/zub/0066.jpg",
+        "./img/zub/0067.jpg",
+        "./img/zub/0068.jpg",
+        "./img/zub/0069.jpg",
+        "./img/zub/0070.jpg",
+        "./img/zub/0071.jpg",
+        "./img/zub/0072.jpg",
+        "./img/zub/0073.jpg",
+        "./img/zub/0074.jpg",
+        "./img/zub/0075.jpg",
+        "./img/zub/0076.jpg",
+        "./img/zub/0078.jpg",
+        "./img/zub/0079.jpg",
+        "./img/zub/0080.jpg",
+        "./img/zub/0081.jpg",
+        "./img/zub/0082.jpg",
+        "./img/zub/0083.jpg",
+        "./img/zub/0085.jpg",
+        "./img/zub/0086.jpg",
+        "./img/zub/0087.jpg",
+        "./img/zub/0088.jpg",
+        "./img/zub/0089.jpg",
+        "./img/zub/0090.jpg",
+        "./img/zub/0091.jpg",
+        "./img/zub/0092.jpg",
+        "./img/zub/0093.jpg",
+        "./img/zub/0094.jpg",
+        "./img/zub/0095.jpg",
+        "./img/zub/0096.jpg",
+        "./img/zub/0097.jpg",
+        "./img/zub/0098.jpg",
+        "./img/zub/0099.jpg",
+        "./img/zub/0100.jpg",
+        "./img/zub/0101.jpg",
+        "./img/zub/0102.jpg",
+        "./img/zub/0103.jpg",
+        "./img/zub/0104.jpg",
+        "./img/zub/0105.jpg",
+        "./img/zub/0106.jpg",
+        "./img/zub/0107.jpg",
+        "./img/zub/0108.jpg",
+        "./img/zub/0109.jpg",
+        "./img/zub/0110.jpg",
+        "./img/zub/0111.jpg",
+        "./img/zub/0112.jpg",
+        "./img/zub/0113.jpg",
+        "./img/zub/0114.jpg",
+        "./img/zub/0115.jpg",
+        "./img/zub/0116.jpg",
+        "./img/zub/0117.jpg",
+        "./img/zub/0118.jpg",
+        "./img/zub/0119.jpg",
+        "./img/zub/0120.jpg",
+	];
+
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj = {curImg: 0};
+    var sectionHeight = document.querySelector('.why_choose').offsetHeight;
+    console.log(sectionHeight)
+
+	// create tween
+	var tween = TweenMax.to(obj, 0.5,
+		{
+			curImg: images.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index
+			repeat: 0,									// repeat 1 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $("#myimg").attr("src", images[obj.curImg]); // set the image source
+			}
+		}
+	);
+
+		// init controller
+		var controller = new ScrollMagic.Controller();
+
+		$(function () { // wait for document ready
+			// build scene
+			var scene = new ScrollMagic.Scene({
+				triggerElement: "#trigger1",
+                triggerHook: 0,
+				duration: sectionHeight,
+			})
+							.setPin("#pin1")
+							.addTo(controller);
+
+			// build scene
+			var scene = new ScrollMagic.Scene({
+				triggerElement: "#trigger",
+                triggerHook: 0,
+				duration: sectionHeight
+			})
+							.setTween(tween)
+							.addTo(controller);
+		});
+    }
+	</script>
+
+
+    <script src="./js/libs/jquery.datetimepicker.full.js"></script>
+    <script>
+        $('#datetimepicker1').datetimepicker({
+            lang:'ru',
+            timepicker: false,
+            format:'d.m.Y',
+            });
+
+        $('#datetimepicker2').datetimepicker({
+            datepicker:false,
+            allowTimes:['12:00','13:00','15:00','17:00','17:05','17:20','19:00','20:00'],
+            format:'H:i',
+        });
+    </script>
 
 
     <script src="./js/main.js"></script>
