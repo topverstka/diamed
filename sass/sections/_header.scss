@@ -1,6 +1,11 @@
 .header {
-    position: relative;
     z-index: 2;
+    position: relative;
+    transition: all 1s;
+    top: 0;
+    &.hide{
+        top: -200px;
+    }
 }
 
 .header_info {

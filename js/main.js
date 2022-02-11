@@ -57,15 +57,18 @@ function bodyLock(con) {
     }
 }
 
-// Поля форм
+// Интро
 
-// let allinputs = findAll('.form-elem');
 
-// for (let i = 0; i < allinputs.length; i++){
-//     allinputs[i].addEventListener('click', function(){
-//         this.classList.add('active');
-//     });
-// }
+let intro = find('.intro__media');
+
+if(window.innerWidth > 767){
+    intro.play();
+    setTimeout(function(){
+        find('.header').classList.remove('hide');
+    }, 6000)
+}
+
 
 // Валидация формы
 function validationForm() {

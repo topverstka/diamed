@@ -153,9 +153,11 @@
 @keyframes showTitle {
     from {
         transform: translateY(80%);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 

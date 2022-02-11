@@ -1,7 +1,7 @@
 .main_top__wrapper {
-    background: url(../img/background_main.png) center center;
     background-size: cover;
     padding-bottom: 32px;
+    position: relative;
     
     @media (max-width: $laptop-m) {
         padding-bottom: 56px;
