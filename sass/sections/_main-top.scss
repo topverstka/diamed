@@ -161,7 +161,7 @@
     right: 0px;
     left: auto;
     width: 70px;
-
+    transition: 0.5s linear;
     @media (max-width: $tablet){
         width: 60px;
     }
@@ -175,12 +175,10 @@
     line-height: 26px;
     padding-left: 24px;
     padding-right: 43%;
+    transition: 0.5s linear;
     @media (max-width: $tablet){
         font-size: 16px;
         padding-right: 20%;
-    }
-    @media (max-width: $tablet-s){
-        
     }
 }
 
@@ -190,5 +188,5 @@
     width: 40px;
     right: 24px;
     opacity: 0;
-    transition: $tr linear;
+    transition: 1s linear;
 }
