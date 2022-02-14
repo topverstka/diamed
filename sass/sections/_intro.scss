@@ -1,5 +1,6 @@
 .intro{
     position: relative;
+    min-height: 100vh;
 }
 
 .intro-bg{
@@ -8,11 +9,25 @@
     height: 100%;
     z-index: -1;
     top: 0;
-    background: url(../img/background_main.png) center center;
     display: flex;
     justify-content: center;
+}
+.intro__img{
+    height: 100%;
+    display: none;
+    height: 100%;
+    z-index: -1;
+    &.active{
+        display: block;
+    }
 }
 
 .intro__media{
    height: 100%;
+   top: 0;
+   display: none;
+   position: absolute;
+   &.active{
+       display: block;
+   }
 }

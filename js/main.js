@@ -57,17 +57,32 @@ function bodyLock(con) {
     }
 }
 
+
+find('.header').classList.remove('hide');
+
 // Интро
 
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+let intro;
+let introBG;
 
-let intro = find('.intro__media');
-
-if(window.innerWidth > 767 && find('.intro')){
-    intro.play();
-    setTimeout(function(){
-        find('.header').classList.remove('hide');
-    }, 6000)
+if(windowWidth > 767){
+    intro = find('.intro__media--pc');
+    introBG = find('.intro__img--pc');
+} else if (windowWidth <= 767){
+    if(windowWidth > windowHeight){
+        intro = find('.intro__media--h');
+        introBG = find('.intro__img--h');
+    } else {
+        intro = find('.intro__media--v');
+        introBG = find('.intro__img--v');
+    }
 }
+
+intro.classList.add('active');
+introBG.classList.add('active')
+intro.play();
 
 
 // Валидация формы

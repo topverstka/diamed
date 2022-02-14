@@ -289,6 +289,10 @@
         opacity: 0.6;
         width: 139px;
         height: 139px;
+        
+        &:hover{
+            cursor: pointer;
+        }
 
         @media (max-width: 1000px) {
             width: 100px;

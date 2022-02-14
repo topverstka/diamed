@@ -21,7 +21,8 @@
         width: 100%;
         height: 100%;
         // background: -90px -17px/1758px no-repeat url(../img/background_digits.png);
-        background: -60px -90px/1758px no-repeat url(../img/background_digits.png);
+        background: no-repeat url(../img/background_digits.png);
+        background-size: cover;
 
         @media (max-width: $tablet-l) {
             background-position: 0 center;
