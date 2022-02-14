@@ -1,15 +1,15 @@
-.modal-search {
+.modal-header {
     background: rgba(248, 247, 252, .5);
     backdrop-filter: blur(5px);
 }
 
-.modal-search__wrap {
+.modal-header__wrap {
     align-items: flex-start;
     padding: 0;
     transform: translateY(-100%);
 }
  
-.modal-search__content {
+.modal-header__content {
     max-width: none;
     width: 100%;
     background: $header-bg;
@@ -23,17 +23,17 @@
 }
 
 // Шапка поиска
-.modal-search__header {
+.modal-header__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.modal-search__title {
+.modal-header__title {
 
 }
 
-.modal-search__close {
+.modal-header__close {
     position: relative;
     top: auto;
     right: auto;
@@ -53,6 +53,10 @@
     width: 100%;
     height: 52px;
 
+    @media (max-width: $mobile-l) {
+        height: 39px;
+    }
+
     & input {
         position: absolute;
         top: 0;
@@ -65,8 +69,13 @@
         border-radius: $radius;
         padding: 0 24px 0 42px;
 
+        @media (max-width: $mobile-l) {
+            font-size: 14px;
+            padding: 0 12px 0 34px;
+        }
+
         &::placeholder {
-            color: $main;
+            color: $accent2;
         }
     }
 }
@@ -80,9 +89,69 @@
     height: 16px;
     display: flex;
     pointer-events: none;
+
+    @media (max-width: $mobile-l) {
+        left: 8px;
+    }
 }
 
 .modal-search__submit {
-    width: 185px;
+    max-width: 185px;
+    width: 100%;
     margin-left: 10px;
+
+    @media (max-width: $mobile-l) {
+        max-width: 112px;
+        height: 39px;
+        padding: 0 12px;
+    }
+}
+
+// Рабочее время
+.modal-work-time__body {
+    margin-top: 32px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 16px;
+    }
+}
+
+.modal-work-time__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 80px;
+    margin-top: 42px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 24px;
+    }
+}
+
+.modal-work-time__block {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-right: 80px;
+    }
+}
+
+.modal-work-time__title {
+    font-size: 16px;
+    color: $accent2;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
+}
+
+.modal-work-time__text {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+        margin-top: 8px;
+    }
 }

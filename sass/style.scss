@@ -48,6 +48,8 @@ body {
 @import 'components/_tabs';
 @import 'components/_accordion';
 @import 'components/_sliders';
+@import 'components/_breadcrumbs';
+@import 'components/_pagination';
 // Текстовые компоненты
 @import 'components/text/_text';
 @import 'components/text/_titles';
@@ -65,4 +67,7 @@ body {
 @import 'sections/_review';
 @import 'sections/cat';
 @import 'sections/_footer';
+
 // Страницы
+@import 'pages/services/_services';
+@import 'pages/search/_search';

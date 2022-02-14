@@ -1,0 +1,83 @@
+.s-search__search-form {
+
+    & input {
+        border: 1px solid $outline-card;
+    }
+}
+
+.s-search__search {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-search__quantity-result {
+    font-size: 16px;
+    margin-top: 24px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+}
+
+.s-search {
+    margin-top: 40px;
+}
+
+.s-search__wrap {
+
+}
+
+.s-search__list {
+
+}
+
+// Карточка
+.s-search-card {
+    padding: 32px 0 24px 0;
+    border-bottom: 1px solid $outline-card;
+    
+    &:first-child {
+        border-top: 1px solid $outline-card;
+    }
+    
+    // &:not(:last-child) {
+    // }
+
+    @media (max-width: $mobile-l) {
+        padding: 24px 0 16px 0;
+    }
+}
+
+.s-search-card__title {
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+    }
+}
+
+.s-search-card__text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+    }
+
+    & strong {
+        color: $second;
+        font-weight: 600;
+    }
+}
+
+.s-search-card__link {
+    margin-top: 32px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 12px;
+        margin-top: 24px;
+    }
+}

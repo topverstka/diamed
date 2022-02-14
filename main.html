@@ -34,33 +34,31 @@
                             <img src="./img/icons/icon_header.svg" alt="">
                             <p>Университетская клиника МГМУ имени И.М. Сеченова</p>
                         </div>
-                        <div class="header_info__time">
+                        <button class="header_info__time" data-modal-open="work_time">
                             <span class="header_info__time-text">Часы работы</span>
                             <svg>
                                 <use xlink:href="./img/sprite.svg#time"></use>
                             </svg>
-                        </svg>
-                        </svg>
-                        </div>
+                        </button>
                         <div class="header_info__icons">
                             <button class="eye_icon"><svg><use xlink:href="./img/sprite.svg#eye"></use></svg></button>
                             <button class="search_icon" data-modal-open="search"><svg><use href='./img/sprite.svg#search_icon'></use></svg></button>
                         </div>
                     </div>
                 </div>
-                <div class="modal modal-search" id="search">
-                    <div class="modal__wrap modal-search__wrap">
-                        <div class="modal__content modal-search__content">
-                            <div class="modal-search__header">
-                                <h2 class="modal-search__title">Поиск</h2>
-                                <button class="modal__close modal-search__close">
+                <div class="modal modal-header" id="search">
+                    <div class="modal__wrap modal-header__wrap">
+                        <div class="modal__content modal-header__content">
+                            <div class="modal-header__header">
+                                <h2 class="title-section modal-header__title">Поиск</h2>
+                                <button class="modal__close modal-header__close">
                                     <span></span>
                                     <span></span>
                                 </button>
                             </div>
                             <form action="#" class="modal-search__form">
                                 <div class="modal-search__textfield">
-                                    <input type="text" id="search" placeholder="Лечение кариеса">
+                                    <input type="text" id="search" placeholder="Поиск..." value="Лечение кариеса">
                                     <span class="modal-search__textfield-icon"><svg><use href='./img/sprite.svg#search-form_icon'></use></svg></span>
                                 </div>
                                 <button class="btn modal-search__submit" type="submit">Найти</button>
@@ -68,11 +66,48 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal modal-header" id="work_time">
+                    <div class="modal__wrap modal-header__wrap">
+                        <div class="modal__content modal-header__content">
+                            <div class="modal-header__header">
+                                <h2 class="title-section modal-header__title">Часы работы</h2>
+                                <button class="modal__close modal-header__close">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="modal-work-time__body">
+                                <div class="tabs__header" data-wow-delay=".3s">
+                                    <div class="tab__list">
+                                        <button class="tab" data-tab="features">На Красноармейской</button>
+                                        <button class="tab" data-tab="indications">На Фрунзе</button>
+                                        <button class="tab" data-tab="cost">На Карташова</button>
+                                        <div class="tab__roller"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-work-time__list">
+                                    <div class="modal-work-time__block">
+                                        <h3 class="modal-work-time__title">Адрес</h3>
+                                        <h3 class="modal-work-time__text">Томск,<br>ул. Красноармейская, 96</h3>
+                                    </div>
+                                    <div class="modal-work-time__block">
+                                        <h3 class="modal-work-time__title">Часы работы</h3>
+                                        <h3 class="modal-work-time__text">ПН-ВС 8:30-20:00<br>ВС 8:30-14:30</h3>
+                                    </div>
+                                    <div class="modal-work-time__block">
+                                        <h3 class="modal-work-time__title">Контакты</h3>
+                                        <h3 class="modal-work-time__text">530-580<br>diamed08@inbox.ru</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="header_main">
                     <div class="container">
                         <div class="header_main__wrap">
-                            <button class="header_main__mobile-icon">
+                            <button class="header_main__mobile-icon" data-modal-open="work_time">
                                 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M18 12.5999V17.9999L21.6 19.7999" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -206,10 +241,9 @@
                 </div>
             </header>
 
-
             <div class="main_top__wrapper">
                 <div class="container">
-                    <h1 class="main_top__wrapper-header wow showTitle"  data-wow-delay="6s">
+                    <h1 class="title-main main_top__wrapper-header wow showTitle"  data-wow-delay="6s">
                         <span>
                             <b>Нам доверяют</b> самое ценное!
                         </span>
@@ -257,7 +291,7 @@
         <main class="main">
             <section class="actual_offer">
                 <div class="container">
-                    <h2 class="actual_offer-title"><span class="wow showTitle">Актуальные предложения</span></h2>
+                    <h2 class="title-section actual_offer-title"><span class="wow showTitle">Актуальные предложения</span></h2>
                     <div class="actual_offer__slider">
                         <div class="swiper-wrapper actual_offer__wrap">
                             <div class="swiper-slide">
@@ -327,7 +361,7 @@
                 <div class="container">
                     <div class="our_doctors__wrapp">
                         <div class="our_doctors__info">
-                            <h2 class="our_doctors__title"><span class="wow showTitle">Наши врачи</span></h2>
+                            <h2 class="title-section our_doctors__title"><span class="wow showTitle">Наши врачи</span></h2>
                             <div class="our_doctors__tabs-container">
                                 <div class="our_doctors__tabs tabs__header wow fadeIn" data-wow-delay=".2s">
                                     <div class="tab__list">
@@ -418,7 +452,7 @@
                 <div class="container">
                     <div class="why_choose__wrapp">
                         <div class="why_choose__left">
-                            <h2 class="why_choose-title wow showTitle">Почему выбирают нас?</h2>
+                            <h2 class="title-section why_choose-title wow showTitle">Почему выбирают нас?</h2>
                             <div class="why_choose__left-picture" >
                                 <img class="why_choose__left-picture-all wow fadeIn" data-wow-delay="1s" src="./img/why_choose/picture-1.png" alt="">
                                 <img id="myimg" class="why_choose__left-picture-main" src="./img/zub/0001.jpg" alt="">
@@ -524,7 +558,7 @@
                 <div class="container">
                     <div class="number_proud__wrapp">
                         <div class="number_proud__title">
-                            <h2><span class="wow showTitle">Цифры, которыми <br>можно гордиться</span></h2>
+                            <h2 class="title-section"><span class="wow showTitle">Цифры, которыми <br>можно гордиться</span></h2>
                         </div>
                         <div class="number_proud__elements">
                             <div class="number_proud__elements-column">
@@ -551,7 +585,7 @@
 
             <section class="useful">
                 <div class="container">
-                    <h2 class="useful-title"><span class="wow showTitle">Полезное</span></h2>
+                    <h2 class="title-section useful-title"><span class="wow showTitle">Полезное</span></h2>
                     <div class="useful_wrapp">
                         <div class="useful_wrapp__smart wow bounceInUp" data-wow-duration="2s">
                             <div class="userful_wrapp__smart-content">
@@ -590,7 +624,7 @@
             <section class="news">
                 <div class="container">
                     <div class="news_header-line">
-                        <h2><span class="wow showTitle">Новости и акции</span></h2>
+                        <h2 class="title-section"><span class="wow showTitle">Новости и акции</span></h2>
                         <a href="" class="link_arrow news-link wow fadeIn">Смотреть все новости и акции</a>
                     </div>
                     <!-- <div class="swiper-container">
@@ -642,7 +676,7 @@
                 <div class="container">
                     <div class="review_wrapp">
                         <div class="review_wrapp__text">
-                            <h2 class="review-title"><span class="wow showTitle">Отзывы <br> о нашей работе</span></h2>
+                            <h2 class="title-section review-title"><span class="wow showTitle">Отзывы <br> о нашей работе</span></h2>
                             <div class="swiper__arrow review__arrows wow fadeIn" data-wow-delay=".3s">
                                 <button class="swiper__arrow-next review__arrow-next slider-arrow"> 
                                         <span class="main-slider__arrow-icon">
@@ -738,6 +772,7 @@
                             </div>
                         </div>
                         <button class="btn review_wrapp__btn-mobile">Оставить отзыв</button>
+                        <div class="review__bg-img"><img src="./img/background_reviews.png" alt=""></div>
                     </div>
                 </div>
             </section>
@@ -745,7 +780,7 @@
         </main>
         <section class="cat">
             <div class="container">
-                <h2 class="cat-title"><span class="wow showTitle">Скажите «А-а-а-а»</span></h2>
+                <h2 class="title-section cat-title"><span class="wow showTitle">Скажите «А-а-а-а»</span></h2>
                 <div class="cat__columns">
                     <div class="cat__columns-left">
                         <div class="tabs__header tabs_cat wow fadeIn" data-wow-delay=".3s">

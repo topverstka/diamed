@@ -183,6 +183,14 @@
     }
 }
 
+// Ссылка акцентного цвета
+.link_arrow-accent {
+    font-weight: 400;
+    color: $second;
+    opacity: .7;
+    transition: $tr;
+}
+
 // Ссылка в sub-menu
 .link_arrow-sub {
     color: $main;

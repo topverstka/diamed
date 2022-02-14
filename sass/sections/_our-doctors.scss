@@ -60,7 +60,12 @@
     pointer-events: none;
 
     @media (max-width: $tablet) {
-        display: none;
+        width: 500px;
+        height: 530px;
+        bottom: auto;
+        left: auto;
+        top: 77px;
+        right: -85px;
     }
 }
 

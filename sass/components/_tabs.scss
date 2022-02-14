@@ -29,8 +29,14 @@
         background: #F0EFEF4D;
         margin-bottom: 32px;
 
+        @media (max-width: $tablet) {
+            background-color: transparent;
+            margin-bottom: 1px;
+        }
+
         & .tab {
             color: #EAE9EF;
+            background-color: #F0EFEF4D;
 
             &:hover{
                 color: #fff;
@@ -39,6 +45,30 @@
             &._active{
                 color: #686868;
             }
+        }
+    }
+    
+    @media(max-width: $tablet){
+        background-color: transparent;
+        margin-bottom: 1px;
+
+        .tab__list{
+            flex-wrap: wrap;
+        }
+
+        .tab{
+            padding: 12px 11px;
+            background: #EAE9EF;
+            border-radius: 13px;
+            margin-right: 13px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            &._active{
+                background-color: #fff;
+            }
+        }
+        .tab__roller{
+            display: none;
         }
     }
 }
@@ -62,7 +92,7 @@
     cursor: pointer;
     white-space: nowrap;
 
-    @media (max-width: $tablet-s) {
+    @media (max-width: $tablet) {
         font-size: 10px;
         padding: 10px 11px;
     }

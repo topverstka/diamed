@@ -62,7 +62,7 @@ function bodyLock(con) {
 
 let intro = find('.intro__media');
 
-if(window.innerWidth > 767){
+if(window.innerWidth > 767 && find('.intro')){
     intro.play();
     setTimeout(function(){
         find('.header').classList.remove('hide');
@@ -503,18 +503,22 @@ function firstTabIsActive() {
 
 tabs()
 function tabs() {
-  const tabElems = document.querySelectorAll('.tab')
+  const tabListElems = document.querySelectorAll('.tab__list')
   
-  for (let i = 0; i < tabElems.length; i++) {
-    const tab = tabElems[i]
-    tab.addEventListener('click', e => {
-        const tabList = tab.parentElement
-        removeAll(tabElems, '_active')
-        tab.classList.add('_active')
-      
-        // tabBlockActive()
-        swipeRoller(tabList)
-    })
+  for (let i = 0; i < tabListElems.length; i++) {
+      const tabList = tabListElems[i];
+      const tabElems = tabList.querySelectorAll('.tab')
+
+      for (let i = 0; i < tabElems.length; i++) {
+        const tab = tabElems[i]
+        tab.addEventListener('click', e => {
+            const tabList = tab.parentElement
+            removeAll(tabElems, '_active')
+            tab.classList.add('_active')
+            
+            swipeRoller(tabList)
+        })
+      }
   }
 }
 

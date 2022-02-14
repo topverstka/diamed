@@ -1,9 +1,10 @@
 .review {
+    position: relative;
     background: $header-bg;
     padding: 66px 0px;
-    background-image: url(../../img/background_reviews.png);
-    background-repeat: no-repeat;
-    background-position: 561px 216px;
+    // background-image: url(../../img/background_reviews.png);
+    // background-repeat: no-repeat;
+    // background-position: 561px 216px;
     padding-bottom: 63px;
 
     @media (max-width: $tablet){
@@ -24,6 +25,13 @@
         padding-top: 32px;
         padding-bottom: 32px;
     }
+}
+
+.review__bg-img {
+    position: absolute;
+    top: 216px;
+    left: 561px;
+    opacity: .2;
 }
 
 .review-title{

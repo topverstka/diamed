@@ -106,17 +106,14 @@
         }
     }
 
-    .eye_icon{
+    .eye_icon,
+    .search_icon {
         width: 20px;
         height: 20px;
-        fill: transparent;
-        flex-shrink: 0;
     }
+    
     .search_icon {
         margin-left: 17px;
-        flex-shrink: 0;
-        width: 20px;
-        height: 20px;
     }
 }
 
