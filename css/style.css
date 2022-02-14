@@ -5307,7 +5307,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .tabs__header.tabs_cat .tab {
   color: #EAE9EF;
-  background-color: #F0EFEF4D;
+}
+
+@media (max-width: 768px) {
+  .tabs__header.tabs_cat .tab {
+    background-color: #F0EFEF4D;
+  }
 }
 
 .tabs__header.tabs_cat .tab:hover {

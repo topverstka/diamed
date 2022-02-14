@@ -36,7 +36,10 @@
 
         & .tab {
             color: #EAE9EF;
-            background-color: #F0EFEF4D;
+
+            @media (max-width: $tablet) {
+                background-color: #F0EFEF4D;
+            }
 
             &:hover{
                 color: #fff;
