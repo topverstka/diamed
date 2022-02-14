@@ -4829,6 +4829,34 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+.form-elem-date::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 29px;
+  height: 29px;
+  background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.04102 6.64583C5.70735 6.64583 5.43685 6.91632 5.43685 7.25V23.5625C5.43685 23.8962 5.70735 24.1667 6.04102 24.1667H22.9577C23.2905 24.1667 23.5618 23.8957 23.5618 23.5612V7.25133C23.5618 6.9168 23.2905 6.64583 22.9577 6.64583H21.1452V5.4375H22.9577C23.9596 5.4375 24.7702 6.25113 24.7702 7.25133V23.5612C24.7702 24.5614 23.9596 25.375 22.9577 25.375H6.04102C5.04 25.375 4.22852 24.5635 4.22852 23.5625V7.25C4.22852 6.24896 5.04 5.4375 6.04102 5.4375H9.06185V6.64583H6.04102ZM18.7285 6.64583H11.4785V5.4375H18.7285V6.64583Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.5625 12.0833H5.4375V10.875H23.5625V12.0833Z' fill='white'/%3E%3Cpath d='M9.0625 4.22917C9.0625 3.8955 9.33299 3.625 9.66667 3.625C10.0003 3.625 10.2708 3.8955 10.2708 4.22917V8.45833C10.2708 8.79201 10.0003 9.0625 9.66667 9.0625C9.33299 9.0625 9.0625 8.79201 9.0625 8.45833V4.22917Z' fill='white'/%3E%3Cpath d='M18.7285 4.22917C18.7285 3.8955 18.999 3.625 19.3327 3.625C19.6664 3.625 19.9368 3.8955 19.9368 4.22917V8.45833C19.9368 8.79201 19.6664 9.0625 19.3327 9.0625C18.999 9.0625 18.7285 8.79201 18.7285 8.45833V4.22917Z' fill='white'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.form-elem-time::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 29px;
+  height: 29px;
+  background: center bottom/16px 16px no-repeat url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
 .form-elem input {
   height: 59px;
   background: transparent;
