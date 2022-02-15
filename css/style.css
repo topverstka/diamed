@@ -9585,6 +9585,7 @@ h6 {
 
 .service-card__link {
   font-size: 16px;
+  font-weight: 500;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
