@@ -194,8 +194,7 @@
     @media (max-width: $tablet-s) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5px 17px; 
-
+        gap: 20px 17px; 
     }
 }
 
@@ -258,9 +257,10 @@
 
         @media (max-width: $tablet-s) {
             font-size: 14px;
-            position: relative;
-            top: -6px;
-            margin-bottom: -6px;
+            // position: relative;
+            // top: -6px;
+            // margin-bottom: -6px;
+            line-height: 1;
         }
 
         &:active{
