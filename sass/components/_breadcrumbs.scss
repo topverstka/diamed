@@ -1,15 +1,12 @@
 .breadcrumbs {
     margin-bottom: 20px;
     overflow-x: auto;
-    
     &::-webkit-scrollbar {
         height: 0;
     }
-
     @media (max-width: $mobile-l) {
         margin-bottom: 10px;
     }
-
     @media (max-width: $mobile) {
         margin-bottom: 5px;
     }
@@ -22,12 +19,10 @@
 .breadcrumbs-indent {
     margin-top: 55px;
     margin-bottom: 55px;
-
     @media (max-width: $tablet) {
         margin-top: 40px;
         margin-bottom: 40px;
     }
-
     @media (max-width: $mobile-l) {
         margin-top: 16px;
         margin-bottom: 32px;
@@ -43,24 +38,20 @@
     font-size: 14px;
     color: $main;
     white-space: nowrap;
-
     &:not(:last-child) {
-
         &::after {
             content: '';
             display: inline-block;
-            width: 16px; 
+            width: 16px;
             height: 16px;
-            background:  center/contain no-repeat url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12L10 8L6 4' stroke='%23C4E0E5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12L10 8L6 4' stroke='%23C4E0E5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             vertical-align: middle;
             margin: 0 10px;
         }
     }
-
     a {
         color: $second;
     }
-
     @media (max-width: $mobile-l) {
         font-size: 12px;
     }

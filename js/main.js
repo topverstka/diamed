@@ -67,11 +67,11 @@ let windowHeight = window.innerHeight;
 let intro;
 let introBG;
 
-if(windowWidth > 767){
+if (windowWidth > 767) {
     intro = find('.intro__media--pc');
     introBG = find('.intro__img--pc');
-} else if (windowWidth <= 767){
-    if(windowWidth > windowHeight){
+} else if (windowWidth <= 767) {
+    if (windowWidth > windowHeight) {
         intro = find('.intro__media--h');
         introBG = find('.intro__img--h');
     } else {
@@ -80,9 +80,11 @@ if(windowWidth > 767){
     }
 }
 
-intro.classList.add('active');
-introBG.classList.add('active')
-intro.play();
+if (intro) {
+    intro.classList.add('active');
+    introBG.classList.add('active')
+    intro.play();
+}
 
 
 // Валидация формы
@@ -157,6 +159,7 @@ function sumbitForm() {
 
 // Мобильное меню
 menu()
+
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');
@@ -212,6 +215,7 @@ function menu() {
 // Функции для модальных окон
 // Открытие модальных окон при клике по кнопке
 openModalWhenClickingOnBtn()
+
 function openModalWhenClickingOnBtn() {
     const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
 
@@ -224,8 +228,7 @@ function openModalWhenClickingOnBtn() {
 
             if (find('.modal._show')) {
                 closeModal()
-            }
-            else {
+            } else {
                 openModal(modal)
                 window.location.hash = dataBtn
             }
@@ -235,6 +238,7 @@ function openModalWhenClickingOnBtn() {
 
 // Открытие модального окна, если в url указан его id
 openModalHash()
+
 function openModalHash() {
     if (window.location.hash) {
         const hash = window.location.hash.substring(1)
@@ -246,6 +250,7 @@ function openModalHash() {
 
 // Показываем/убираем модальное окно при изменения хеша в адресной строке
 checkHash()
+
 function checkHash() {
     window.addEventListener('hashchange', e => {
         const hash = window.location.hash
@@ -258,6 +263,7 @@ function checkHash() {
 
 // Закрытие модального окна при клике по заднему фону
 closeModalWhenClickingOnBg()
+
 function closeModalWhenClickingOnBg() {
     document.addEventListener('click', (e) => {
         const target = e.target
@@ -269,6 +275,7 @@ function closeModalWhenClickingOnBg() {
 
 // Закрытие модальных окон при клике по крестику
 closeModalWhenClickingOnCross()
+
 function closeModalWhenClickingOnCross() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -285,6 +292,7 @@ function closeModalWhenClickingOnCross() {
 
 // Закрытие модальных окон при нажатии по клавише ESC
 closeModalWhenClickingOnESC()
+
 function closeModalWhenClickingOnESC() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -308,7 +316,7 @@ function openModal(modal) {
     if (find('.modal._show')) {
         find('.modal._show').classList.remove('_show')
     }
-    
+
     modal.classList.add('_show')
     bodyLock(true)
 }
@@ -345,8 +353,8 @@ const swiper_slider = new Swiper('.actual_offer__slider', {
     },
 
     navigation: {
-      nextEl: '.actual_offer__arrow-next',
-      prevEl: '.actual_offer__arrow-prev',
+        nextEl: '.actual_offer__arrow-next',
+        prevEl: '.actual_offer__arrow-prev',
     },
 });
 
@@ -373,7 +381,7 @@ const swiper_news = new Swiper('.news-slider', {
 });
 
 // const swiper = new Swiper('.swiper-container', {
-  
+
 //   slidesPerView: 1, // Кол-во показываемых слайдов
 //   spaceBetween: 0, // Расстояние между слайдами
 //   loop: true, // Бесконечный слайдер
@@ -412,7 +420,7 @@ const swiper_doctors = new Swiper(".our_doctors__slider-main", {
     allowTouchMove: false,
     effect: 'fade',
     fadeEffect: {
-      crossFade: true
+        crossFade: true
     },
     // freeMode: true,
     watchSlidesProgress: true,
@@ -505,39 +513,42 @@ const swiper_review = new Swiper('.review_wrapp__slider', {
 
 // Первый таб является активным
 firstTabIsActive()
+
 function firstTabIsActive() {
-  const tabList = document.querySelectorAll('.tab__list')
+    const tabList = document.querySelectorAll('.tab__list')
 
-  for (let i = 0; i < tabList.length; i++) {
-      const tab = tabList[i];
-      const tabElems = tab.querySelectorAll('.tab')
+    for (let i = 0; i < tabList.length; i++) {
+        const tab = tabList[i];
+        const tabElems = tab.querySelectorAll('.tab')
 
-      tabElems[0].classList.add('_active')
-  }
+        tabElems[0].classList.add('_active')
+    }
 }
 
 tabs()
-function tabs() {
-  const tabListElems = document.querySelectorAll('.tab__list')
-  
-  for (let i = 0; i < tabListElems.length; i++) {
-      const tabList = tabListElems[i];
-      const tabElems = tabList.querySelectorAll('.tab')
 
-      for (let i = 0; i < tabElems.length; i++) {
-        const tab = tabElems[i]
-        tab.addEventListener('click', e => {
-            const tabList = tab.parentElement
-            removeAll(tabElems, '_active')
-            tab.classList.add('_active')
-            
-            swipeRoller(tabList)
-        })
-      }
-  }
+function tabs() {
+    const tabListElems = document.querySelectorAll('.tab__list')
+
+    for (let i = 0; i < tabListElems.length; i++) {
+        const tabList = tabListElems[i];
+        const tabElems = tabList.querySelectorAll('.tab')
+
+        for (let i = 0; i < tabElems.length; i++) {
+            const tab = tabElems[i]
+            tab.addEventListener('click', e => {
+                const tabList = tab.parentElement
+                removeAll(tabElems, '_active')
+                tab.classList.add('_active')
+
+                swipeRoller(tabList)
+            })
+        }
+    }
 }
 
 tabRollers()
+
 function tabRollers() {
     const tabListElems = findAll('.tab__list')
 
@@ -554,26 +565,27 @@ function tabRollers() {
 function swipeRoller(tabList) {
     const roller = tabList.querySelector('.tab__roller')
     const tabActive = tabList.querySelector('.tab._active')
-    
-        roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
-        roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+
+    roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
+    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 }
 
 // tabBlockActive()
 function tabBlockActive() {
     const tabActive = document.querySelector('.tab._active'),
-          dataTab = tabActive.dataset.tab,
-          blockElems = document.querySelectorAll('.tabs__block'),
-          blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
-      
+        dataTab = tabActive.dataset.tab,
+        blockElems = document.querySelectorAll('.tabs__block'),
+        blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+
     removeAll(blockElems, '_show')
     for (let i = 0; i < blockShowElems.length; i++) {
-      blockShowElems[i].classList.add('_show')
+        blockShowElems[i].classList.add('_show')
     }
 }
 
 // Анимация пересчета цифр
 appearAnimationNumber()
+
 function appearAnimationNumber() {
     const appearElems = findAll('[data-animation=number]')
 
@@ -584,19 +596,19 @@ function appearAnimationNumber() {
 
         elem.innerHTML = generatorHTMLFromNum(number)
     }
-    
+
     // Сгенерировать 3 цифры, идущие за аргументом
     function generatorFreeNum(num) {
         num = parseInt(num)
         let arr = []
-    
+
         for (let i = 1; i < 3; i++) {
             arr.push(num--)
         }
-    
+
         return arr
     }
-    
+
     // Собирает массив из строки и генерирует html
     function generatorHTMLFromNum(value) {
         return value.split('').map(e => `<span>${e}</span>`).join('')
@@ -609,29 +621,30 @@ window.addEventListener('load', animation)
 
 // Анимация
 animation()
+
 function animation() {
     const elems = document.querySelectorAll('[data-animation]')
-    
+
     for (let i = 0; i < elems.length; i++) {
         const elem = elems[i];
         const elemTop = elem.getBoundingClientRect().top
-    
+
         if (elemTop < window.innerHeight && elemTop >= 0) {
-    
+
             if (elem.dataset.animation === 'number' && !elem.classList.contains('_visible')) {
                 const numElems = elem.querySelectorAll('span')
-    
+
                 doAnimWithDelay(numElems, '_visible', 150)
                 elem.classList.add('_visible')
             }
-    
+
             if (elem.dataset.animation === 'acc' && !elem.classList.contains('_visible')) {
                 elem.classList.add('_visible')
             }
-    
+
             if (elem.dataset.animation === 'menu-item' && !elem.classList.contains('_visible')) {
                 const itemElems = elem.querySelectorAll('li')
-    
+
                 doAnimWithDelay(itemElems, '_visible', 150)
                 elem.classList.add('_visible')
             }
@@ -656,6 +669,7 @@ function doAnimWithDelay(array, _class, transition) {
 if (window.innerWidth <= 500) {
     showSubMenuMobile()
 }
+
 function showSubMenuMobile() {
     const itemElems = findAll('[data-sub-menu]')
 
@@ -663,15 +677,15 @@ function showSubMenuMobile() {
         const item = itemElems[i];
         const subMenu = item.dataset.subMenu
         const listSubMenu = item.parentElement.nextElementSibling
-        
+
         fetch('../sub-menu-db.json')
             .then(res => res.json())
             .then(json => {
                 let arr = []
-    
+
                 for (let i = 0; i < json.length; i++) {
                     const elem = json[i];
-    
+
                     if (elem.category === subMenu) {
                         arr.push(elem)
                     }
@@ -683,35 +697,35 @@ function showSubMenuMobile() {
             })
             .then(e => {
                 const dItemElems = item.parentElement.nextElementSibling.querySelectorAll('[data-d-sub-menu]')
-        
+
                 for (let i = 0; i < dItemElems.length; i++) {
                     const dItem = dItemElems[i];
                     const dItemData = dItem.dataset.dSubMenu
                     const dItemList = dItem.parentElement.nextElementSibling
                     console.log(dItem)
-        
+
                     getDataDSubMenuForMobile(dItemData)
                         .then(arr => {
                             if (arr.length != 0) {
 
                                 for (let i = 0; i < arr.length; i++) {
                                     const elem = arr[i];
-                                    
+
                                     // console.log(elem)
                                     const elemLI = document.createElement('li')
-                        
+
                                     elemLI.classList.add('d-sub-menu__item', 'show-menu-item')
                                     elemLI.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
-                                    
+
                                     // console.log(elemLI)
                                     dItemList.append(elemLI)
                                 }
 
                                 console.log(dItem.parentElement.parentElement.parentElement)
-                                // accordions(dItem.parentElement.parentElement.parentElement)
+                                    // accordions(dItem.parentElement.parentElement.parentElement)
                             }
                         })
-                        
+
                 }
             })
             .then(e => {
@@ -721,19 +735,18 @@ function showSubMenuMobile() {
     }
 
     function setSubMenuMobile(arr, list) {
-        
+
         for (let i = 0; i < arr.length; i++) {
             const elem = arr[i];
             const item = document.createElement('li')
             const childTitle = elem.child != false ? elem.child : ''
-            
+
             if (elem.child === false) {
                 item.classList.add('sub-menu__item', 'show-menu-item')
                 item.innerHTML = `
                     <a href="#" class="link_arrow link_arrow-sub sub-menu__link">${elem.title}</a>
                 `
-            }
-            else {
+            } else {
                 item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
                 item.innerHTML = `
                     <div class="acc-header sub-menu__item-header">
@@ -753,12 +766,13 @@ function showSubMenuMobile() {
 if (window.innerWidth >= 920) {
     showSubMenuDesktop()
 }
+
 function showSubMenuDesktop() {
     const menu = find('.menu')
 
     menu.addEventListener('mousemove', e => {
         let target = e.target
-        
+
         if (target.classList.contains('menu__link') || target.classList.contains('sub-menu__link')) {
             const item = target
             const subMenu = item.dataset.subMenu
@@ -767,7 +781,7 @@ function showSubMenuDesktop() {
             const listDSubMenu = document.getElementById('d-sub-menu')
 
             if (!item.classList.contains('_active')) {
-                
+
                 if (subMenu) {
                     removeAll('.menu__link', '_active')
                     item.classList.add('_active')
@@ -789,8 +803,7 @@ function showSubMenuDesktop() {
                         .then(arr => {
                             setLinksToSubMenu(arr, listSubMenu)
                         })
-                }
-                else if (subMenu === '') {
+                } else if (subMenu === '') {
                     removeAll('.menu__link', '_active')
                     clearSubMenu()
                     clearDSubMenu()
@@ -818,8 +831,7 @@ function showSubMenuDesktop() {
                             setLinksToSubMenu(arr, listDSubMenu, item)
                         })
 
-                }
-                else if (dSubMenu === '') {
+                } else if (dSubMenu === '') {
                     removeAll('.sub-menu__link', '_active')
                     clearDSubMenu()
                 }
@@ -832,6 +844,7 @@ function showSubMenuDesktop() {
 if (window.innerWidth < 920 && window.innerWidth > 500) {
     showSubMenuTablet()
 }
+
 function showSubMenuTablet() {
     const itemElems = findAll('.menu__link')
 
@@ -842,7 +855,7 @@ function showSubMenuTablet() {
 
         item.addEventListener('click', e => {
             if (!item.classList.contains('_active')) {
-            
+
                 if (subMenu) {
                     removeAll('.menu__link', '_active')
                     item.classList.add('_active')
@@ -864,8 +877,7 @@ function showSubMenuTablet() {
                         .then(arr => {
                             setBlocksToSubMenu(arr, listSubMenu)
                         })
-                }
-                else if (subMenu === '') {
+                } else if (subMenu === '') {
                     removeAll('.menu__link', '_active')
                     clearSubMenu()
                     clearDSubMenu()
@@ -898,8 +910,7 @@ function setLinksToSubMenu(arr, list, selectedItem) {
                 item.innerHTML = `
                     <a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>${elem.title}</a>
                 `
-            }
-            else {
+            } else {
                 item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
                 item.innerHTML = `
                     <div class="acc-header sub-menu__item-header">
@@ -917,7 +928,7 @@ function setLinksToSubMenu(arr, list, selectedItem) {
             item.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
         }
 
-        item.style.animationDelay = (i+1)*delay + 'ms'
+        item.style.animationDelay = (i + 1) * delay + 'ms'
         list.append(item)
     }
 }
@@ -949,14 +960,13 @@ function setBlocksToSubMenu(arr, list) {
                             </div>
                             <ul class="acc-body sub-menu__item-list">${html}</ul>
                         `
-                    }
-                    else {
+                    } else {
                         item.innerHTML = `<a href="#" class="link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu>${elem.title}</a>`
                     }
 
                 })
                 .then(e => {
-                    item.style.animationDelay = (i+1)*delay + 'ms'
+                    item.style.animationDelay = (i + 1) * delay + 'ms'
                     list.append(item)
                 })
                 // .then(e => {
@@ -1010,6 +1020,7 @@ function clearDSubMenu() {
 
 // Аккордеоны
 accordions()
+
 function accordions() {
     const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
 
@@ -1020,30 +1031,29 @@ function accordions() {
             const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
             const parent = target.closest('.acc')
             const accBody = parent.querySelector('.acc-body')
-        
-            parent.classList.toggle('_show') 
-            target.classList.toggle('_show') 
-            
-            if (accBody.style.maxHeight) { 
+
+            parent.classList.toggle('_show')
+            target.classList.toggle('_show')
+
+            if (accBody.style.maxHeight) {
                 accBody.style.maxHeight = null
-                parent.classList.remove('_show') 
-                target.classList.remove('_show') 
-            }
-            else {
+                parent.classList.remove('_show')
+                target.classList.remove('_show')
+            } else {
                 const adjacentElems = getSiblings(parent)
-                
+
                 if (hiddenSiblingAcc) {
-                for (let i = 0; i < adjacentElems.length; i++) {
-                    const elem = adjacentElems[i]
-                    const elemHeader = elem.querySelector('.acc-open')
-                    const elemBody = elem.querySelector('.acc-body')
-        
-                    elem.classList.remove('_show') 
-                    elemHeader.classList.remove('_show')  
-                    elemBody.style.maxHeight = null
+                    for (let i = 0; i < adjacentElems.length; i++) {
+                        const elem = adjacentElems[i]
+                        const elemHeader = elem.querySelector('.acc-open')
+                        const elemBody = elem.querySelector('.acc-body')
+
+                        elem.classList.remove('_show')
+                        elemHeader.classList.remove('_show')
+                        elemBody.style.maxHeight = null
+                    }
                 }
-                }
-                
+
                 accBody.style.maxHeight = accBody.scrollHeight + 'px'
                 container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
             }
@@ -1055,6 +1065,7 @@ function accordions() {
 
 // Плейсхолдер текстовых полей
 labelTextfield()
+
 function labelTextfield() {
     const textfieldElems = document.querySelectorAll('.form-elem')
 
@@ -1074,4 +1085,3 @@ function labelTextfield() {
         })
     }
 }
-  

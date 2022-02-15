@@ -8,9 +8,7 @@
     background: $second;
     border-radius: $radius;
     transition: $tr;
-
     @media (min-width: $minHover) {
-    
         &:hover {
             opacity: 0.9;
         }
@@ -18,16 +16,20 @@
     &:active {
         opacity: 0.8;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         padding: 15px 24px;
     }
 }
 
-.btn--white{
+.btn--white {
     background-color: #fff;
     color: $second;
+}
+
+.btn--green {
+    background-color: $second;
+    color: #fff;
 }
 
 .btn_disabled {
@@ -46,20 +48,16 @@
     background: $accent;
     border-radius: $radius;
     transition: $tr linear;
-
     @media (min-width: $minHover) {
-        
         &:hover {
             background: $second;
             color: #fff;
         }
     }
-
-    &:active{
+    &:active {
         opacity: 0.7;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         padding: 14px 24px;
     }
@@ -74,9 +72,7 @@
     padding: 12px 24px;
     background: #F8F8F8;
     border-radius: 100px;
-
     @media (min-width: $minHover) {
-        
         &:hover {
             color: $accent;
             background: #EFF7F5;
@@ -118,16 +114,12 @@
 //         left: 2px;
 //     }
 // }
-
 .link {
-
     @media (min-width: $minHover) {
-        
         &:hover {
             color: $accent-hover;
         }
     }
-
     &:active {
         color: $accent-active;
     }
@@ -142,7 +134,6 @@
     font-weight: 600;
     color: $main;
     // white-space: nowrap;
-
     &::after {
         content: '';
         min-width: 24px;
@@ -153,11 +144,8 @@
         margin-left: 8px;
         transition: $tr;
     }
-
     @media (min-width: $minHover) {
-        
         &:hover {
-            
             &::after {
                 transform: rotate(45deg);
             }
@@ -170,13 +158,10 @@
     color: #fff;
     opacity: .7;
     transition: $tr;
-
     &::after {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     }
-
     @media (min-width: $minHover) {
-        
         &:hover {
             opacity: 1;
         }
@@ -196,13 +181,10 @@
     color: $main;
     opacity: .7;
     transition: $tr;
-
     &::after {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     }
-
     @media (min-width: $minHover) {
-        
         &:hover {
             opacity: 1;
         }
@@ -215,35 +197,28 @@
     align-items: center;
     font-weight: 600;
     font-size: 14px;
-
     &:hover {
-            
         .link-review-top {
             transform: translate(13px, -7px);
         }
-
         .link-review-bottom {
             transform: translate(0px, 2px);
         }
     }
-
-    &:active{
+    &:active {
         opacity: 0.7;
     }
-
     span {
         display: flex;
         flex-direction: column;
         margin-left: 8px;
     }
-    
     img {
         width: 6px;
         height: 6px;
         transition: $tr linear;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 12px;
     }
 }
@@ -282,11 +257,8 @@
 
 // Включает hover-эффект при наведении на ссылку
 .link-arrow_hover {
-
     @media (min-width: $minHover) {
-        
         &:hover {
-            
             & .link-arrow__text {
                 color: $accent;
             }
@@ -312,8 +284,6 @@
         }
     }
 }
-
-
 
 // Кнопк/ссылка "Подробнее" у разделов
 .section-more {

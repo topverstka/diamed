@@ -1,0 +1,29 @@
+.first-block {
+    padding: 0 0 91px 0;
+    position: relative;
+    h1 {
+        margin: 0 0 40px 0;
+        width: 50%;
+        line-height: 68px;
+    }
+    .breadcrumbs {
+        margin-top: 0;
+        padding: 55px 0 0 0
+    }
+}
+
+.first-block__background {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.first-block__text {
+    width: 55%;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main;
+    font-weight: 500;
+    margin-bottom: 56px;
+}

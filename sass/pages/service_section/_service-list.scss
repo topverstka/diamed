@@ -1,0 +1,57 @@
+.service-list {
+    padding: 100px 0
+}
+
+.service-list__header {
+    width: 50%;
+}
+
+.service-list__info {
+    width: 55%;
+    margin: 40px 0 56px 0;
+    font-weight: 500;
+}
+
+.service-list__enumeration {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 20px;
+}
+
+.service-list__enumeration-number {
+    background: #F3F8F9;
+    border-radius: 8px;
+    color: $second;
+    font-weight: 600;
+    font-size: 32px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 13px;
+    top: 12px;
+}
+
+.service-list__enumeration-item {
+    background: #F8F7FC;
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+}
+
+.service-list__enumeration-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+    width: 90%;
+    color: $accent2;
+}
+
+.service-list__enumeration-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $accent2;
+}

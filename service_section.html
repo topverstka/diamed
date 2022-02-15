@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Генератор фавикон - https://realfavicongenerator.net/ -->
+    <title>Diamed</title>
+    <meta name="description" content="Описание сайта">
+
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <header class="header hide">
+            <div class="header_info">
+                <div class="container">
+                    <div class="header_info__tel">
+                        <span class="header_info__tel-text">Единый телефон сети</span>
+                        <a class="header_info__tel-link" href="tel:+73822609010">8 (3822) 60 90 10</a>
+                    </div>
+                    <div class="header_info__text">
+
+                        <img src="./img/icons/icon_header.svg" alt="">
+                        <p>Университетская клиника МГМУ имени И.М. Сеченова</p>
+                    </div>
+                    <button class="header_info__time" data-modal-open="work_time">
+                            <span class="header_info__time-text">Часы работы</span>
+                            <svg>
+                                <use xlink:href="./img/sprite.svg#time"></use>
+                            </svg>
+                        </button>
+                    <div class="header_info__icons">
+                        <button class="eye_icon"><svg><use xlink:href="./img/sprite.svg#eye"></use></svg></button>
+                        <button class="search_icon" data-modal-open="search"><svg><use href='./img/sprite.svg#search_icon'></use></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-header" id="search">
+                <div class="modal__wrap modal-header__wrap">
+                    <div class="modal__content modal-header__content">
+                        <div class="modal-header__header">
+                            <h2 class="title-section modal-header__title">Поиск</h2>
+                            <button class="modal__close modal-header__close">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                        </div>
+                        <form action="#" class="modal-search__form">
+                            <div class="modal-search__textfield">
+                                <input type="text" id="search" placeholder="Поиск..." value="Лечение кариеса">
+                                <span class="modal-search__textfield-icon"><svg><use href='./img/sprite.svg#search-form_icon'></use></svg></span>
+                            </div>
+                            <button class="btn modal-search__submit" type="submit">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-header" id="work_time">
+                <div class="modal__wrap modal-header__wrap">
+                    <div class="modal__content modal-header__content">
+                        <div class="modal-header__header">
+                            <h2 class="title-section modal-header__title">Часы работы</h2>
+                            <button class="modal__close modal-header__close">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                        </div>
+                        <div class="modal-work-time__body">
+                            <div class="tabs__header" data-wow-delay=".3s">
+                                <div class="tab__list">
+                                    <button class="tab" data-tab="features">На Красноармейской</button>
+                                    <button class="tab" data-tab="indications">На Фрунзе</button>
+                                    <button class="tab" data-tab="cost">На Карташова</button>
+                                    <div class="tab__roller"></div>
+                                </div>
+                            </div>
+                            <div class="modal-work-time__list">
+                                <div class="modal-work-time__block">
+                                    <h3 class="modal-work-time__title">Адрес</h3>
+                                    <h3 class="modal-work-time__text">Томск,<br>ул. Красноармейская, 96</h3>
+                                </div>
+                                <div class="modal-work-time__block">
+                                    <h3 class="modal-work-time__title">Часы работы</h3>
+                                    <h3 class="modal-work-time__text">ПН-ВС 8:30-20:00<br>ВС 8:30-14:30</h3>
+                                </div>
+                                <div class="modal-work-time__block">
+                                    <h3 class="modal-work-time__title">Контакты</h3>
+                                    <h3 class="modal-work-time__text">530-580<br>diamed08@inbox.ru</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_main">
+                <div class="container">
+                    <div class="header_main__wrap">
+                        <button class="header_main__mobile-icon" data-modal-open="work_time">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 12.5999V17.9999L21.6 19.7999" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="0.5" y="0.5" width="35" height="35" rx="7.5" stroke="#DAEBEF"/>
+                                </svg>
+                            </button>
+                        <img class="header_main__logo" src="./img/logo.svg" alt="">
+                        <nav class="header_main__menu">
+                            <ul>
+                                <li><a href="">О клиниках</a></li>
+                                <li><a href="">Услуги</a></li>
+                                <li><a href="">Цены</a></li>
+                                <li><a href="">Пациентам</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <button class="header_main__enroll-btn btn">Записаться на прием</button>
+                        <button class="header_main__gamburger btn burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu__header">
+                    <button class="btn menu__header-appointment">Записаться на прием</button>
+                    <div class="menu__header-tel">
+                        <span class="menu__header-tel-text">Единый телефон сети</span>
+                        <a class="link menu__header-tel-link" href="tel:+73822609010">8 (3822) 60 90 10</a>
+                    </div>
+                </div>
+                <div class="menu__wrap">
+                    <div class="menu-left">
+                        <ul class="menu-left__list">
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">О сети клиник</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Акции и новости</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Коллектив</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Наши цены</a>
+                            </li>
+                            <li class="acc menu-left__item">
+                                <div class="acc-header menu-left__header">
+                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
+                                </div>
+                                <ul class="acc-body menu-left__item-list"></ul>
+                            </li>
+                            <li class="acc menu-left__item">
+                                <div class="acc-header menu-left__header">
+                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
+                                </div>
+                                <ul class="acc-body menu-left__item-list"></ul>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Ответы на вопросы</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Отзывы</a>
+                            </li>
+                            <li class="menu-left__item">
+                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Контакты</a>
+                            </li>
+
+                            <!-- <li class="acc sub-menu__item show-menu-item _show" style="animation-delay: 140ms; max-height: 144px;">
+                                    <div class="acc-header sub-menu__item-header">
+                                        <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link _show" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                    </div>
+                                    <ul class="acc-body sub-menu__item-list" style="max-height: 120px;"><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Брэкеты</a></li><li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Детская пластинка для ровных зубов</a></li></ul>
+                                </li> -->
+                        </ul>
+                        <div class="menu-left__footer">
+                            <div class="menu-left__schedule">
+                                <span class="menu-left__schedule-title">Заполнить анкету пациента</span>
+                                <button class="btn btn--white menu-left__schedule-btn">Расписание врачей</button>
+                            </div>
+                            <div class="menu-left__footer-bottom">
+                                <div class="menu-left__social-list">
+                                    <a href="#" class="menu-left__social"><svg><use href='./img/sprite.svg#facebook'></use></svg></a>
+                                    <a href="#" class="menu-left__social"><svg><use href='./img/sprite.svg#youtube'></use></svg></a>
+                                    <a href="#" class="menu-left__social"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+                                    <a href="#" class="menu-left__social"><svg><use href='./img/sprite.svg#instagram'></use></svg></a>
+                                </div>
+                                <div class="menu-left__more">
+                                    <button class="menu-left__more-btn menu-left__more-eye">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.833984 9.99998C0.833984 9.99998 4.16732 3.33331 10.0007 3.33331C15.834 3.33331 19.1673 9.99998 19.1673 9.99998C19.1673 9.99998 15.834 16.6666 10.0007 16.6666C4.16732 16.6666 0.833984 9.99998 0.833984 9.99998Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                            
+                                        </button>
+                                    <button class="menu-left__more-btn menu-left__more-search_icon search_icon" data-modal-open="search">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                            
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-right">
+                        <div class="menu-right__body">
+                            <div class="sub-menu">
+                                <ul class="sub-menu__list" id="sub-menu" data-menu="sub-menu"></ul>
+                            </div>
+                            <div class="d-sub-menu">
+                                <h3 class="d-sub-menu__title" id="d-sub-menu-title"></h3>
+                                <ul class="d-sub-menu__list" id="d-sub-menu" data-menu="d-sub-menu"></ul>
+                            </div>
+                        </div>
+                        <div class="menu-right__footer">
+                            <div class="menu-right__social-list">
+                                <a href="#" class="menu-right__social"><svg><use href='./img/sprite.svg#facebook'></use></svg></a>
+                                <a href="#" class="menu-right__social"><svg><use href='./img/sprite.svg#youtube'></use></svg></a>
+                                <a href="#" class="menu-right__social"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+                                <a href="#" class="menu-right__social"><svg><use href='./img/sprite.svg#instagram'></use></svg></a>
+                            </div>
+                            <div class="menu-right__univer">
+                                <div class="menu-right__univer-icon"><img src="./img/icons/icon_header.svg" alt=""></div>
+                                <p class="menu-right__univer-text">Университетская клиника МГМУ имени И.М. Сеченова</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="first-block">
+                <div class="container">
+                    <div class="breadcrumbs breadcrumbs-indent breadcrumbs-container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item"><a class="link" href="#">Услуги стоматологии</a></li>
+                            <li class="breadcrumbs__item">Эндодонтическое лечение каналов</li>
+                        </ul>
+                    </div>
+                    <h1 class="first-block__header title-main">Эндодонтическое лечение каналов</h1>
+                    <p class="first-block__text">Частой проблемой, с которой пациенты обращаются к стоматологам, является воспалительный процесс в каналах зубов. Как правило, это запущенные ситуации, когда человек долгое время не обращается к врачу для лечения кариеса. </p>
+                    <button class="btn first-block__btn">Записаться на консультацию</button>
+                </div>
+                <img class="first-block__background" src="./img/service_section/background.png" alt="">
+            </section>
+
+
+            <section class="service-list">
+                <div class="container">
+                    <h2 class="service-list__header title-section">Как проходит диагностика при лечении каналов</h2>
+                    <p class="service-list__info">
+                        Современная стоматологическая диагностика осуществляется с применением качественного и точного оборудования, выпускаемого мировыми производителями.
+                    </p>
+                    <div class="service-list__enumeration">
+                        <div class="service-list__enumeration-item">
+                            <h3 class="service-list__enumeration-title">Обследование зубов пациента</h3>
+                            <span class="service-list__enumeration-number">1</span>
+                            <p class="service-list__enumeration-text">
+                                Хорошим помощником для стоматолога является компьютерная томография. После обследования врач получает объёмный снимок зубов, на котором видны особенности каналов и их расположение. С его помощью оценивается и качество выполненного лечения.
+                            </p>
+                        </div>
+                        <div class="service-list__enumeration-item">
+                            <h3 class="service-list__enumeration-title">Точность и эффективность диагностики</h3>
+                            <span class="service-list__enumeration-number">2</span>
+                            <p class="service-list__enumeration-text">
+                                Врачи нашей клиники особенно внимательно относятся к предварительным диагностическим процедурам. Правильное определение состояния зубных тканей и анатомических особенностей пациента позволяет более быстро и успешно провести процедуру.
+                            </p>
+                        </div>
+                        <div class="service-list__enumeration-item">
+                            <h3 class="service-list__enumeration-title">Диагностика на каждом этапе</h3>
+                            <span class="service-list__enumeration-number">3</span>
+                            <p class="service-list__enumeration-text">
+                                На каждом этапе лечения стоматологи оценивают состояние зубных тканей и результаты с помощью рентгеновских снимков. Чтобы оценить длину корневого канала и уменьшить воздействие рентгена, врачи применяют апекслокатор, позволяющий определить положение апикального
+                                сужения.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="first-time">
+                <div class="container">
+                    <h2 class="title-section first-time__header">Впервые у нас?</h2>
+                    <span class="first-time__text">Запишитесь на консультацию</span>
+                    <div class="tabs__header wow fadeIn" data-wow-delay=".2s">
+                        <div class="tab__list">
+                            <div class="tab__roller"></div>
+                            <button class="tab" data-tab="features">На Красноармейской</button>
+                            <button class="tab" data-tab="indications">На Фрунзе</button>
+                            <button class="tab" data-tab="cost">На Карташова</button>
+                        </div>
+                    </div>
+                    <form action="" class="form cat-form wow fadeIn" data-wow-delay=".3s">
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="name" type="text">
+                            <label class="form-elem__label">Как к вам обращаться?</label>
+                            <p class="form-elem__error">Введите имя</p>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="e-mail" type="email">
+                            <label class="form-elem__label">E-mail</label>
+                            <p class="form-elem__error">Введите корректный email</p>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="phone" type="text">
+                            <label class="form-elem__label">Телефон</label>
+                            <p class="form-elem__error">Введите корректный телефон</p>
+                        </div>
+                        <div class="form-footer">
+                            <button class="btn btn--green form-footer__btn wow fadeIn" data-wow-delay=".3s" type="submit">Записаться на приём</button>
+                            <p class="form-footer__privacy wow fadeIn" data-wow-delay=".5s">Нажимая на кнопку, я потверждаю, что согласен с <a href="#">политикой конфиденциальности</a></p>
+                        </div>
+                    </form>
+                </div>
+                <img class="first-time__background-points" src="./img/background_points.png" alt="">
+
+            </section>
+
+
+            <section class="section_information_services">
+                <div class="container">
+                    <div class="tabs__header wow fadeIn" data-wow-delay=".2s">
+                        <div class="tab__list">
+                            <div class="tab__roller"></div>
+                            <button class="tab" data-tab="features">Особенности</button>
+                            <button class="tab" data-tab="indications">Микроскоп</button>
+                            <button class="tab" data-tab="cost">Коффердам</button>
+                            <button class="tab" data-tab="cost">Стоимость</button>
+                        </div>
+                    </div>
+                    <div class="section_information_services__box">
+                        <div class="section_information_services__item">
+                            <h2 class="title-section section_information_services__item-header">Особенности работы с каналами зубов</h2>
+                            <ul class="section_information_services__item-list">
+                                <li>
+                                    Каждый корень уникален, поэтому во время обследования стоматолог изучает анатомические особенности отдельного пациента. Есть общие особенности, позволяющие предварительно оценить количество каналов у зубов разного типа: резцов, клыков, премоляров или
+                                    моляров. Например, в резцах обычно один канал, в то время как у моляров их может быть 3-4. Однако это не гарантия того, что у всех пациентов будет такое количество - часто зубы имеют дополнительные каналы. Помимо количества
+                                    каналов, различается форма корней. Они могут быть тонкими, извитыми, очень короткими или длинными, иметь округлый изгиб и так далее.
+                                </li>
+                                <li>
+                                    В ходе лечения стоматологи отдают предпочтение минимально-инвазивной терапии, которая позволяет максимально сохранить живые ткани зуба, в том числе эмаль. Эмаль - прочный и устойчивый материал, способный выполнять свою функцию в течение всей жизни человека.
+                                    Она оберегает ткани зуба и отвечает за сохранность его функциональности. По этой причине врачи стараются сохранить максимальный объем собственных тканей пациента. Для этого используются методы, которые минимально разрушают
+                                    эмаль. В их число входят лазерная терапия и озонотерапия.
+                                </li>
+                            </ul>
+                            <img class="section_information_services__item-picture" src="./img/service_section/photo-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </section>
+    </main>
+
+
+    <section class="cat">
+        <div class="container">
+            <h2 class="title-section cat-title"><span class="wow showTitle">Скажите «А-а-а-а»</span></h2>
+            <div class="cat__columns">
+                <div class="cat__columns-left">
+                    <div class="tabs__header tabs_cat wow fadeIn" data-wow-delay=".3s">
+                        <div class="tab__list">
+                            <button class="tab" data-tab="features">На Красноармейской</button>
+                            <button class="tab" data-tab="indications">На Фрунзе</button>
+                            <button class="tab" data-tab="cost">На Карташова</button>
+                            <div class="tab__roller"></div>
+                        </div>
+                    </div>
+                    <form action="" class="form cat-form wow fadeIn" data-wow-delay=".3s">
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="name" type="text">
+                            <label class="form-elem__label">Как к вам обращаться?</label>
+                            <p class="form-elem__error">Введите имя</p>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="e-mail" type="email">
+                            <label class="form-elem__label">E-mail</label>
+                            <p class="form-elem__error">Введите корректный email</p>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="phone" type="text">
+                            <label class="form-elem__label">Телефон</label>
+                            <p class="form-elem__error">Введите корректный телефон</p>
+                        </div>
+                        <div class="form-elem form-elem-date">
+                            <input class="form-elem__area" id="datetimepicker1" name="date" type="text">
+                            <label class="form-elem__label">Выберите дату</label>
+                            <p class="form-elem__error">Введите корректную дату</p>
+                        </div>
+                        <div class="form-elem form-elem-time">
+                            <input class="form-elem__area" id="datetimepicker2" name="time" type="text">
+                            <label class="form-elem__label">Выберите время</label>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="symptoms" type="text">
+                            <label class="form-elem__label">Симптомы</label>
+                        </div>
+                        <div class="form-elem">
+                            <input class="form-elem__area" name="comments" type="text">
+                            <label class="form-elem__label">Комментарий</label>
+                        </div>
+                        <div class="form-footer">
+                            <button class="btn btn--white form-footer__btn wow fadeIn" data-wow-delay=".3s" type="submit">Записаться на приём</button>
+                            <p class="form-footer__privacy wow fadeIn" data-wow-delay=".5s">Нажимая на кнопку, я потверждаю, что согласен с <a href="#">политикой конфиденциальности</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="cat__columns-right">
+                    <div class="cat__columns-info">
+                        <div class="cat__elem wow fadeInRight">
+                            <p class="cat__elem-title">Часы работы</p>
+                            <p class="cat__elem-text">ПН-ВС 8:30-20:00</p>
+                            <p class="cat__elem-text">ВС 8:30-14:30</p>
+                        </div>
+                        <div class="cat__elem wow fadeInRight" data-wow-delay=".3s">
+                            <p class="cat__elem-title">Адрес</p>
+                            <p class="cat__elem-text">Томск,<br>ул. Красноармейская, 96</p>
+                        </div>
+                        <div class="cat__elem wow fadeInRight" data-wow-delay=".5s">
+                            <p class="cat__elem-title">Контакты</p>
+                            <p class="cat__elem-text"><a href="tel:530580">530-580</a></p>
+                            <p class="cat__elem-text"><a href="mailto:diamed08@inbox.ru">diamed08@inbox.ru</a></p>
+                        </div>
+                    </div>
+
+                    <div class="cat-social">
+                        <a href="#">
+                            <img id="facebook" src="./img/icons/cat/Facebook.svg" alt="facebook">
+                        </a>
+                        <a data-wow-delay=".3s" href="#">
+                            <img id="youtube" src="./img/icons/cat/youtube.svg" alt="youtube">
+                        </a>
+                        <a data-wow-delay=".5s" href="#">
+                            <img id="vk" src="./img/icons/cat/vk.svg" alt="">
+                        </a>
+                        <a data-wow-delay=".7s" href="#">
+                            <img id="instagram" src="./img/icons/cat/Instagram.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer wow fadeInDown" data-wow-offset="0">
+        <div class="container">
+            <div class="footer-top">
+                <a href="/" class="footer-logo">
+                    <img src="./img/logo-footer.svg" alt="">
+                </a>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">О сети клиник</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </nav>
+
+                <a href="/" class="footer-creator">
+                    <img src="./img/logo-paraweb.svg" alt="">
+                </a>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-text">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА.</p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- Модальные окна -->
+
+
+    <!-- Подключение скриптов -->
+    <script src="./js/libs/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 100
+        }).init();
+    </script>
+
+    <script src="./js/libs/swiper-bundle.min.js"></script>
+
+
+    <script src="./js/libs/jquery.js"></script>
+
+    <script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script>
+        if (window.innerWidth > 767) {
+            // define images
+            var images = [
+                "./img/zub/0001.jpg",
+                "./img/zub/0002.jpg",
+                "./img/zub/0003.jpg",
+                "./img/zub/0004.jpg",
+                "./img/zub/0005.jpg",
+                "./img/zub/0006.jpg",
+                "./img/zub/0007.jpg",
+                "./img/zub/0008.jpg",
+                "./img/zub/0009.jpg",
+                "./img/zub/0010.jpg",
+                "./img/zub/0011.jpg",
+                "./img/zub/0012.jpg",
+                "./img/zub/0013.jpg",
+                "./img/zub/0014.jpg",
+                "./img/zub/0015.jpg",
+                "./img/zub/0016.jpg",
+                "./img/zub/0017.jpg",
+                "./img/zub/0018.jpg",
+                "./img/zub/0019.jpg",
+                "./img/zub/0020.jpg",
+                "./img/zub/0021.jpg",
+                "./img/zub/0022.jpg",
+                "./img/zub/0023.jpg",
+                "./img/zub/0024.jpg",
+                "./img/zub/0025.jpg",
+                "./img/zub/0026.jpg",
+                "./img/zub/0027.jpg",
+                "./img/zub/0028.jpg",
+                "./img/zub/0029.jpg",
+                "./img/zub/0030.jpg",
+                "./img/zub/0031.jpg",
+                "./img/zub/0032.jpg",
+                "./img/zub/0033.jpg",
+                "./img/zub/0034.jpg",
+                "./img/zub/0035.jpg",
+                "./img/zub/0036.jpg",
+                "./img/zub/0037.jpg",
+                "./img/zub/0038.jpg",
+                "./img/zub/0039.jpg",
+                "./img/zub/0040.jpg",
+                "./img/zub/0041.jpg",
+                "./img/zub/0042.jpg",
+                "./img/zub/0043.jpg",
+                "./img/zub/0044.jpg",
+                "./img/zub/0045.jpg",
+                "./img/zub/0046.jpg",
+                "./img/zub/0047.jpg",
+                "./img/zub/0048.jpg",
+                "./img/zub/0049.jpg",
+                "./img/zub/0050.jpg",
+                "./img/zub/0051.jpg",
+                "./img/zub/0052.jpg",
+                "./img/zub/0053.jpg",
+                "./img/zub/0054.jpg",
+                "./img/zub/0055.jpg",
+                "./img/zub/0056.jpg",
+                "./img/zub/0057.jpg",
+                "./img/zub/0058.jpg",
+                "./img/zub/0059.jpg",
+                "./img/zub/0060.jpg",
+                "./img/zub/0061.jpg",
+                "./img/zub/0062.jpg",
+                "./img/zub/0063.jpg",
+                "./img/zub/0064.jpg",
+                "./img/zub/0065.jpg",
+                "./img/zub/0066.jpg",
+                "./img/zub/0067.jpg",
+                "./img/zub/0068.jpg",
+                "./img/zub/0069.jpg",
+                "./img/zub/0070.jpg",
+                "./img/zub/0071.jpg",
+                "./img/zub/0072.jpg",
+                "./img/zub/0073.jpg",
+                "./img/zub/0074.jpg",
+                "./img/zub/0075.jpg",
+                "./img/zub/0076.jpg",
+                "./img/zub/0078.jpg",
+                "./img/zub/0079.jpg",
+                "./img/zub/0080.jpg",
+                "./img/zub/0081.jpg",
+                "./img/zub/0082.jpg",
+                "./img/zub/0083.jpg",
+                "./img/zub/0085.jpg",
+                "./img/zub/0086.jpg",
+                "./img/zub/0087.jpg",
+                "./img/zub/0088.jpg",
+                "./img/zub/0089.jpg",
+                "./img/zub/0090.jpg",
+                "./img/zub/0091.jpg",
+                "./img/zub/0092.jpg",
+                "./img/zub/0093.jpg",
+                "./img/zub/0094.jpg",
+                "./img/zub/0095.jpg",
+                "./img/zub/0096.jpg",
+                "./img/zub/0097.jpg",
+                "./img/zub/0098.jpg",
+                "./img/zub/0099.jpg",
+                "./img/zub/0100.jpg",
+                "./img/zub/0101.jpg",
+                "./img/zub/0102.jpg",
+                "./img/zub/0103.jpg",
+                "./img/zub/0104.jpg",
+                "./img/zub/0105.jpg",
+                "./img/zub/0106.jpg",
+                "./img/zub/0107.jpg",
+                "./img/zub/0108.jpg",
+                "./img/zub/0109.jpg",
+                "./img/zub/0110.jpg",
+                "./img/zub/0111.jpg",
+                "./img/zub/0112.jpg",
+                "./img/zub/0113.jpg",
+                "./img/zub/0114.jpg",
+                "./img/zub/0115.jpg",
+                "./img/zub/0116.jpg",
+                "./img/zub/0117.jpg",
+                "./img/zub/0118.jpg",
+                "./img/zub/0119.jpg",
+                "./img/zub/0120.jpg",
+            ];
+
+            // TweenMax can tween any property of any object. We use this object to cycle through the array
+            var obj = {
+                curImg: 0
+            };
+            var sectionHeight = document.querySelector('.why_choose').offsetHeight;
+            console.log(sectionHeight)
+
+            // create tween
+            var tween = TweenMax.to(obj, 0.5, {
+                curImg: images.length - 1, // animate propery curImg to number of images
+                roundProps: "curImg", // only integers so it can be used as an array index
+                repeat: 0, // repeat 1 times
+                immediateRender: true, // load first image automatically
+                ease: Linear.easeNone, // show every image the same ammount of time
+                onUpdate: function() {
+                    $("#myimg").attr("src", images[obj.curImg]); // set the image source
+                }
+            });
+
+            // init controller
+            var controller = new ScrollMagic.Controller();
+
+            $(function() { // wait for document ready
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger1",
+                        triggerHook: 0,
+                        duration: sectionHeight,
+                    })
+                    .setPin("#pin1")
+                    .addTo(controller);
+
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger",
+                        triggerHook: 0,
+                        duration: sectionHeight
+                    })
+                    .setTween(tween)
+                    .addTo(controller);
+            });
+        }
+    </script>
+
+
+    <script src="./js/libs/jquery.datetimepicker.full.js"></script>
+    <script>
+        $('#datetimepicker1').datetimepicker({
+            lang: 'ru',
+            timepicker: false,
+            format: 'd.m.Y',
+        });
+
+        $('#datetimepicker2').datetimepicker({
+            datepicker: false,
+            allowTimes: ['12:00', '13:00', '15:00', '17:00', '17:05', '17:20', '19:00', '20:00'],
+            format: 'H:i',
+        });
+    </script>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

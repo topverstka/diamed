@@ -1,0 +1,40 @@
+.first-time {
+    padding: 56px 0;
+    background: $header-bg;
+    position: relative;
+    h2 {
+        margin-bottom: 16px;
+    }
+    .tabs__header {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .form-elem__area {
+        border-bottom: 1px solid #DBDBDB;
+        color: $accent2
+    }
+    .form-elem__label {
+        color: $accent2;
+        opacity: 1;
+    }
+    .form-footer__privacy {
+        color: $main;
+        font-weight: 500;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.first-time__background-points {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 600px;
+    opacity: 0.2;
+}
+
+.first-time__text {
+    color: $main;
+    display: block
+}
