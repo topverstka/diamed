@@ -9585,6 +9585,20 @@ h6 {
 
 .service-card__link {
   font-size: 16px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.service-card__link::after {
+  margin-left: 0;
+  margin-right: 8px;
 }
 
 @media (max-width: 425px) {

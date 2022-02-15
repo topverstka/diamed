@@ -77,6 +77,13 @@ $service-card-outline: var(--service-card-outline);
 
 .service-card__link {
     font-size: 16px;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+
+    &::after {
+        margin-left: 0;
+        margin-right: 8px;
+    }
 
     @media (max-width: $mobile-l) {
         font-size: 14px;
