@@ -9,7 +9,13 @@
     }
 }
 
-@include font('Montserat', normal, 400, '../fonts/Montserrat-Light.ttf');
-@include font('Montserat', normal, 500, '../fonts/Montserrat-Regular.ttf');
-@include font('Montserat', normal, 700, '../fonts/Montserrat-Medium.ttf');
+// @include font('Montserat', normal, 400, '../fonts/Montserrat-Light.ttf');
+// @include font('Montserat', normal, 500, '../fonts/Montserrat-Regular.ttf');
+// @include font('Montserat', normal, 700, '../fonts/Montserrat-Medium.ttf');
+// @include font('Montserat', normal, 600, '../fonts/Montserrat-SemiBold.ttf');
+
+
+@include font('Montserat', normal, 300, '../fonts/Montserrat-Light.ttf');
+@include font('Montserat', normal, 400, '../fonts/Montserrat-Regular.ttf');
+@include font('Montserat', normal, 500, '../fonts/Montserrat-Medium.ttf');
 @include font('Montserat', normal, 600, '../fonts/Montserrat-SemiBold.ttf');

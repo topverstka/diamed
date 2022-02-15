@@ -142,9 +142,7 @@
     max-width: 360px;
     a{
         position: relative;
-        &:active{
-            opacity: 0.8;
-        }
+        
         &:after{
             display: block;
             width: 100%;
@@ -154,6 +152,17 @@
             bottom: 0px;
             left: 0;
             content: '';
+        }
+
+        @media (min-width: $minHover) {
+
+            &:hover {
+                font-weight: 500;
+            }
+        }
+
+        &:active {
+            opacity: .8;
         }
     }
 
@@ -240,7 +249,6 @@
 .cat__elem-text{
     font-size: 16px;
     line-height: 24px;
-    font-weight: 600;
 
     @media (max-width: $tablet-s) {
         font-size: 14px;
@@ -251,8 +259,9 @@
     }
 
     a{
-        font-size: 20px;
         position: relative;
+        font-size: 20px;
+        font-weight: 600;
         line-height: 32px;
 
         @media (max-width: $tablet-s) {
@@ -263,8 +272,15 @@
             line-height: 1;
         }
 
+        @media (min-width: $minHover) {
+            
+            &:hover {
+                font-weight: 700;
+            }
+        }
+
         &:active{
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         &:after{

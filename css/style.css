@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Montserat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-stretch: 100%;
   font-display: swap;
   src: url("../fonts/Montserrat-Light.ttf") format("truetype");
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Montserat";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
   src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
@@ -20,7 +20,7 @@
 @font-face {
   font-family: "Montserat";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-stretch: 100%;
   font-display: swap;
   src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
@@ -9100,10 +9100,6 @@ h6 {
   position: relative;
 }
 
-.form-footer__privacy a:active {
-  opacity: 0.8;
-}
-
 .form-footer__privacy a:after {
   display: block;
   width: 100%;
@@ -9113,6 +9109,16 @@ h6 {
   bottom: 0px;
   left: 0;
   content: '';
+}
+
+@media (min-width: 769px) {
+  .form-footer__privacy a:hover {
+    font-weight: 500;
+  }
+}
+
+.form-footer__privacy a:active {
+  opacity: .8;
 }
 
 @media (max-width: 500px) {
@@ -9231,7 +9237,6 @@ h6 {
 .cat__elem-text {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 600;
 }
 
 @media (max-width: 500px) {
@@ -9245,8 +9250,9 @@ h6 {
 }
 
 .cat__elem-text a {
-  font-size: 20px;
   position: relative;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 32px;
 }
 
@@ -9257,8 +9263,14 @@ h6 {
   }
 }
 
+@media (min-width: 769px) {
+  .cat__elem-text a:hover {
+    font-weight: 700;
+  }
+}
+
 .cat__elem-text a:active {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .cat__elem-text a:after {
@@ -9868,6 +9880,16 @@ h6 {
 
 .first-time .form-footer__privacy a {
   text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+  .first-time .form-footer__privacy a:hover {
+    font-weight: 500;
+  }
+}
+
+.first-time .form-footer__privacy a:active {
+  opacity: .8;
 }
 
 .first-time__background-points {

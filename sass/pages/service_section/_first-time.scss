@@ -22,6 +22,17 @@
         font-weight: 500;
         a {
             text-decoration: underline;
+
+            @media (min-width: $minHover) {
+
+                &:hover {
+                    font-weight: 500;
+                }
+            }
+
+            &:active {
+                opacity: .8;
+            }
         }
     }
 }
