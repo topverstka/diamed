@@ -540,7 +540,7 @@ function tabs() {
                 const tabList = tab.parentElement
                 removeAll(tabElems, '_active')
                 tab.classList.add('_active')
-
+                tabBlockActive();
                 swipeRoller(tabList)
             })
         }
@@ -570,17 +570,19 @@ function swipeRoller(tabList) {
     roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 }
 
-// tabBlockActive()
+tabBlockActive()
+
 function tabBlockActive() {
     const tabActive = document.querySelector('.tab._active'),
         dataTab = tabActive.dataset.tab,
         blockElems = document.querySelectorAll('.tabs__block'),
-        blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+        blockShowElems = document.querySelector(`[data-tab-body=${dataTab}]`)
 
-    removeAll(blockElems, '_show')
-    for (let i = 0; i < blockShowElems.length; i++) {
-        blockShowElems[i].classList.add('_show')
-    }
+    removeAll(blockElems, '_show');
+    blockShowElems.classList.add('_show')
+        // for (let i = 0; i < blockShowElems.length; i++) {
+        //     blockShowElems[i].classList.add('_show')
+        // }
 }
 
 // Анимация пересчета цифр
