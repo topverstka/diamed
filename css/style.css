@@ -9894,6 +9894,7 @@ h6 {
 .section_information_services__box {
   margin-top: 56px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -9903,7 +9904,8 @@ h6 {
   background: var(--second);
   color: #fff;
   padding: 32px;
-  border-radius: 12px;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
 }
 
 .section_information_services__list li {
@@ -9946,7 +9948,8 @@ h6 {
   width: 7px;
   height: 7px;
   background: var(--second);
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 .section_information_services__list-title {
