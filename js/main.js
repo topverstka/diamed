@@ -228,10 +228,9 @@ function openModalWhenClickingOnBtn() {
 
             if (find('.modal._show')) {
                 closeModal()
-            } else {
-                openModal(modal)
-                window.location.hash = dataBtn
             }
+            openModal(modal)
+            window.location.hash = dataBtn
         });
     }
 }
@@ -313,12 +312,13 @@ function resetHash() {
 
 // Открытие модального окна
 function openModal(modal) {
-    if (find('.modal._show')) {
-        find('.modal._show').classList.remove('_show')
-    }
+    // if (find('.modal._show')) {
+    //     find('.modal._show').classList.remove('_show')
+    // }
 
     modal.classList.add('_show')
     bodyLock(true)
+    console.log(modal, 'Open')
 }
 
 // Закрытие модального окна
@@ -331,6 +331,7 @@ function closeModal(modal) {
     modal.classList.remove('_show')
     bodyLock(false)
     resetHash()
+    console.log(modal, 'Close')
 }
 
 
