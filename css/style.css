@@ -9354,11 +9354,18 @@ h6 {
 
 .section_information_services__item {
   margin-right: 135px;
+  display: none;
+}
+
+.section_information_services__item._show {
+  display: block;
 }
 
 .section_information_services__item h2 {
   font-size: 32px;
   margin-bottom: 32px;
+  width: 80%;
+  line-height: 40px;
 }
 
 .section_information_services__item-list {
@@ -9386,6 +9393,11 @@ h6 {
   border-radius: 50%;
 }
 
+.section_information_services__item-list li span {
+  color: var(--second);
+  font-weight: 600;
+}
+
 .section_information_services__list-title {
   font-weight: 600;
   font-size: 32px;
@@ -9403,5 +9415,88 @@ h6 {
   width: 100%;
   height: auto;
   margin: 32px 0;
+}
+
+.section_information_services__item-header-table {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+.section_information_services__item-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.section_information_services__item-table tr:nth-of-type(odd) {
+  background: var(--header-bg);
+}
+
+.section_information_services__item-table td {
+  padding: 14px;
+}
+
+.section_information_services__item-table td:last-child {
+  text-align: right;
+}
+
+.service_articles {
+  padding: 100px 0 144px 0;
+}
+
+.service_articles .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #F0EFEF;
+  border-radius: var(--radius2);
+}
+
+.service_articles__slider {
+  overflow: hidden;
+}
+
+.service_articles__slider-picture {
+  height: 292px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 23px;
+  width: 264px;
+}
+
+.service_articles__slider-text-header {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.service_articles__slider-text-info {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.service_articles__slider-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px 0 32px 32px;
+}
+
+.service_articles__slider-text-link {
+  margin-top: auto;
+}
+
+.service_articles__arrows {
+  margin-top: 24px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=style.css.map */

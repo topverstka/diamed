@@ -24,9 +24,15 @@
 
 .section_information_services__item {
     margin-right: 135px;
+    display: none;
+    &._show {
+        display: block
+    }
     h2 {
         font-size: 32px;
         margin-bottom: 32px;
+        width: 80%;
+        line-height: 40px;
     }
 }
 
@@ -49,6 +55,10 @@
             background: $second;
             border-radius: 50%;
         }
+        span {
+            color: $second;
+            font-weight: 600;
+        }
     }
 }
 
@@ -68,4 +78,26 @@
     width: 100%;
     height: auto;
     margin: 32px 0
+}
+
+.section_information_services__item-header-table {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.section_information_services__item-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    tr:nth-of-type(odd) {
+        background: $header-bg
+    }
+    td {
+        padding: 14px
+    }
+    td:last-child {
+        text-align: right;
+    }
 }
