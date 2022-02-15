@@ -7909,6 +7909,10 @@ h6 {
   .our_doctors__slider-main .swiper-wrapper {
     height: 100%;
   }
+  .our_doctors__slider-main img {
+    -o-object-position: center -40px;
+       object-position: center -40px;
+  }
 }
 
 @media (max-width: 500px) {
