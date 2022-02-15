@@ -9330,5 +9330,78 @@ h6 {
 
 .section_information_services__box {
   margin-top: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_information_services__list {
+  width: 375px;
+  background: var(--second);
+  color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.section_information_services__list li {
+  margin-bottom: 10px;
+}
+
+.section_information_services__list li:not(:last-child) {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 24px;
+}
+
+.section_information_services__item {
+  margin-right: 135px;
+}
+
+.section_information_services__item h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.section_information_services__item-list {
+  padding-left: 27px;
+  line-height: 24px;
+}
+
+.section_information_services__item-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section_information_services__item-list li {
+  position: relative;
+  font-weight: 500;
+}
+
+.section_information_services__item-list li:after {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background: var(--second);
+  border-radius: 50%;
+}
+
+.section_information_services__list-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+
+.section_information_services__list-text {
+  font-size: 16px;
+}
+
+.section_information_services__item-picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin: 32px 0;
 }
 /*# sourceMappingURL=style.css.map */
