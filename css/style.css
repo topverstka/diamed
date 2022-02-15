@@ -9498,6 +9498,8 @@ h6 {
 }
 
 .service-main__text {
+  max-width: 800px;
+  width: 100%;
   font-size: 16px;
   margin-top: 40px;
 }
