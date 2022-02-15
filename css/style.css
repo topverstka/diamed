@@ -35,6 +35,15 @@
   src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Montserat";
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
 :root {
   --ffMain: 'Montserat';
   --ffHeader: sans-serif;
