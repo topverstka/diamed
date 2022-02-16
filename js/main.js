@@ -70,7 +70,6 @@ function paddingTopMainSection() {
 find('.header').classList.remove('hide');
 
 // Интро
-
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let intro;
@@ -92,7 +91,11 @@ if (windowWidth > 767) {
 if (intro) {
     intro.classList.add('active');
     introBG.classList.add('active')
-    intro.play();
+    // console.log(intro.play())
+    intro.play()
+        .catch(e => {
+            intro.remove()
+        })
 }
 
 
@@ -210,7 +213,6 @@ function submitApplication() {
     form.addEventListener('submit', async e => {
         e.preventDefault()
 
-        console.log(validForm(form))
         if (validForm(form)) {
             const formData = new FormData()
             const action = form.getAttribute('action')
