@@ -388,12 +388,16 @@ const swiper_articles = new Swiper('.service_articles__slider', {
 
 
     breakpoints: {
+        1200: {
+            slidesPerView: 2
+        },
         769: {
-            slidesPerView: 2,
+            slidesPerView: 1.14,
+
             allowTouchMove: false,
         },
         500: {
-            slidesPerView: 1.33,
+            slidesPerView: 1.06,
             allowTouchMove: true,
         },
         0: {
