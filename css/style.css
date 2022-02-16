@@ -8113,6 +8113,17 @@ h6 {
   }
 }
 
+.why_choose__left-preloading-img {
+  display: none;
+  position: fixed;
+}
+
+.why_choose__left-preloading-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .why_choose__left-picture-all {
   position: absolute;
   top: 48px;

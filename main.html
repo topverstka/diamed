@@ -462,6 +462,7 @@
                             <div class="why_choose__left-picture" >
                                 <img class="why_choose__left-picture-all wow fadeIn" data-wow-delay="1s" src="./img/why_choose/picture-1.png" alt="">
                                 <img id="myimg" class="why_choose__left-picture-main" src="./img/zub/0001.jpg" alt="">
+                                <div class="why_choose__left-preloading-img" id="preloading_img"></div>
                             </div>
                         </div>
                         <div class="why_choose__right">
@@ -1047,6 +1048,20 @@
         "./img/zub/0119.jpg",
         "./img/zub/0120.jpg",
 	];
+
+    window.addEventListener('load', e => {
+        preloadingImages(images)
+    })
+    function preloadingImages(arr) {
+        const preloadingContainer = document.getElementById('preloading_img')
+        for (let i = 0; i < arr.length; i++) {
+            const src = arr[i];
+            const img = document.createElement('img')
+            img.setAttribute('src', src)
+
+            preloadingContainer.append(img)
+        }
+    }
 
 	// TweenMax can tween any property of any object. We use this object to cycle through the array
 	var obj = {curImg: 0};
