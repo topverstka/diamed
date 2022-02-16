@@ -3,12 +3,49 @@
     position: relative;
     h1 {
         margin: 0 0 40px 0;
-        width: 50%;
+        width: 756px;
         line-height: 68px;
     }
     .breadcrumbs {
         margin-top: 0;
         padding: 55px 0 0 0
+    }
+    .breadcrumbs__item {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    @media (max-width:$tablet) {
+        .breadcrumbs {
+            padding: 69px 0 0 0;
+            margin-bottom: 56px;
+        }
+        h1 {
+            font-size: 40px;
+            line-height: 49px;
+            width: 405px
+        }
+        padding-bottom: 56px;
+    }
+    @media (max-width: $tablet-s) {
+        .breadcrumbs__item:nth-of-type(2) {
+            display: none
+        }
+        .breadcrumbs {
+            padding: 19px 0 0 0;
+            margin-bottom: 35px;
+        }
+        .breadcrumbs__item {
+            font-size: 10px;
+            &:not(:last-child)::after {
+                margin: 0 5px
+            }
+        }
+        h1 {
+            font-size: 24px;
+            line-height: 29px;
+            width: 330px;
+            max-width: 100%;
+        }
     }
 }
 
@@ -17,13 +54,30 @@
     top: 0;
     object-fit: cover;
     z-index: -1;
+    @media (max-width: $tablet) {
+        height: 320px
+    }
+    @media (max-width: $tablet-s) {
+        height: 191px
+    }
 }
 
 .first-block__text {
-    width: 55%;
+    width: 756px;
     font-size: 16px;
     line-height: 24px;
     color: $main;
     font-weight: 500;
     margin-bottom: 56px;
+    @media (max-width: $tablet) {
+        margin-top: 130px;
+        width: 75%;
+    }
+    @media (max-width: $tablet-s) {
+        width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
 }
