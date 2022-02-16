@@ -163,7 +163,7 @@
     right: 0px;
     left: auto;
     width: 70px;
-    transition: 0.5s linear;
+    transition: $tr;
     @media (max-width: $tablet){
         width: 60px;
     }
@@ -190,5 +190,5 @@
     width: 40px;
     right: 24px;
     opacity: 0;
-    transition: 1s linear;
+    transition: $tr;
 }
