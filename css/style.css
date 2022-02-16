@@ -9286,8 +9286,32 @@ h6 {
   padding: 100px 0;
 }
 
+@media (max-width: 768px) {
+  .service-list {
+    padding: 0 0 56px 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .service-list .service-list__enumer-overflow {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .service-list .service-list__enumer-overflow {
+    overflow-x: visible;
+  }
+}
+
 .service-list__header {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .service-list__header {
+    width: 90%;
+  }
 }
 
 .service-list__info {
@@ -9296,12 +9320,42 @@ h6 {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .service-list__info {
+    width: 95%;
+  }
+}
+
+@media (max-width: 920px) {
+  .service-list__info {
+    margin: 24px 0 32px 0;
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+  }
+}
+
 .service-list__enumeration {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 20px;
+}
+
+@media (max-width: 920px) {
+  .service-list__enumeration {
+    -ms-grid-columns: (420px)[3];
+        grid-template-columns: repeat(3, 420px);
+  }
+}
+
+@media (max-width: 500px) {
+  .service-list__enumeration {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px 0;
+  }
 }
 
 .service-list__enumeration-number {
@@ -9326,11 +9380,27 @@ h6 {
   top: 12px;
 }
 
+@media (max-width: 500px) {
+  .service-list__enumeration-number {
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    right: 8px;
+    top: 7px;
+  }
+}
+
 .service-list__enumeration-item {
   background: #F8F7FC;
   border-radius: 12px;
   padding: 32px;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .service-list__enumeration-item {
+    padding: 24px 20px;
+  }
 }
 
 .service-list__enumeration-title {
@@ -9342,10 +9412,23 @@ h6 {
   color: var(--accent2);
 }
 
+@media (max-width: 500px) {
+  .service-list__enumeration-title {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
 .service-list__enumeration-text {
   font-size: 16px;
   line-height: 24px;
   color: var(--accent2);
+}
+
+@media (max-width: 500px) {
+  .service-list__enumeration-text {
+    font-size: 14px;
+  }
 }
 
 .first-time {
