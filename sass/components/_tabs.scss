@@ -29,7 +29,7 @@
         background: #F0EFEF4D;
         margin-bottom: 32px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: 600px) {
             background-color: transparent;
             margin-bottom: 1px;
         }
@@ -37,7 +37,7 @@
         & .tab {
             color: #EAE9EF;
 
-            @media (max-width: $tablet) {
+            @media (max-width: 600px) {
                 background-color: #F0EFEF4D;
             }
 

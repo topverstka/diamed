@@ -5336,7 +5336,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 32px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .tabs__header.tabs_cat {
     background-color: transparent;
     margin-bottom: 1px;
@@ -5347,7 +5347,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: #EAE9EF;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .tabs__header.tabs_cat .tab {
     background-color: #F0EFEF4D;
   }
