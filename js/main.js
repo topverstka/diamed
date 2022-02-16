@@ -195,9 +195,9 @@ function menu() {
     })
 }
 
-// Отправить заявку
-submitApplication()
-function submitApplication() {
+// Отправить заявку на прием врача
+submitAppointment()
+function submitAppointment() {
     const form = document.getElementById('make_appointment')
     const textfieldElems = form.querySelectorAll('input._req')
 
@@ -230,73 +230,113 @@ function submitApplication() {
             }
         }
     })
+}
 
-    function validForm(form) {
+// Отправить заявку на консультацию
+submitConsultation()
+function submitConsultation() {
+    const form = document.getElementById('form_consultation')
+
+    if (form) {
         const textfieldElems = form.querySelectorAll('input._req')
-        let con = true
 
         for (let i = 0; i < textfieldElems.length; i++) {
             const textfield = textfieldElems[i]
-
-            if (textfield.value.trim() === '') {
-                showError(textfield, 'Поле не должно быть пустым')
-                con = false
-            }
-            else {
-                hideError(textfield)
-
-                // Поле email
-                if (textfield.name === 'email') {
-                    if (!validateEmail(textfield.value)) {
-                        showError(textfield, 'Введен некорректный email')
-                        con = false
-                    }
-                }
+            const parent = textfield.parentElement
     
-                // Телефон
-                if (textfield.name === 'phone') {
-                    if (textfield.value.length < 11) {
-                        showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
-                        con = false
-                    }
-                    else {
-                        hideError(textfield)
-                    }
+            textfield.addEventListener('input', e => {
+                parent.classList.remove('error')
+            })
+        }
+
+        form.addEventListener('submit', async e => {
+            e.preventDefault()
+
+            if (validForm(form)) {
+                const formData = new FormData()
+                const action = form.getAttribute('action')
+
+                let response = await fetch(action, {
+                    method: 'POST',
+                    body: formData
+                })
+
+                if (response.ok) {
+                    alert('Заявка отправлена!')
+                }
+                else {
+                    alert('Ошибка с сервером! Заявка не отправлена!')
+                }
+            }
+        })
+    }
+}
+
+function validForm(form) {
+    const textfieldElems = form.querySelectorAll('input._req')
+    let con = true
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i]
+
+        if (textfield.value.trim() === '') {
+            showError(textfield, 'Поле не должно быть пустым')
+            con = false
+        }
+        else {
+            hideError(textfield)
+
+            // Поле email
+            if (textfield.name === 'email') {
+                if (!validateEmail(textfield.value)) {
+                    showError(textfield, 'Введен некорректный email')
+                    con = false
+                }
+            }
+
+            // Телефон
+            if (textfield.name === 'phone') {
+                if (textfield.value.length < 11) {
+                    showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
+                    con = false
+                }
+                else {
+                    hideError(textfield)
                 }
             }
         }
-
-        return con
     }
 
-    function validateEmail(email) {
-        var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return pattern .test(email);
+    return con
+}
+
+function validateEmail(email) {
+    var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern .test(email);
+}
+
+function showError(textfield, textError) {
+    const parent = textfield.parentElement
+    let error = parent.querySelector('.form-elem__error')
+
+    if (!error) {
+        error = document.createElement('p')
+
+        error.classList.add('form-elem__error')
+        parent.append(error)
     }
 
-    function showError(textfield, textError) {
-        const parent = textfield.parentElement
-        let error = parent.querySelector('.form-elem__error')
+    parent.classList.add('error')
+    error.innerHTML = textError
+}
 
-        if (!error) {
-            error = document.createElement('p')
-    
-            error.classList.add('form-elem__error')
-            parent.append(error)
-        }
+function hideError(textfield) {
+    const parent = textfield.parentElement
+    const error = parent.querySelector('.form-elem__error')
 
-        parent.classList.add('error')
-        error.innerHTML = textError
-    }
-
-    function hideError(textfield) {
-        const parent = textfield.parentElement
-        const error = parent.querySelector('.form-elem__error')
-
-        if (error) {
-            error.remove()
-            parent.classList.remove('error')
-        }
+    if (error) {
+        error.remove()
+        parent.classList.remove('error')
     }
 }
 
