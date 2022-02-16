@@ -95,6 +95,7 @@ if (intro) {
     intro.play()
         .catch(e => {
             intro.remove()
+            console.log('Ошибка воспроизведения видео на главном экране')
         })
 }
 
