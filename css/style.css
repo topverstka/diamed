@@ -5361,7 +5361,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: #686868;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .tabs__header {
     background-color: transparent;
     margin-bottom: 1px;
@@ -5416,10 +5416,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .tab {
-    font-size: 10px;
-    padding: 10px 11px;
+    font-size: 12px;
+    padding: 10px 12px;
   }
 }
 
