@@ -675,7 +675,7 @@ function tabs() {
                 const tabList = tab.parentElement
                 removeAll(tabElems, '_active')
                 tab.classList.add('_active')
-                tabBlockActive();
+                // tabBlockActive();
                 swipeRoller(tabList)
             })
         }
@@ -704,8 +704,7 @@ function swipeRoller(tabList) {
     roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 }
 
-tabBlockActive()
-
+// tabBlockActive()
 function tabBlockActive() {
     const tabActive = document.querySelector('.tab._active'),
         dataTab = tabActive.dataset.tab,
