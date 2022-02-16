@@ -57,6 +57,15 @@ function bodyLock(con) {
     }
 }
 
+// Отступ главного экрана на главной странице
+if (find('.header_index')) paddingTopMainSection()
+function paddingTopMainSection() {
+    const main = find('.main_top__wrapper')
+    const header = find('.header_index')
+
+    main.style.paddingTop = header.scrollHeight + 'px'
+}
+
 
 find('.header').classList.remove('hide');
 

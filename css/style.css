@@ -6042,6 +6042,19 @@ h6 {
 .intro {
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .intro-bg {
@@ -6099,6 +6112,13 @@ h6 {
 
 .header.hide {
   top: -200px;
+}
+
+.header_index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header_info {
