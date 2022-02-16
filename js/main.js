@@ -210,6 +210,7 @@ function submitApplication() {
     form.addEventListener('submit', async e => {
         e.preventDefault()
 
+        console.log(validForm(form))
         if (validForm(form)) {
             const formData = new FormData()
             const action = form.getAttribute('action')
@@ -220,22 +221,24 @@ function submitApplication() {
             })
 
             if (response.ok) {
-                console.log('Заявка отправлена!')
+                alert('Заявка отправлена!')
             }
             else {
-                console.log('Ошибка! Заявка не отправлена!')
+                alert('Ошибка с сервером! Заявка не отправлена!')
             }
         }
     })
 
     function validForm(form) {
         const textfieldElems = form.querySelectorAll('input._req')
+        let con = true
 
         for (let i = 0; i < textfieldElems.length; i++) {
             const textfield = textfieldElems[i]
 
             if (textfield.value.trim() === '') {
                 showError(textfield, 'Поле не должно быть пустым')
+                con = false
             }
             else {
                 hideError(textfield)
@@ -244,6 +247,7 @@ function submitApplication() {
                 if (textfield.name === 'email') {
                     if (!validateEmail(textfield.value)) {
                         showError(textfield, 'Введен некорректный email')
+                        con = false
                     }
                 }
     
@@ -251,15 +255,16 @@ function submitApplication() {
                 if (textfield.name === 'phone') {
                     if (textfield.value.length < 11) {
                         showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
+                        con = false
                     }
                     else {
                         hideError(textfield)
                     }
                 }
             }
-            
-
         }
+
+        return con
     }
 
     function validateEmail(email) {

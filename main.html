@@ -798,33 +798,33 @@
                                 <button class="tab" data-tab="cost">На Карташова</button>
                             </div>
                         </div>
-                        <form action="" class="form cat-form wow fadeIn" data-wow-delay=".3s">
+                        <form action="" class="form cat-form wow fadeIn" id="make_appointment" data-wow-delay=".3s">
                             <div class="form-elem">
-                                <input class="form-elem__area" name="name" type="text">
+                                <input class="form-elem__area _req" name="name" type="text">
                                 <label class="form-elem__label">Как к вам обращаться?</label>
-                                <p class="form-elem__error">Введите имя</p>
+                                <!-- <p class="form-elem__error">Введите имя</p> -->
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="e-mail" type="email">
+                                <input class="form-elem__area _req" name="email" type="text">
                                 <label class="form-elem__label">E-mail</label>
-                                <p class="form-elem__error">Введите корректный email</p>
+                                <!-- <p class="form-elem__error">Введите корректный email</p> -->
                             </div>
-                            <div class="form-elem">
-                                <input class="form-elem__area" name="phone" type="text">
+                            <div class="form-elem only-digit">
+                                <input class="form-elem__area _req" name="phone" type="text">
                                 <label class="form-elem__label">Телефон</label>
-                                <p class="form-elem__error">Введите корректный телефон</p>
+                                <!-- <p class="form-elem__error">Введите корректный телефон</p> -->
                             </div>
-                            <div class="form-elem form-elem-date">
-                                <input class="form-elem__area" id="datetimepicker1" name="date" type="text">
+                            <div class="form-elem form-elem-date only-digit">
+                                <input class="form-elem__area _req" id="datetimepicker1" name="date" type="text">
                                 <label class="form-elem__label">Выберите дату</label>
-                                <p class="form-elem__error">Введите корректную дату</p>
+                                <!-- <p class="form-elem__error">Введите корректную дату</p> -->
                             </div>
-                            <div class="form-elem form-elem-time">
-                                <input class="form-elem__area" id="datetimepicker2" name="time" type="text">
+                            <div class="form-elem form-elem-time only-digit">
+                                <input class="form-elem__area _req" id="datetimepicker2" name="time" type="text">
                                 <label class="form-elem__label">Выберите время</label>
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="symptoms" type="text">
+                                <input class="form-elem__area _req" name="symptoms" type="text">
                                 <label class="form-elem__label">Симптомы</label>
                             </div>
                             <div class="form-elem">
@@ -1109,12 +1109,26 @@
 
     <script src="./js/libs/air-datepicker.js"></script>
     <script>
-        const datePicker = new AirDatepicker('#datetimepicker1')
+        const datePicker = new AirDatepicker('#datetimepicker1', {
+            onSelect({date, cellType, datepicker}) {
+                removeError(datepicker)
+            }
+        })
         const timePicker = new AirDatepicker('#datetimepicker2', {  
             timepicker: true,
             onlyTimepicker: true,
-            minutesStep: 5
+            minutesStep: 5,
+            onSelect({date, cellType, datepicker}) {
+                removeError(datepicker)
+            }
         })
+
+        function removeError(datepicker) {
+                const textfield = datepicker.$el
+                const parent = textfield.parentElement
+
+                parent.classList.remove('error')
+        }
     </script>
 
     <script src="./js/main.js"></script>
