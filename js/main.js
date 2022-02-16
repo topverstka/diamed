@@ -517,6 +517,38 @@ const swiper_news = new Swiper('.news-slider', {
     },
 });
 
+
+const swiper_articles = new Swiper('.service_articles__slider', {
+    speed: 400,
+    spaceBetween: 20,
+    slidesPerView: 2,
+
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 2
+        },
+        769: {
+            slidesPerView: 1.14,
+
+            allowTouchMove: false,
+        },
+        500: {
+            slidesPerView: 1.06,
+            allowTouchMove: true,
+        },
+        0: {
+            slidesPerView: 1.06,
+            spaceBetween: 16,
+        }
+    },
+
+    navigation: {
+        nextEl: '.service_articles__arrow-next',
+        prevEl: '.service_articles__arrow-prev',
+    },
+});
+
 // const swiper = new Swiper('.swiper-container', {
 
 //   slidesPerView: 1, // Кол-во показываемых слайдов
@@ -674,8 +706,8 @@ function tabs() {
             tab.addEventListener('click', e => {
                 const tabList = tab.parentElement
                 removeAll(tabElems, '_active')
-                tab.classList.add('_active')
-                // tabBlockActive();
+                tab.classList.add('_active');
+                tabBlockActive(tab.dataset.tab);
                 swipeRoller(tabList)
             })
         }
@@ -704,18 +736,18 @@ function swipeRoller(tabList) {
     roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 }
 
-// tabBlockActive()
-function tabBlockActive() {
-    const tabActive = document.querySelector('.tab._active'),
-        dataTab = tabActive.dataset.tab,
+tabBlockActive();
+
+function tabBlockActive(data) {
+    let tabActive = document.querySelector('.tab._active'),
+        dataTab = data !== undefined ? data : tabActive.dataset.tab,
         blockElems = document.querySelectorAll('.tabs__block'),
-        blockShowElems = document.querySelector(`[data-tab-body=${dataTab}]`)
+        blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
 
     removeAll(blockElems, '_show');
-    blockShowElems.classList.add('_show')
-        // for (let i = 0; i < blockShowElems.length; i++) {
-        //     blockShowElems[i].classList.add('_show')
-        // }
+    for (let i = 0; i < blockShowElems.length; i++) {
+        blockShowElems[i].classList.add('_show')
+    }
 }
 
 // Анимация пересчета цифр
