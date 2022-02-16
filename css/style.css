@@ -7545,6 +7545,11 @@ h6 {
   margin-bottom: 24px;
 }
 
+.our_doctors_service .our_doctors__slider-main {
+  width: 544px;
+  max-width: 100%;
+}
+
 .why_choose {
   padding-top: 100px;
   padding-bottom: 97px;
@@ -9467,6 +9472,8 @@ h6 {
 
 .first-time .form-elem__area:focus {
   color: var(--second);
+  font-weight: 500;
+  border-bottom: 1px solid var(--second);
 }
 
 .first-time .form-elem__label {

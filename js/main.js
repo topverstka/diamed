@@ -605,15 +605,23 @@ function swipeRoller(tabList) {
 tabBlockActive();
 
 function tabBlockActive(data) {
-    let tabActive = document.querySelector('.tab._active'),
-        dataTab = data !== undefined ? data : tabActive.dataset.tab,
-        blockElems = document.querySelectorAll('.tabs__block'),
-        blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+    let tabActive = document.querySelectorAll('.tab._active'),
+        //     dataTab = data !== undefined ? data : tabActive.dataset.tab,
+        blockElems = document.querySelectorAll('.tabs__block');
+    //     blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+    // console.log(dataTab);
+    // removeAll(blockElems, '_show');
+    // for (let i = 0; i < blockShowElems.length; i++) {
+    //     blockShowElems[i].classList.add('_show')
+    // }
 
     removeAll(blockElems, '_show');
-    for (let i = 0; i < blockShowElems.length; i++) {
-        blockShowElems[i].classList.add('_show')
-    }
+
+    tabActive.forEach(i => {
+        if (document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`)) {
+            document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`).classList.add('_show');
+        }
+    });
 }
 
 // Анимация пересчета цифр
