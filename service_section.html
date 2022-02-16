@@ -626,10 +626,8 @@
                     </div>
                 </div>
             </section>
-
         </main>
-
-
+        
         <section class="cat">
             <div class="container">
                 <h2 class="title-section cat-title"><span class="wow showTitle">Скажите «А-а-а-а»</span></h2>
@@ -637,39 +635,39 @@
                     <div class="cat__columns-left">
                         <div class="tabs__header tabs_cat wow fadeIn" data-wow-delay=".3s">
                             <div class="tab__list">
+                                <div class="tab__roller"></div>
                                 <button class="tab" data-tab="features">На Красноармейской</button>
                                 <button class="tab" data-tab="indications">На Фрунзе</button>
                                 <button class="tab" data-tab="cost">На Карташова</button>
-                                <div class="tab__roller"></div>
                             </div>
                         </div>
-                        <form action="" class="form cat-form wow fadeIn" data-wow-delay=".3s">
+                        <form action="" class="form cat-form wow fadeIn" id="make_appointment" data-wow-delay=".3s">
                             <div class="form-elem">
-                                <input class="form-elem__area" name="name" type="text">
+                                <input class="form-elem__area _req" name="name" type="text">
                                 <label class="form-elem__label">Как к вам обращаться?</label>
-                                <p class="form-elem__error">Введите имя</p>
+                                <!-- <p class="form-elem__error">Введите имя</p> -->
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="e-mail" type="email">
+                                <input class="form-elem__area _req" name="email" type="text">
                                 <label class="form-elem__label">E-mail</label>
-                                <p class="form-elem__error">Введите корректный email</p>
+                                <!-- <p class="form-elem__error">Введите корректный email</p> -->
                             </div>
-                            <div class="form-elem">
-                                <input class="form-elem__area" name="phone" type="text">
+                            <div class="form-elem only-digit">
+                                <input class="form-elem__area _req" name="phone" type="text">
                                 <label class="form-elem__label">Телефон</label>
-                                <p class="form-elem__error">Введите корректный телефон</p>
+                                <!-- <p class="form-elem__error">Введите корректный телефон</p> -->
                             </div>
-                            <div class="form-elem form-elem-date">
-                                <input class="form-elem__area" id="datetimepicker1" name="date" type="text">
+                            <div class="form-elem form-elem-date only-digit">
+                                <input class="form-elem__area _req" id="datetimepicker1" name="date" type="text">
                                 <label class="form-elem__label">Выберите дату</label>
-                                <p class="form-elem__error">Введите корректную дату</p>
+                                <!-- <p class="form-elem__error">Введите корректную дату</p> -->
                             </div>
-                            <div class="form-elem form-elem-time">
-                                <input class="form-elem__area" id="datetimepicker2" name="time" type="text">
+                            <div class="form-elem form-elem-time only-digit">
+                                <input class="form-elem__area _req" id="datetimepicker2" name="time" type="text">
                                 <label class="form-elem__label">Выберите время</label>
                             </div>
                             <div class="form-elem">
-                                <input class="form-elem__area" name="symptoms" type="text">
+                                <input class="form-elem__area _req" name="symptoms" type="text">
                                 <label class="form-elem__label">Симптомы</label>
                             </div>
                             <div class="form-elem">
@@ -699,16 +697,16 @@
                                 <p class="cat__elem-text"><a href="mailto:diamed08@inbox.ru">diamed08@inbox.ru</a></p>
                             </div>
                         </div>
-
+                        
                         <div class="cat-social">
                             <a href="#">
                                 <img id="facebook" src="./img/icons/cat/Facebook.svg" alt="facebook">
                             </a>
                             <a data-wow-delay=".3s" href="#">
-                                <img id="youtube" src="./img/icons/cat/youtube.svg" alt="youtube">
+                                <img id="youtube"src="./img/icons/cat/youtube.svg" alt="youtube">
                             </a>
                             <a data-wow-delay=".5s" href="#">
-                                <img id="vk" src="./img/icons/cat/vk.svg" alt="">
+                                <img id="vk"src="./img/icons/cat/vk.svg" alt="">
                             </a>
                             <a data-wow-delay=".7s" href="#">
                                 <img id="instagram" src="./img/icons/cat/Instagram.svg" alt="">
