@@ -9435,6 +9435,7 @@ h6 {
   padding: 56px 0;
   background: var(--header-bg);
   position: relative;
+  overflow: hidden;
 }
 
 .first-time h2 {
@@ -9465,12 +9466,34 @@ h6 {
   text-decoration: underline;
 }
 
+@media (max-width: 1100px) {
+  .first-time form {
+    margin-right: 93px;
+  }
+}
+
+@media (max-width: 500px) {
+  .first-time {
+    padding: 32px 0;
+  }
+  .first-time form {
+    margin-right: 0;
+  }
+}
+
 .first-time__background-points {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 600px;
+  top: 21px;
+  height: 100%;
+  width: 100%;
+  right: -30%;
   opacity: 0.2;
+}
+
+@media (max-width: 1100px) {
+  .first-time__background-points {
+    display: none;
+  }
 }
 
 .first-time__text {
