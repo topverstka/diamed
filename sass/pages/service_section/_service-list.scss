@@ -1,21 +1,56 @@
 .service-list {
-    padding: 100px 0
+    padding: 100px 0;
+    @media (max-width: $tablet) {
+        padding: 0 0 56px 0
+    }
+    @media (max-width: $tablet-l) {
+        .service-list__enumer-overflow {
+            overflow-x: scroll;
+        }
+        // .container {
+        //     padding-right: 0
+        // }
+    }
+    @media (max-width:$tablet-s) {
+        .service-list__enumer-overflow {
+            overflow-x: visible;
+        }
+    }
 }
 
 .service-list__header {
     width: 50%;
+    @media (max-width: $tablet) {
+        width: 90%
+    }
 }
 
 .service-list__info {
     width: 55%;
     margin: 40px 0 56px 0;
     font-weight: 500;
+    @media (max-width: $tablet) {
+        width: 95%
+    }
+    @media (max-width: $tablet-l) {
+        margin: 24px 0 32px 0;
+        font-size: 14px;
+        line-height: 22px;
+        width: 100%;
+    }
 }
 
 .service-list__enumeration {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 20px;
+    @media (max-width: $tablet-l) {
+        grid-template-columns: repeat(3, 420px);
+    }
+    @media (max-width:$tablet-s) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px 0
+    }
 }
 
 .service-list__enumeration-number {
@@ -32,6 +67,13 @@
     position: absolute;
     right: 13px;
     top: 12px;
+    @media (max-width: $tablet-s) {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+        right: 8px;
+        top: 7px
+    }
 }
 
 .service-list__enumeration-item {
@@ -39,6 +81,9 @@
     border-radius: 12px;
     padding: 32px;
     position: relative;
+    @media (max-width: $tablet-s) {
+        padding: 24px 20px
+    }
 }
 
 .service-list__enumeration-title {
@@ -48,10 +93,17 @@
     margin-bottom: 16px;
     width: 90%;
     color: $accent2;
+    @media (max-width: $tablet-s) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 
 .service-list__enumeration-text {
     font-size: 16px;
     line-height: 24px;
     color: $accent2;
+    @media (max-width: $tablet-s) {
+        font-size: 14px
+    }
 }
