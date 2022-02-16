@@ -187,6 +187,7 @@ function menu() {
         if (find('.menu._show') && !target.classList.contains('menu__wrap') && !target.closest('.menu__wrap') && !target.classList.contains('menu__header') && !target.closest('.menu__header') && !target.classList.contains('burger') && !target.closest('.burger')) {
             menu.classList.remove('_show')
             burger.classList.remove('burger_close')
+            bodyLock(false)
         }
     })
 }
