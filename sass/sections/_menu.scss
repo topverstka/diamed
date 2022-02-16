@@ -306,6 +306,11 @@
     font-size: 14px;
     font-weight: 600;
     color: #fff;
+    transition: $tr;
+
+    &:active {
+        opacity: .7;
+    }
 }
 
 .menu-left__schedule-btn {

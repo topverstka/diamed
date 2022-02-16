@@ -6860,6 +6860,13 @@ h6 {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
+  -webkit-transition: var(--tr);
+  -o-transition: var(--tr);
+  transition: var(--tr);
+}
+
+.menu-left__schedule-title:active {
+  opacity: .7;
 }
 
 .menu-left__schedule-btn {
