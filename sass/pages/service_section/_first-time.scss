@@ -7,12 +7,15 @@
         margin-bottom: 16px;
     }
     .tabs__header {
-        margin-top: 32px;
+        margin-top: 34px;
         margin-bottom: 32px;
     }
     .form-elem__area {
         border-bottom: 1px solid #DBDBDB;
-        color: $accent2
+        color: $accent2;
+        &:focus {
+            color: $second;
+        }
     }
     .form-elem__label {
         color: $accent2;

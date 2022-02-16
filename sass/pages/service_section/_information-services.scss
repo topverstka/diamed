@@ -8,6 +8,7 @@
 .section_information_services__box {
     margin-top: 56px;
     display: flex;
+    justify-content: space-between;
     @media (max-width: $tablet-l) {
         flex-direction: column-reverse;
         margin-top: 47px;
@@ -42,7 +43,8 @@
 }
 
 .section_information_services__item {
-    margin-right: 135px;
+    width: 770px;
+    max-width: 100%;
     display: none;
     &._show {
         display: block
@@ -122,7 +124,7 @@
     object-fit: cover;
     width: 100%;
     height: auto;
-    margin: 32px 0;
+    margin: 32px 0 0 0;
     @media (max-width: $tablet-s) {
         margin: 24px 0 0 0
     }

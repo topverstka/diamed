@@ -4,7 +4,7 @@
         display: flex;
         border: 1px solid #F0EFEF;
         border-radius: $radius2;
-        min-height: 292px;
+        height: 292px;
     }
     @media (max-width:$tablet) {
         .news_header-line {
@@ -64,7 +64,7 @@
 .service_articles__slider-text {
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 32px 0 32px 32px;
     @media (max-width: 600px) {
         padding: 24px 20px
     }

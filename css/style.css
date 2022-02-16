@@ -5039,15 +5039,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (max-width: 768px) {
-  .tabs__header {
+  .tabs__header:not(.tabs__wrapp) {
     background-color: transparent;
     margin-bottom: 1px;
   }
-  .tabs__header .tab__list {
+  .tabs__header:not(.tabs__wrapp) .tab__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .tabs__header .tab {
+  .tabs__header:not(.tabs__wrapp) .tab {
     padding: 12px 11px;
     background: #EAE9EF;
     border-radius: 13px;
@@ -5055,10 +5055,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-bottom: 10px;
     font-size: 12px;
   }
-  .tabs__header .tab._active {
+  .tabs__header:not(.tabs__wrapp) .tab._active {
     background-color: #fff;
   }
-  .tabs__header .tab__roller {
+  .tabs__header:not(.tabs__wrapp) .tab__roller {
     display: none;
   }
 }
@@ -7532,6 +7532,19 @@ h6 {
   }
 }
 
+.our_doctors__info-initial-stag {
+  margin: 24px 0;
+  font-weight: 600;
+}
+
+.our_doctors__info-initial-text-info {
+  font-weight: 500;
+}
+
+.our_doctors__info-initial-text-info:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .why_choose {
   padding-top: 100px;
   padding-bottom: 97px;
@@ -9443,13 +9456,17 @@ h6 {
 }
 
 .first-time .tabs__header {
-  margin-top: 32px;
+  margin-top: 34px;
   margin-bottom: 32px;
 }
 
 .first-time .form-elem__area {
   border-bottom: 1px solid #DBDBDB;
   color: var(--accent2);
+}
+
+.first-time .form-elem__area:focus {
+  color: var(--second);
 }
 
 .first-time .form-elem__label {
@@ -9516,6 +9533,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 920px) {
@@ -9561,7 +9581,8 @@ h6 {
 }
 
 .section_information_services__item {
-  margin-right: 135px;
+  width: 770px;
+  max-width: 100%;
   display: none;
 }
 
@@ -9659,7 +9680,7 @@ h6 {
      object-fit: cover;
   width: 100%;
   height: auto;
-  margin: 32px 0;
+  margin: 32px 0 0 0;
 }
 
 @media (max-width: 500px) {
@@ -9723,7 +9744,7 @@ h6 {
   display: flex;
   border: 1px solid #F0EFEF;
   border-radius: var(--radius2);
-  min-height: 292px;
+  height: 292px;
 }
 
 @media (max-width: 768px) {
@@ -9801,7 +9822,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 32px;
+  padding: 32px 0 32px 32px;
 }
 
 @media (max-width: 600px) {

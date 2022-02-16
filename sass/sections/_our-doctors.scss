@@ -4,11 +4,9 @@
     h2 {
         margin-top: 50px;
         margin-bottom: 30px;
-
         @media (max-width: $tablet) {
             margin-bottom: 32px;
         }
-
         @media (max-width: $tablet-s) {
             margin: 32px 0 24px;
         }
@@ -20,23 +18,18 @@
         width: 100%;
         overflow-x: auto;
         margin-bottom: 80px;
-
         @media (min-width: $tablet) and (max-width: $tablet-l) {
-            
             & .tab {
                 font-size: 12px;
             }
         }
-
         @media (max-width: $tablet) {
             margin-bottom: 40px;
             padding: 0 $p-mob;
         }
     }
-
     @media (max-width: $tablet) {
-        
-        & > .container {
+        &>.container {
             padding: 0;
         }
     }
@@ -44,7 +37,6 @@
 
 .our_doctors__wrapp {
     display: flex;
-
     @media (max-width: $tablet) {
         flex-direction: column;
     }
@@ -58,7 +50,6 @@
     width: 773px;
     height: 820px;
     pointer-events: none;
-
     @media (max-width: $tablet) {
         width: 500px;
         height: 530px;
@@ -74,28 +65,22 @@
     display: flex;
     flex-direction: column;
     z-index: 9;
-
     @media (max-width: 1050px) {
-        margin-right: 32px; 
+        margin-right: 32px;
     }
-
     @media (max-width: $tablet) {
         padding: 0;
         margin: 0;
     }
-
     @media (max-width: $tablet-s) {
         // padding: 0 20px;
     }
-
     @media (max-width: $mobile) {
         // padding: 0 16px;
     }
-
     .swiper__arrow {
         justify-content: flex-end;
         margin-top: 32px;
-
         @media (max-width: $tablet) {
             margin-bottom: 32px;
         }
@@ -107,7 +92,6 @@
 }
 
 .our_doctors__title {
-    
     @media (max-width: $tablet) {
         padding: 0 $p-mob;
     }
@@ -116,14 +100,12 @@
 .our_doctors__more {
     margin: auto 0 52px;
     font-size: 14px;
-
     @media (max-width: $tablet) {
         display: none;
     }
 }
 
 .our_doctors__info-initial {
-
     @media (max-width: $tablet) {
         padding: 0 $p-mob;
     }
@@ -134,8 +116,6 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 12px;
-
-
     @media (max-width: $tablet-s) {
         font-size: 16px;
         line-height: 26px;
@@ -146,7 +126,6 @@
 .our_doctors__info-initial-text {
     font-size: 16px;
     line-height: 24px;
-
     @media (max-width: $tablet-s) {
         font-size: 14px;
     }
@@ -160,26 +139,21 @@
     column-gap: 60px;
     // width: 600px;
     height: 704px;
-
     @media (max-width: 1200px) {
         column-gap: 24px
     }
-
     @media (max-width: 1100px) {
         height: 600px;
     }
-
     @media (max-width: 1000px) {
         grid-template-columns: 1fr 100px;
     }
-    
     @media (max-width: 930px) {
         height: auto;
         display: flex;
         flex-direction: column;
         gap: 0;
     }
-
     @media (max-width: $tablet) {
         height: auto;
         display: flex;
@@ -187,19 +161,14 @@
         gap: 0;
         padding-bottom: 50px;
     }
-
     @media (max-width: $tablet-s) {
         padding-bottom: 20px;
     }
-
     // @media (max-width: ) {
-        
     // }
-
     .swiper-wrapper {
         // flex-direction: column;
         // height: 704px;
-
         @media (max-width: $tablet) {
             flex-direction: initial;
         }
@@ -212,7 +181,6 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
-
         @media (max-width: $tablet) {
             position: absolute;
             top: 0;
@@ -222,7 +190,6 @@
 }
 
 .our_doctors__arrows {
-
     @media (max-width: $tablet) {
         padding: 0 $p-mob;
     }
@@ -232,76 +199,59 @@
     max-width: 553px;
     height: 100%;
     overflow: hidden;
-
     .swiper-wrapper {
         flex-direction: column;
         height: 704px;
     }
-
-
     @media (max-width: 930px) {
         height: 400px;
     }
-
     @media (max-width: $tablet) {
         height: 525px;
         max-width: 100%;
         margin-bottom: 0!important;
-        .swiper-wrapper{
+        .swiper-wrapper {
             height: 100%;
         }
     }
-
     @media (max-width: $tablet-s) {
         height: 278px;
-        
     }
-
-    
 }
 
 .our_doctors__slider-all {
     height: 100%;
     margin-top: 40px;
     overflow: hidden;
-
     @media (max-width: 930px) {
         height: initial;
         max-width: 450px;
         width: 100%;
         margin-top: 32px;
     }
-
     @media (max-width: 830px) {
         max-width: 400px;
     }
-
     @media (max-width: $tablet) {
         max-width: none;
         padding: 0 20px;
     }
-
     @media (max-width: $tablet-s) {
         margin-top: 20px;
     }
-
     .swiper-slide {
         opacity: 0.6;
         width: 139px;
         height: 139px;
-        
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
-
         @media (max-width: 1000px) {
             width: 100px;
             height: 100px;
         }
-
         @media (max-width: $tablet) {
             height: auto;
-
             &::after {
                 content: '';
                 padding-top: 100%;
@@ -317,14 +267,24 @@
         // height: 139px;
         border-radius: $radius2;
     }
-
     .swiper-wrapper {
         flex-direction: column;
         height: 704px;
-
         @media (max-width: 930px) {
             height: auto;
             flex-direction: initial;
         }
+    }
+}
+
+.our_doctors__info-initial-stag {
+    margin: 24px 0;
+    font-weight: 600;
+}
+
+.our_doctors__info-initial-text-info {
+    font-weight: 500;
+    &:not(:last-child) {
+        margin-bottom: 24px;
     }
 }
