@@ -94,7 +94,8 @@
 
 .form-elem__error{
     position: absolute;
-    bottom: -32px;
+    bottom: -11px;
+    transform: translateY(100%);
     left: 0;
     font-size: 12px;
     color: #BC0022;
@@ -102,7 +103,9 @@
     transition: all 0.2s;
 }
 
-.form-elem.error{
+.form-elem.error{ 
+    margin-bottom: 32px;
+
     .form-elem__area{
         border-bottom: 1px solid #BC0022;
         color: #BC0022;

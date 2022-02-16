@@ -192,6 +192,107 @@ function menu() {
     })
 }
 
+// Отправить заявку
+submitApplication()
+function submitApplication() {
+    const form = document.getElementById('make_appointment')
+    const textfieldElems = form.querySelectorAll('input._req')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i]
+        const parent = textfield.parentElement
+
+        textfield.addEventListener('input', e => {
+            parent.classList.remove('error')
+        })
+    }
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault()
+
+        if (validForm(form)) {
+            const formData = new FormData()
+            const action = form.getAttribute('action')
+
+            let response = await fetch(action, {
+                method: 'POST',
+                body: formData
+            })
+
+            if (response.ok) {
+                console.log('Заявка отправлена!')
+            }
+            else {
+                console.log('Ошибка! Заявка не отправлена!')
+            }
+        }
+    })
+
+    function validForm(form) {
+        const textfieldElems = form.querySelectorAll('input._req')
+
+        for (let i = 0; i < textfieldElems.length; i++) {
+            const textfield = textfieldElems[i]
+
+            if (textfield.value.trim() === '') {
+                showError(textfield, 'Поле не должно быть пустым')
+            }
+            else {
+                hideError(textfield)
+
+                // Поле email
+                if (textfield.name === 'email') {
+                    if (!validateEmail(textfield.value)) {
+                        showError(textfield, 'Введен некорректный email')
+                    }
+                }
+    
+                // Телефон
+                if (textfield.name === 'phone') {
+                    if (textfield.value.length < 11) {
+                        showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
+                    }
+                    else {
+                        hideError(textfield)
+                    }
+                }
+            }
+            
+
+        }
+    }
+
+    function validateEmail(email) {
+        var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return pattern .test(email);
+    }
+
+    function showError(textfield, textError) {
+        const parent = textfield.parentElement
+        let error = parent.querySelector('.form-elem__error')
+
+        if (!error) {
+            error = document.createElement('p')
+    
+            error.classList.add('form-elem__error')
+            parent.append(error)
+        }
+        
+        parent.classList.add('error')
+        error.innerHTML = textError
+    }
+
+    function hideError(textfield) {
+        const parent = textfield.parentElement
+        const error = parent.querySelector('.form-elem__error')
+
+        if (error) {
+            error.remove()
+            parent.classList.remove('error')
+        }
+    }
+}
+
 // const advantagesSlider = new Swiper('.advantages__slider', {
 // 	spaceBetween: 16,
 // 	centeredSlides: true,
@@ -220,6 +321,24 @@ function menu() {
 // 	// 	prevEl: '.swiper__arrow-prev',
 // 	// }
 // });
+
+// В инпуте могут быть только цифры если у textfield есть класс only-digit
+onlyDigit()
+function onlyDigit() {
+    const textfieldElems = document.querySelectorAll('.only-digit')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const input = textfieldElems[i].querySelector('input')
+
+        input.addEventListener('keypress', function(e) {
+            const inputValue = e.charCode;
+        
+            if(!(inputValue >= 48 && inputValue <= 57) && (inputValue != 43 && inputValue != 0 && inputValue != 40 && inputValue != 41 && inputValue != 45)) {
+                e.preventDefault();
+            }
+        }); 
+    }
+}
 
 // Функции для модальных окон
 // Открытие модальных окон при клике по кнопке
@@ -535,7 +654,6 @@ function firstTabIsActive() {
 }
 
 tabs()
-
 function tabs() {
     const tabListElems = document.querySelectorAll('.tab__list')
 
@@ -557,7 +675,6 @@ function tabs() {
 }
 
 tabRollers()
-
 function tabRollers() {
     const tabListElems = findAll('.tab__list')
 
@@ -594,7 +711,6 @@ function tabBlockActive() {
 
 // Анимация пересчета цифр
 appearAnimationNumber()
-
 function appearAnimationNumber() {
     const appearElems = findAll('[data-animation=number]')
 
@@ -630,7 +746,6 @@ window.addEventListener('load', animation)
 
 // Анимация
 animation()
-
 function animation() {
     const elems = document.querySelectorAll('[data-animation]')
 

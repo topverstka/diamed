@@ -5753,6 +5753,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .form-elem {
+  height: 59px;
   position: relative;
   -webkit-flex-basis: 48%;
       -ms-flex-preferred-size: 48%;
@@ -5805,7 +5806,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .form-elem input {
-  height: 59px;
   background: transparent;
   color: #fff;
   font-size: 16px;
@@ -5849,14 +5849,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transition: var(--tr);
   -o-transition: var(--tr);
   transition: var(--tr);
-}
-
-.form-elem__area._error {
-  border: 2px solid var(--error) !important;
-}
-
-.form-elem__area._error + .form-elem__label::after {
-  opacity: 1;
 }
 
 .form-elem__label {
@@ -10012,7 +10004,10 @@ h6 {
 
 .form-elem__error {
   position: absolute;
-  bottom: -32px;
+  bottom: -11px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
   left: 0;
   font-size: 12px;
   color: #BC0022;
@@ -10020,6 +10015,10 @@ h6 {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.form-elem.error {
+  margin-bottom: 32px;
 }
 
 .form-elem.error .form-elem__area {
