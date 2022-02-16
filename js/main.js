@@ -449,7 +449,6 @@ swiper_doctors.on('slideChange', e => {
 })
 
 const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
-    // centeredSlides: true,
 
     breakpoints: {
         930: {
@@ -1032,7 +1031,12 @@ function clearDSubMenu() {
 accordions()
 
 function accordions() {
-    const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
+
+    if (find('.acc._show')) {
+        const accBody = find('.acc._show').querySelector('.acc-body')
+        find('.acc._show').querySelector('.acc-open').classList.add('_show')
+        accBody.style.maxHeight = accBody.scrollHeight + 'px'
+    }
 
     window.addEventListener('click', e => {
         const target = e.target
@@ -1050,9 +1054,9 @@ function accordions() {
                 parent.classList.remove('_show')
                 target.classList.remove('_show')
             } else {
-                const adjacentElems = getSiblings(parent)
 
-                if (hiddenSiblingAcc) {
+                if (parent.classList.contains('accordion_container-list')) {
+                    const adjacentElems = getSiblings(parent)
                     for (let i = 0; i < adjacentElems.length; i++) {
                         const elem = adjacentElems[i]
                         const elemHeader = elem.querySelector('.acc-open')
