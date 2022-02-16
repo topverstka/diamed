@@ -172,23 +172,22 @@ menu()
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');
-
-    // Высота меню
-    // window.addEventListener('resize', () => {
-    //     const headerHeight = find('.header').clientHeight
-
-    //     if (window.innerWidth <= 768) {
-    //         menu.style.paddingTop = headerHeight + 'px'
-    //     } else {
-    //         menu.style.paddingTop = 0
-    //     }
-    // })
+    const header = find('.header')
 
     burger.addEventListener('click', (e) => {
         burger.classList.toggle('burger_close')
         menu.classList.toggle('_show')
         menu.style.height = `calc(100vh - ${find('.header').offsetHeight}px)`
         bodyLock()
+    })
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (find('.menu._show') && !target.classList.contains('menu__wrap') && !target.closest('.menu__wrap') && !target.classList.contains('menu__header') && !target.closest('.menu__header') && !target.classList.contains('burger') && !target.closest('.burger')) {
+            menu.classList.remove('_show')
+            burger.classList.remove('burger_close')
+        }
     })
 }
 
