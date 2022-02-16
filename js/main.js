@@ -172,7 +172,6 @@ function sumbitForm() {
 
 // Мобильное меню
 menu()
-
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');

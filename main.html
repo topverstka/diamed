@@ -1050,7 +1050,9 @@
 	];
 
     window.addEventListener('load', e => {
-        preloadingImages(images)
+        if (window.innerWidth >= 768) {
+            preloadingImages(images)
+        }
     })
     function preloadingImages(arr) {
         const preloadingContainer = document.getElementById('preloading_img')
