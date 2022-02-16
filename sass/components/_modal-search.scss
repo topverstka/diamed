@@ -130,10 +130,6 @@
 .modal-work-time__block {
     display: flex;
     flex-direction: column;
-
-    &:not(:last-child) {
-        margin-right: 80px;
-    }
 }
 
 .modal-work-time__title {

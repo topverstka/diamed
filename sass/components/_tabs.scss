@@ -29,7 +29,7 @@
         background: #F0EFEF4D;
         margin-bottom: 32px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: 600px) {
             background-color: transparent;
             margin-bottom: 1px;
         }
@@ -37,7 +37,7 @@
         & .tab {
             color: #EAE9EF;
 
-            @media (max-width: $tablet) {
+            @media (max-width: 600px) {
                 background-color: #F0EFEF4D;
             }
 
@@ -51,7 +51,7 @@
         }
     }
     
-    @media(max-width: $tablet){
+    @media(max-width: 600px){
         background-color: transparent;
         margin-bottom: 1px;
 
@@ -95,9 +95,9 @@
     cursor: pointer;
     white-space: nowrap;
 
-    @media (max-width: $tablet) {
-        font-size: 10px;
-        padding: 10px 11px;
+    @media (max-width: 600px) {
+        font-size: 12px;
+        padding: 10px 12px;
     }
 
     &:not(:last-child) {

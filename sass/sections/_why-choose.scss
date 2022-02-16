@@ -53,6 +53,19 @@
     }
 }
 
+.why_choose__left-preloading-img {
+    display: none;
+    position: fixed;
+    // top: 0;
+    // right: -100vw;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
 .why_choose__left-picture-all {
     position: absolute;
     top: 48px;

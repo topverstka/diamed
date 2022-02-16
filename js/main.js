@@ -57,11 +57,19 @@ function bodyLock(con) {
     }
 }
 
+// Отступ главного экрана на главной странице
+if (find('.header_index')) paddingTopMainSection()
+function paddingTopMainSection() {
+    const main = find('.main_top__wrapper')
+    const header = find('.header_index')
+
+    main.style.paddingTop = header.scrollHeight + 'px'
+}
+
 
 find('.header').classList.remove('hide');
 
 // Интро
-
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let intro;
@@ -83,7 +91,11 @@ if (windowWidth > 767) {
 if (intro) {
     intro.classList.add('active');
     introBG.classList.add('active')
-    intro.play();
+    // console.log(intro.play())
+    intro.play()
+        .catch(e => {
+            intro.remove()
+        })
 }
 
 
@@ -163,17 +175,7 @@ menu()
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');
-
-    // Высота меню
-    // window.addEventListener('resize', () => {
-    //     const headerHeight = find('.header').clientHeight
-
-    //     if (window.innerWidth <= 768) {
-    //         menu.style.paddingTop = headerHeight + 'px'
-    //     } else {
-    //         menu.style.paddingTop = 0
-    //     }
-    // })
+    const header = find('.header')
 
     burger.addEventListener('click', (e) => {
         burger.classList.toggle('burger_close')
@@ -181,6 +183,121 @@ function menu() {
         menu.style.height = `calc(100vh - ${find('.header').offsetHeight}px)`
         bodyLock()
     })
+
+    window.addEventListener('click', e => {
+        const target = e.target
+
+        if (find('.menu._show') && !target.classList.contains('menu__wrap') && !target.closest('.menu__wrap') && !target.classList.contains('menu__header') && !target.closest('.menu__header') && !target.classList.contains('burger') && !target.closest('.burger')) {
+            menu.classList.remove('_show')
+            burger.classList.remove('burger_close')
+            bodyLock(false)
+        }
+    })
+}
+
+// Отправить заявку
+submitApplication()
+function submitApplication() {
+    const form = document.getElementById('make_appointment')
+    const textfieldElems = form.querySelectorAll('input._req')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i]
+        const parent = textfield.parentElement
+
+        textfield.addEventListener('input', e => {
+            parent.classList.remove('error')
+        })
+    }
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault()
+
+        if (validForm(form)) {
+            const formData = new FormData()
+            const action = form.getAttribute('action')
+
+            let response = await fetch(action, {
+                method: 'POST',
+                body: formData
+            })
+
+            if (response.ok) {
+                alert('Заявка отправлена!')
+            }
+            else {
+                alert('Ошибка с сервером! Заявка не отправлена!')
+            }
+        }
+    })
+
+    function validForm(form) {
+        const textfieldElems = form.querySelectorAll('input._req')
+        let con = true
+
+        for (let i = 0; i < textfieldElems.length; i++) {
+            const textfield = textfieldElems[i]
+
+            if (textfield.value.trim() === '') {
+                showError(textfield, 'Поле не должно быть пустым')
+                con = false
+            }
+            else {
+                hideError(textfield)
+
+                // Поле email
+                if (textfield.name === 'email') {
+                    if (!validateEmail(textfield.value)) {
+                        showError(textfield, 'Введен некорректный email')
+                        con = false
+                    }
+                }
+    
+                // Телефон
+                if (textfield.name === 'phone') {
+                    if (textfield.value.length < 11) {
+                        showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
+                        con = false
+                    }
+                    else {
+                        hideError(textfield)
+                    }
+                }
+            }
+        }
+
+        return con
+    }
+
+    function validateEmail(email) {
+        var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return pattern .test(email);
+    }
+
+    function showError(textfield, textError) {
+        const parent = textfield.parentElement
+        let error = parent.querySelector('.form-elem__error')
+
+        if (!error) {
+            error = document.createElement('p')
+    
+            error.classList.add('form-elem__error')
+            parent.append(error)
+        }
+        
+        parent.classList.add('error')
+        error.innerHTML = textError
+    }
+
+    function hideError(textfield) {
+        const parent = textfield.parentElement
+        const error = parent.querySelector('.form-elem__error')
+
+        if (error) {
+            error.remove()
+            parent.classList.remove('error')
+        }
+    }
 }
 
 // const advantagesSlider = new Swiper('.advantages__slider', {
@@ -212,6 +329,24 @@ function menu() {
 // 	// }
 // });
 
+// В инпуте могут быть только цифры если у textfield есть класс only-digit
+onlyDigit()
+function onlyDigit() {
+    const textfieldElems = document.querySelectorAll('.only-digit')
+
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const input = textfieldElems[i].querySelector('input')
+
+        input.addEventListener('keypress', function(e) {
+            const inputValue = e.charCode;
+        
+            if(!(inputValue >= 48 && inputValue <= 57) && (inputValue != 43 && inputValue != 0 && inputValue != 40 && inputValue != 41 && inputValue != 45)) {
+                e.preventDefault();
+            }
+        }); 
+    }
+}
+
 // Функции для модальных окон
 // Открытие модальных окон при клике по кнопке
 openModalWhenClickingOnBtn()
@@ -228,10 +363,9 @@ function openModalWhenClickingOnBtn() {
 
             if (find('.modal._show')) {
                 closeModal()
-            } else {
-                openModal(modal)
-                window.location.hash = dataBtn
             }
+            openModal(modal)
+            window.location.hash = dataBtn
         });
     }
 }
@@ -313,12 +447,13 @@ function resetHash() {
 
 // Открытие модального окна
 function openModal(modal) {
-    if (find('.modal._show')) {
-        find('.modal._show').classList.remove('_show')
-    }
+    // if (find('.modal._show')) {
+    //     find('.modal._show').classList.remove('_show')
+    // }
 
     modal.classList.add('_show')
     bodyLock(true)
+    console.log(modal, 'Open')
 }
 
 // Закрытие модального окна
@@ -331,6 +466,7 @@ function closeModal(modal) {
     modal.classList.remove('_show')
     bodyLock(false)
     resetHash()
+    console.log(modal, 'Close')
 }
 
 
@@ -439,7 +575,6 @@ swiper_doctors.on('slideChange', e => {
 })
 
 const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
-    // centeredSlides: true,
 
     breakpoints: {
         930: {
@@ -526,7 +661,6 @@ function firstTabIsActive() {
 }
 
 tabs()
-
 function tabs() {
     const tabListElems = document.querySelectorAll('.tab__list')
 
@@ -548,7 +682,6 @@ function tabs() {
 }
 
 tabRollers()
-
 function tabRollers() {
     const tabListElems = findAll('.tab__list')
 
@@ -587,7 +720,6 @@ function tabBlockActive() {
 
 // Анимация пересчета цифр
 appearAnimationNumber()
-
 function appearAnimationNumber() {
     const appearElems = findAll('[data-animation=number]')
 
@@ -623,7 +755,6 @@ window.addEventListener('load', animation)
 
 // Анимация
 animation()
-
 function animation() {
     const elems = document.querySelectorAll('[data-animation]')
 
@@ -1024,7 +1155,12 @@ function clearDSubMenu() {
 accordions()
 
 function accordions() {
-    const hiddenSiblingAcc = false // Скрывать соседние аккордеоны. false если не нужно.
+
+    if (find('.acc._show')) {
+        const accBody = find('.acc._show').querySelector('.acc-body')
+        find('.acc._show').querySelector('.acc-open').classList.add('_show')
+        accBody.style.maxHeight = accBody.scrollHeight + 'px'
+    }
 
     window.addEventListener('click', e => {
         const target = e.target
@@ -1042,9 +1178,9 @@ function accordions() {
                 parent.classList.remove('_show')
                 target.classList.remove('_show')
             } else {
-                const adjacentElems = getSiblings(parent)
 
-                if (hiddenSiblingAcc) {
+                if (parent.classList.contains('accordion_container-list')) {
+                    const adjacentElems = getSiblings(parent)
                     for (let i = 0; i < adjacentElems.length; i++) {
                         const elem = adjacentElems[i]
                         const elemHeader = elem.querySelector('.acc-open')
