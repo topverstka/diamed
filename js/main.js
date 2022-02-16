@@ -284,7 +284,7 @@ function submitApplication() {
             error.classList.add('form-elem__error')
             parent.append(error)
         }
-        
+
         parent.classList.add('error')
         error.innerHTML = textError
     }
