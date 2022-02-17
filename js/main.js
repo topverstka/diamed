@@ -92,13 +92,12 @@ if (windowWidth > 767) {
 if (intro) {
     intro.classList.add('active');
     introBG.classList.add('active')
-        // console.log(intro.play())
     intro.play()
         .catch(e => {
             intro.remove();
-            let src = introBG.getAttribute('data-src-picture');
+            let src = introBG.getAttribute('data-src-end');
             introBG.setAttribute('src', src);
-            console.log('Ошибка воспроизведения видео на главном экране')
+            console.log('Ошибка воспроизведения видео');
         })
 }
 
