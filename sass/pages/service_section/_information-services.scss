@@ -3,6 +3,18 @@
     @media (max-width: $tablet-l) {
         padding: 56px 0;
     }
+    @media (max-width: $tablet) {
+        .container {
+            padding: 0px;
+        }
+        .tabs__container {
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+        .section_information_services__box {
+            padding: 0 20px
+        }
+    }
 }
 
 .section_information_services__box {
@@ -76,7 +88,6 @@
     }
     li {
         position: relative;
-        font-weight: 500;
         &:after {
             content: '';
             position: absolute;
@@ -150,7 +161,6 @@
     }
     td {
         padding: 14px;
-        font-weight: 500;
     }
     td:last-child {
         text-align: right;
