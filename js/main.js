@@ -59,6 +59,7 @@ function bodyLock(con) {
 
 // Отступ главного экрана на главной странице
 if (find('.header_index')) paddingTopMainSection()
+
 function paddingTopMainSection() {
     const main = find('.main_top__wrapper')
     const header = find('.header_index')
@@ -91,10 +92,10 @@ if (windowWidth > 767) {
 if (intro) {
     intro.classList.add('active');
     introBG.classList.add('active')
-    // console.log(intro.play())
+        // console.log(intro.play())
     intro.play()
         .catch(e => {
-            intro.remove()
+            intro.remove();
             console.log('Ошибка воспроизведения видео на главном экране')
         })
 }
@@ -172,6 +173,7 @@ function sumbitForm() {
 
 // Мобильное меню
 menu()
+
 function menu() {
     const burger = find('.burger')
     const menu = find('.menu');
@@ -197,6 +199,7 @@ function menu() {
 
 // Отправить заявку на прием врача
 submitAppointment()
+
 function submitAppointment() {
     const form = document.getElementById('make_appointment')
     const textfieldElems = form.querySelectorAll('input._req')
@@ -224,8 +227,7 @@ function submitAppointment() {
 
             if (response.ok) {
                 alert('Заявка отправлена!')
-            }
-            else {
+            } else {
                 alert('Ошибка с сервером! Заявка не отправлена!')
             }
         }
@@ -234,6 +236,7 @@ function submitAppointment() {
 
 // Отправить заявку на консультацию
 submitConsultation()
+
 function submitConsultation() {
     const form = document.getElementById('form_consultation')
 
@@ -263,8 +266,7 @@ function submitConsultation() {
 
                 if (response.ok) {
                     alert('Заявка отправлена!')
-                }
-                else {
+                } else {
                     alert('Ошибка с сервером! Заявка не отправлена!')
                 }
             }
@@ -282,8 +284,7 @@ function validForm(form) {
         if (textfield.value.trim() === '') {
             showError(textfield, 'Поле не должно быть пустым')
             con = false
-        }
-        else {
+        } else {
             hideError(textfield)
 
             // Поле email
@@ -299,8 +300,7 @@ function validForm(form) {
                 if (textfield.value.length < 11) {
                     showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
                     con = false
-                }
-                else {
+                } else {
                     hideError(textfield)
                 }
             }
@@ -311,8 +311,8 @@ function validForm(form) {
 }
 
 function validateEmail(email) {
-    var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return pattern .test(email);
+    var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
 }
 
 function showError(textfield, textError) {
@@ -342,6 +342,7 @@ function hideError(textfield) {
 
 // В инпуте могут быть только цифры если у textfield есть класс only-digit
 onlyDigit()
+
 function onlyDigit() {
     const textfieldElems = document.querySelectorAll('.only-digit')
 
@@ -350,17 +351,18 @@ function onlyDigit() {
 
         input.addEventListener('keypress', function(e) {
             const inputValue = e.charCode;
-        
-            if(!(inputValue >= 48 && inputValue <= 57) && (inputValue != 43 && inputValue != 0 && inputValue != 40 && inputValue != 41 && inputValue != 45)) {
+
+            if (!(inputValue >= 48 && inputValue <= 57) && (inputValue != 43 && inputValue != 0 && inputValue != 40 && inputValue != 41 && inputValue != 45)) {
                 e.preventDefault();
             }
-        }); 
+        });
     }
 }
 
 // Функции для модальных окон
 // Открытие модальных окон при клике по кнопке
 openModalWhenClickingOnBtn()
+
 function openModalWhenClickingOnBtn() {
     const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
 
@@ -382,6 +384,7 @@ function openModalWhenClickingOnBtn() {
 
 // Открытие модального окна, если в url указан его id
 openModalHash()
+
 function openModalHash() {
     if (window.location.hash) {
         const hash = window.location.hash.substring(1)
@@ -393,6 +396,7 @@ function openModalHash() {
 
 // Показываем/убираем модальное окно при изменения хеша в адресной строке
 checkHash()
+
 function checkHash() {
     window.addEventListener('hashchange', e => {
         const hash = window.location.hash
@@ -405,6 +409,7 @@ function checkHash() {
 
 // Закрытие модального окна при клике по заднему фону
 closeModalWhenClickingOnBg()
+
 function closeModalWhenClickingOnBg() {
     document.addEventListener('click', (e) => {
         const target = e.target
@@ -416,6 +421,7 @@ function closeModalWhenClickingOnBg() {
 
 // Закрытие модальных окон при клике по крестику
 closeModalWhenClickingOnCross()
+
 function closeModalWhenClickingOnCross() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -432,6 +438,7 @@ function closeModalWhenClickingOnCross() {
 
 // Закрытие модальных окон при нажатии по клавише ESC
 closeModalWhenClickingOnESC()
+
 function closeModalWhenClickingOnESC() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -650,6 +657,7 @@ const swiper_review = new Swiper('.review_wrapp__slider', {
 
 // Первый таб является активным
 firstTabIsActive()
+
 function firstTabIsActive() {
     const tabList = document.querySelectorAll('.tab__list')
 
@@ -662,6 +670,7 @@ function firstTabIsActive() {
 }
 
 tabs()
+
 function tabs() {
     const tabListElems = document.querySelectorAll('.tab__list')
 
@@ -683,6 +692,7 @@ function tabs() {
 }
 
 tabRollers()
+
 function tabRollers() {
     const tabListElems = findAll('.tab__list')
 
@@ -705,20 +715,23 @@ function swipeRoller(tabList) {
 }
 
 tabBlockActive();
+
 function tabBlockActive(data) {
-    let tabActive = document.querySelector('.tab._active'),
-        dataTab = data !== undefined ? data : tabActive.dataset.tab,
-        blockElems = document.querySelectorAll('.tabs__block'),
-        blockShowElems = document.querySelectorAll(`[data-tab-body=${dataTab}]`)
+    let tabActive = document.querySelectorAll('.tab._active'),
+        blockElems = document.querySelectorAll('.tabs__block');
 
     removeAll(blockElems, '_show');
-    for (let i = 0; i < blockShowElems.length; i++) {
-        blockShowElems[i].classList.add('_show')
-    }
+
+    [...tabActive].filter(i => {
+        if (document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`)) {
+            document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`).classList.add('_show');
+        }
+    });
 }
 
 // Анимация пересчета цифр
 appearAnimationNumber()
+
 function appearAnimationNumber() {
     const appearElems = findAll('[data-animation=number]')
 
@@ -753,6 +766,7 @@ window.addEventListener('load', animation)
 
 // Анимация
 animation()
+
 function animation() {
     const elems = document.querySelectorAll('[data-animation]')
 
@@ -798,6 +812,7 @@ function doAnimWithDelay(array, _class, transition) {
 
 // Аккордеоны
 accordions()
+
 function accordions() {
 
     if (find('.acc._show')) {
@@ -815,17 +830,17 @@ function accordions() {
                 const parent = target.closest('.acc')
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
-    
+
                 parent.classList.toggle('_show')
                 target.classList.toggle('_show')
-    
+
                 if (accBody.style.maxHeight) {
                     accBody.style.maxHeight = null
                     container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
                     parent.classList.remove('_show')
                     target.classList.remove('_show')
                 } else {
-    
+
                     if (
                         parent.classList.contains('accordion_container-list') ||
                         parent.parentElement.parentElement.classList.contains('menu-left-mobile')
@@ -835,16 +850,16 @@ function accordions() {
                             const elem = adjacentElems[i]
                             const elemHeader = elem.querySelector('.acc-open')
                             const elemBody = elem.querySelector('.acc-body')
-    
+
                             elem.classList.remove('_show')
                             elemHeader.classList.remove('_show')
                             elemBody.style.maxHeight = null
                         }
                     }
-                    
+
                     accBody.style.maxHeight = accBody.scrollHeight + 'px'
                     container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
-                    
+
                     if (parent.closest('.menu-left__item')) {
                         parent.closest('.menu-left__item').style.maxHeight = 'none'
                     }
@@ -853,12 +868,13 @@ function accordions() {
                     }
                 }
             }
-        }   
+        }
     })
 }
 
 // Плейсхолдер текстовых полей
 labelTextfield()
+
 function labelTextfield() {
     const textfieldElems = document.querySelectorAll('.form-elem')
 
@@ -881,26 +897,26 @@ function labelTextfield() {
 
 // Показать подменю
 showSubMenu()
+
 function showSubMenu() {
 
     if (innerWidth < 920) {
         const itemElems = findAll('[data-sub-menu]')
-    
+
         for (let i = 0; i < itemElems.length; i++) {
             const item = itemElems[i];
-            
+
             item.addEventListener('click', e => {
                 const dataMenu = item.dataset.subMenu
                 const subMenu = find(`[data-menu=${dataMenu}]`)
-    
+
                 removeAll('.d-sub-menu__block', '_show')
                 removeAll('.sub-menu__link', '_show')
                 removeAll('[data-menu]', '_show')
                 subMenu.classList.add('_show')
             })
         }
-    }
-    else {
+    } else {
         const menu = find('.menu')
         menu.addEventListener('mousemove', e => {
             const target = e.target
@@ -908,7 +924,7 @@ function showSubMenu() {
             if (target.getAttribute('data-sub-menu')) {
                 const targetData = target.dataset.subMenu
                 const subMenu = find(`[data-menu=${targetData}]`)
-                
+
                 if (!subMenu.classList.contains('_show')) {
                     removeAll('.d-sub-menu__block', '_show')
                     removeAll('.sub-menu__link', '_show')
@@ -922,6 +938,7 @@ function showSubMenu() {
 
 // Открытие d-sub-menu
 if (window.innerWidth > 920) showDSubMenu()
+
 function showDSubMenu() {
     const menu = find('.menu')
 
@@ -931,7 +948,7 @@ function showDSubMenu() {
         if (target.getAttribute('data-d-sub-menu') && target.classList.contains('sub-menu__link')) {
             const targetData = target.dataset.dSubMenu
             const dSubMenu = find(`.d-sub-menu__block[data-d-sub-menu=${targetData}]`)
-            
+
             if (!dSubMenu.classList.contains('_show')) {
                 removeAll('.d-sub-menu__block', '_show')
                 dSubMenu.classList.add('_show')

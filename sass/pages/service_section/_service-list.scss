@@ -28,15 +28,16 @@
 .service-list__info {
     width: 55%;
     margin: 40px 0 56px 0;
-    font-weight: 500;
+    font-weight: 400;
     @media (max-width: $tablet) {
-        width: 95%
+        width: 92.6%;
+        min-height: 78px;
     }
-    @media (max-width: $tablet-l) {
-        margin: 24px 0 32px 0;
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         line-height: 22px;
         width: 100%;
+        margin: 24px 0 32px 0;
     }
 }
 
@@ -48,8 +49,9 @@
         grid-template-columns: repeat(3, 420px);
     }
     @media (max-width:$tablet-s) {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 20px 0
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px 0
     }
 }
 
@@ -81,8 +83,10 @@
     border-radius: 12px;
     padding: 32px;
     position: relative;
+    height: 334px;
     @media (max-width: $tablet-s) {
-        padding: 24px 20px
+        padding: 24px 20px;
+        height: auto
     }
 }
 
@@ -96,6 +100,7 @@
     @media (max-width: $tablet-s) {
         font-size: 16px;
         line-height: 26px;
+        width: 100%
     }
 }
 
@@ -104,6 +109,7 @@
     line-height: 24px;
     color: $accent2;
     @media (max-width: $tablet-s) {
-        font-size: 14px
+        font-size: 14px;
+        line-height: 23px;
     }
 }

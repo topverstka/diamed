@@ -26,14 +26,12 @@
     &.tabs_cat {
         background: #F0EFEF4D;
         margin-bottom: 32px;
-
         @media (max-width: 600px) {
             background-color: transparent;
             margin-bottom: 1px;
         }
         & .tab {
             color: #EAE9EF;
-
             @media (max-width: 600px) {
                 background-color: #F0EFEF4D;
             }
@@ -55,7 +53,7 @@
         }
         &:not(.tabs__wrapp) .tab {
             padding: 12px 11px;
-            background: #EAE9EF;
+            background: rgba(240, 239, 239, 0.3);
             border-radius: 13px;
             margin-right: 13px;
             margin-bottom: 10px;
@@ -88,7 +86,6 @@
     transition: $tr;
     cursor: pointer;
     white-space: nowrap;
-
     @media (max-width: 600px) {
         font-size: 12px;
         padding: 10px 12px;

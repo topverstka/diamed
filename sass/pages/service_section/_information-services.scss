@@ -3,6 +3,23 @@
     @media (max-width: $tablet-l) {
         padding: 56px 0;
     }
+    @media (max-width: $tablet) {
+        .container {
+            padding: 0px;
+        }
+        .tabs__container {
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+        .section_information_services__box {
+            padding: 0 20px
+        }
+    }
+    @media (max-width:$tablet-s) {
+        .tab {
+            font-size: 10px
+        }
+    }
 }
 
 .section_information_services__box {
@@ -32,13 +49,15 @@
         width: 541px;
         max-width: 100%;
         margin-bottom: 40px;
-        padding: 24px 24px 24px 20px;
         li:not(:last-child) {
             padding-bottom: 16px;
         }
         li:last-child {
             margin-bottom: 0;
         }
+    }
+    @media (max-width:$tablet-s) {
+        padding: 24px
     }
 }
 
@@ -69,18 +88,17 @@
 }
 
 .section_information_services__item-list {
-    padding-left: 27px;
+    padding-left: 23px;
     line-height: 24px;
     li:not(:last-child) {
         margin-bottom: 20px;
     }
     li {
         position: relative;
-        font-weight: 500;
         &:after {
             content: '';
             position: absolute;
-            left: -27px;
+            left: -23px;
             top: 10px;
             width: 7px;
             height: 7px;
@@ -93,10 +111,11 @@
         }
     }
     @media (max-width: $tablet-s) {
+        padding-left: 20px;
         li {
             font-size: 14px;
             &:after {
-                left: -20px
+                left: -17px
             }
         }
     }
@@ -117,6 +136,10 @@
     font-size: 16px;
     @media (max-width: $tablet-s) {
         font-size: 14px
+    }
+    @media (max-width: $tablet) {
+        width: 100%;
+        display: block
     }
 }
 
@@ -150,7 +173,6 @@
     }
     td {
         padding: 14px;
-        font-weight: 500;
     }
     td:last-child {
         text-align: right;
