@@ -7592,6 +7592,25 @@ h6 {
   }
 }
 
+@media (max-width: 500px) {
+  .menu-left {
+    display: none;
+  }
+}
+
+.menu-left-mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .menu-left-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .menu-left__list {
   margin-bottom: 32px;
 }
@@ -7899,6 +7918,22 @@ h6 {
 
 .sub-menu {
   margin-right: 24px;
+}
+
+.sub-menu__list {
+  display: none;
+}
+
+.sub-menu__list._show {
+  display: block;
+}
+
+.d-sub-menu__block {
+  display: none;
+}
+
+.d-sub-menu__block._show {
+  display: block;
 }
 
 .sub-menu__item {
