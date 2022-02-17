@@ -10505,6 +10505,9 @@ h6 {
   .first-time form {
     margin-right: 0;
   }
+  .first-time .tab {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 768px) {
