@@ -87,5 +87,8 @@
 
 .first-time__text {
     color: $main;
-    display: block
+    display: block;
+    @media (max-width: $tablet-s) {
+        font-size: 14px
+    }
 }

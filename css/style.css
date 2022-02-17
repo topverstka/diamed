@@ -10544,6 +10544,12 @@ h6 {
   display: block;
 }
 
+@media (max-width: 500px) {
+  .first-time__text {
+    font-size: 14px;
+  }
+}
+
 .section_information_services {
   padding: 100px 0;
 }
