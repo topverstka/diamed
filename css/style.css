@@ -7133,7 +7133,6 @@ h6 {
 @media (max-width: 500px) {
   .menu-left-mobile {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -10346,9 +10345,14 @@ h6 {
 
 @media (max-width: 500px) {
   .service-list__enumeration {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 16px 0;
   }
 }
 
@@ -10389,11 +10393,13 @@ h6 {
   border-radius: 12px;
   padding: 32px;
   position: relative;
+  height: 334px;
 }
 
 @media (max-width: 500px) {
   .service-list__enumeration-item {
     padding: 24px 20px;
+    height: auto;
   }
 }
 
@@ -10410,6 +10416,7 @@ h6 {
   .service-list__enumeration-title {
     font-size: 16px;
     line-height: 26px;
+    width: 100%;
   }
 }
 
@@ -10422,6 +10429,7 @@ h6 {
 @media (max-width: 500px) {
   .service-list__enumeration-text {
     font-size: 14px;
+    line-height: 23px;
   }
 }
 
