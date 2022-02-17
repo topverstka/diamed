@@ -6305,6 +6305,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-bottom: 10px;
     font-size: 12px;
   }
+  .modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab{
+    background: #EAE9EF; 
+  }
   .tabs__header:not(.tabs__wrapp) .tab._active {
     background-color: #fff;
   }
