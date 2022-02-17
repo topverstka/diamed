@@ -891,7 +891,6 @@ function showSubMenu() {
             
             item.addEventListener('click', e => {
                 const dataMenu = item.dataset.subMenu
-                console.log(dataMenu)
                 const subMenu = find(`[data-menu=${dataMenu}]`)
     
                 removeAll('.d-sub-menu__block', '_show')
