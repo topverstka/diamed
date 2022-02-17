@@ -299,7 +299,7 @@ function validForm(form) {
 
             // Телефон
             if (textfield.name === 'phone') {
-                if (textfield.value.length < 11) {
+                if (textfield.value.replace('+', '').length != 11) {
                     showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
                     con = false
                 } else {
