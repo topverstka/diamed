@@ -24,7 +24,7 @@
                         <a class="header_info__tel-link" href="tel:+73822609010">8 (3822) 60 90 10</a>
                     </div>
                     <div class="header_info__text">
-                        
+
                         <img src="./img/icons/icon_header.svg" alt="">
                         <p>Университетская клиника МГМУ имени И.М. Сеченова</p>
                     </div>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="header_main">
                 <div class="container">
                     <div class="header_main__wrap">
@@ -137,7 +137,7 @@
                 </div>
                 <div class="menu__wrap">
                     <div class="menu-left">
-                        <ul class="menu-left__list">                            
+                        <ul class="menu-left__list">
                             <li class="menu-left__item">
                                 <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">О сети клиник</a>
                             </li>
@@ -234,8 +234,8 @@
                 </div>
             </div>
         </header>
-       
-        
+
+
         <main class="main">
             <div class="breadcrumbs breadcrumbs-indent breadcrumbs-container">
                 <ul class="breadcrumbs__list">
@@ -247,7 +247,8 @@
                 <div class="container">
                     <div class="service-main__wrap">
                         <h1 class="title-main service-main__title">Услуги</h1>
-                        <p class="service-main__text">Наш врач-стоматолог проведёт осмотр и вместе с вами составит план лечения зубов. Вам будет предложено несколько вариантов лечения, различающихся по цене, но одинаковых по качеству исполнения и вы сможете выбрать наиболее приемлемый способ лечения.<br><br>На консультации наши специалисты расскажут вам, как предотвращать заболевания и реже ходить к стоматологам. </p>
+                        <p class="service-main__text">Наш врач-стоматолог проведёт осмотр и вместе с вами составит план лечения зубов. Вам будет предложено несколько вариантов лечения, различающихся по цене, но одинаковых по качеству исполнения и вы сможете выбрать наиболее приемлемый
+                            способ лечения.<br><br>На консультации наши специалисты расскажут вам, как предотвращать заболевания и реже ходить к стоматологам. </p>
                     </div>
                 </div>
             </div>
@@ -470,7 +471,7 @@
                             </div>
                             <div class="cat__elem wow fadeInRight" data-wow-delay=".3s">
                                 <p class="cat__elem-title">Адрес</p>
-                                <p class="cat__elem-text">Томск,<br>ул. Красноармейская, 96</p>
+                                <p class="cat__elem-text">Томск,<br> ул. Красноармейская, 96</p>
                             </div>
                             <div class="cat__elem wow fadeInRight" data-wow-delay=".5s">
                                 <p class="cat__elem-title">Контакты</p>
@@ -478,16 +479,16 @@
                                 <p class="cat__elem-text"><a href="mailto:diamed08@inbox.ru">diamed08@inbox.ru</a></p>
                             </div>
                         </div>
-                        
+
                         <div class="cat-social">
                             <a href="#">
                                 <img id="facebook" src="./img/icons/cat/Facebook.svg" alt="facebook">
                             </a>
                             <a data-wow-delay=".3s" href="#">
-                                <img id="youtube"src="./img/icons/cat/youtube.svg" alt="youtube">
+                                <img id="youtube" src="./img/icons/cat/youtube.svg" alt="youtube">
                             </a>
                             <a data-wow-delay=".5s" href="#">
-                                <img id="vk"src="./img/icons/cat/vk.svg" alt="">
+                                <img id="vk" src="./img/icons/cat/vk.svg" alt="">
                             </a>
                             <a data-wow-delay=".7s" href="#">
                                 <img id="instagram" src="./img/icons/cat/Instagram.svg" alt="">
@@ -514,7 +515,7 @@
                     <a href="/" class="footer-creator">
                         <img src="./img/logo-paraweb.svg" alt="">
                     </a>
-                    
+
                 </div>
             </div>
             <div class="footer-bottom">
@@ -543,24 +544,32 @@
     <script src="./js/libs/air-datepicker.js"></script>
     <script>
         const datePicker = new AirDatepicker('#datetimepicker1', {
-            onSelect({date, cellType, datepicker}) {
+            onSelect({
+                date,
+                cellType,
+                datepicker
+            }) {
                 removeError(datepicker)
             }
         })
-        const timePicker = new AirDatepicker('#datetimepicker2', {  
+        const timePicker = new AirDatepicker('#datetimepicker2', {
             timepicker: true,
             onlyTimepicker: true,
             minutesStep: 5,
-            onSelect({date, cellType, datepicker}) {
+            onSelect({
+                date,
+                cellType,
+                datepicker
+            }) {
                 removeError(datepicker)
             }
         })
 
         function removeError(datepicker) {
-                const textfield = datepicker.$el
-                const parent = textfield.parentElement
+            const textfield = datepicker.$el
+            const parent = textfield.parentElement
 
-                parent.classList.remove('error')
+            parent.classList.remove('error')
         }
     </script>
 
