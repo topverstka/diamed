@@ -15,6 +15,11 @@
             padding: 0 20px
         }
     }
+    @media (max-width:$tablet-s) {
+        .tab {
+            font-size: 10px
+        }
+    }
 }
 
 .section_information_services__box {
