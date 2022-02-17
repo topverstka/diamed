@@ -8513,6 +8513,21 @@ h6 {
   }
 }
 
+@media (max-width: 500px) {
+  .our_doctors_service .our_doctors__more {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .our_doctors_service .tab {
+    font-size: 10px;
+  }
+  .our_doctors_service .tab:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
 .why_choose {
   padding-top: 100px;
   padding-bottom: 97px;
@@ -10379,8 +10394,8 @@ h6 {
 
 @media (max-width: 920px) {
   .service-list__enumeration {
-    -ms-grid-columns: (420px)[3];
-        grid-template-columns: repeat(3, 420px);
+    -ms-grid-columns: (413px)[3];
+        grid-template-columns: repeat(3, 413px);
   }
 }
 
@@ -10434,13 +10449,13 @@ h6 {
   border-radius: 12px;
   padding: 32px;
   position: relative;
-  height: 334px;
+  min-height: 334px;
 }
 
 @media (max-width: 500px) {
   .service-list__enumeration-item {
     padding: 24px 20px;
-    height: auto;
+    min-height: auto;
   }
 }
 

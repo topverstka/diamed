@@ -318,3 +318,18 @@
         margin-bottom: 34px;
     }
 }
+
+.our_doctors_service .our_doctors__more {
+    @media (max-width: $tablet-s) {
+        font-size: 12px
+    }
+}
+
+.our_doctors_service .tab {
+    @media (max-width: $tablet-s) {
+        font-size: 10px;
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+    }
+}

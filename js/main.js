@@ -96,6 +96,8 @@ if (intro) {
     intro.play()
         .catch(e => {
             intro.remove();
+            let src = introBG.getAttribute('data-src-picture');
+            introBG.setAttribute('src', src);
             console.log('Ошибка воспроизведения видео на главном экране')
         })
 }
