@@ -10201,6 +10201,15 @@ h6 {
   }
 }
 
+@media (min-width: 500px) and (max-width: 768px) {
+  .header_main__logo {
+    margin-right: auto;
+    margin-left: 32px;
+    width: 129px;
+    height: 36px;
+  }
+}
+
 .first-block {
   padding: 0 0 91px 0;
   position: relative;

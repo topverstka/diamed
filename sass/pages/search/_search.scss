@@ -1,5 +1,4 @@
 .s-search__search-form {
-
     & input {
         border: 1px solid $outline-card;
     }
@@ -13,7 +12,6 @@
 .s-search__quantity-result {
     font-size: 16px;
     margin-top: 24px;
-
     @media (max-width: $mobile-l) {
         font-size: 14px;
         margin-top: 16px;
@@ -24,26 +22,19 @@
     margin-top: 40px;
 }
 
-.s-search__wrap {
+.s-search__wrap {}
 
-}
-
-.s-search__list {
-
-}
+.s-search__list {}
 
 // Карточка
 .s-search-card {
     padding: 24px 0;
     border-bottom: 1px solid $outline-card;
-    
     &:first-child {
         border-top: 1px solid $outline-card;
     }
-    
     // &:not(:last-child) {
     // }
-
     @media (max-width: $mobile-l) {
         padding: 24px 0 16px 0;
     }
@@ -52,7 +43,6 @@
 .s-search-card__title {
     font-size: 20px;
     font-weight: 600;
-
     @media (max-width: $mobile-l) {
         font-size: 16px;
     }
@@ -62,11 +52,9 @@
     font-size: 16px;
     font-weight: 400;
     margin-top: 16px;
-
     @media (max-width: $mobile-l) {
         font-size: 14px;
     }
-
     & strong {
         color: $second;
         font-weight: 600;
@@ -75,9 +63,17 @@
 
 .s-search-card__link {
     margin-top: 32px;
-
     @media (max-width: $mobile-l) {
         font-size: 12px;
         margin-top: 24px;
+    }
+}
+
+@media (min-width:$tablet-s) and (max-width:$tablet) {
+    .header_main__logo {
+        margin-right: auto;
+        margin-left: 32px;
+        width: 129px;
+        height: 36px;
     }
 }
