@@ -10661,7 +10661,7 @@ h6 {
 }
 
 .section_information_services__item-list {
-  padding-left: 27px;
+  padding-left: 23px;
   line-height: 24px;
 }
 
@@ -10676,7 +10676,7 @@ h6 {
 .section_information_services__item-list li:after {
   content: '';
   position: absolute;
-  left: -27px;
+  left: -23px;
   top: 10px;
   width: 7px;
   height: 7px;
@@ -10690,11 +10690,14 @@ h6 {
 }
 
 @media (max-width: 500px) {
+  .section_information_services__item-list {
+    padding-left: 20px;
+  }
   .section_information_services__item-list li {
     font-size: 14px;
   }
   .section_information_services__item-list li:after {
-    left: -20px;
+    left: -17px;
   }
 }
 
