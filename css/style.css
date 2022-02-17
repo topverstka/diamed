@@ -10379,8 +10379,8 @@ h6 {
 
 @media (max-width: 920px) {
   .service-list__enumeration {
-    -ms-grid-columns: (420px)[3];
-        grid-template-columns: repeat(3, 420px);
+    -ms-grid-columns: (413px)[3];
+        grid-template-columns: repeat(3, 413px);
   }
 }
 
@@ -10434,13 +10434,13 @@ h6 {
   border-radius: 12px;
   padding: 32px;
   position: relative;
-  height: 334px;
+  min-height: 334px;
 }
 
 @media (max-width: 500px) {
   .service-list__enumeration-item {
     padding: 24px 20px;
-    height: auto;
+    min-height: auto;
   }
 }
 

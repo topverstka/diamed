@@ -46,7 +46,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 20px;
     @media (max-width: $tablet-l) {
-        grid-template-columns: repeat(3, 420px);
+        grid-template-columns: repeat(3, 413px);
     }
     @media (max-width:$tablet-s) {
         display: flex;
@@ -83,10 +83,10 @@
     border-radius: 12px;
     padding: 32px;
     position: relative;
-    height: 334px;
+    min-height: 334px;
     @media (max-width: $tablet-s) {
         padding: 24px 20px;
-        height: auto
+        min-height: auto
     }
 }
 
