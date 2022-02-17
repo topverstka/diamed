@@ -10472,6 +10472,10 @@ h6 {
 
 .first-time .form-footer__privacy {
   color: var(--main);
+  padding: 6px;
+  line-height: 20px;
+  width: 378px;
+  max-width: 100%;
 }
 
 .first-time .form-footer__privacy a {

@@ -28,6 +28,10 @@
     }
     .form-footer__privacy {
         color: $main;
+        padding: 6px;
+        line-height: 20px;
+        width: 378px;
+        max-width: 100%;
         a {
             text-decoration: underline;
             @media (min-width: $minHover) {
