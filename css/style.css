@@ -8513,6 +8513,12 @@ h6 {
   }
 }
 
+@media (max-width: 500px) {
+  .our_doctors_service .our_doctors__more {
+    font-size: 12px;
+  }
+}
+
 .why_choose {
   padding-top: 100px;
   padding-bottom: 97px;
