@@ -130,6 +130,18 @@
         max-width: none;
         padding: 10px 0 70px;
     }
+
+    @media (max-width: $tablet-s) {
+        display: none;
+    }
+}
+
+.menu-left-mobile {
+    display: none;
+
+    @media (max-width: $tablet-s) {
+        display: flex;
+    }
 }
 
 .menu-left__list {
@@ -391,7 +403,19 @@
 }
 
 .sub-menu__list {
+    display: none;
+ 
+    &._show { 
+        display: block;
+    }
+}
 
+.d-sub-menu__block {
+    display: none;
+ 
+    &._show {
+        display: block;
+    }
 }
 
 .sub-menu__item {

@@ -76,6 +76,7 @@
     width: 100%;
     right: -30%;
     opacity: 0.2;
+    pointer-events: none;
     @media (max-width: 1100px) {
         display: none
     }

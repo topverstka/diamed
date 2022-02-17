@@ -195,9 +195,9 @@ function menu() {
     })
 }
 
-// Отправить заявку
-submitApplication()
-function submitApplication() {
+// Отправить заявку на прием врача
+submitAppointment()
+function submitAppointment() {
     const form = document.getElementById('make_appointment')
     const textfieldElems = form.querySelectorAll('input._req')
 
@@ -230,104 +230,115 @@ function submitApplication() {
             }
         }
     })
+}
 
-    function validForm(form) {
+// Отправить заявку на консультацию
+submitConsultation()
+function submitConsultation() {
+    const form = document.getElementById('form_consultation')
+
+    if (form) {
         const textfieldElems = form.querySelectorAll('input._req')
-        let con = true
 
         for (let i = 0; i < textfieldElems.length; i++) {
             const textfield = textfieldElems[i]
+            const parent = textfield.parentElement
 
-            if (textfield.value.trim() === '') {
-                showError(textfield, 'Поле не должно быть пустым')
-                con = false
-            }
-            else {
-                hideError(textfield)
+            textfield.addEventListener('input', e => {
+                parent.classList.remove('error')
+            })
+        }
 
-                // Поле email
-                if (textfield.name === 'email') {
-                    if (!validateEmail(textfield.value)) {
-                        showError(textfield, 'Введен некорректный email')
-                        con = false
-                    }
+        form.addEventListener('submit', async e => {
+            e.preventDefault()
+
+            if (validForm(form)) {
+                const formData = new FormData()
+                const action = form.getAttribute('action')
+
+                let response = await fetch(action, {
+                    method: 'POST',
+                    body: formData
+                })
+
+                if (response.ok) {
+                    alert('Заявка отправлена!')
                 }
-    
-                // Телефон
-                if (textfield.name === 'phone') {
-                    if (textfield.value.length < 11) {
-                        showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
-                        con = false
-                    }
-                    else {
-                        hideError(textfield)
-                    }
+                else {
+                    alert('Ошибка с сервером! Заявка не отправлена!')
                 }
             }
-        }
-
-        return con
-    }
-
-    function validateEmail(email) {
-        var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return pattern .test(email);
-    }
-
-    function showError(textfield, textError) {
-        const parent = textfield.parentElement
-        let error = parent.querySelector('.form-elem__error')
-
-        if (!error) {
-            error = document.createElement('p')
-    
-            error.classList.add('form-elem__error')
-            parent.append(error)
-        }
-        
-        parent.classList.add('error')
-        error.innerHTML = textError
-    }
-
-    function hideError(textfield) {
-        const parent = textfield.parentElement
-        const error = parent.querySelector('.form-elem__error')
-
-        if (error) {
-            error.remove()
-            parent.classList.remove('error')
-        }
+        })
     }
 }
 
-// const advantagesSlider = new Swiper('.advantages__slider', {
-// 	spaceBetween: 16,
-// 	centeredSlides: true,
-// 	// slidesPerView: 1.33, // Кол-во показываемых слайдов
-// 	// autoHeight: true,
-// 	// slidesPerView: 'auto',
-// 	// loop: true, // Бесконечный слайдер
-// 	// freeMode: true, // Слайдеры не зафиксированны
+function validForm(form) {
+    const textfieldElems = form.querySelectorAll('input._req')
+    let con = true
 
-// 	breakpoints: {
-// 		1200: {
-// 			slidesPerView: 'auto',
-// 		},
-// 		700: {
-// 			slidesPerView: 1.1,
-// 		},
-// 		0: {
-// 			slidesPerView: 1.08,
-// 			spaceBetween: 8,
-// 			centeredSlides: false,
-// 		}
-// 	},
+    for (let i = 0; i < textfieldElems.length; i++) {
+        const textfield = textfieldElems[i]
 
-// 	// navigation: {
-// 	// 	nextEl: '.swiper__arrow-next',
-// 	// 	prevEl: '.swiper__arrow-prev',
-// 	// }
-// });
+        if (textfield.value.trim() === '') {
+            showError(textfield, 'Поле не должно быть пустым')
+            con = false
+        }
+        else {
+            hideError(textfield)
+
+            // Поле email
+            if (textfield.name === 'email') {
+                if (!validateEmail(textfield.value)) {
+                    showError(textfield, 'Введен некорректный email')
+                    con = false
+                }
+            }
+
+            // Телефон
+            if (textfield.name === 'phone') {
+                if (textfield.value.length < 11) {
+                    showError(textfield, 'Телефонный номер должен состоять из 11-ти цифр')
+                    con = false
+                }
+                else {
+                    hideError(textfield)
+                }
+            }
+        }
+    }
+
+    return con
+}
+
+function validateEmail(email) {
+    var pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern .test(email);
+}
+
+function showError(textfield, textError) {
+    const parent = textfield.parentElement
+    let error = parent.querySelector('.form-elem__error')
+
+    if (!error) {
+        error = document.createElement('p')
+
+        error.classList.add('form-elem__error')
+        parent.append(error)
+    }
+
+    parent.classList.add('error')
+    error.innerHTML = textError
+}
+
+function hideError(textfield) {
+    const parent = textfield.parentElement
+    const error = parent.querySelector('.form-elem__error')
+
+    if (error) {
+        error.remove()
+        parent.classList.remove('error')
+    }
+}
 
 // В инпуте могут быть только цифры если у textfield есть класс only-digit
 onlyDigit()
@@ -350,7 +361,6 @@ function onlyDigit() {
 // Функции для модальных окон
 // Открытие модальных окон при клике по кнопке
 openModalWhenClickingOnBtn()
-
 function openModalWhenClickingOnBtn() {
     const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
 
@@ -372,7 +382,6 @@ function openModalWhenClickingOnBtn() {
 
 // Открытие модального окна, если в url указан его id
 openModalHash()
-
 function openModalHash() {
     if (window.location.hash) {
         const hash = window.location.hash.substring(1)
@@ -384,7 +393,6 @@ function openModalHash() {
 
 // Показываем/убираем модальное окно при изменения хеша в адресной строке
 checkHash()
-
 function checkHash() {
     window.addEventListener('hashchange', e => {
         const hash = window.location.hash
@@ -397,7 +405,6 @@ function checkHash() {
 
 // Закрытие модального окна при клике по заднему фону
 closeModalWhenClickingOnBg()
-
 function closeModalWhenClickingOnBg() {
     document.addEventListener('click', (e) => {
         const target = e.target
@@ -409,7 +416,6 @@ function closeModalWhenClickingOnBg() {
 
 // Закрытие модальных окон при клике по крестику
 closeModalWhenClickingOnCross()
-
 function closeModalWhenClickingOnCross() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -426,7 +432,6 @@ function closeModalWhenClickingOnCross() {
 
 // Закрытие модальных окон при нажатии по клавише ESC
 closeModalWhenClickingOnESC()
-
 function closeModalWhenClickingOnESC() {
     const modalElems = document.querySelectorAll('.modal')
     for (let i = 0; i < modalElems.length; i++) {
@@ -548,39 +553,6 @@ const swiper_articles = new Swiper('.service_articles__slider', {
     },
 });
 
-// const swiper = new Swiper('.swiper-container', {
-
-//   slidesPerView: 1, // Кол-во показываемых слайдов
-//   spaceBetween: 0, // Расстояние между слайдами
-//   loop: true, // Бесконечный слайдер
-//   freeMode: true, // Слайдеры не зафиксированны
-
-//   breakpoints: {
-//     1200: {
-
-//     },
-//     700: {
-
-//     },
-//     400: {
-
-//     }
-//   },
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   navigation: {
-//     nextEl: '.swiper__arrow-next',
-//     prevEl: '.swiper__arrow-prev',
-//   },
-
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
 const swiper_doctors = new Swiper(".our_doctors__slider-main", {
     direction: "vertical",
     loop: true,
@@ -602,8 +574,6 @@ swiper_doctors.on('slideChange', e => {
 
     elemName.innerText = slideActive.dataset.doctorName
     elemPost.innerText = slideActive.dataset.doctorPost
-
-    // console.log(dName, dPost)
 })
 
 const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
@@ -680,7 +650,6 @@ const swiper_review = new Swiper('.review_wrapp__slider', {
 
 // Первый таб является активным
 firstTabIsActive()
-
 function firstTabIsActive() {
     const tabList = document.querySelectorAll('.tab__list')
 
@@ -736,7 +705,6 @@ function swipeRoller(tabList) {
 }
 
 tabBlockActive();
-
 function tabBlockActive(data) {
     let tabActive = document.querySelector('.tab._active'),
         dataTab = data !== undefined ? data : tabActive.dataset.tab,
@@ -779,7 +747,6 @@ function appearAnimationNumber() {
         return value.split('').map(e => `<span>${e}</span>`).join('')
     }
 }
-
 
 window.addEventListener('scroll', animation)
 window.addEventListener('load', animation)
@@ -829,362 +796,8 @@ function doAnimWithDelay(array, _class, transition) {
     }, transition)
 }
 
-// Показываем пункты меню на планшете
-if (window.innerWidth <= 500) {
-    showSubMenuMobile()
-}
-
-function showSubMenuMobile() {
-    const itemElems = findAll('[data-sub-menu]')
-
-    for (let i = 0; i < itemElems.length; i++) {
-        const item = itemElems[i];
-        const subMenu = item.dataset.subMenu
-        const listSubMenu = item.parentElement.nextElementSibling
-
-        fetch('../sub-menu-db.json')
-            .then(res => res.json())
-            .then(json => {
-                let arr = []
-
-                for (let i = 0; i < json.length; i++) {
-                    const elem = json[i];
-
-                    if (elem.category === subMenu) {
-                        arr.push(elem)
-                    }
-                }
-                return arr
-            })
-            .then(arr => {
-                setSubMenuMobile(arr, listSubMenu)
-            })
-            .then(e => {
-                const dItemElems = item.parentElement.nextElementSibling.querySelectorAll('[data-d-sub-menu]')
-
-                for (let i = 0; i < dItemElems.length; i++) {
-                    const dItem = dItemElems[i];
-                    const dItemData = dItem.dataset.dSubMenu
-                    const dItemList = dItem.parentElement.nextElementSibling
-                    console.log(dItem)
-
-                    getDataDSubMenuForMobile(dItemData)
-                        .then(arr => {
-                            if (arr.length != 0) {
-
-                                for (let i = 0; i < arr.length; i++) {
-                                    const elem = arr[i];
-
-                                    // console.log(elem)
-                                    const elemLI = document.createElement('li')
-
-                                    elemLI.classList.add('d-sub-menu__item', 'show-menu-item')
-                                    elemLI.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
-
-                                    // console.log(elemLI)
-                                    dItemList.append(elemLI)
-                                }
-
-                                console.log(dItem.parentElement.parentElement.parentElement)
-                                    // accordions(dItem.parentElement.parentElement.parentElement)
-                            }
-                        })
-
-                }
-            })
-            .then(e => {
-                accordions(listSubMenu)
-            })
-
-    }
-
-    function setSubMenuMobile(arr, list) {
-
-        for (let i = 0; i < arr.length; i++) {
-            const elem = arr[i];
-            const item = document.createElement('li')
-            const childTitle = elem.child != false ? elem.child : ''
-
-            if (elem.child === false) {
-                item.classList.add('sub-menu__item', 'show-menu-item')
-                item.innerHTML = `
-                    <a href="#" class="link_arrow link_arrow-sub sub-menu__link">${elem.title}</a>
-                `
-            } else {
-                item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
-                item.innerHTML = `
-                    <div class="acc-header sub-menu__item-header">
-                        <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>
-                    </div>
-                    <ul class="acc-body sub-menu__item-list"></ul>
-                `
-            }
-
-            // console.log(item)
-            list.append(item)
-        }
-    }
-}
-
-// Подгрузка данных в меню при наведении на пункты
-if (window.innerWidth >= 920) {
-    showSubMenuDesktop()
-}
-
-function showSubMenuDesktop() {
-    const menu = find('.menu')
-
-    menu.addEventListener('mousemove', e => {
-        let target = e.target
-
-        if (target.classList.contains('menu__link') || target.classList.contains('sub-menu__link')) {
-            const item = target
-            const subMenu = item.dataset.subMenu
-            const dSubMenu = item.dataset.dSubMenu
-            const listSubMenu = document.getElementById('sub-menu')
-            const listDSubMenu = document.getElementById('d-sub-menu')
-
-            if (!item.classList.contains('_active')) {
-
-                if (subMenu) {
-                    removeAll('.menu__link', '_active')
-                    item.classList.add('_active')
-
-                    fetch('../sub-menu-db.json')
-                        .then(res => res.json())
-                        .then(json => {
-                            let arr = []
-
-                            for (let i = 0; i < json.length; i++) {
-                                const elem = json[i];
-
-                                if (elem.category === subMenu) {
-                                    arr.push(elem)
-                                }
-                            }
-                            return arr
-                        })
-                        .then(arr => {
-                            setLinksToSubMenu(arr, listSubMenu)
-                        })
-                } else if (subMenu === '') {
-                    removeAll('.menu__link', '_active')
-                    clearSubMenu()
-                    clearDSubMenu()
-                }
-
-                if (dSubMenu) {
-                    removeAll('.sub-menu__link', '_active')
-                    item.classList.add('_active')
-
-                    fetch('../d-sub-menu-db.json')
-                        .then(res => res.json())
-                        .then(json => {
-                            let arr = []
-
-                            for (let i = 0; i < json.length; i++) {
-                                const elem = json[i];
-
-                                if (elem.category === dSubMenu) {
-                                    arr.push(elem)
-                                }
-                            }
-                            return arr
-                        })
-                        .then(arr => {
-                            setLinksToSubMenu(arr, listDSubMenu, item)
-                        })
-
-                } else if (dSubMenu === '') {
-                    removeAll('.sub-menu__link', '_active')
-                    clearDSubMenu()
-                }
-            }
-        }
-    })
-}
-
-// Показываем пункты меню на планшете
-if (window.innerWidth < 920 && window.innerWidth > 500) {
-    showSubMenuTablet()
-}
-
-function showSubMenuTablet() {
-    const itemElems = findAll('.menu__link')
-
-    for (let i = 0; i < itemElems.length; i++) {
-        const item = itemElems[i]
-        const subMenu = item.dataset.subMenu
-        const listSubMenu = document.getElementById('sub-menu')
-
-        item.addEventListener('click', e => {
-            if (!item.classList.contains('_active')) {
-
-                if (subMenu) {
-                    removeAll('.menu__link', '_active')
-                    item.classList.add('_active')
-
-                    fetch('../sub-menu-db.json')
-                        .then(res => res.json())
-                        .then(json => {
-                            let arr = []
-
-                            for (let i = 0; i < json.length; i++) {
-                                const elem = json[i];
-
-                                if (elem.category === subMenu) {
-                                    arr.push(elem)
-                                }
-                            }
-                            return arr
-                        })
-                        .then(arr => {
-                            setBlocksToSubMenu(arr, listSubMenu)
-                        })
-                } else if (subMenu === '') {
-                    removeAll('.menu__link', '_active')
-                    clearSubMenu()
-                    clearDSubMenu()
-                }
-            }
-        })
-    }
-}
-
-// Получаем данные исходя из активного элемента для создания подменю
-// getDataMenu()
-// function getDataMenu(item) {
-// }
-
-// Вставить полученные данные из БД в подменю
-function setLinksToSubMenu(arr, list, selectedItem) {
-    list.innerHTML = ''
-    clearDSubMenu()
-
-    for (let i = 0; i < arr.length; i++) {
-        const elem = arr[i];
-        const item = document.createElement('li')
-        const delay = 20
-
-        if (list.dataset.menu === 'sub-menu') {
-            const childTitle = elem.child != false ? elem.child : ''
-
-            if (elem.child === false) {
-                item.classList.add('sub-menu__item', 'show-menu-item')
-                item.innerHTML = `
-                    <a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu>${elem.title}</a>
-                `
-            } else {
-                item.classList.add('acc', 'sub-menu__item', 'show-menu-item')
-                item.innerHTML = `
-                    <div class="acc-header sub-menu__item-header">
-                        <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu=${childTitle}>${elem.title}</a>
-                    </div>
-                    <ul class="acc-body sub-menu__item-list"></ul>
-                `
-            }
-        }
-        if (list.dataset.menu === 'd-sub-menu') {
-            const dSubMenuTitle = document.getElementById('d-sub-menu-title')
-            dSubMenuTitle.innerText = selectedItem.innerText
-
-            item.classList.add('d-sub-menu__item', 'show-menu-item')
-            item.innerHTML = `<a href="#" class="link d-sub-menu__link">${elem.title}</a>`
-        }
-
-        item.style.animationDelay = (i + 1) * delay + 'ms'
-        list.append(item)
-    }
-}
-
-// Вставить полученные данные из БД в меню сразу с подменю для мобильной версии и планшета
-function setBlocksToSubMenu(arr, list) {
-    list.innerHTML = ''
-    clearDSubMenu()
-
-    for (let i = 0; i < arr.length; i++) {
-        const elem = arr[i];
-        const item = document.createElement('li')
-        const delay = 20
-
-        if (list.dataset.menu === 'sub-menu') {
-            const childTitle = elem.child != false ? elem.child : ''
-
-            getDataDSubMenuForMobile(childTitle)
-                .then(arr => {
-                    const html = dataToHTML(arr)
-
-                    item.classList.add('sub-menu__item', 'show-menu-item')
-
-                    if (html != '') {
-                        item.classList.add('acc')
-                        item.innerHTML = `
-                            <div class="acc-header sub-menu__item-header">
-                                <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu=${childTitle}>${elem.title}</a>
-                            </div>
-                            <ul class="acc-body sub-menu__item-list">${html}</ul>
-                        `
-                    } else {
-                        item.innerHTML = `<a href="#" class="link_arrow link_arrow-sub sub-menu__link"  data-d-sub-menu>${elem.title}</a>`
-                    }
-
-                })
-                .then(e => {
-                    item.style.animationDelay = (i + 1) * delay + 'ms'
-                    list.append(item)
-                })
-                // .then(e => {
-                //     accordions()
-                // })
-        }
-    }
-}
-
-// function 
-
-// Получить данные d-sub-menu для планшета и мобилы
-function getDataDSubMenuForMobile(cat) {
-    return fetch('../d-sub-menu-db.json')
-        .then(data => data.json())
-        .then(json => {
-            let arr = []
-
-            for (let i = 0; i < json.length; i++) {
-                const elem = json[i];
-
-                if (elem.category === cat) {
-                    arr.push(elem)
-                }
-            }
-
-            return arr
-        })
-}
-
-// Из полученных данных составляем html
-function dataToHTML(arr) {
-    return arr.map(elem => {
-        return `<li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">${elem.title}</a></li>`
-    }).join('')
-}
-
-// Отчистить sub-menu
-function clearSubMenu() {
-    const subMenu = document.getElementById('sub-menu')
-    subMenu.innerHTML = ''
-}
-
-// Отчистить d-sub-menu
-function clearDSubMenu() {
-    const dSubMenu = document.getElementById('d-sub-menu')
-    const dSubMenuTitle = document.getElementById('d-sub-menu-title')
-    dSubMenu.innerHTML = ''
-    dSubMenuTitle.innerText = ''
-}
-
 // Аккордеоны
 accordions()
-
 function accordions() {
 
     if (find('.acc._show')) {
@@ -1197,44 +810,55 @@ function accordions() {
         const target = e.target
 
         if (target.classList.contains('acc-open') || target.closest('.acc-open')) {
-            const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
-            const parent = target.closest('.acc')
-            const accBody = parent.querySelector('.acc-body')
-
-            parent.classList.toggle('_show')
-            target.classList.toggle('_show')
-
-            if (accBody.style.maxHeight) {
-                accBody.style.maxHeight = null
-                parent.classList.remove('_show')
-                target.classList.remove('_show')
-            } else {
-
-                if (parent.classList.contains('accordion_container-list')) {
-                    const adjacentElems = getSiblings(parent)
-                    for (let i = 0; i < adjacentElems.length; i++) {
-                        const elem = adjacentElems[i]
-                        const elemHeader = elem.querySelector('.acc-open')
-                        const elemBody = elem.querySelector('.acc-body')
-
-                        elem.classList.remove('_show')
-                        elemHeader.classList.remove('_show')
-                        elemBody.style.maxHeight = null
+            if ((window.innerWidth > 920 && !target.classList.contains('sub-menu__link')) || window.innerWidth <= 920) {
+                const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
+                const parent = target.closest('.acc')
+                const accBody = parent.querySelector('.acc-body')
+                const menuLeft = container.closest('.menu-left-mobile')
+    
+                parent.classList.toggle('_show')
+                target.classList.toggle('_show')
+    
+                if (accBody.style.maxHeight) {
+                    accBody.style.maxHeight = null
+                    container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+                    parent.classList.remove('_show')
+                    target.classList.remove('_show')
+                } else {
+    
+                    if (
+                        parent.classList.contains('accordion_container-list') ||
+                        parent.parentElement.parentElement.classList.contains('menu-left-mobile')
+                    ) {
+                        const adjacentElems = getSiblings(parent)
+                        for (let i = 0; i < adjacentElems.length; i++) {
+                            const elem = adjacentElems[i]
+                            const elemHeader = elem.querySelector('.acc-open')
+                            const elemBody = elem.querySelector('.acc-body')
+    
+                            elem.classList.remove('_show')
+                            elemHeader.classList.remove('_show')
+                            elemBody.style.maxHeight = null
+                        }
+                    }
+                    
+                    accBody.style.maxHeight = accBody.scrollHeight + 'px'
+                    container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+                    
+                    if (parent.closest('.menu-left__item')) {
+                        parent.closest('.menu-left__item').style.maxHeight = 'none'
+                    }
+                    if (container.classList.contains('menu-left__item-list')) {
+                        container.style.maxHeight = 'none'
                     }
                 }
-
-                accBody.style.maxHeight = accBody.scrollHeight + 'px'
-                container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
             }
-        }
+        }   
     })
 }
 
-
-
 // Плейсхолдер текстовых полей
 labelTextfield()
-
 function labelTextfield() {
     const textfieldElems = document.querySelectorAll('.form-elem')
 
@@ -1253,4 +877,66 @@ function labelTextfield() {
             }
         })
     }
+}
+
+// Показать подменю
+showSubMenu()
+function showSubMenu() {
+
+    if (innerWidth < 920) {
+        const itemElems = findAll('[data-sub-menu]')
+    
+        for (let i = 0; i < itemElems.length; i++) {
+            const item = itemElems[i];
+            
+            item.addEventListener('click', e => {
+                const dataMenu = item.dataset.subMenu
+                console.log(dataMenu)
+                const subMenu = find(`[data-menu=${dataMenu}]`)
+    
+                removeAll('.d-sub-menu__block', '_show')
+                removeAll('.sub-menu__link', '_show')
+                removeAll('[data-menu]', '_show')
+                subMenu.classList.add('_show')
+            })
+        }
+    }
+    else {
+        const menu = find('.menu')
+        menu.addEventListener('mousemove', e => {
+            const target = e.target
+
+            if (target.getAttribute('data-sub-menu')) {
+                const targetData = target.dataset.subMenu
+                const subMenu = find(`[data-menu=${targetData}]`)
+                
+                if (!subMenu.classList.contains('_show')) {
+                    removeAll('.d-sub-menu__block', '_show')
+                    removeAll('.sub-menu__link', '_show')
+                    removeAll('[data-menu]', '_show')
+                    subMenu.classList.add('_show')
+                }
+            }
+        })
+    }
+}
+
+// Открытие d-sub-menu
+if (window.innerWidth > 920) showDSubMenu()
+function showDSubMenu() {
+    const menu = find('.menu')
+
+    menu.addEventListener('mousemove', e => {
+        const target = e.target
+
+        if (target.getAttribute('data-d-sub-menu') && target.classList.contains('sub-menu__link')) {
+            const targetData = target.dataset.dSubMenu
+            const dSubMenu = find(`.d-sub-menu__block[data-d-sub-menu=${targetData}]`)
+            
+            if (!dSubMenu.classList.contains('_show')) {
+                removeAll('.d-sub-menu__block', '_show')
+                dSubMenu.classList.add('_show')
+            }
+        }
+    })
 }
