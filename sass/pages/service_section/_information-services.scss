@@ -3,6 +3,18 @@
     @media (max-width: $tablet-l) {
         padding: 56px 0;
     }
+    @media (max-width: $tablet) {
+        .container {
+            padding: 0px;
+        }
+        .tabs__container {
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+        .section_information_services__box {
+            padding: 0 20px
+        }
+    }
 }
 
 .section_information_services__box {

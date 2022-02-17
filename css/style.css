@@ -9505,6 +9505,22 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .first-time .container {
+    padding: 0px;
+  }
+  .first-time .tabs__container {
+    padding: 0 20px;
+    overflow-x: auto;
+  }
+  .first-time .first-time__text,
+  .first-time h2,
+  .first-time .tabs__container,
+  .first-time form {
+    padding: 0 20px;
+  }
+}
+
 .first-time__background-points {
   position: absolute;
   top: 21px;
@@ -9532,6 +9548,19 @@ h6 {
 @media (max-width: 920px) {
   .section_information_services {
     padding: 56px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section_information_services .container {
+    padding: 0px;
+  }
+  .section_information_services .tabs__container {
+    padding: 0 20px;
+    overflow-x: auto;
+  }
+  .section_information_services .section_information_services__box {
+    padding: 0 20px;
   }
 }
 
