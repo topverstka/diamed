@@ -8202,6 +8202,18 @@ h6 {
   }
 }
 
+.our_doctors_service .our_doctors__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .our_doctors_service .our_doctors__more {
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .our_doctors__info-initial {
     padding: 0 20px;

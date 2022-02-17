@@ -105,6 +105,13 @@
     }
 }
 
+.our_doctors_service .our_doctors__more {
+    display: flex;
+    @media (max-width: $tablet) {
+        padding: 0 20px;
+    }
+}
+
 .our_doctors__info-initial {
     @media (max-width: $tablet) {
         padding: 0 $p-mob;
