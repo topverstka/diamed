@@ -6,22 +6,18 @@
     // background-repeat: no-repeat;
     // background-position: 561px 216px;
     padding-bottom: 63px;
-
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
         padding-bottom: 50px;
     }
-
     .container {
         @media (max-width: 1200px) {
-            padding-right: 0; 
+            padding-right: 0;
         }
-
         @media (max-width: $tablet-l) {
             padding-right: 24px;
         }
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         padding-top: 32px;
         padding-bottom: 32px;
     }
@@ -34,17 +30,15 @@
     opacity: .2;
 }
 
-.review-title{
+.review-title {
     margin-bottom: 32px;
     width: 85%;
-        
     @media (max-width: 1200px) {
         width: 100%;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         margin-bottom: 25px;
-        br{
+        br {
             display: none;
         }
     }
@@ -57,7 +51,6 @@
 
 .review_wrapp {
     display: flex;
-
     @media (max-width: $tablet-l) {
         flex-direction: column;
     }
@@ -65,7 +58,6 @@
 
 .review_wrapp__btn {
     margin-top: auto;
-
     @media (max-width: $tablet-l) {
         display: none;
     }
@@ -73,13 +65,11 @@
 
 .review_wrapp__btn-mobile {
     display: none;
-
     @media (max-width: $tablet-l) {
         display: block;
         margin-top: 32px;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         margin-top: 36px;
     }
 }
@@ -89,7 +79,6 @@
     margin-right: 19px;
     display: flex;
     flex-direction: column;
-
     @media (max-width: $laptop) {
         max-width: 340px;
         width: 100%;
@@ -99,28 +88,23 @@
 .review_wrapp__slider {
     width: 848px;
     overflow-x: clip;
-
     &::-webkit-scrollbar {
         width: 0;
     }
-
     .swiper-slide {
         background: #fff;
         border-radius: $radius2;
         padding: 24px 24px 24px 24px;
-
-        @media (max-width: $tablet-s){
+        @media (max-width: $tablet-s) {
             padding: 20px;
         }
     }
-
     @media (max-width: $tablet-l) {
         width: 100%;
         margin-top: 32px;
         overflow: initial;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         margin-top: 20px;
     }
 }
@@ -131,8 +115,7 @@
     color: $accent2;
     margin-bottom: 24px;
     display: block;
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         line-height: 22px;
         margin-bottom: 16px;
@@ -149,12 +132,12 @@
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     display: -webkit-box;
-
     @media (max-width: $tablet-s) {
         font-size: 16px;
         line-height: 26px;
-        height: 138px;
-        margin-bottom: 39px;
+        height: 157px;
+        margin-bottom: 24px;
+        -webkit-line-clamp: 6;
     }
 }
 
@@ -164,11 +147,11 @@
     color: $accent2;
     margin-bottom: 12px;
     display: block;
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
     }
 }
+
 .review_wrapp__slider-name-doctor {
     font-weight: 600;
     font-size: 16px;
@@ -178,7 +161,7 @@
     padding-bottom: 31px;
     margin-bottom: 33px;
     display: block;
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         padding-bottom: 19px;
         margin-bottom: 22px;

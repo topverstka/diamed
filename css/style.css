@@ -9356,8 +9356,9 @@ h6 {
   .review_wrapp__slider-text {
     font-size: 16px;
     line-height: 26px;
-    height: 138px;
-    margin-bottom: 39px;
+    height: 157px;
+    margin-bottom: 24px;
+    -webkit-line-clamp: 6;
   }
 }
 
