@@ -32,11 +32,11 @@
     @media (max-width: $tablet) {
         width: 95%
     }
-    @media (max-width: $tablet-l) {
-        margin: 24px 0 32px 0;
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         line-height: 22px;
         width: 100%;
+        margin: 24px 0 32px 0;
     }
 }
 
