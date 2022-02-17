@@ -10618,13 +10618,18 @@ h6 {
     width: 541px;
     max-width: 100%;
     margin-bottom: 40px;
-    padding: 24px 24px 24px 20px;
   }
   .section_information_services__list li:not(:last-child) {
     padding-bottom: 16px;
   }
   .section_information_services__list li:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .section_information_services__list {
+    padding: 24px;
   }
 }
 
@@ -10722,6 +10727,13 @@ h6 {
 @media (max-width: 500px) {
   .section_information_services__list-text {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section_information_services__list-text {
+    width: 100%;
+    display: block;
   }
 }
 
