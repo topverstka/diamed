@@ -30,7 +30,8 @@
     margin: 40px 0 56px 0;
     font-weight: 400;
     @media (max-width: $tablet) {
-        width: 95%
+        width: 92.6%;
+        min-height: 78px;
     }
     @media (max-width: $tablet-s) {
         font-size: 14px;
