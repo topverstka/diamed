@@ -7423,6 +7423,12 @@ h6 {
           transform: rotate(90deg);
 }
 
+@media (min-width: 500px) {
+  .sub-menu__link.link_arrow-sub {
+    font-size: 16px;
+  }
+}
+
 .d-sub-menu {
   max-width: 317px;
   width: 100%;

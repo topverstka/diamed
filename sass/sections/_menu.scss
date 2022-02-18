@@ -4,9 +4,8 @@
     left: 0;
     width: 100%;
     transition: $tr;
-    overflow-y: auto; 
+    overflow-y: auto;
     // overflow-x: hidden; 
-    
     &._show {
         transform: translate(0, 100%);
     }
@@ -19,11 +18,9 @@
     justify-content: space-between;
     background: $header-bg;
     padding: 24px 25px 24px 20px;
-    
     @media (max-width: $tablet) {
         display: flex;
     }
-
     @media (max-width: $tablet-s) {
         padding: 24px 20px 14px;
     }
@@ -33,7 +30,6 @@
     font-size: 14px;
     padding: 12px 16px;
     white-space: nowrap;
-
     @media (max-width: $tablet-s) {
         max-width: 178px;
         width: 100%;
@@ -47,7 +43,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
     @media (max-width: $tablet-s) {
         min-width: 115px;
         flex-direction: column;
@@ -59,7 +54,6 @@
 .menu__header-tel-text {
     font-size: 14px;
     font-weight: 400;
-
     @media (max-width: $tablet-s) {
         font-size: 12px;
     }
@@ -69,7 +63,6 @@
     font-size: 14px;
     font-weight: 600;
     margin-left: 20px;
-
     @media (max-width: $tablet-s) {
         font-size: 12px;
         margin-left: 0;
@@ -80,16 +73,13 @@
     min-height: 750px;
     height: 750px;
     display: flex;
-
     @media (max-width: $tablet-s) {
-        position: relative; 
+        position: relative;
     }
-
     @media (max-width: $tablet-s) {
         min-height: auto;
         height: auto;
     }
-
     @media (max-width: $tablet-s) {
         min-height: auto;
         height: auto;
@@ -103,34 +93,28 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: $second; 
+    background: $second;
     padding: 54px 62px 54px 80px;
-
     @media (max-width: 1300px) {
         max-width: none;
         max-width: 320px;
         padding: 54px 50px;
     }
-
     @media (max-width: $tablet-l) {
         padding: 42px 32px;
     }
-
     @media (max-width: $tablet) {
         max-width: 374px;
         width: 100%;
         padding: 40px 20px 32px;
     }
-
     @media (max-width: 600px) {
         max-width: 260px;
     }
-
     @media (max-width: $tablet-s) {
         max-width: none;
         padding: 10px 0 70px;
     }
-
     @media (max-width: $tablet-s) {
         display: none;
     }
@@ -138,7 +122,6 @@
 
 .menu-left-mobile {
     display: none;
-
     @media (max-width: $tablet-s) {
         display: flex;
     }
@@ -149,27 +132,21 @@
 }
 
 .menu-left__item {
-
     &._show {
-
         @media (max-width: $tablet-s) {
             & .menu-left__item-list {
                 padding: 24px 20px;
             }
         }
     }
-
     &:not(:last-child) {
         margin-bottom: 22px;
-
         @media (max-width: $tablet-s) {
             margin: 0;
         }
     }
-
     @media (max-width: $tablet-s) {
         position: relative;
-
         &::after {
             content: '';
             position: absolute;
@@ -179,15 +156,12 @@
             height: .5px;
             background: #C4E0E5;
         }
-        
-        & .menu__link {
-        }
+        & .menu__link {}
     }
 }
 
 .menu-left__item-list {
     display: none;
-    
     @media (max-width: $tablet-s) {
         display: block;
         max-height: 0;
@@ -200,33 +174,26 @@
 
 .menu__link {
     font-size: 20px;
-
     &._active {
         opacity: 1;
-
         &::after {
             transform: rotate(45deg);
         }
     }
-
     @media (max-width: $tablet-s) {
         width: 100%;
         padding: 12px 20px;
-
         &:not(:last-child) {
             // display: block;
             // border-bottom: 0.5px solid #C4E0E5;
         }
-
         &._show {
             opacity: 1;
-    
             &::after {
                 transform: rotate(90deg);
             }
         }
     }
-
     @media (max-width: 600px) {
         font-size: 16px;
     }
@@ -235,11 +202,9 @@
 // Подвал
 .menu-left__footer {
     margin: auto 0 0 0;
-
     @media (max-width: $tablet-s) {
         padding: 0 20px;
     }
-
     // @media (max-width: $tablet-s) {
     //     margin: 32px 0 0 0;
     // }
@@ -250,7 +215,6 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 32px;
-
     @media (max-width: $tablet) {
         display: flex;
     }
@@ -264,19 +228,15 @@
 .menu-left__social {
     width: 24px;
     height: 24px;
-
     &:not(:last-child) {
         margin-right: 32px;
-
         @media (max-width: 620px) {
             margin-right: 24px;
         }
-
         @media (max-width: 600px) {
             margin-right: 16px;
         }
     }
-
     & svg {
         fill: #fff;
     }
@@ -290,23 +250,16 @@
 .menu-left__more-btn {
     width: 20px;
     height: 20px;
-
     &:last-child {
         margin-left: 16px;
     }
 }
 
-.menu-left__more-eye {
+.menu-left__more-eye {}
 
-}
+.menu-left__more-search_icon {}
 
-.menu-left__more-search_icon {
-
-}
-
-.search_icon {
-
-}
+.search_icon {}
 
 // Заполните анкету
 .menu-left__schedule {
@@ -319,7 +272,6 @@
     font-weight: 600;
     color: #fff;
     transition: $tr;
-
     &:active {
         opacity: .7;
     }
@@ -328,11 +280,9 @@
 .menu-left__schedule-btn {
     padding: 12px 16px;
     margin-top: 24px;
-
     @media (max-width: $tablet) {
         font-size: 14px;
     }
-
     @media (max-width: $tablet-s) {
         margin-top: 16px;
     }
@@ -346,23 +296,18 @@
     flex-direction: column;
     padding: 54px 80px 54px 70px;
     background: $header-bg;
-
     @media (max-width: 1300px) {
         padding: 54px 50px;
     }
-
     @media (max-width: 1000px) {
         padding-right: 12px;
     }
-
     @media (max-width: $tablet-l) {
         padding: 42px 32px;
     }
-
     @media (max-width: $tablet) {
         padding: 42px 20px 32px 20px;
     }
-
     @media (max-width: $tablet-s) {
         padding: 0;
         width: 0;
@@ -376,16 +321,13 @@
     justify-content: space-between;
     margin: 0 0 24px 0;
     overflow-y: auto;
-
     &::-webkit-scrollbar {
         width: 5px;
     }
-    
     &::-webkit-scrollbar-thumb {
         background-color: #cecece;
         border-radius: $radius;
     }
-
     @media (max-width: $tablet-s) {
         display: none;
     }
@@ -404,15 +346,13 @@
 
 .sub-menu__list {
     display: none;
- 
-    &._show { 
+    &._show {
         display: block;
     }
 }
 
 .d-sub-menu__block {
     display: none;
- 
     &._show {
         display: block;
     }
@@ -420,31 +360,24 @@
 
 .sub-menu__item {
     transition: $tr;
-
     &:not(:last-child) {
         margin-bottom: 22px;
     }
-
     &.acc._show {
         margin-bottom: 32px;
-
         & .sub-menu__item-list {
             margin: 16px 0 8px 12px;
         }
     }
-
     // @media (max-width: $tablet-s) {
     //     padding: 0 20px;
     // }
 }
 
-.sub-menu__item-header {
-
-}
+.sub-menu__item-header {}
 
 .sub-menu__item-list {
     display: none;
-    
     @media (max-width: $tablet-l) {
         display: block;
         max-height: 0;
@@ -455,20 +388,21 @@
 }
 
 .sub-menu__link {
-
     &._active {
         opacity: 1;
-
         &::after {
             transform: rotate(45deg);
         }
     }
-
     &._show {
         opacity: 1;
-
         &::after {
             transform: rotate(90deg);
+        }
+    }
+    @media (min-width:$tablet-s) {
+        &.link_arrow-sub {
+            font-size: 16px
         }
     }
 }
@@ -477,11 +411,9 @@
 .d-sub-menu {
     max-width: 317px;
     width: 100%;
-
     @media (max-width: 1100px) {
         max-width: 250px;
     }
-
     @media (max-width: $tablet-l) {
         display: none;
         // max-width: 200px;
@@ -498,7 +430,6 @@
 }
 
 .d-sub-menu__item {
-
     &:not(:last-child) {
         margin-bottom: 12px;
     }
@@ -512,11 +443,9 @@
 }
 
 // Подвал у правой части
-
 // Соц. сети
 .menu-right__footer {
     margin: auto 0 0 0;
-
     @media (max-width: $tablet-s) {
         position: absolute;
         bottom: 0;
@@ -533,7 +462,6 @@
 .menu-right__social-list {
     display: flex;
     align-items: center;
-
     @media (max-width: $tablet) {
         display: none;
     }
@@ -542,11 +470,9 @@
 .menu-right__social {
     width: 24px;
     height: 24px;
-
     &:not(:last-child) {
         margin-right: 54px;
     }
-
     & svg {
         fill: $second;
     }
@@ -555,7 +481,6 @@
 .menu-right__univer {
     display: none;
     align-items: center;
-
     @media (max-width: $tablet) {
         display: flex;
     }
@@ -564,20 +489,18 @@
 .menu-right__univer-icon {
     width: 32px;
     height: 32px;
-
     @media (max-width: $tablet-s) {
         width: 24px;
         height: 24px;
     }
 }
 
-.menu-right__univer-text { 
+.menu-right__univer-text {
     max-width: 210px;
     width: 100%;
     font-size: 14px;
     font-weight: 400;
     margin-left: 10px;
-
     @media (max-width: $tablet-s) {
         max-width: none;
         font-size: 10px;
