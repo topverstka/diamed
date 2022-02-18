@@ -153,12 +153,37 @@
     }
 }
 
+.menu__wrap .link_arrow {
+    // white-space: nowrap;
+    &::after {
+        display: none
+    }
+    &::before {
+        content: '';
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        margin-right: 8px;
+        transition: $tr;
+    }
+    @media (min-width: $minHover) {
+        &:hover {
+            &::before {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
 // Белая ссылка
-.link_arrow-light {
+.link_arrow-light,
+.menu__wrap .link_arrow-light {
     color: #fff;
     opacity: .7;
     transition: $tr;
-    &::after {
+    &::before {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     }
     @media (min-width: $minHover) {
@@ -166,6 +191,10 @@
             opacity: 1;
         }
     }
+}
+
+.menu__wrap .link_arrow._show:before {
+    transform: rotate(90deg);
 }
 
 // Ссылка акцентного цвета
