@@ -64,9 +64,14 @@
 .section_information_services__item {
     width: 770px;
     max-width: 100%;
-    display: none;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-20px);
+    transition: transform .4s linear;
     &._show {
-        display: block
+        opacity: 1;
+        position: static;
+        transform: translateY(0);
     }
     h2 {
         font-size: 32px;
