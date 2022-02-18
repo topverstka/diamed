@@ -8101,15 +8101,16 @@ h6 {
   }
 }
 
-.our_doctors_service .our_doctors__more {
+.our_doctors_service:not(.our_doctors_service__index) .our_doctors__more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (max-width: 768px) {
-  .our_doctors_service .our_doctors__more {
+  .our_doctors_service:not(.our_doctors_service__index) .our_doctors__more {
     padding: 0 20px;
+    margin-bottom: 36px;
   }
 }
 

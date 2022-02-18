@@ -105,10 +105,11 @@
     }
 }
 
-.our_doctors_service .our_doctors__more {
+.our_doctors_service:not(.our_doctors_service__index) .our_doctors__more {
     display: flex;
     @media (max-width: $tablet) {
         padding: 0 20px;
+        margin-bottom: 36px;
     }
 }
 
