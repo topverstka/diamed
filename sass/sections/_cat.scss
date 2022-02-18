@@ -44,8 +44,7 @@
         }
     }
 }
-.tabs__header.tabs_cat{
-}
+
 
 .cat__columns{
     display: flex;
@@ -270,18 +269,9 @@
 
         @media (max-width: $tablet-s) {
             font-size: 14px;
-            // position: relative;
-            // top: -6px;
-            // margin-bottom: -6px;
             line-height: 1;
         }
 
-        @media (min-width: $minHover) {
-            
-            &:hover {
-                font-weight: 700;
-            }
-        }
 
         &:active{
             opacity: 0.8;
