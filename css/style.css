@@ -9205,7 +9205,7 @@ h6 {
 
 .review_wrapp__slider {
   width: 848px;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .review_wrapp__slider::-webkit-scrollbar {
