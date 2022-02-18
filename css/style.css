@@ -10593,6 +10593,12 @@ h6 {
   }
 }
 
+@media (max-width: 600px) {
+  .section_information_services__box {
+    margin-top: 32px;
+  }
+}
+
 .section_information_services__list {
   width: 375px;
   background: var(--second);
