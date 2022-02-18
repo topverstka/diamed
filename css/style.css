@@ -5753,6 +5753,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+@media (max-width: 600px) {
+  .modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab {
+    background: #EAE9EF;
+  }
+}
+
 .tabs__header {
   position: relative;
   width: -webkit-fit-content;
@@ -5866,10 +5872,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .tab:hover {
     color: var(--second);
   }
-}
-
-.modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab {
-  background: #EAE9EF;
 }
 
 .tab__roller {

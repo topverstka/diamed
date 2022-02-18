@@ -17,6 +17,12 @@
 //         }
 //     }
 // }
+.modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab {
+    @media (max-width: 600px) {
+        background: #EAE9EF;
+    }
+}
+
 .tabs__header {
     position: relative;
     width: fit-content;
@@ -104,10 +110,6 @@
             color: $second;
         }
     }
-}
-
-.modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab{
-    background: #EAE9EF; 
 }
 
 .tab__roller {
