@@ -5917,6 +5917,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: var(--tr);
 }
 
+.tabs__block {
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: -webkit-transform .4s linear;
+  transition: -webkit-transform .4s linear;
+  transition: transform .4s linear;
+  transition: transform .4s linear, -webkit-transform .4s linear;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.tabs__block._show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  position: static;
+}
+
 .accordion_container-list {
   position: relative;
   display: -webkit-box;
@@ -10595,7 +10613,7 @@ h6 {
 
 @media (max-width: 600px) {
   .section_information_services__box {
-    margin-top: 32px;
+    margin-top: 22px;
   }
 }
 

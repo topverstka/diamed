@@ -122,3 +122,15 @@
     border-radius: 12px;
     transition: $tr;
 }
+
+.tabs__block {
+    opacity: 0;
+    position: absolute;
+    transition: transform .4s linear;
+    transform: translateY(10px);
+    &._show {
+        transform: translateY(0);
+        opacity: 1;
+        position: static;
+    }
+}
