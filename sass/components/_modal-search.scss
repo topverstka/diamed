@@ -108,16 +108,22 @@
     @media (max-width: $mobile-l) {
         margin-top: 16px;
     }
+    .tabs__header {
+        margin-bottom: 42px;
+        @media (max-width: $mobile-l) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.modal-work-time__body-container {
+    position: relative;
 }
 
 .modal-work-time__list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px 80px;
-    margin-top: 42px;
-    @media (max-width: $mobile-l) {
-        margin-top: 24px;
-    }
 }
 
 .modal-work-time__block {
