@@ -5917,7 +5917,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: var(--tr);
 }
 
-.tabs__block {
+.tabs__block:not(.swiper-slide) {
   opacity: 0;
   position: absolute;
   -webkit-transition: -webkit-transform .4s linear;
@@ -5928,11 +5928,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
           transform: translateY(10px);
 }
 
-.tabs__block._show {
+.tabs__block:not(.swiper-slide)._show {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
   position: static;
+  z-index: 9;
 }
 
 .accordion_container-list {
@@ -8430,6 +8431,12 @@ h6 {
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .our_doctors__slider-all .swiper-wrapper {
+    height: 53px;
   }
 }
 

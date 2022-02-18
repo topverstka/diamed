@@ -556,11 +556,12 @@ const swiper_articles = new Swiper('.service_articles__slider', {
     },
 });
 
-const swiper_doctors = new Swiper(".our_doctors__slider-main", {
+const swiper_doctors = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-main", {
     direction: "vertical",
     loop: true,
     slidesPerView: 1,
     allowTouchMove: false,
+    observer: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
@@ -568,6 +569,7 @@ const swiper_doctors = new Swiper(".our_doctors__slider-main", {
     // freeMode: true,
     watchSlidesProgress: true,
 });
+
 
 swiper_doctors.on('slideChange', e => {
     const slider = e.wrapperEl
@@ -579,8 +581,56 @@ swiper_doctors.on('slideChange', e => {
     elemPost.innerText = slideActive.dataset.doctorPost
 })
 
-const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
+const swiper_doctors__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-main", {
+    direction: "vertical",
+    loop: true,
+    slidesPerView: 1,
+    observer: true,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    // freeMode: true,
+    watchSlidesProgress: true,
+});
 
+swiper_doctors__1.on('slideChange', e => {
+    const slider = e.wrapperEl
+    const slideActive = slider.querySelector('.swiper-slide-next')
+    const elemName = document.getElementById('doctor-name')
+    const elemPost = document.getElementById('doctor-post')
+
+    elemName.innerText = slideActive.dataset.doctorName
+    elemPost.innerText = slideActive.dataset.doctorPost
+})
+
+const swiper_doctors__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-main", {
+    direction: "vertical",
+    loop: true,
+    slidesPerView: 1,
+    observer: true,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    // freeMode: true,
+    watchSlidesProgress: true,
+});
+
+swiper_doctors__2.on('slideChange', e => {
+    const slider = e.wrapperEl
+    const slideActive = slider.querySelector('.swiper-slide-next')
+    const elemName = document.getElementById('doctor-name')
+    const elemPost = document.getElementById('doctor-post')
+
+    elemName.innerText = slideActive.dataset.doctorName
+    elemPost.innerText = slideActive.dataset.doctorPost
+})
+
+const swiper_doctors2 = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-all", {
+    observeParents: true,
     breakpoints: {
         930: {
             direction: "vertical",
@@ -610,11 +660,95 @@ const swiper_doctors2 = new Swiper(".our_doctors__slider-all", {
         }
     },
     navigation: {
-        nextEl: ".our_doctors__arrow-next",
-        prevEl: ".our_doctors__arrow-prev",
+        nextEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-next",
+        prevEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-prev",
     },
     thumbs: {
         swiper: swiper_doctors,
+    },
+});
+
+
+if (swiper_doctors2.$el) {
+    setTimeout(() => swiper_doctors2.update(), 9);
+}
+
+
+const swiper_doctors2__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-all", {
+    observeParents: true,
+    breakpoints: {
+        930: {
+            direction: "vertical",
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 'auto',
+            slideToClickedSlide: true,
+        },
+        769: {
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 5,
+            slideToClickedSlide: true,
+            slidesPerView: 'auto',
+        },
+        500: {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 4.7,
+            slideToClickedSlide: true,
+        },
+        0: {
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 4.6,
+            slideToClickedSlide: true,
+        }
+    },
+    navigation: {
+        nextEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-next",
+        prevEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-prev",
+    },
+    thumbs: {
+        swiper: swiper_doctors__1,
+    },
+});
+
+const swiper_doctors2__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-all", {
+    observeParents: true,
+    breakpoints: {
+        930: {
+            direction: "vertical",
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 'auto',
+            slideToClickedSlide: true,
+        },
+        769: {
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 5,
+            slideToClickedSlide: true,
+            slidesPerView: 'auto',
+        },
+        500: {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 4.7,
+            slideToClickedSlide: true,
+        },
+        0: {
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: 4.6,
+            slideToClickedSlide: true,
+        }
+    },
+    navigation: {
+        nextEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-next",
+        prevEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-prev",
+    },
+    thumbs: {
+        swiper: swiper_doctors__2,
     },
 });
 
@@ -680,7 +814,7 @@ function tabs() {
                 const tabList = tab.parentElement
                 removeAll(tabElems, '_active')
                 tab.classList.add('_active');
-                tabBlockActive(tab.dataset.tab);
+                tabBlockActive(tab);
                 swipeRoller(tabList)
             })
         }
@@ -713,6 +847,15 @@ function swipeRoller(tabList) {
 tabBlockActive();
 
 function tabBlockActive(data) {
+    if (data) {
+        if (data.closest('.our_doctors')) {
+            setTimeout(() => {
+                swiper_doctors2.update();
+                swiper_doctors2__1.update();
+                swiper_doctors2__2.update();
+            }, 1);
+        }
+    }
     let tabActive = document.querySelectorAll('.tab._active'),
         blockElems = document.querySelectorAll('.tabs__block');
 
@@ -720,7 +863,8 @@ function tabBlockActive(data) {
 
     [...tabActive].filter(i => {
         if (document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`)) {
-            document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`).classList.add('_show');
+            //    console.log(document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`));
+            document.querySelectorAll(`[data-tab-body=${i.getAttribute('data-tab')}]`).forEach(i => i.classList.add('_show'));
         }
     });
 }

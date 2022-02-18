@@ -286,6 +286,9 @@
             height: auto;
             flex-direction: initial;
         }
+        @media (max-width:600px) {
+            height: 53px
+        }
     }
 }
 
