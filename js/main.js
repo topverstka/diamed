@@ -68,8 +68,6 @@ function paddingTopMainSection() {
 }
 
 
-find('.header').classList.remove('hide');
-
 // Интро
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -460,9 +458,6 @@ function resetHash() {
 
 // Открытие модального окна
 function openModal(modal) {
-    // if (find('.modal._show')) {
-    //     find('.modal._show').classList.remove('_show')
-    // }
 
     modal.classList.add('_show')
     bodyLock(true)

@@ -1,117 +1,12 @@
-
-/* Стили анимации пульсации кругов */
-@keyframes pulse {
+@keyframes header {
     0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.7;
+        top: -200px;
     }
     100% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-}
-/* Стили кроссбраузерной анимации пульсации кругов */
-@-webkit-keyframes pulse {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(0.9);
-        opacity: 0;
+        top: 0;
     }
 }
 
-/* Стили анимации блика для кнопок */
-@keyframes sheens {
-    0%,79% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transform: rotateZ(60deg) translate(-5em,7.5em);
-        transform: rotateZ(60deg) translate(-5em,7.5em)
-    }
-
-    80% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: rotateZ(60deg) translate(-5em,7.5em);
-        transform: rotateZ(60deg) translate(-5em,7.5em)
-    }
-
-    95% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: rotateZ(60deg) translate(1em,-11em);
-        transform: rotateZ(60deg) translate(1em,-11em)
-    }
-
-    to {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transform: rotateZ(60deg) translate(1em,-9em);
-        transform: rotateZ(60deg) translate(1em,-9em)
-    }
-}
-
-/* Стили кроссбраузерной анимации блика для кнопок */
-@-webkit-keyframes sheens {
-    0%,79% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transform: rotateZ(60deg) translate(-5em,7.5em);
-        transform: rotateZ(60deg) translate(-5em,7.5em)
-    }
-
-    80% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: rotateZ(60deg) translate(-5em,7.5em);
-        transform: rotateZ(60deg) translate(-5em,7.5em)
-    }
-
-    95% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: rotateZ(60deg) translate(1em,-11em);
-        transform: rotateZ(60deg) translate(1em,-11em)
-    }
-
-    to {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transform: rotateZ(60deg) translate(1em,-9em);
-        transform: rotateZ(60deg) translate(1em,-9em)
-    }
-}
-
-
-/* Стили анимации полоски в квизе */
-@keyframes moveIt{
-    from{
-        background-position: 0 center
-    }
-        
-    to{
-        background-position: 48px center
-    }
-}
-
-/* Стили кроссбраузерной анимации полоски в квизе */
-@-webkit-keyframes moveIt{
-    from{
-        background-position: 0 center
-    }
-        
-    to{
-        background-position: 48px center
-    }
-}
 
 @keyframes showElem {
     from {
@@ -125,9 +20,11 @@
 @keyframes sendPreloader {
     from {
         transform: translate(-50%, -50%) rotate(0);
+        opacity: 0;
     }
     to {
         transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 1;
     }
 }
 
@@ -161,22 +58,7 @@
     }
 }
 
-// Анимация зуба
-.showTooth {
-    animation-name: showTooth;
-    // animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
-}
 
-@keyframes showTooth {
-    from {
-        opacity: 0;
-        transform: translateY(100%) rotate(45deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) rotate(0);
-    }
-}
 
 // Плавное отображение карточек
 .showCard {
@@ -189,48 +71,25 @@
 }
 @keyframes showCard {
     0% {
-        // transform: translate3d(0px, 200px, 0px);
         transform: translateY(200px);
+        opacity: 0;
     }
     50% {
-        // transform: translate3d(0px, -5px, 0px);
         transform: translateY(-10px);
+        opacity: 0.5;
     }
     70% {
-        // transform: translate3d(0px, -5px, 0px);
         transform: translateY(10px);
+        opacity: 0.7;
     }
     100% {
-        // transform: translate3d(0px, 0px, 0px);
         transform: translateY(0px);
+        opacity: 1;
     }
 }
 
 // Аккордеоны
-// .showAcc {
 
-//     &::after {
-//         width: 100%;
-//     }
-
-//     & .accordion_container-list-title {
-//         animation: showAccTitle .8s ease-in-out forwards;
-//     }
-// }
-
-// .showAccTitle {
-//     animation-name: showAccTitle;
-// }
-// @keyframes showAccTitle {
-//     0% {
-//         opacity: 0;
-//         transform: translateX(30%);
-//     }
-//     100% {
-//         opacity: 1;
-//         transform: translateX(0);
-//     }
-// }
 
 [data-animation=number] span {
     position: relative;
