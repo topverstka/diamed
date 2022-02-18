@@ -10551,6 +10551,16 @@ h6 {
   }
 }
 
+@media (max-width: 600px) {
+  .section_information_services .tabs__header .tab {
+    background: #EAE9EF;
+  }
+  .section_information_services .tabs__header .tab._active {
+    background-color: #4bb9b5;
+    color: #fff;
+  }
+}
+
 @media (max-width: 500px) {
   .section_information_services .tab {
     font-size: 10px;
