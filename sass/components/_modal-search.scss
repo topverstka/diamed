@@ -8,17 +8,20 @@
     padding: 0;
     transform: translateY(-100%);
 }
- 
+
 .modal-header__content {
     max-width: none;
     width: 100%;
     background: $header-bg;
     border-radius: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
-
+    padding: 100px 0;
     @media (max-width: $tablet) {
         padding: 40px 20px;
+    }
+    @media (max-width:$tablet-s) {
+        .container {
+            padding: 0
+        }
     }
 }
 
@@ -29,9 +32,7 @@
     justify-content: space-between;
 }
 
-.modal-header__title {
-
-}
+.modal-header__title {}
 
 .modal-header__close {
     position: relative;
@@ -52,11 +53,9 @@
     position: relative;
     width: 100%;
     height: 52px;
-
     @media (max-width: $mobile-l) {
         height: 39px;
     }
-
     & input {
         position: absolute;
         top: 0;
@@ -68,12 +67,10 @@
         background: #fff;
         border-radius: $radius;
         padding: 0 24px 0 42px;
-
         @media (max-width: $mobile-l) {
             font-size: 14px;
             padding: 0 12px 0 34px;
         }
-
         &::placeholder {
             color: $accent2;
         }
@@ -89,7 +86,6 @@
     height: 16px;
     display: flex;
     pointer-events: none;
-
     @media (max-width: $mobile-l) {
         left: 8px;
     }
@@ -99,7 +95,6 @@
     max-width: 185px;
     width: 100%;
     margin-left: 10px;
-
     @media (max-width: $mobile-l) {
         max-width: 112px;
         height: 39px;
@@ -110,7 +105,6 @@
 // Рабочее время
 .modal-work-time__body {
     margin-top: 32px;
-
     @media (max-width: $mobile-l) {
         margin-top: 16px;
     }
@@ -121,7 +115,6 @@
     flex-wrap: wrap;
     gap: 24px 80px;
     margin-top: 42px;
-
     @media (max-width: $mobile-l) {
         margin-top: 24px;
     }
@@ -135,7 +128,6 @@
 .modal-work-time__title {
     font-size: 16px;
     color: $accent2;
-
     @media (max-width: $mobile-l) {
         font-size: 14px;
     }
@@ -145,7 +137,6 @@
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
-
     @media (max-width: $mobile-l) {
         font-size: 14px;
         margin-top: 8px;
