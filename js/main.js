@@ -506,7 +506,7 @@ const swiper_news = new Swiper('.news-slider', {
     speed: 400,
     spaceBetween: 20,
     slidesPerView: 3,
-    allowTouchMove: false,
+    allowTouchMove: true,
 
     breakpoints: {
         769: {
