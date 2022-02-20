@@ -92,3 +92,27 @@
         }
     }
 }
+
+.modal-text{
+    margin-top: 32px;
+    
+    svg{
+        width: 24px;
+        height: 24px;
+        fill: transparent;
+    }
+    @media (max-width: $tablet-s){
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.modal-text--error{
+    position: relative;
+    padding-left: 32px;
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
