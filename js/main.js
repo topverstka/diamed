@@ -556,201 +556,201 @@ const swiper_articles = new Swiper('.service_articles__slider', {
     },
 });
 
-const swiper_doctors = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-main", {
-    direction: "vertical",
-    loop: true,
-    slidesPerView: 1,
-    allowTouchMove: false,
-    observer: true,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    // freeMode: true,
-    watchSlidesProgress: true,
-});
+// const swiper_doctors = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-main", {
+//     direction: "vertical",
+//     loop: true,
+//     slidesPerView: 1,
+//     allowTouchMove: false,
+//     observer: true,
+//     effect: 'fade',
+//     fadeEffect: {
+//         crossFade: true
+//     },
+//     // freeMode: true,
+//     watchSlidesProgress: true,
+// });
 
 
-swiper_doctors.on('slideChange', e => {
-    const slider = e.wrapperEl
-    const slideActive = slider.querySelector('.swiper-slide-next')
-    const elemName = document.getElementById('doctor-name')
-    const elemPost = document.getElementById('doctor-post')
+// swiper_doctors.on('slideChange', e => {
+//     const slider = e.wrapperEl
+//     const slideActive = slider.querySelector('.swiper-slide-next')
+//     const elemName = document.getElementById('doctor-name')
+//     const elemPost = document.getElementById('doctor-post')
 
-    elemName.innerText = slideActive.dataset.doctorName
-    elemPost.innerText = slideActive.dataset.doctorPost
-})
+//     elemName.innerText = slideActive.dataset.doctorName
+//     elemPost.innerText = slideActive.dataset.doctorPost
+// })
 
-const swiper_doctors__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-main", {
-    direction: "vertical",
-    loop: true,
-    slidesPerView: 1,
-    observer: true,
-    allowTouchMove: false,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    // freeMode: true,
-    watchSlidesProgress: true,
-});
+// const swiper_doctors__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-main", {
+//     direction: "vertical",
+//     loop: true,
+//     slidesPerView: 1,
+//     observer: true,
+//     allowTouchMove: false,
+//     effect: 'fade',
+//     fadeEffect: {
+//         crossFade: true
+//     },
+//     // freeMode: true,
+//     watchSlidesProgress: true,
+// });
 
-swiper_doctors__1.on('slideChange', e => {
-    const slider = e.wrapperEl
-    const slideActive = slider.querySelector('.swiper-slide-next')
-    const elemName = document.getElementById('doctor-name')
-    const elemPost = document.getElementById('doctor-post')
+// swiper_doctors__1.on('slideChange', e => {
+//     const slider = e.wrapperEl
+//     const slideActive = slider.querySelector('.swiper-slide-next')
+//     const elemName = document.getElementById('doctor-name')
+//     const elemPost = document.getElementById('doctor-post')
 
-    elemName.innerText = slideActive.dataset.doctorName
-    elemPost.innerText = slideActive.dataset.doctorPost
-})
+//     elemName.innerText = slideActive.dataset.doctorName
+//     elemPost.innerText = slideActive.dataset.doctorPost
+// })
 
-const swiper_doctors__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-main", {
-    direction: "vertical",
-    loop: true,
-    slidesPerView: 1,
-    observer: true,
-    allowTouchMove: false,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    // freeMode: true,
-    watchSlidesProgress: true,
-});
+// const swiper_doctors__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-main", {
+//     direction: "vertical",
+//     loop: true,
+//     slidesPerView: 1,
+//     observer: true,
+//     allowTouchMove: false,
+//     effect: 'fade',
+//     fadeEffect: {
+//         crossFade: true
+//     },
+//     // freeMode: true,
+//     watchSlidesProgress: true,
+// });
 
-swiper_doctors__2.on('slideChange', e => {
-    const slider = e.wrapperEl
-    const slideActive = slider.querySelector('.swiper-slide-next')
-    const elemName = document.getElementById('doctor-name')
-    const elemPost = document.getElementById('doctor-post')
+// swiper_doctors__2.on('slideChange', e => {
+//     const slider = e.wrapperEl
+//     const slideActive = slider.querySelector('.swiper-slide-next')
+//     const elemName = document.getElementById('doctor-name')
+//     const elemPost = document.getElementById('doctor-post')
 
-    elemName.innerText = slideActive.dataset.doctorName
-    elemPost.innerText = slideActive.dataset.doctorPost
-})
+//     elemName.innerText = slideActive.dataset.doctorName
+//     elemPost.innerText = slideActive.dataset.doctorPost
+// })
 
-const swiper_doctors2 = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-all", {
-    observeParents: true,
-    breakpoints: {
-        930: {
-            direction: "vertical",
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 'auto',
-            slideToClickedSlide: true,
-        },
-        769: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 5,
-            slideToClickedSlide: true,
-            slidesPerView: 'auto',
-        },
-        500: {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 4.7,
-            slideToClickedSlide: true,
-        },
-        0: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 4.6,
-            slideToClickedSlide: true,
-        }
-    },
-    navigation: {
-        nextEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-next",
-        prevEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-prev",
-    },
-    thumbs: {
-        swiper: swiper_doctors,
-    },
-});
-
-
-if (swiper_doctors2.$el) {
-    setTimeout(() => swiper_doctors2.update(), 9);
-}
+// const swiper_doctors2 = new Swiper(".tabs__block[data-tab-body='our_features'] .our_doctors__slider-all", {
+//     observeParents: true,
+//     breakpoints: {
+//         930: {
+//             direction: "vertical",
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 'auto',
+//             slideToClickedSlide: true,
+//         },
+//         769: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 5,
+//             slideToClickedSlide: true,
+//             slidesPerView: 'auto',
+//         },
+//         500: {
+//             loop: true,
+//             spaceBetween: 20,
+//             slidesPerView: 4.7,
+//             slideToClickedSlide: true,
+//         },
+//         0: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 4.6,
+//             slideToClickedSlide: true,
+//         }
+//     },
+//     navigation: {
+//         nextEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-next",
+//         prevEl: ".tabs__block[data-tab-body='our_features'] .our_doctors__arrow-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper_doctors,
+//     },
+// });
 
 
-const swiper_doctors2__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-all", {
-    observeParents: true,
-    breakpoints: {
-        930: {
-            direction: "vertical",
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 'auto',
-            slideToClickedSlide: true,
-        },
-        769: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 5,
-            slideToClickedSlide: true,
-            slidesPerView: 'auto',
-        },
-        500: {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 4.7,
-            slideToClickedSlide: true,
-        },
-        0: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 4.6,
-            slideToClickedSlide: true,
-        }
-    },
-    navigation: {
-        nextEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-next",
-        prevEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-prev",
-    },
-    thumbs: {
-        swiper: swiper_doctors__1,
-    },
-});
+// if (swiper_doctors2.$el) {
+//     setTimeout(() => swiper_doctors2.update(), 9);
+// }
 
-const swiper_doctors2__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-all", {
-    observeParents: true,
-    breakpoints: {
-        930: {
-            direction: "vertical",
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 'auto',
-            slideToClickedSlide: true,
-        },
-        769: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 5,
-            slideToClickedSlide: true,
-            slidesPerView: 'auto',
-        },
-        500: {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 4.7,
-            slideToClickedSlide: true,
-        },
-        0: {
-            loop: true,
-            spaceBetween: 16,
-            slidesPerView: 4.6,
-            slideToClickedSlide: true,
-        }
-    },
-    navigation: {
-        nextEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-next",
-        prevEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-prev",
-    },
-    thumbs: {
-        swiper: swiper_doctors__2,
-    },
-});
+
+// const swiper_doctors2__1 = new Swiper(".tabs__block[data-tab-body='our_indications'] .our_doctors__slider-all", {
+//     observeParents: true,
+//     breakpoints: {
+//         930: {
+//             direction: "vertical",
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 'auto',
+//             slideToClickedSlide: true,
+//         },
+//         769: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 5,
+//             slideToClickedSlide: true,
+//             slidesPerView: 'auto',
+//         },
+//         500: {
+//             loop: true,
+//             spaceBetween: 20,
+//             slidesPerView: 4.7,
+//             slideToClickedSlide: true,
+//         },
+//         0: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 4.6,
+//             slideToClickedSlide: true,
+//         }
+//     },
+//     navigation: {
+//         nextEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-next",
+//         prevEl: ".tabs__block[data-tab-body='our_indications'] .our_doctors__arrow-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper_doctors__1,
+//     },
+// });
+
+// const swiper_doctors2__2 = new Swiper(".tabs__block[data-tab-body='our_cost'] .our_doctors__slider-all", {
+//     observeParents: true,
+//     breakpoints: {
+//         930: {
+//             direction: "vertical",
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 'auto',
+//             slideToClickedSlide: true,
+//         },
+//         769: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 5,
+//             slideToClickedSlide: true,
+//             slidesPerView: 'auto',
+//         },
+//         500: {
+//             loop: true,
+//             spaceBetween: 20,
+//             slidesPerView: 4.7,
+//             slideToClickedSlide: true,
+//         },
+//         0: {
+//             loop: true,
+//             spaceBetween: 16,
+//             slidesPerView: 4.6,
+//             slideToClickedSlide: true,
+//         }
+//     },
+//     navigation: {
+//         nextEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-next",
+//         prevEl: ".tabs__block[data-tab-body='our_cost'] .our_doctors__arrow-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper_doctors__2,
+//     },
+// });
 
 const swiper_review = new Swiper('.review_wrapp__slider', {
     speed: 400,
@@ -849,11 +849,7 @@ tabBlockActive();
 function tabBlockActive(data) {
     if (data) {
         if (data.closest('.our_doctors')) {
-            setTimeout(() => {
-                swiper_doctors2.update();
-                swiper_doctors2__1.update();
-                swiper_doctors2__2.update();
-            }, 1);
+            data.closest('.our_doctors').querySelectorAll('.tabs__block').forEach(i => i.classList.remove('_active'));
         }
     }
     let tabActive = document.querySelectorAll('.tab._active'),
@@ -1096,3 +1092,70 @@ function showDSubMenu() {
         }
     })
 }
+
+
+
+let arr_variable = [];
+document.querySelectorAll('.our_doctors__right-slider .tabs__block').forEach(i => {
+    arr_variable.push('.tabs__block[data-tab-body=' + i.dataset.tabBody + ']');
+});
+$(arr_variable).each((i, el) => {
+    let $carousel = $(el).find('.carousel').flickity();
+
+    $(el).find('.our_doctors__arrow-next').on('click', function(e) {
+        flkty.next();
+    });
+
+    $(el).find('.our_doctors__arrow-prev').on('click', function(e) {
+        flkty.previous();
+    });
+
+    let $carouselNav = $(el).find('.carousel-nav');
+    let $carouselNavCells = $carouselNav.find('.carousel-cell');
+
+    $carouselNav.on('click', '.carousel-cell', function(event) {
+        let index = $(event.currentTarget).index();
+        $carousel.flickity('select', index);
+    });
+
+    let flkty = $carousel.data('flickity');
+    let navTop = $carouselNav.position().top;
+    let navCellHeight = $carouselNavCells.height();
+    let navHeight = $carouselNav.height();
+
+
+    if (window.innerWidth < 768) {
+        $(el).find('.carousel-nav').attr('data-flickity', `{"asNavFor": "${el + ' .carousel-main' }", "pageDots": false, "imagesLoaded": true, "contain": true,  "draggable": true}`);
+    }
+
+    $carousel.on('select.flickity', function() {
+
+        $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+        let $selected = $carouselNavCells.eq(flkty.selectedIndex)
+            .addClass('is-nav-selected');
+
+
+        let scrollY = $selected.position().top +
+            $carouselNav.scrollTop() - (navHeight + navCellHeight) / 1.5;
+        $carouselNav.animate({
+            scrollTop: scrollY
+        });
+
+    });
+
+
+    $carousel.on('change.flickity', function(event, index) {
+        const elemName = document.getElementById('doctor-name');
+        const elemPost = document.getElementById('doctor-post');
+
+        elemName.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-name');
+        elemPost.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-post');
+    });
+
+    document.querySelectorAll('.our_doctors__right-slider .tabs__block:not(._show)').forEach(i => {
+        i.classList.add('_active');
+    });
+
+
+    setTimeout(function() { flkty.resize(); }, 100);
+});

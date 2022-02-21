@@ -8,7 +8,7 @@
     <!-- Генератор фавикон - https://realfavicongenerator.net/ -->
     <title>Diamed</title>
     <meta name="description" content="Описание сайта">
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -1196,259 +1196,162 @@
                         </div>
                         <div class="our_doctors__right-slider">
                             <div class="tabs__block" data-tab-body="our_features">
-                                <div class="our_doctors__slider">
-                                    <div class="swiper our_doctors__slider-main">
+                                <div class="carousel-container">
 
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                    <div class="carousel carousel-main" data-flickity>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
                                         </div>
-                                    </div>
-                                    <div class="swiper our_doctors__slider-all">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
                                         </div>
                                     </div>
 
-
-
+                                    <div class="carousel-nav">
+                                        <div class="carousel-cell is-nav-selected" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
                             <div class="tabs__block" data-tab-body="our_indications">
-                                <div class="our_doctors__slider">
-                                    <div class="swiper our_doctors__slider-main">
+                                <div class="carousel-container">
 
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                    <div class="carousel carousel-main" data-flickity>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
                                         </div>
                                     </div>
-                                    <div class="swiper our_doctors__slider-all">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
 
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                    <div class="carousel-nav">
+                                        <div class="carousel-cell is-nav-selected" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="tabs__block" data-tab-body="our_cost">
-                                <div class="our_doctors__slider">
-                                    <div class="swiper our_doctors__slider-main">
+                                <div class="carousel-container">
 
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                    <div class="carousel carousel-main" data-flickity>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
                                         </div>
                                     </div>
-                                    <div class="swiper our_doctors__slider-all">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
 
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-1.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-4.png" />
-                                            </div>
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-3.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-2.png" />
-                                            </div>
-
-
-                                            <div class="swiper-slide">
-                                                <img src="./img/our_doctors/photo-5.png" />
-                                            </div>
+                                    <div class="carousel-nav">
+                                        <div class="carousel-cell is-nav-selected" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Валиев" data-doctor-post="Cтоматолог-имплантолог">
+                                            <img src="./img/our_doctors/photo-3.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович" data-doctor-post="Cтоматолог-терапевт">
+                                            <img src="./img/our_doctors/photo-2.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав Рауфович Валиев" data-doctor-post="Cтоматолог-терапевт, имплантолог">
+                                            <img src="./img/our_doctors/photo-5.png" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Станислав" data-doctor-post="Cтоматолог">
+                                            <img src="./img/our_doctors/photo-1.jpg" />
+                                        </div>
+                                        <div class="carousel-cell" data-doctor-name="Рауфович Валиев" data-doctor-post="имплантолог">
+                                            <img src="./img/our_doctors/photo-4.png" />
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1716,7 +1619,7 @@
         }
     </script>
 
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
