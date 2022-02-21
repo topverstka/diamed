@@ -1100,7 +1100,7 @@ document.querySelectorAll('.our_doctors__right-slider .tabs__block').forEach(i =
     arr_variable.push('.tabs__block[data-tab-body=' + i.dataset.tabBody + ']');
 });
 $(arr_variable).each((i, el) => {
-    let $carousel = $(el).find('.carousel').flickity();
+    let $carousel = $(el).find('.carousel').flickity({ 'wrapAround': true });
 
     $(el).find('.our_doctors__arrow-next').on('click', function(e) {
         flkty.next();
@@ -1111,6 +1111,7 @@ $(arr_variable).each((i, el) => {
     });
 
     let $carouselNav = $(el).find('.carousel-nav');
+    //$carouselNav.attr('data-flickity', "{ 'wrapAround': true }");
     let $carouselNavCells = $carouselNav.find('.carousel-cell');
 
     $carouselNav.on('click', '.carousel-cell', function(event) {
