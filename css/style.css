@@ -8493,6 +8493,14 @@ h6 {
   }
 }
 
+@media (max-width: 500px) {
+  .our_doctors__slider img,
+  .carousel-container img {
+    -o-object-position: 0 8%;
+       object-position: 0 8%;
+  }
+}
+
 @media (max-width: 768px) {
   .our_doctors__arrows {
     padding: 0 20px;
