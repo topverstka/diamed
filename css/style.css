@@ -189,6 +189,12 @@ body._lock {
   overflow: hidden;
 }
 
+@media (min-width: 920px) {
+  body._lock {
+    padding: 0 calc(16px - (100vw - 100%)) 0 0;
+  }
+}
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -5502,6 +5508,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .modal._show .modal__wrap {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+@media (min-width: 920px) {
+  .modal._show .modal__content {
+    padding-right: 16px;
+  }
 }
 
 .modal__wrap {

@@ -10,14 +10,19 @@
     visibility: hidden;
     opacity: 0;
     transition: $tr;
-
     &._show {
         visibility: visible;
         opacity: 1;
         overflow-y: auto;
-
         & .modal__wrap {
             transform: translate(0, 0);
+        }
+    }
+    @media (min-width:$tablet-l) {
+        &._show {
+            .modal__content {
+                padding-right: 16px
+            }
         }
     }
 }
@@ -73,7 +78,6 @@
     right: 16px;
     width: 24px;
     height: 24px;
-
     & span {
         position: absolute;
         top: 50%;
@@ -82,35 +86,32 @@
         height: 2px;
         background: $main;
         border-radius: 100px;
-
         &:nth-child(1) {
             transform: translate(-50%, -50%) rotate(45deg);
         }
-
         &:nth-child(2) {
             transform: translate(-50%, -50%) rotate(-45deg);
         }
     }
 }
 
-.modal-text{
+.modal-text {
     margin-top: 32px;
-    
-    svg{
+    svg {
         width: 24px;
         height: 24px;
         fill: transparent;
     }
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         font-size: 14px;
         line-height: 22px;
     }
 }
 
-.modal-text--error{
+.modal-text--error {
     position: relative;
     padding-left: 32px;
-    svg{
+    svg {
         position: absolute;
         top: -1px;
         left: 0;
