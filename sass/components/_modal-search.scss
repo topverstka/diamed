@@ -123,12 +123,23 @@
 .modal-work-time__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 80px;
+    // gap: 24px 80px;
+    @media (max-width: $tablet-s) {
+        flex-direction: column;
+    }
 }
 
 .modal-work-time__block {
     display: flex;
     flex-direction: column;
+    &:not(:last-child) {
+        margin-right: 80px;
+    }
+    @media (max-width:$tablet) {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .modal-work-time__title {

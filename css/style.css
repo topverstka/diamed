@@ -5802,7 +5802,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 24px 80px;
+}
+
+@media (max-width: 500px) {
+  .modal-work-time__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .modal-work-time__block {
@@ -5813,6 +5821,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.modal-work-time__block:not(:last-child) {
+  margin-right: 80px;
+}
+
+@media (max-width: 768px) {
+  .modal-work-time__block:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .modal-work-time__title {
