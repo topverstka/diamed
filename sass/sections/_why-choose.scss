@@ -1,12 +1,10 @@
 .why_choose {
     padding-top: 100px;
     padding-bottom: 97px;
-
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
         padding-top: 79px;
         padding-bottom: 82px;
     }
-
     @media (max-width: $tablet-s) {
         padding-top: 46px;
         padding-bottom: 54px;
@@ -15,7 +13,6 @@
 
 .why_choose__wrapp {
     display: flex;
-
     @media (max-width: $tablet) {
         flex-direction: column;
     }
@@ -25,29 +22,25 @@
     width: 42%;
     margin-right: 25px;
     position: relative;
-
     @media (max-width: $tablet-l) {
         width: 40%;
         margin: 0;
     }
-
     @media (max-width: $tablet) {
         width: 100%;
     }
 }
 
-.why_choose-title{
+.why_choose-title {
     width: 305px;
     line-height: 49px;
     position: relative;
-
     @media (max-width: $tablet) {
         width: 100%;
     }
 }
 
 .why_choose__left-picture {
-
     @media (max-width: $tablet) {
         display: none;
     }
@@ -58,7 +51,6 @@
     position: fixed;
     // top: 0;
     // right: -100vw;
-
     & img {
         position: absolute;
         top: 0;
@@ -66,15 +58,14 @@
     }
 }
 
-.why_choose__left-picture-all {
-    position: absolute;
-    top: 48px;
-    right: 55px;
-    width: 219px;
-    height: 180px;
-    object-fit: cover;
-}
-
+// .why_choose__left-picture-all {
+//     position: absolute;
+//     top: 48px;
+//     right: 55px;
+//     width: 219px;
+//     height: 180px;
+//     object-fit: cover;
+// }
 .why_choose__left-picture-main {
     margin-top: -167px;
     margin-left: -52px;
@@ -82,7 +73,6 @@
 
 .why_choose__right {
     width: 60%;
-    
     @media (max-width: $tablet) {
         width: 100%;
         margin: 40px 0 0 0;

@@ -8654,16 +8654,6 @@ h6 {
   left: 0;
 }
 
-.why_choose__left-picture-all {
-  position: absolute;
-  top: 48px;
-  right: 55px;
-  width: 219px;
-  height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .why_choose__left-picture-main {
   margin-top: -167px;
   margin-left: -52px;
