@@ -1111,7 +1111,6 @@ $(arr_variable).each((i, el) => {
     });
 
     let $carouselNav = $(el).find('.carousel-nav');
-    //$carouselNav.attr('data-flickity', "{ 'wrapAround': true }");
     let $carouselNavCells = $carouselNav.find('.carousel-cell');
 
     $carouselNav.on('click', '.carousel-cell', function(event) {
