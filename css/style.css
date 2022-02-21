@@ -8841,6 +8841,7 @@ h6 {
 .useful {
   padding-top: 100px;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -9077,6 +9078,7 @@ h6 {
 
 .news {
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -9215,6 +9217,7 @@ h6 {
   position: relative;
   background: var(--header-bg);
   padding: 66px 0px;
+  overflow: hidden;
   padding-bottom: 63px;
 }
 
@@ -9448,6 +9451,7 @@ h6 {
   padding-top: 80px;
   padding-bottom: 78px;
   background: var(--second);
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
