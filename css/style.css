@@ -7818,14 +7818,12 @@ h6 {
   .main_top__wrapper-list li a:hover .main_top__wrapper-list-picture {
     opacity: 0;
   }
-}
-
-.main_top__wrapper-list li a:active {
-  border-bottom-color: #81CECB;
-}
-
-.main_top__wrapper-list li a:active .main_top__wrapper-list-hover {
-  opacity: .7;
+  .main_top__wrapper-list li a:active {
+    border-bottom-color: #81CECB;
+  }
+  .main_top__wrapper-list li a:active .main_top__wrapper-list-hover {
+    opacity: .7;
+  }
 }
 
 @media (max-width: 1280px) {

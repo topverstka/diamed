@@ -118,11 +118,11 @@
                         opacity: 0;
                     }
                 }
-            }
-            &:active {
-                border-bottom-color: #81CECB;
-                & .main_top__wrapper-list-hover {
-                    opacity: .7;
+                &:active {
+                    border-bottom-color: #81CECB;
+                    & .main_top__wrapper-list-hover {
+                        opacity: .7;
+                    }
                 }
             }
         }
