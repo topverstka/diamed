@@ -1094,7 +1094,7 @@ function showDSubMenu() {
 }
 
 
-
+/* Слайдер в секции врачей */
 let arr_variable = [];
 document.querySelectorAll('.our_doctors__right-slider .tabs__block').forEach(i => {
     arr_variable.push('.tabs__block[data-tab-body=' + i.dataset.tabBody + ']');
@@ -1158,4 +1158,8 @@ $(arr_variable).each((i, el) => {
 
 
     setTimeout(function() { flkty.resize(); }, 100);
+});
+
+document.querySelector('.form-elem-date').addEventListener('click', () => {
+    datePicker.show();
 });
