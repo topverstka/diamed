@@ -6550,6 +6550,12 @@ h6 {
   line-height: 49px;
 }
 
+@media (min-width: 500px) and (max-width: 768px) {
+  .title-section.modal-header__title {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 500px) {
   .title-section {
     font-size: 24px;
