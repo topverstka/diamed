@@ -6588,6 +6588,12 @@ h6 {
           justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .intro {
+    min-height: auto;
+  }
+}
+
 .intro-bg {
   width: 100%;
   position: absolute;

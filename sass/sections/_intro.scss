@@ -1,12 +1,15 @@
-.intro{
+.intro {
     position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: $tablet-s) {
+        min-height: auto;
+    }
 }
 
-.intro-bg{
+.intro-bg {
     width: 100%;
     position: absolute;
     height: 100%;
@@ -17,7 +20,7 @@
     overflow: hidden;
 }
 
-.intro__img{
+.intro__img {
     min-width: 100%;
     min-height: 100%;
     top: 0;
@@ -25,18 +28,18 @@
     display: none;
     z-index: -1;
     object-fit: cover;
-    &.active{
+    &.active {
         display: block;
     }
 }
 
-.intro__media{
+.intro__media {
     min-width: 100%;
     min-height: 100%;
     top: 0;
     display: none;
     position: absolute;
-    &.active{
+    &.active {
         display: block;
     }
 }
