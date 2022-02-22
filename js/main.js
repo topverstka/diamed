@@ -756,7 +756,7 @@ const swiper_review = new Swiper('.review_wrapp__slider', {
     speed: 400,
     slidesPerView: 2,
     spaceBetween: 20,
-    loop: true,
+    loop: false,
 
     breakpoints: {
         1200: {
