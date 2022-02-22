@@ -17,7 +17,8 @@
 //         }
 //     }
 // }
-.modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab {
+.modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab,
+.tabs__cats.tabs__background .tab__list .tab {
     @media (max-width: 600px) {
         background: #EAE9EF;
     }

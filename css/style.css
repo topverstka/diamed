@@ -5858,7 +5858,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (max-width: 600px) {
-  .modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab {
+  .modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab,
+  .tabs__cats.tabs__background .tab__list .tab {
     background: #EAE9EF;
   }
 }
