@@ -8288,7 +8288,13 @@ h6 {
 
 @media (max-width: 500px) {
   .our_doctors__right-slider {
-    height: 400px;
+    height: 380px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .our_doctors__right-slider {
+    height: 750px;
   }
 }
 
@@ -8432,21 +8438,6 @@ h6 {
   .carousel-container {
     -ms-grid-columns: 1fr 100px;
         grid-template-columns: 1fr 100px;
-  }
-}
-
-@media (max-width: 930px) {
-  .our_doctors__slider,
-  .carousel-container {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 0;
   }
 }
 
@@ -8626,7 +8617,7 @@ h6 {
   .our_doctors__slider-all,
   .carousel-nav {
     max-width: none;
-    padding: 0 20px;
+    padding: 0 0 0 20px;
   }
 }
 
@@ -8658,7 +8649,7 @@ h6 {
   .our_doctors__slider-all .carousel-cell,
   .carousel-nav .swiper-slide,
   .carousel-nav .carousel-cell {
-    height: auto;
+    margin-bottom: 0;
   }
   .our_doctors__slider-all .swiper-slide::after,
   .our_doctors__slider-all .carousel-cell::after,
@@ -8759,6 +8750,10 @@ h6 {
 
 .our_doctors__info-arrows-slider {
   position: relative;
+}
+
+.our_doctors__info-arrows-slider button[disabled] {
+  opacity: .4;
 }
 
 .why_choose {

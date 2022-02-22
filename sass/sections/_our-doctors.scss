@@ -117,7 +117,10 @@
         position: relative;
     }
     @media (max-width: $tablet-s) {
-        height: 400px
+        height: 380px
+    }
+    @media (min-width:$tablet-s) and (max-width:$tablet) {
+        height: 750px
     }
 }
 
@@ -219,12 +222,12 @@
     @media (max-width: 1000px) {
         grid-template-columns: 1fr 100px;
     }
-    @media (max-width: 930px) {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
+    // @media (max-width: 930px) {
+    //     height: auto;
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 0;
+    // }
     @media (max-width: $tablet) {
         height: auto;
         display: flex;
@@ -336,7 +339,7 @@
     }
     @media (max-width: $tablet) {
         max-width: none;
-        padding: 0 20px;
+        padding: 0 0 0 20px;
     }
     @media (max-width: $tablet-s) {
         margin-top: 20px;
@@ -354,7 +357,8 @@
         //     height: 100px;
         // }
         @media (max-width: $tablet) {
-            height: auto;
+            // height: 100%;
+            margin-bottom: 0;
             &::after {
                 content: '';
                 padding-top: 100%;
@@ -431,4 +435,7 @@
 
 .our_doctors__info-arrows-slider {
     position: relative;
+    button[disabled] {
+        opacity: .4;
+    }
 }
