@@ -28,11 +28,11 @@
     }
     &.swiper-button-disabled {
         //background: #F8F8F8;
-        opacity: .5;
+        opacity: 0;
         // pointer-events: none;
-        // & svg path {
-        //     stroke: #fff;
-        // }
+        & svg path {
+            stroke: #fff;
+        }
     }
     @media (max-width: $tablet-s) {
         width: 32px;

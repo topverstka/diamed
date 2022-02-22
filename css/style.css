@@ -6260,7 +6260,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .slider-arrow.swiper-button-disabled {
-  opacity: .5;
+  opacity: 0;
+}
+
+.slider-arrow.swiper-button-disabled svg path {
+  stroke: #fff;
 }
 
 @media (max-width: 500px) {
