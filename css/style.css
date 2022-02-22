@@ -8103,6 +8103,7 @@ h6 {
 .our_doctors {
   background: #F8F7FC;
   overflow: hidden;
+  position: relative;
 }
 
 .our_doctors h2 {
