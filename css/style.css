@@ -5611,6 +5611,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .modal-text {
     font-size: 14px;
     line-height: 22px;
+    margin-top: 16px;
   }
 }
 
@@ -5650,11 +5651,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @media (max-width: 768px) {
   .modal-header__content {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 }
 
 @media (max-width: 500px) {
+  .modal-header__content {
+    padding: 32px 20px 40px 20px;
+  }
   .modal-header__content .container {
     padding: 0;
   }
@@ -5688,6 +5692,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-align: center;
           align-items: center;
   margin-top: 32px;
+}
+
+@media (max-width: 500px) {
+  .modal-search__form {
+    margin-top: 16px;
+  }
 }
 
 .modal-search__textfield {

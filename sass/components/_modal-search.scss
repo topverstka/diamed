@@ -16,9 +16,10 @@
     border-radius: 0;
     padding: 100px 0;
     @media (max-width: $tablet) {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
     @media (max-width:$tablet-s) {
+        padding: 32px 20px 40px 20px;
         .container {
             padding: 0
         }
@@ -47,6 +48,9 @@
     display: flex;
     align-items: center;
     margin-top: 32px;
+    @media (max-width: $tablet-s) {
+        margin-top: 16px
+    }
 }
 
 .modal-search__textfield {
