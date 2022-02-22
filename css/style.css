@@ -11103,6 +11103,10 @@ h6 {
   height: 292px;
 }
 
+.service_articles .service_articles__arrows {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .service_articles {
     padding: 56px 0;
@@ -11113,6 +11117,11 @@ h6 {
   .service_articles .news-link {
     margin-top: 35px;
   }
+  .service_articles .service_articles__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 600px) {
@@ -11121,9 +11130,6 @@ h6 {
   }
   .service_articles .news_header-line {
     margin-bottom: 29px;
-  }
-  .service_articles .service_articles__arrows {
-    display: none;
   }
 }
 

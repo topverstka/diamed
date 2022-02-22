@@ -6,12 +6,18 @@
         border-radius: $radius2;
         height: 292px;
     }
+    .service_articles__arrows {
+        display: none
+    }
     @media (max-width:$tablet) {
         .news_header-line {
             margin-bottom: 35px;
         }
         .news-link {
             margin-top: 35px
+        }
+        .service_articles__arrows {
+            display: flex
         }
         padding: 56px 0
     }
@@ -21,9 +27,6 @@
         }
         .news_header-line {
             margin-bottom: 29px
-        }
-        .service_articles__arrows {
-            display: none
         }
     }
 }
