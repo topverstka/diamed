@@ -144,6 +144,11 @@
             margin-bottom: 20px;
         }
     }
+    @media (min-width:$tablet-s) {
+        &:first-child {
+            width: 212px
+        }
+    }
 }
 
 .modal-work-time__title {

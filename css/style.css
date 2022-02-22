@@ -5843,6 +5843,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+@media (min-width: 500px) {
+  .modal-work-time__block:first-child {
+    width: 212px;
+  }
+}
+
 .modal-work-time__title {
   font-size: 16px;
   color: var(--accent2);
