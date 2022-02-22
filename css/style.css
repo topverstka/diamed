@@ -6260,11 +6260,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .slider-arrow.swiper-button-disabled {
-  opacity: 0;
+  pointer-events: none;
 }
 
-.slider-arrow.swiper-button-disabled svg path {
-  stroke: #fff;
+.slider-arrow.swiper-button-disabled:hover {
+  background: #fff;
+}
+
+.slider-arrow.swiper-button-disabled:hover svg path {
+  stroke: #828282;
 }
 
 @media (max-width: 500px) {
