@@ -4,15 +4,12 @@
     align-items: flex-start;
     padding-bottom: 31px;
     // border-bottom: 1px solid #F0EFEF;
-
     &:not(:last-child) {
         margin-bottom: 32px;
-
         @media (max-width: $tablet-s) {
             margin-bottom: 18px;
         }
     }
-
     &::after {
         content: '';
         position: absolute;
@@ -22,34 +19,47 @@
         display: block;
         background: #F0EFEF;
     }
-
     &._show {
-        
+        & .accordion_container-list-content__container {
+            opacity: 1;
+            p,
+            a {
+                opacity: 1;
+            }
+        }
         & .accordion_container-list-content {
             // margin-top: 24px;
-
             // @media (max-width: 1300px) {
             //     margin-top: 40px;
             // }
-        
             @media (max-width: $tablet-s) {
                 margin-top: 24px;
             }
         }
     }
-
     @media (max-width: $tablet-s) {
         flex-direction: column;
     }
-
     @media (max-width: $tablet-s) {
         padding-bottom: 20px;
     }
 }
 
+.accordion_container-list-content__container {
+    opacity: 0;
+    // transition: $tr easy;
+    // transition-delay: .5s;
+    // transition-property: opacity;
+    p,
+    a {
+        transition-delay: .5s;
+        transition-property: opacity;
+        opacity: 0;
+    }
+}
+
 .accordion_container-list-header {
     width: 100%;
-
     @media (max-width: $tablet-s) {
         display: flex;
         align-items: center;
@@ -64,16 +74,14 @@
     width: 100%;
     line-height: 28px;
     // opacity: 0;
-    
     @media (max-width: $tablet-l) {
         text-overflow: ellipsis;
         overflow: hidden;
     }
-
     @media (max-width: $tablet-s) {
         max-width: none;
         font-size: 16px;
-        br{
+        br {
             display: none;
         }
     }
@@ -83,7 +91,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    
     @media (max-width: $tablet-s) {
         position: initial;
     }
@@ -97,21 +104,17 @@
     margin-left: auto;
     margin-right: 108px;
     transition: $tr linear;
-
     @media (max-width: $tablet) {
         margin-right: 97px;
     }
-
     // @media (max-width: $tablet-s) {
     //     margin: 24px 0 0 0;
     // }
-
     p {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 35px;
         font-weight: 500;
-
         @media (max-width: $tablet-s) {
             font-size: 14px;
             line-height: 22px;
@@ -120,7 +123,6 @@
     }
     .accordion_container-list-link {
         font-size: 14px;
-
         @media (max-width: $tablet-s) {
             font-size: 12px;
         }
@@ -136,7 +138,7 @@
     padding: 8px;
     transition: $tr linear;
     position: relative;
-    span{
+    span {
         width: 14px;
         height: 1px;
         background-color: $second;
@@ -144,16 +146,14 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transition: all 0.2s;
         pointer-events: none;
-        &:last-child{
-            transform: translate(-50%,-50%) rotate(90deg);
+        &:last-child {
+            transform: translate(-50%, -50%) rotate(90deg);
         }
     }
-
     @media (min-width: $minHover) {
-        
         &:hover {
             background: $second;
             span {
@@ -161,18 +161,16 @@
             }
         }
     }
-    
     &._show {
         background: $second;
-        span{
+        span {
             background-color: #fff;
-            &:last-child{
-                transform: translate(-50%,-50%) rotate(0deg);
+            &:last-child {
+                transform: translate(-50%, -50%) rotate(0deg);
             }
         }
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         width: 32px;
         height: 32px;
     }
