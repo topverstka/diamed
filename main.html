@@ -2084,7 +2084,8 @@
                 cellType,
                 datepicker
             }) {
-                removeError(datepicker)
+                document.querySelector('.form-elem-time .form-elem__label').classList.add('_change-label');
+                removeError(timePicker)
             }
         })
 
@@ -2092,7 +2093,7 @@
             const textfield = datepicker.$el
             const parent = textfield.parentElement
 
-            parent.classList.remove('error ')
+            parent.classList.remove('error')
         }
     </script>
     <script src="./js/libs/flickity.pkgd.min.js"></script>

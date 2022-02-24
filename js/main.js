@@ -828,11 +828,18 @@ function labelTextfield() {
             label.classList.add('_change-label')
         })
 
+
         input.addEventListener('blur', e => {
             if (input.value === '') {
                 label.classList.remove('_change-label')
             }
         })
+
+        document.querySelector('#air-datepicker-global-container').addEventListener('mousemove', function(e) {
+            document.querySelector('.form-elem-time .form-elem__label').classList.add('_change-label');
+        });
+
+
     }
 }
 
@@ -982,4 +989,8 @@ $(arr_variable).each((i, el) => {
 
 document.querySelector('.form-elem-date').addEventListener('click', () => {
     datePicker.show();
+});
+
+document.querySelector('.form-elem-time').addEventListener('click', () => {
+    timePicker.show();
 });
