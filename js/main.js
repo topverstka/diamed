@@ -825,7 +825,12 @@ function labelTextfield() {
         const label = parent.querySelector('label')
 
         input.addEventListener('focus', e => {
-            label.classList.add('_change-label')
+            label.classList.add('_change-label');
+            if (e.target.id === 'datetimepicker2' || e.target.id === 'datetimepicker1') {
+                if (input.value === '') {
+                    input.value = ' ';
+                }
+            }
         })
 
 
@@ -834,10 +839,6 @@ function labelTextfield() {
                 label.classList.remove('_change-label')
             }
         })
-
-        document.querySelector('#air-datepicker-global-container').addEventListener('mousemove', function(e) {
-            document.querySelector('.form-elem-time .form-elem__label').classList.add('_change-label');
-        });
 
 
     }
