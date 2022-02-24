@@ -2085,6 +2085,10 @@
                 datepicker
             }) {
                 removeError(timePicker)
+
+            },
+            onHide() {
+                document.querySelector('#datetimepicker2').classList.remove('_focus_input');
             }
         })
 

@@ -47,6 +47,10 @@
     }
 }
 
+.form-elem__area._focus_input {
+    border-bottom: 1px solid white;
+}
+
 .form-elem input {
     background: transparent;
     color: #fff;

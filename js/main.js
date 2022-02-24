@@ -831,12 +831,17 @@ function labelTextfield() {
                     input.value = ' ';
                 }
             }
+
+            if (e.target.id === 'datetimepicker2') {
+                input.classList.add('_focus_input');
+            }
         })
 
 
         input.addEventListener('blur', e => {
             if (input.value === '') {
-                label.classList.remove('_change-label')
+                label.classList.remove('_change-label');
+                input.classList.remove('_focus_input');
             }
         })
 
