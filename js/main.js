@@ -776,16 +776,23 @@ function accordions() {
                 target.classList.toggle('_show')
 
                 if (accBody.style.maxHeight) {
-                    accBody.style.maxHeight = null
-                    container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
-                    parent.classList.remove('_show')
-                    target.classList.remove('_show')
+                    
+                    parent.classList.remove('_show');
+                    target.classList.remove('_show');
+
+                    if(accBody.closest('.menu')){
+                        accBody.style.maxHeight = null;
+                        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
+                    }else{
+                        setTimeout(function(){
+                            accBody.style.maxHeight = null;
+                            container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
+                        }, 500);
+                    }
+                   
                 } else {
 
-                    if (
-                        parent.classList.contains('accordion_container-list') ||
-                        parent.parentElement.parentElement.classList.contains('menu-left-mobile')
-                    ) {
+                    if (parent.classList.contains('accordion_container-list') || parent.parentElement.parentElement.classList.contains('menu-left-mobile') ) {
                         const adjacentElems = getSiblings(parent)
                         for (let i = 0; i < adjacentElems.length; i++) {
                             const elem = adjacentElems[i]
@@ -798,8 +805,11 @@ function accordions() {
                         }
                     }
 
-                    accBody.style.maxHeight = accBody.scrollHeight + 'px'
-                    container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px'
+                    
+                        accBody.style.maxHeight = accBody.scrollHeight + 'px';
+                        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
+                    
+                    
 
                     if (parent.closest('.menu-left__item')) {
                         parent.closest('.menu-left__item').style.maxHeight = 'none'

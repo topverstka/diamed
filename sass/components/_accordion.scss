@@ -32,9 +32,6 @@
             // @media (max-width: 1300px) {
             //     margin-top: 40px;
             // }
-            @media (max-width: $tablet-s) {
-                margin-top: 24px;
-            }
         }
     }
     @media (max-width: $tablet-s) {
@@ -50,11 +47,17 @@
     // transition: $tr easy;
     // transition-delay: .5s;
     // transition-property: opacity;
-    p,
-    a {
-        transition-delay: .5s;
-        transition-property: opacity;
-        opacity: 0;
+    transition: all 0.5s;
+    // p,
+    // a {
+    //     transition-delay: .5s;
+    //     transition-property: opacity;
+    //     opacity: 0;
+    // }
+    p{
+        @media (max-width: $tablet-s) {
+            margin-top: 24px;
+        }
     }
 }
 
