@@ -2005,20 +2005,30 @@
 
             window.addEventListener('load ', e => {
                 if (window.innerWidth > 768) {
-                    preloadingImages(images)
+                    //preloadingImages(images);
+                    preload(images);
                 }
             })
 
-            function preloadingImages(arr) {
-                const preloadingContainer = document.getElementById('preloading_img ')
-                for (let i = 0; i < arr.length; i++) {
-                    const src = arr[i];
-                    const img = document.createElement('img ')
-                    img.setAttribute('src ', src)
+            // function preloadingImages(arr) {
+            //     const preloadingContainer = document.getElementById('preloading_img ')
+            //     for (let i = 0; i < arr.length; i++) {
+            //         const src = arr[i];
+            //         const img = document.createElement('img ')
+            //         img.setAttribute('src ', src)
 
-                    preloadingContainer.append(img)
-                }
+            //         preloadingContainer.append(img)
+            //     }
+            // }
+
+            function preload(arrayOfImages) {
+                $(arrayOfImages).each(function(){
+                    $('<img/>')[0].src = this;
+                    // Alternatively you could use:
+                    // (new Image()).src = this;
+                });
             }
+
 
             // TweenMax can tween any property of any object. We use this object to cycle through the array
             var obj = {
