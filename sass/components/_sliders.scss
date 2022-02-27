@@ -14,14 +14,21 @@
         display: flex;
         align-items: center;
     }
+    cursor: unset;
     @media (min-width: $minHover) {
+
         &:hover {
-            background: $second;
-            & svg path {
-                stroke: #fff;
+            &:enabled{
+                background: $second;
+                cursor: pointer;
+                & svg path {
+                    stroke: #fff;
+                }
             }
+            
         }
     }
+
     &:active {
         // background: $second;
         opacity: 0.7;
