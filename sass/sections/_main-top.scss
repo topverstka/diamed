@@ -2,6 +2,8 @@
     background-size: cover;
     padding-bottom: 32px;
     position: relative;
+
+    
     @media (min-width: $tablet) {
         .container {
             min-height: 100vh;
@@ -10,6 +12,12 @@
             justify-content: flex-end;
         }
     }
+    @media (min-width: $laptop-l){
+        .container {
+            min-height: calc(100vh - 100px);
+        }
+    }
+    
     @media (max-width: $laptop-m) {
         padding-bottom: 56px;
     }

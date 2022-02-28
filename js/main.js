@@ -478,6 +478,32 @@ function closeModal(modal) {
 }
 
 
+
+// sticky header
+
+  
+  window.onload = function () {
+    var stickyHeader = d.querySelector('.sticky');
+    var headerOffset = 100;
+  
+    window.onscroll = function() {
+      // body.scrollTop is deprecated and no longer available on Firefox
+      var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  
+      if (bodyScrollTop > 100) {
+        stickyHeader.classList.add('fixed');
+      } else {
+        stickyHeader.classList.remove('fixed');
+      }
+    };
+  };
+
+
+
+
+
+//sliders
+
 const swiper_slider = new Swiper('.actual_offer__slider', {
     speed: 400,
     spaceBetween: 20,

@@ -4,6 +4,13 @@
     transition: all 1s;
     animation-duration: 3s;
     animation-name: header;
+    z-index: 12;
+    &.fixed{
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0;
+    }
 }
 
 .header_index {
