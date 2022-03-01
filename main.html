@@ -2005,33 +2005,31 @@
 
             window.addEventListener('load ', e => {
                 if (window.innerWidth > 768) {
-                    //preloadingImages(images);
-                    preload(images);
+                    preloadingImages(images);
+                    //preload(images);
                 }
             })
 
-            // function preloadingImages(arr) {
-            //     const preloadingContainer = document.getElementById('preloading_img ')
-            //     for (let i = 0; i < arr.length; i++) {
-            //         const src = arr[i];
-            //         const img = document.createElement('img ')
-            //         img.setAttribute('src ', src)
+            function preloadingImages(arr) {
+                const preloadingContainer = document.getElementById('preloading_img ')
+                for (let i = 0; i < arr.length; i++) {
+                    const src = arr[i];
+                    const img = document.createElement('img ')
+                    img.setAttribute('src ', src)
 
-            //         preloadingContainer.append(img)
-            //     }
-            // }
-
-            function preload(arrayOfImages) {
-                $(arrayOfImages).each(function(){
-                    //$('<img/>')[0].src = this;
-
-                    var img = new Image();
-                    img.src = url;
-
-                    // Alternatively you could use:
-                    // (new Image()).src = this;
-                });
+                    preloadingContainer.append(img)
+                }
             }
+
+            // function preload(arrayOfImages) {
+            //     $(arrayOfImages).each(function(){
+
+            //         var img = new Image();
+            //         img.src = url;
+
+                   
+            //     });
+            // }
 
 
             // TweenMax can tween any property of any object. We use this object to cycle through the array
