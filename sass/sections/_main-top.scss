@@ -6,15 +6,9 @@
     
     @media (min-width: $tablet) {
         .container {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-        }
-    }
-    @media (min-width: $laptop-l){
-        .container {
-            min-height: calc(100vh - 100px);
         }
     }
     
@@ -31,8 +25,16 @@
     min-width: 460px;
     font-weight: 600;
     line-height: 68px;
-    padding-top: 129px;
     margin-bottom: 40px;
+    //padding-top: 129px;
+
+    @media (max-width: 1600px){
+        padding-top: 80px;
+    }
+
+    @media (max-width: $laptop-l){
+        padding-top: 50px;
+    }
     @media (max-width: $tablet) {
         min-width: auto;
         width: 70%;
@@ -80,6 +82,10 @@
     color: #fff;
     &::after {
         display: none
+    }
+
+    @media (max-width: $laptop-l){
+        margin-bottom: 75px;
     }
     @media (max-width:$tablet) {
         margin-bottom: 139px;
