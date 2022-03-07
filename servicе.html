@@ -18,7 +18,7 @@
     <div class="wrapper">
 
 
-        <header class="header">
+        <header class="header sticky">
             <div class="header_info">
                 <div class="container">
                     <div class="header_info__tel">
@@ -28,7 +28,7 @@
                     <div class="header_info__text">
 
                         <img src="./img/icons/icon_header.svg" alt="">
-                        <p>Университетская клиника МГМУ имени И.М. Сеченова</p>
+                        <p><a href="#">Университетская клиника МГМУ имени И.М. Сеченова</a></p>
                     </div>
                     <button class="header_info__time" data-modal-open="work_time">
                         <span class="header_info__time-text">Часы работы</span>
@@ -55,7 +55,7 @@
                             </div>
                             <form action="#" class="modal-search__form">
                                 <div class="modal-search__textfield">
-                                    <input type="text" id="search" placeholder="Поиск..." value="Лечение кариеса">
+                                    <input type="text" id="search" placeholder="Поиск...">
                                     <span class="modal-search__textfield-icon"><svg><use href='./img/sprite.svg#search-form_icon'></use></svg></span>
                                 </div>
                                 <button class="btn modal-search__submit" type="submit">Найти</button>
@@ -64,6 +64,47 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal modal-header" id="thanks">
+                <div class="modal__wrap modal-header__wrap">
+                    <div class="modal__content modal-header__content">
+                        <div class="container">
+                            <div class="modal-header__header">
+                                <h2 class="title-section modal-header__title">Спасибо!</h2>
+                                <button class="modal__close modal-header__close">
+                                <span></span>
+                                <span></span>
+                            </button>
+                            </div>
+                            <div class="modal-text">
+                                <p>Ваши данные успешно отправлены! Наш менеджер свяжется с Вами для уточнения деталей.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal modal-header" id="error">
+                <div class="modal__wrap modal-header__wrap">
+                    <div class="modal__content modal-header__content">
+                        <div class="container">
+                            <div class="modal-header__header">
+                                <h2 class="title-section modal-header__title">Ошибка!</h2>
+                                <button class="modal__close modal-header__close">
+                                <span></span>
+                                <span></span>
+                            </button>
+                            </div>
+                            <div class="modal-text modal-text--error">
+                                <svg><use xlink:href="./img/sprite.svg#error"></use></svg>
+                                <p>При отправке данных произошла ошибка. Пожалуйста, попробуйте снова.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="modal modal-header" id="work_time">
                 <div class="modal__wrap modal-header__wrap">
                     <div class="modal__content modal-header__content">
@@ -183,46 +224,46 @@
                     <div class="menu-left">
                         <ul class="menu-left__list">
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">О сети
+                                <a href="#" class="link_arrow link_arrow-light menu__link">О сети
                                     клиник</a>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Акции и
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Акции и
                                     новости</a>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Коллектив</a>
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Коллектив</a>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Наши
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Наши
                                     цены</a>
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list"></ul>
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list"></ul>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Ответы на
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Ответы на
                                     вопросы</a>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Отзывы</a>
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Отзывы</a>
                             </li>
                             <li class="menu-left__item">
-                                <a href="javascript:void(0)" class="link_arrow link_arrow-light menu__link">Контакты</a>
+                                <a href="#" class="link_arrow link_arrow-light menu__link">Контакты</a>
                             </li>
                         </ul>
                         <div class="menu-left__footer">
                             <div class="menu-left__schedule">
-                                <a href="javascript:void(0)" class="menu-left__schedule-title">Заполнить анкету
+                                <a href="#" class="menu-left__schedule-title">Заполнить анкету
                                     пациента</a>
                                 <button class="btn btn--white menu-left__schedule-btn">Расписание врачей</button>
                             </div>
@@ -271,7 +312,7 @@
                         <ul class="menu-left__list">
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">О сети клиник</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">О сети клиник</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -299,7 +340,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -313,7 +354,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -323,7 +364,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -342,7 +383,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Акции и новости</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Акции и новости</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -355,7 +396,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -369,7 +410,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -379,7 +420,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -398,78 +439,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Коллектив</a>
-                                </div>
-                                <ul class="acc-body menu-left__item-list">
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Диагностика</a>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Терапевтическая
-                                            стоматология</a>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Эстетическая
-                                            стоматология</a>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Хирургическая
-                                            стоматология и имплантация</a>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Ортопедическая
-                                            стоматология</a>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Цифровая
-                                            стоматология</a>
-                                    </li>
-                                    <li class="acc sub-menu__item show-menu-item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Брэкеты</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Детская пластинка для ровных зубов</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Антистресс-лечение</a>
-                                    </li>
-                                    <li class="acc sub-menu__item show-menu-item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Местная анастезия</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Акция! 2 зуба по цене 1</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="acc sub-menu__item show-menu-item">
-                                        <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
-                                        </div>
-                                        <ul class="acc-body sub-menu__item-list">
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
-                                                    рта</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
-                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM
-                                                    4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu__item show-menu-item">
-                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Пародонтология</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="acc menu-left__item">
-                                <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Наши цены</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Коллектив</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -497,7 +467,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -511,7 +481,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -521,7 +491,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -540,7 +510,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Наши цены</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -568,7 +538,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -582,7 +552,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -592,7 +562,7 @@
                                     </li>
                                     <li class="acc sub-menu__item show-menu-item">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -611,7 +581,78 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="services">Услуги</a>
+                                </div>
+                                <ul class="acc-body menu-left__item-list">
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Диагностика</a>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Терапевтическая
+                                            стоматология</a>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Эстетическая
+                                            стоматология</a>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Хирургическая
+                                            стоматология и имплантация</a>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Ортопедическая
+                                            стоматология</a>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Цифровая
+                                            стоматология</a>
+                                    </li>
+                                    <li class="acc sub-menu__item show-menu-item">
+                                        <div class="acc-header sub-menu__item-header">
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                        </div>
+                                        <ul class="acc-body sub-menu__item-list">
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Брэкеты</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Детская пластинка для ровных зубов</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Антистресс-лечение</a>
+                                    </li>
+                                    <li class="acc sub-menu__item show-menu-item">
+                                        <div class="acc-header sub-menu__item-header">
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                        </div>
+                                        <ul class="acc-body sub-menu__item-list">
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Местная анастезия</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Акция! 2 зуба по цене 1</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="acc sub-menu__item show-menu-item">
+                                        <div class="acc-header sub-menu__item-header">
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                        </div>
+                                        <ul class="acc-body sub-menu__item-list">
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
+                                                    рта</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Удаление зубного камня</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Чистка Air Flow</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Фторирование и ремотерапия</a></li>
+                                            <li class="d-sub-menu__item show-menu-item"><a href="#" class="link d-sub-menu__link">Отбеливание зубов по технологии ZOOM
+                                                    4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub-menu__item show-menu-item">
+                                        <a href="#" class="link_arrow link_arrow-sub sub-menu__link">Пародонтология</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc menu-left__item">
+                                <div class="acc-header menu-left__header">
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Вакансии</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -628,7 +669,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Ответы на вопросы</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Ответы на вопросы</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -645,7 +686,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Отзывы</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Отзывы</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -662,7 +703,7 @@
                             </li>
                             <li class="acc menu-left__item">
                                 <div class="acc-header menu-left__header">
-                                    <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Контакты</a>
+                                    <a href="#" class="acc-open link_arrow link_arrow-light menu__link" data-sub-menu="vacancy">Контакты</a>
                                 </div>
                                 <ul class="acc-body menu-left__item-list">
                                     <li class="sub-menu__item show-menu-item">
@@ -680,7 +721,7 @@
                         </ul>
                         <div class="menu-left__footer">
                             <div class="menu-left__schedule">
-                                <a href="javascript:void(0)" class="menu-left__schedule-title">Заполнить анкету
+                                <a href="#" class="menu-left__schedule-title">Заполнить анкету
                                     пациента</a>
                                 <button class="btn btn--white menu-left__schedule-btn">Расписание врачей</button>
                             </div>
@@ -738,7 +779,7 @@
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 120ms;"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="">Цифровая стоматология</a></li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 140ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -750,7 +791,7 @@
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 160ms;"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="">Антистресс-лечение</a></li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 180ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -760,7 +801,7 @@
                                     </li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 200ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -780,7 +821,7 @@
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 120ms;"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="">Цифровая стоматология</a></li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 140ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="orthodontist">Ортодонтия</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Слепок челюсти</a></li>
@@ -792,7 +833,7 @@
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 160ms;"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="">Антистресс-лечение</a></li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 180ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -802,7 +843,7 @@
                                     </li>
                                     <li class="sub-menu__item show-menu-item acc" style="animation-delay: 200ms;">
                                         <div class="acc-header sub-menu__item-header">
-                                            <a href="javascript:void(0)" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
+                                            <a href="#" class="acc-open link_arrow link_arrow-sub sub-menu__link">Гигиеническая стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Профессиональная чистка полости
@@ -867,16 +908,16 @@
         <main class="main">
             <section class="first-block">
                 <div class="container">
-                    <div class="breadcrumbs breadcrumbs-indent breadcrumbs-container wow fadeIn">
+                    <div class="breadcrumbs breadcrumbs-indent breadcrumbs-container">
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
                             <li class="breadcrumbs__item"><a class="link" href="#">Услуги стоматологии</a></li>
                             <li class="breadcrumbs__item">Эндодонтическое лечение каналов</li>
                         </ul>
                     </div>
-                    <h1 class="first-block__header title-main wow showTitle">Эндодонтическое лечение каналов</h1>
-                    <p class="first-block__text wow fadeIn">Частой проблемой, с которой пациенты обращаются к стоматологам, является воспалительный процесс в каналах зубов. Как правило, это запущенные ситуации, когда человек долгое время не обращается к врачу для лечения кариеса. </p>
-                    <button class="btn first-block__btn wow fadeIn">Записаться на консультацию</button>
+                    <h1 class="first-block__header title-main">Эндодонтическое лечение каналов</h1>
+                    <p class="first-block__text">Частой проблемой, с которой пациенты обращаются к стоматологам, является воспалительный процесс в каналах зубов. Как правило, это запущенные ситуации, когда человек долгое время не обращается к врачу для лечения кариеса. </p>
+                    <button class="btn first-block__btn">Записаться на консультацию</button>
                 </div>
                 <img class="first-block__background" src="./img/service_section/background-2.jpg" alt="">
             </section>
@@ -962,7 +1003,7 @@
             <section class="section_information_services">
                 <div class="container">
                     <div class="tabs__container">
-                        <div class="tabs__header wow fadeIn" data-wow-delay=".2s">
+                        <div class="tabs__header">
                             <div class="tab__list">
                                 <div class="tab__roller"></div>
                                 <button class="tab" data-tab="info_features">Особенности</button>
@@ -973,7 +1014,7 @@
                         </div>
                     </div>
                     <div class="section_information_services__box">
-                        <div class="section_information_services__left wow showTitle">
+                        <div class="section_information_services__left">
                             <div class="section_information_services__item tabs__block" data-tab-body="info_features">
                                 <h2 class="title-section section_information_services__item-header">Особенности работы с каналами зубов</h2>
                                 <ul class="section_information_services__item-list">
@@ -1082,7 +1123,7 @@
                             </div>
                         </div>
                         <div class="section_information_services__right-info">
-                            <ul class="section_information_services__list wow bounceInRight">
+                            <ul class="section_information_services__list">
                                 <li class="section_information_services__list-wrap">
                                     <p class="section_information_services__list-title">от 2 до 4 каналов</p>
                                     <span class="section_information_services__list-text">

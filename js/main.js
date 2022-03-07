@@ -481,22 +481,22 @@ function closeModal(modal) {
 
 // sticky header
 
-  
-  window.onload = function () {
+
+window.onload = function() {
     var stickyHeader = d.querySelector('.sticky');
     var headerOffset = 100;
-  
+
     window.onscroll = function() {
-      // body.scrollTop is deprecated and no longer available on Firefox
-      var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  
-      if (bodyScrollTop > 100) {
-        stickyHeader.classList.add('fixed');
-      } else {
-        stickyHeader.classList.remove('fixed');
-      }
+        // body.scrollTop is deprecated and no longer available on Firefox
+        var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (bodyScrollTop > 100) {
+            stickyHeader.classList.add('fixed');
+        } else {
+            stickyHeader.classList.remove('fixed');
+        }
     };
-  };
+};
 
 
 
@@ -802,23 +802,23 @@ function accordions() {
                 target.classList.toggle('_show')
 
                 if (accBody.style.maxHeight) {
-                    
+
                     parent.classList.remove('_show');
                     target.classList.remove('_show');
 
-                    if(accBody.closest('.menu')){
+                    if (accBody.closest('.menu')) {
                         accBody.style.maxHeight = null;
                         container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                    }else{
-                        setTimeout(function(){
+                    } else {
+                        setTimeout(function() {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
                         }, 500);
                     }
-                   
+
                 } else {
 
-                    if (parent.classList.contains('accordion_container-list') || parent.parentElement.parentElement.classList.contains('menu-left-mobile') ) {
+                    if (parent.classList.contains('accordion_container-list') || parent.parentElement.parentElement.classList.contains('menu-left-mobile')) {
                         const adjacentElems = getSiblings(parent)
                         for (let i = 0; i < adjacentElems.length; i++) {
                             const elem = adjacentElems[i]
@@ -831,11 +831,11 @@ function accordions() {
                         }
                     }
 
-                    
-                        accBody.style.maxHeight = accBody.scrollHeight + 'px';
-                        container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                    
-                    
+
+                    accBody.style.maxHeight = accBody.scrollHeight + 'px';
+                    container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
+
+
 
                     if (parent.closest('.menu-left__item')) {
                         parent.closest('.menu-left__item').style.maxHeight = 'none'
@@ -976,9 +976,9 @@ $(arr_variable).each((i, el) => {
     let navTop = $carouselNav.position().top;
     let navCellHeight = $carouselNavCells.height();
     let navHeight = $carouselNav.height();
+    let scrollY = 0;
 
-
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 993) {
         $(el).find('.carousel-nav').attr('data-flickity', `{"asNavFor": "${el + ' .carousel-main' }", "pageDots": false, "imagesLoaded": true, "contain": true,  "draggable": true}`);
     }
 
@@ -988,12 +988,62 @@ $(arr_variable).each((i, el) => {
         let $selected = $carouselNavCells.eq(flkty.selectedIndex)
             .addClass('is-nav-selected');
 
+        function size_window() {
+            if (window.innerWidth < 1320) {
+                return true;
+            } else {
+                return false
+            }
+        }
 
-        let scrollY = $selected.position().top +
-            $carouselNav.scrollTop() - (navHeight + navCellHeight) / 1.5;
-        $carouselNav.animate({
-            scrollTop: scrollY
-        });
+
+
+        if (size_window()) {
+            if (((navHeight - navCellHeight + 16)) < $selected.position().top) {
+                scrollY += navCellHeight;
+                $carouselNav.animate({
+                    scrollTop: scrollY
+                });
+            } else if (Math.sign($selected.position().top) === -1 || $selected.position().top <= 20) {
+                scrollY -= navCellHeight;
+                $carouselNav.animate({
+                    scrollTop: scrollY
+                });
+            }
+
+        } else {
+            if (((navHeight - navCellHeight + 16)) < $selected.position().top) {
+                scrollY += navCellHeight;
+                $carouselNav.animate({
+                    scrollTop: scrollY
+                });
+            } else if (Math.sign($selected.position().top) === -1) {
+                scrollY -= navCellHeight;
+                $carouselNav.animate({
+                    scrollTop: scrollY
+                });
+            }
+
+        }
+
+
+
+        // if (flkty.selectedIndex < Math.ceil(flkty.cells.length)) {
+        //     let scrollY = $selected.position().top +
+        //         $carouselNav.scrollTop() - (navHeight - navCellHeight);
+        //     $carouselNav.animate({
+        //         scrollTop: scrollY
+        //     });
+        // } else {
+        //     let scrollY = $selected.position().top -
+        //         $carouselNav.scrollTop() + (navHeight - navCellHeight);
+        //     $carouselNav.animate({
+        //         scrollTop: scrollY
+        //     });
+        //     console.log($selected, 'small')
+        // }
+
+        //   console.log(flkty.selectedIndex, flkty.cells.length, flkty.selectedElements)
 
     });
 

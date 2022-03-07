@@ -4,7 +4,7 @@
         display: flex;
         border: 1px solid #F0EFEF;
         border-radius: $radius2;
-        height: 292px;
+        min-height: 292px;
     }
     .service_articles__arrows {
         display: none
@@ -50,6 +50,7 @@
     line-height: 28px;
     font-weight: 600;
     margin-bottom: 16px;
+    overflow: initial;
     @media (max-width: 600px) {
         font-size: 16px;
         line-height: 26px;

@@ -2,118 +2,105 @@
     margin: auto 0 0 0;
     padding-top: 32px;
     padding-bottom: 20px;
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         padding-top: 24px;
     }
 }
 
-
-.footer-top{
+.footer-top {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     align-items: center;
-
     @media (max-width: $tablet-l) {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
-
-.footer-logo{
+.footer-logo {
     margin-right: 181px;
-    img{
+    img {
         width: 146px;
     }
 }
 
-.footer-menu{
+.footer-menu {
     position: relative;
     top: 3px;
-
-    
-
     @media (max-width: $tablet-l) {
         margin-top: 40px;
     }
-
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
         margin-top: 36px;
     }
-
-    ul{
+    ul {
         padding: 0;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
     }
-    li{
+    li {
         &:not(:last-child) {
             margin-right: 51px;
-            @media (max-width: $tablet-s){
-               margin-right: 38px;
+            @media (max-width: $tablet-s) {
+                margin-right: 38px;
             }
         }
     }
-    a{
+    a {
         font-size: 14px;
         line-height: 20px;
         color: #686868;
         font-weight: 400;
-
-        @media (max-width: $tablet-s){
+        &:hover {
+            color: $second
+        }
+        @media (max-width: $tablet-s) {
             font-size: 12px;
         }
     }
 }
 
-.footer-creator{
+.footer-creator {
     position: absolute;
     right: 0;
     margin-bottom: -10px;
-
-    img{
+    img {
         width: 84px;
     }
-
     @media (max-width: $laptop) {
         position: static;
         flex-basis: 100%;
         margin-top: 40px;
     }
-
-    @media (max-width: $tablet-s){
+    @media (max-width: $tablet-s) {
         margin-top: 43px;
-        img{
+        img {
             width: 78px;
         }
     }
 }
 
-.footer-bottom{
+.footer-bottom {
     margin-top: 34px;
     border-top: 1px solid #F0EFEF;
     text-align: center;
     padding-top: 20px;
-
-    @media (max-width: $tablet){
+    @media (max-width: $tablet) {
         margin-top: 28px;
     }
 }
 
-.footer-text{
+.footer-text {
     color: #CACACA;
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.2em;
-
     @media (max-width: $tablet) {
         text-align: left;
     }
-
     @media (max-width: $tablet-s) {
         font-size: 14px;
         line-height: 17px;

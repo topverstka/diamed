@@ -5,7 +5,7 @@
     h2 {
         margin-top: 50px;
         margin-bottom: 30px;
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             margin-bottom: 32px;
         }
         @media (max-width: $tablet-s) {
@@ -19,17 +19,17 @@
         width: 100%;
         overflow-x: auto;
         margin-bottom: 80px;
-        @media (min-width: $tablet) and (max-width: $tablet-l) {
+        @media (min-width: $tablet) and (max-width: $tablet-ls) {
             & .tab {
                 font-size: 12px;
             }
         }
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             margin-bottom: 40px;
             padding: 0 $p-mob;
         }
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         &>.container {
             padding: 0;
         }
@@ -56,12 +56,6 @@
     opacity: 1;
 }
 
-.carousel-container {
-    display: flex;
-    position: relative;
-    height: 704px
-}
-
 .our_doctors__wrapp {
     display: flex;
     .tabs__block {
@@ -81,7 +75,7 @@
             }
         }
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         flex-direction: column;
     }
 }
@@ -94,7 +88,7 @@
     width: 773px;
     height: 820px;
     pointer-events: none;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         width: 500px;
         height: 530px;
         bottom: auto;
@@ -107,19 +101,20 @@
 .our_doctors__right-slider {
     z-index: 2;
     height: 704px;
+    width: 100%;
     ._active {
         position: static;
     }
     .tabs__block {
         width: 100%
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         position: relative;
     }
     @media (max-width: $tablet-s) {
         height: 380px
     }
-    @media (min-width:$tablet-s) and (max-width:$tablet) {
+    @media (min-width:$tablet-s) and (max-width:$tablet-ls) {
         height: 750px
     }
 }
@@ -132,7 +127,7 @@
     @media (max-width: 1050px) {
         margin-right: 32px;
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         padding: 0;
         margin: 0;
     }
@@ -145,7 +140,7 @@
     .swiper__arrow {
         justify-content: flex-end;
         margin-top: 32px;
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             margin-bottom: 32px;
         }
         @media (max-width: $tablet-s) {
@@ -156,7 +151,7 @@
 }
 
 .our_doctors__title {
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         padding: 0 $p-mob;
     }
 }
@@ -164,21 +159,21 @@
 .our_doctors__more {
     margin: auto 0 52px;
     font-size: 14px;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         display: none;
     }
 }
 
 .our_doctors_service:not(.our_doctors_service__index) .our_doctors__more {
     display: flex;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         padding: 0 20px;
         margin-bottom: 36px;
     }
 }
 
 .our_doctors__info-initial {
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         padding: 0 $p-mob;
     }
 }
@@ -228,7 +223,7 @@
     //     flex-direction: column;
     //     gap: 0;
     // }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         height: auto;
         display: flex;
         flex-direction: column;
@@ -262,7 +257,7 @@
     .swiper-wrapper {
         // flex-direction: column;
         // height: 704px;
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             flex-direction: initial;
         }
     }
@@ -279,19 +274,35 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             position: absolute;
             top: 0;
             left: 0;
-        }
-        @media (max-width: $tablet-s) {
             object-position: 0 8%;
         }
     }
 }
 
+.carousel-container {
+    @media (min-width: $tablet-ls) and (max-width: 1320px) {
+        grid-template-columns: 1fr .3fr;
+        .carousel {
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-nav .carousel-cell {
+            width: 100px;
+            height: 100px
+        }
+    }
+}
+
+.our_doctors__right-slider .tabs__block {
+    height: 100%
+}
+
 .our_doctors__arrows {
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         padding: 0 $p-mob;
     }
 }
@@ -307,7 +318,7 @@
     @media (max-width: 930px) {
         height: 400px;
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         height: 525px;
         max-width: 100%;
         margin-bottom: 0!important;
@@ -337,9 +348,9 @@
     @media (max-width: 830px) {
         max-width: 400px;
     }
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         max-width: none;
-         padding: 0 0 0 20px;
+        padding: 0 0 0 20px;
     }
     @media (max-width: $tablet-s) {
         margin-top: 20px;
@@ -356,7 +367,7 @@
         //     width: 100px;
         //     height: 100px;
         // }
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-ls) {
             // height: 100%;
             margin-bottom: 0;
             &::after {
@@ -401,7 +412,7 @@
 .our_doctors_service .our_doctors__slider-main {
     width: 544px;
     max-width: 100%;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         width: 100%
     }
 }
@@ -413,7 +424,7 @@
 
 .our_doctors_service .our_doctors__tabs-container {
     margin-bottom: 48px;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-ls) {
         margin-bottom: 34px;
     }
 }

@@ -14,17 +14,16 @@ $minHover: 769px; // Минимальное разрешения экрана д
 $container: 1328px;
 $radius: var(--radius);
 $radius2: var(--radius2);
-
 $laptop-l: 1440px;
 $laptop-m: 1280px;
 $laptop: 1024px;
+$tablet-ls: 992px;
 $tablet-l: 920px;
 $tablet: 768px;
 $tablet-s: 500px;
 $mobile-l: 425px;
-$mobile-m: 375px; 
+$mobile-m: 375px;
 $mobile: 320px;
-
 // Цвета
 :root {
     --main: #313033;

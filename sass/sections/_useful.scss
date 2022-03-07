@@ -21,7 +21,7 @@
 
 .useful_wrapp {
     display: flex;
-    height: 308px;
+    min-height: 308px;
     &>div:not(:last-child) {
         margin-right: 20px;
         @media (max-width: $laptop) {
@@ -46,6 +46,14 @@
     background: #fff;
     border-radius: $radius2;
     padding: 30px 48px 32px 32px;
+    @media (min-width: $laptop) and (max-width: 1280px) {
+        padding-right: 32px;
+        display: flex;
+        flex-direction: column;
+        .btn_more {
+            margin-top: auto;
+        }
+    }
     @media (max-width: $laptop) {
         width: auto;
     }
@@ -69,6 +77,9 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 55px;
+    @media (max-width: 1280px) {
+        margin-bottom: 40px;
+    }
     @media (max-width: $tablet-s) {
         font-size: 16px;
         margin-bottom: 42px;
@@ -131,6 +142,13 @@
     height: 31px;
     @media (max-width: $tablet-s) {
         width: 23px;
+    }
+    @media (min-width: $minHover) {
+        &:hover {
+            path {
+                fill: #4BB9B5
+            }
+        }
     }
 }
 

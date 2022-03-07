@@ -130,6 +130,7 @@
     max-width: 360px;
     a {
         position: relative;
+        transition: 0.1s linear;
         &:after {
             display: block;
             width: 100%;
@@ -142,6 +143,9 @@
         }
         &:active {
             opacity: .8;
+        }
+        &:hover {
+            font-weight: 500;
         }
     }
     @media (max-width: $tablet-s) {
@@ -233,6 +237,9 @@
         }
         &:active {
             opacity: 0.8;
+        }
+        &:hover {
+            font-weight: bold;
         }
         &:after {
             content: '';
