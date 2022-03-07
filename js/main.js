@@ -646,7 +646,13 @@ function tabs() {
                 removeAll(tabElems, '_active')
                 tab.classList.add('_active');
                 tabBlockActive(tab);
-                swipeRoller(tabList)
+                swipeRoller(tabList);
+                if (tab.closest('.form-class')) {
+                    tab.closest('.form-class').querySelectorAll('input._req').forEach(el => {
+                        console.log(el)
+                        hideError(el)
+                    });
+                }
             })
         }
     }
@@ -690,7 +696,6 @@ function tabBlockActive(data) {
 
     [...tabActive].filter(i => {
         if (document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`)) {
-            //    console.log(document.querySelector(`[data-tab-body=${i.getAttribute('data-tab')}]`));
             document.querySelectorAll(`[data-tab-body=${i.getAttribute('data-tab')}]`).forEach(i => i.classList.add('_show'));
         }
     });
