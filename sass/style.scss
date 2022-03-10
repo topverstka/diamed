@@ -17,11 +17,11 @@ body {
     &._lock {
         overflow: hidden;
     }
-    // @media (min-width:$tablet-l) {
-    //     &._lock {
-    //         padding: 0 calc(16px - (100vw - 100%)) 0 0
-    //     }
-    // }
+    @media (min-width:$tablet-l) {
+        &._lock {
+            padding: 0 calc(16px - (100vw - 100%)) 0 0
+        }
+    }
 }
 
 .wrapper {

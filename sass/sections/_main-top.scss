@@ -2,8 +2,6 @@
     background-size: cover;
     padding-bottom: 32px;
     position: relative;
-
-    
     @media (min-width: $tablet) {
         .container {
             display: flex;
@@ -11,7 +9,6 @@
             justify-content: flex-end;
         }
     }
-    
     @media (max-width: $laptop-m) {
         padding-bottom: 56px;
     }
@@ -27,12 +24,10 @@
     line-height: 68px;
     margin-bottom: 40px;
     //padding-top: 129px;
-
-    @media (max-width: 1600px){
+    @media (max-width: 1600px) {
         padding-top: 80px;
     }
-
-    @media (max-width: $laptop-l){
+    @media (max-width: $laptop-l) {
         padding-top: 50px;
     }
     @media (max-width: $tablet) {
@@ -80,11 +75,10 @@
     align-items: center;
     margin-bottom: 127px;
     color: #fff;
-    &::after {
+    &::before {
         display: none
     }
-
-    @media (max-width: $laptop-l){
+    @media (max-width: $laptop-l) {
         margin-bottom: 75px;
     }
     @media (max-width:$tablet) {

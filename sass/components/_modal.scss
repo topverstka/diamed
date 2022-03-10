@@ -4,18 +4,31 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .3);
+    height: auto;
+    //  background: rgba(0, 0, 0, .3);
     overflow: hidden;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: $tr;
+    // transform: translateY(-100%);
+    transition-delay: .40s;
     &._show {
         visibility: visible;
         opacity: 1;
-        overflow-y: auto;
+        overflow: visible;
+        transform: none;
         & .modal__wrap {
-            transform: translate(0, 0);
+            transform: translateY(0);
+            &::after {
+                content: '';
+                position: absolute;
+                background: rgba(248, 247, 252, .5);
+                width: 100%;
+                height: 100vh;
+                bottom: -100vh;
+                backdrop-filter: blur(5px);
+                transition: 0s;
+            }
         }
     }
     @media (min-width:$tablet-l) {
@@ -29,12 +42,12 @@
 
 .modal__wrap {
     min-height: 100%;
-    transform: translate(0, 100vh);
+    //  transform: translateY(0, 100vh);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 16px;
-    transition: $tr;
+    // transition: $tr;
 }
 
 .modal__content {
