@@ -91,6 +91,7 @@ if (windowWidth > 767) {
 }
 
 if (intro) {
+    intro.play();
     intro.play().then(function() {
         intro.classList.add('active');
         introBG.classList.add('active')
@@ -100,6 +101,9 @@ if (intro) {
         introBG.setAttribute('src', src);
         console.log('Ошибка воспроизведения видео');
     })
+
+    // intro.classList.add('active');
+    // introBG.classList.add('active')
 
     // intro.play()
     //     .catch(e => {
