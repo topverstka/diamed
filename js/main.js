@@ -67,6 +67,9 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+});
 
 // Интро
 let windowWidth = window.innerWidth;
