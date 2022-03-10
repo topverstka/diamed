@@ -67,9 +67,9 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+// });
 
 // Интро
 let windowWidth = window.innerWidth;
@@ -91,15 +91,23 @@ if (windowWidth > 767) {
 }
 
 if (intro) {
-    intro.classList.add('active');
-    introBG.classList.add('active')
-    intro.play()
-        .catch(e => {
-            intro.remove();
-            let src = introBG.getAttribute('data-src-end');
-            introBG.setAttribute('src', src);
-            console.log('Ошибка воспроизведения видео');
-        })
+    intro.play().then(function() {
+        intro.classList.add('active');
+        introBG.classList.add('active')
+    }).catch(function(err) {
+        intro.remove();
+        let src = introBG.getAttribute('data-src-end');
+        introBG.setAttribute('src', src);
+        console.log('Ошибка воспроизведения видео');
+    })
+
+    // intro.play()
+    //     .catch(e => {
+    //         intro.remove();
+    //         let src = introBG.getAttribute('data-src-end');
+    //         introBG.setAttribute('src', src);
+    //         console.log('Ошибка воспроизведения видео');
+    //     })
 }
 
 
