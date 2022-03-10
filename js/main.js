@@ -92,9 +92,10 @@ if (windowWidth > 767) {
 
 if (intro) {
     intro.play();
+    intro.classList.add('active');
+    introBG.classList.add('active');
     intro.play().then(function() {
-        intro.classList.add('active');
-        introBG.classList.add('active')
+        console.log('play');
     }).catch(function(err) {
         intro.remove();
         let src = introBG.getAttribute('data-src-end');
