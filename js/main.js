@@ -818,7 +818,7 @@ function accordions() {
                         setTimeout(function() {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                        }, 500);
+                        }, 100);
                     }
 
                 } else {

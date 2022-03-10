@@ -26,8 +26,12 @@
             a {
                 opacity: 1;
             }
+            // transition: all 0.5s;
+            // transition-delay: .1s;
         }
         & .accordion_container-list-content {
+            //  transition-delay: .5s;
+            transition: max-height .6s linear, opacity 1s linear;
             // margin-top: 24px;
             // @media (max-width: 1300px) {
             //     margin-top: 40px;
@@ -48,13 +52,14 @@
     // transition-delay: .5s;
     // transition-property: opacity;
     transition: all 0.5s;
+    transition-delay: .4s;
     // p,
     // a {
     //     transition-delay: .5s;
     //     transition-property: opacity;
     //     opacity: 0;
     // }
-    p{
+    p {
         @media (max-width: $tablet-s) {
             margin-top: 24px;
         }
@@ -106,7 +111,8 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: 108px;
-    transition: $tr linear;
+    // transition: .5s linear;
+    transition: max-height .6s linear, opacity 0s;
     @media (max-width: $tablet) {
         margin-right: 97px;
     }

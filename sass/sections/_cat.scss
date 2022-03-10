@@ -130,7 +130,7 @@
     max-width: 360px;
     a {
         position: relative;
-        transition: 0.1s linear;
+        transition: 0s;
         &:after {
             display: block;
             width: 100%;
@@ -231,6 +231,7 @@
         font-size: 20px;
         font-weight: 600;
         line-height: 32px;
+        transition: 0s;
         @media (max-width: $tablet-s) {
             font-size: 14px;
             line-height: 1;

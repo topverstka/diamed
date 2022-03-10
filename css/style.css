@@ -6096,6 +6096,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   opacity: 1;
 }
 
+.accordion_container-list._show .accordion_container-list-content {
+  -webkit-transition: max-height .6s linear, opacity 1s linear;
+  transition: max-height .6s linear, opacity 1s linear;
+}
+
 @media (max-width: 500px) {
   .accordion_container-list {
     -webkit-box-orient: vertical;
@@ -6115,6 +6120,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
 }
 
 @media (max-width: 500px) {
@@ -6185,8 +6192,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   overflow: hidden;
   margin-left: auto;
   margin-right: 108px;
-  -webkit-transition: var(--tr) linear;
-  transition: var(--tr) linear;
+  -webkit-transition: max-height .6s linear, opacity 0s;
+  transition: max-height .6s linear, opacity 0s;
 }
 
 @media (max-width: 768px) {
@@ -9453,6 +9460,7 @@ h6 {
   border-radius: var(--radius2);
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 769px) and (max-width: 1100px) {
@@ -9934,8 +9942,8 @@ h6 {
 
 .form-footer__privacy a {
   position: relative;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 .form-footer__privacy a:after {
@@ -10086,6 +10094,8 @@ h6 {
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 @media (max-width: 500px) {
