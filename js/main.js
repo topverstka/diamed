@@ -91,7 +91,6 @@ if (windowWidth > 767) {
 }
 
 if (intro) {
-    intro.play();
     intro.classList.add('active');
     introBG.classList.add('active');
     intro.play().then(function() {
