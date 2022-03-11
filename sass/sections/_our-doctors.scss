@@ -290,6 +290,8 @@
             width: 100%;
             height: 100%;
         }
+    }
+    @media (min-width: $tablet-ls) and (max-width: 1250px) {
         .carousel-nav .carousel-cell {
             width: 100px;
             height: 100px

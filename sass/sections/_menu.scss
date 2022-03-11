@@ -174,11 +174,11 @@
 
 .menu__link {
     font-size: 20px;
-    &._active {
+    &.link_arrow._active {
         opacity: 1;
-        &::after {
-            transform: rotate(45deg);
-        }
+        // &::before {
+        //     transform: rotate(45deg);
+        // }
     }
     @media (max-width: $tablet-s) {
         width: 100%;
@@ -189,7 +189,7 @@
         }
         &._show {
             opacity: 1;
-            &::after {
+            &::before {
                 transform: rotate(90deg);
             }
         }

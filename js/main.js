@@ -939,8 +939,28 @@ function showSubMenu() {
                     removeAll('.d-sub-menu__block', '_show')
                     removeAll('.sub-menu__link', '_show')
                     removeAll('[data-menu]', '_show')
+                    removeAll('[data-sub-menu]', '_active')
+                    removeAll('.menu__link', '_active')
                     subMenu.classList.add('_show')
+                    target.classList.add('_active')
                 }
+            }
+
+            if (!target.classList.contains('_active') && e.target.classList.contains('menu__link')) {
+                removeAll('.menu__link', '_active')
+                target.classList.add('_active')
+            }
+
+
+            if (target.getAttribute('data-d-sub-menu') && !e.target.classList.contains('d-sub-menu__block')) {
+                removeAll('.sub-menu__link', '_active')
+                target.classList.add('_active')
+
+            }
+
+            if (!target.classList.contains('_active') && e.target.classList.contains('sub-menu__link')) {
+                removeAll('.sub-menu__link', '_active')
+                target.classList.add('_active')
             }
         })
     }
