@@ -941,6 +941,7 @@ function showSubMenu() {
                     removeAll('[data-menu]', '_show')
                     removeAll('[data-sub-menu]', '_active')
                     removeAll('.menu__link', '_active')
+                    removeAll('.sub-menu__link', '_active')
                     subMenu.classList.add('_show')
                     target.classList.add('_active')
                 }
