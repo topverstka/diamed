@@ -440,9 +440,9 @@
 .our_doctors_service .tab {
     @media (max-width: $tablet-s) {
         font-size: 10px;
-        &:not(:last-child) {
-            margin-right: 2px;
-        }
+        // &:not(:last-child) {
+        //     margin-right: 2px;
+        // }
     }
 }
 

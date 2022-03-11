@@ -8837,9 +8837,6 @@ h6 {
   .our_doctors_service .tab {
     font-size: 10px;
   }
-  .our_doctors_service .tab:not(:last-child) {
-    margin-right: 2px;
-  }
 }
 
 .our_doctors__info-arrows-slider {
