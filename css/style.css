@@ -5089,7 +5089,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: var(--main);
 }
 
-.link_arrow::before {
+.link_arrow::after {
   content: '';
   min-width: 24px;
   width: 24px;

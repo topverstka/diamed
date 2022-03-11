@@ -134,7 +134,7 @@
     font-weight: 600;
     color: $main;
     // white-space: nowrap;
-    &::before {
+    &::after {
         content: '';
         min-width: 24px;
         width: 24px;

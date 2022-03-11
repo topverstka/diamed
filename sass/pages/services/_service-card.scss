@@ -4,23 +4,19 @@
 }
 
 $service-card-outline: var(--service-card-outline);
-
 .service-card {
     position: relative;
     border: 1px solid $service-card-outline;
     border-radius: $radius2;
     padding: 32px;
     overflow: hidden;
-
     @media (max-width: $mobile-l) {
         padding: 20px;
     }
 }
 
 // Шапка карточки
-.service-card__header {
-
-}
+.service-card__header {}
 
 .service-card__title {
     position: relative;
@@ -29,7 +25,6 @@ $service-card-outline: var(--service-card-outline);
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
-
     @media (max-width: $mobile-l) {
         font-size: 16px;
         line-height: 26px;
@@ -42,7 +37,6 @@ $service-card-outline: var(--service-card-outline);
     right: -33px;
     width: 102px;
     height: 102px;
-
     @media (max-width: $mobile-l) {
         top: 11px;
         right: -27px;
@@ -54,21 +48,16 @@ $service-card-outline: var(--service-card-outline);
 // Тело карточки
 .service-card__body {
     margin-top: 24px;
-
     @media (max-width: $mobile-l) {
         margin-top: 16px;
     }
 }
 
-.servie-card__list {
-
-}
+.servie-card__list {}
 
 .service-card__item {
-
     &:not(:last-child) {
         margin-bottom: 24px;
-
         @media (max-width: $mobile-l) {
             margin-bottom: 16px;
         }
@@ -80,12 +69,10 @@ $service-card-outline: var(--service-card-outline);
     font-weight: 500;
     flex-direction: row-reverse;
     align-items: flex-start;
-
     &::after {
         margin-left: 0;
         margin-right: 8px;
     }
-
     @media (max-width: $mobile-l) {
         font-size: 14px;
     }
