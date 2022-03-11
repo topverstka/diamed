@@ -994,6 +994,13 @@ function showDSubMenu() {
 
 
 /* Слайдер в секции врачей */
+function size_window() {
+    if (window.innerWidth < 1320) {
+        return true;
+    } else {
+        return false
+    }
+}
 let arr_variable = [];
 document.querySelectorAll('.our_doctors__right-slider .tabs__block').forEach(i => {
     arr_variable.push('.tabs__block[data-tab-body=' + i.dataset.tabBody + ']');
@@ -1033,13 +1040,7 @@ $(arr_variable).each((i, el) => {
         let $selected = $carouselNavCells.eq(flkty.selectedIndex)
             .addClass('is-nav-selected');
 
-        function size_window() {
-            if (window.innerWidth < 1320) {
-                return true;
-            } else {
-                return false
-            }
-        }
+
 
 
 
