@@ -7329,6 +7329,11 @@ h6 {
   opacity: 1;
 }
 
+.menu__link.link_arrow._active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 @media (max-width: 500px) {
   .menu__link {
     width: 100%;
@@ -7606,7 +7611,7 @@ h6 {
   opacity: 1;
 }
 
-.sub-menu__link._active::after {
+.sub-menu__link._active::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }

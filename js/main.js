@@ -946,7 +946,7 @@ function showSubMenu() {
                 }
             }
 
-            if (!target.classList.contains('_active') && e.target.classList.contains('menu__link')) {
+            if (!target.classList.contains('_active') && e.target.classList.contains('menu__link') && find(`[data-menu=${target.dataset.subMenu}]`)) {
                 removeAll('.menu__link', '_active')
                 target.classList.add('_active')
             }
@@ -958,9 +958,11 @@ function showSubMenu() {
 
             }
 
-            if (!target.classList.contains('_active') && e.target.classList.contains('sub-menu__link')) {
-                removeAll('.sub-menu__link', '_active')
-                target.classList.add('_active')
+            if (target.dataset.dSubMenu) {
+                if (!target.classList.contains('_active') && e.target.classList.contains('sub-menu__link') && find(`[data-d-sub-menu=${target.dataset.dSubMenu}]`)) {
+                    removeAll('.sub-menu__link', '_active')
+                    target.classList.add('_active')
+                }
             }
         })
     }
