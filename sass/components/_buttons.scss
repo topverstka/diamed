@@ -134,7 +134,7 @@
     font-weight: 600;
     color: $main;
     // white-space: nowrap;
-    &::after {
+    &:not(.service-card__link)::before {
         content: '';
         min-width: 24px;
         width: 24px;
@@ -143,6 +143,21 @@
         background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         margin-right: 8px;
         transition: $tr;
+    }
+    &.service-card__link::after {
+        content: '';
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        margin-right: 8px;
+        transition: $tr;
+    }
+    @media (min-width: $tablet-s) {
+        &.main_top__wrapper-link::before {
+            display: none
+        }
     }
     @media (min-width: $minHover) {
         &:hover {
