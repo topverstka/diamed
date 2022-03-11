@@ -10454,6 +10454,11 @@ h6 {
   margin-right: 8px;
 }
 
+.service-card__link:hover::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 @media (max-width: 425px) {
   .service-card__link {
     font-size: 14px;

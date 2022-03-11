@@ -73,6 +73,9 @@ $service-card-outline: var(--service-card-outline);
         margin-left: 0;
         margin-right: 8px;
     }
+    &:hover::after {
+        transform: rotate(45deg);
+    }
     @media (max-width: $mobile-l) {
         font-size: 14px;
     }
