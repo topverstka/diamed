@@ -7900,7 +7900,7 @@ h6 {
     padding: 0;
     margin-bottom: 30px;
   }
-  .main_top__wrapper-link::after {
+  .main_top__wrapper-link::before {
     display: inline-block;
   }
 }
