@@ -318,9 +318,12 @@
     max-height: 600px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin: 0 0 24px 0;
     overflow-y: auto;
+    .sub-menu {
+        margin-right: 163px;
+    }
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -328,6 +331,9 @@
         background-color: #cecece;
         border-radius: $radius;
     }
+    // @media (min-width:1650px) {
+    //     width: 90%
+    // }
     @media (max-width: $tablet-s) {
         display: none;
     }

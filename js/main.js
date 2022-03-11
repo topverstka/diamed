@@ -198,6 +198,7 @@ function menu() {
         menu.classList.toggle('_show')
         menu.style.height = `calc(100vh - ${find('.header').offsetHeight}px)`
         bodyLock()
+        body.classList.toggle('_lock-menu');
     })
 
     window.addEventListener('click', e => {
@@ -207,6 +208,7 @@ function menu() {
             menu.classList.remove('_show')
             burger.classList.remove('burger_close')
             bodyLock(false)
+            body.classList.remove('_lock-menu');
         }
     })
 }

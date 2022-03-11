@@ -191,7 +191,7 @@ body._lock {
 }
 
 @media (min-width: 920px) {
-  body._lock {
+  body._lock:not(._lock-menu) {
     padding: 0 calc(16px - (100vw - 100%)) 0 0;
   }
 }
@@ -7540,11 +7540,12 @@ h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0 0 24px 0;
   overflow-y: auto;
+}
+
+.menu-right__body .sub-menu {
+  margin-right: 163px;
 }
 
 .menu-right__body::-webkit-scrollbar {

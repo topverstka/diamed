@@ -18,7 +18,7 @@ body {
         overflow: hidden;
     }
     @media (min-width:$tablet-l) {
-        &._lock {
+        &._lock:not(._lock-menu) {
             padding: 0 calc(16px - (100vw - 100%)) 0 0
         }
     }
