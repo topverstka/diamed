@@ -1124,9 +1124,20 @@ $(arr_variable).each((i, el) => {
     $carousel.on('change.flickity', function(event, index) {
         const elemName = document.getElementById('doctor-name');
         const elemPost = document.getElementById('doctor-post');
+        const stag = document.querySelector('#doctor-stag span');
+        const graduate = document.getElementById('doctor-graduate');
+        const diplom = document.getElementById('doctor-diplom');
+
 
         elemName.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-name');
         elemPost.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-post');
+
+        if (stag) {
+            stag.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-work');
+            graduate.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-graduate');
+            diplom.innerText = $carouselNavCells.eq(flkty.selectedIndex).data('doctor-diplom');
+        }
+
 
         if (flkty.selectedIndex === flkty.cells.length - 1) {
             $(el).find('.our_doctors__arrow-next').attr('disabled', 'disabled');

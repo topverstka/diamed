@@ -36,7 +36,7 @@
     margin-top: 56px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: $tablet-l) {
+    @media (max-width: 1200px) {
         flex-direction: column-reverse;
         margin-top: 47px;
     }
@@ -58,7 +58,7 @@
             padding-bottom: 24px;
         }
     }
-    @media (max-width: $tablet-l) {
+    @media (max-width: 1200px) {
         width: 541px;
         max-width: 100%;
         margin-bottom: 40px;
