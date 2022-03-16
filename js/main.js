@@ -93,9 +93,9 @@ if (windowWidth > 767) {
 
 window.addEventListener('DOMContentLoaded', () => {
     if (intro) {
-        intro.play();
         introBG.classList.add('active');
         intro.addEventListener('canplaythrough', function(e) {
+            intro.play();
             intro.classList.add('active');
         });
 
