@@ -94,9 +94,15 @@ if (windowWidth > 767) {
 window.addEventListener('DOMContentLoaded', () => {
     if (intro) {
         introBG.classList.add('active');
+        let src = introBG.getAttribute('data-src-end');
         intro.addEventListener('canplaythrough', function(e) {
             intro.play();
             intro.classList.add('active');
+        });
+
+        intro.addEventListener('error', function(e) {
+            intro.remove();
+            introBG.setAttribute('src', src);
         });
 
 
