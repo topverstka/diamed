@@ -338,8 +338,7 @@
 
 .our_doctors__slider-all,
 .carousel-nav {
-    height: 95%;
-    margin-top: 40px;
+    height: 100%;
     overflow: hidden;
     @media (max-width: 930px) {
         height: initial;
@@ -365,10 +364,11 @@
         &:hover {
             cursor: pointer;
         }
-        // @media (max-width: 1000px) {
-        //     width: 100px;
-        //     height: 100px;
-        // }
+        @media (min-width:$tablet-ls) {
+            &:first-child {
+                margin-top: 40px
+            }
+        }
         @media (max-width: $tablet-ls) {
             // height: 100%;
             margin-bottom: 0;

@@ -1022,7 +1022,7 @@ function showDSubMenu() {
 
 /* Слайдер в секции врачей */
 function size_window() {
-    if (window.innerWidth < 1320) {
+    if (window.innerWidth < 1250) {
         return true;
     } else {
         return false
@@ -1072,8 +1072,8 @@ $(arr_variable).each((i, el) => {
 
 
         if (size_window()) {
-            if (((navHeight - navCellHeight + 16)) < $selected.position().top) {
-                scrollY += navCellHeight;
+            if (((navHeight - navCellHeight)) < $selected.position().top) {
+                scrollY += navCellHeight + 20;
                 $carouselNav.animate({
                     scrollTop: scrollY
                 });
