@@ -105,10 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
             introBG.setAttribute('src', src);
         });
 
-        intro.addEventListener('pause', function(e) {
-            intro.remove();
-            introBG.setAttribute('src', src);
-        });
+
 
 
         // intro.play().then(function() {
