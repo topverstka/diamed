@@ -95,15 +95,19 @@ window.addEventListener('DOMContentLoaded', () => {
     if (intro) {
         introBG.classList.add('active');
         let src = introBG.getAttribute('data-src-end');
+        introBG.setAttribute('src', src);
         intro.addEventListener('canplaythrough', function(e) {
-            intro.play();
+            intro.play().catch((err) => {
+                intro.remove();
+                introBG.setAttribute('src', src);
+            });
             intro.classList.add('active');
         });
 
-        intro.addEventListener('emptied', function(e) {
-            intro.remove();
-            introBG.setAttribute('src', src);
-        });
+        // intro.addEventListener('emptied', function(e) {
+        //     intro.remove();
+        //     introBG.setAttribute('src', src);
+        // });
 
 
 
