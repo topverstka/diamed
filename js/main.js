@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
             introBG.setAttribute('src', src);
         });
 
-        intro.addEventListener('abort', function(e) {
+        intro.addEventListener('stalled', function(e) {
             intro.remove();
             introBG.setAttribute('src', src);
         });
