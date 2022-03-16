@@ -100,7 +100,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 intro.play();
             }).catch(function(err) {
                 intro.remove();
-                let src = introBG.getAttribute('data-src-end');
                 introBG.setAttribute('src', src);
                 console.log('Ошибка воспроизведения видео');
             })
