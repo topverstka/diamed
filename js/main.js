@@ -67,9 +67,9 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
-// });
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+});
 
 // Интро
 let windowWidth = window.innerWidth;
@@ -96,10 +96,19 @@ window.addEventListener('DOMContentLoaded', () => {
         introBG.classList.add('active');
         let src = introBG.getAttribute('data-src-end');
         intro.addEventListener('canplaythrough', function(e) {
-            intro.play().catch((err) => {
+            intro.play().then(function() {
+                intro.play();
+            }).catch(function(err) {
                 intro.remove();
+                let src = introBG.getAttribute('data-src-end');
                 introBG.setAttribute('src', src);
-            });
+                console.log('Ошибка воспроизведения видео');
+            })
+
+            // intro.play().catch((err) => {
+            //     intro.remove();
+            //     introBG.setAttribute('src', src);
+            // });
             intro.classList.add('active');
         });
 
