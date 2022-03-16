@@ -95,7 +95,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (intro) {
         introBG.classList.add('active');
         let src = introBG.getAttribute('data-src-end');
-        introBG.setAttribute('src', src);
         intro.addEventListener('canplaythrough', function(e) {
             intro.play().catch((err) => {
                 intro.remove();
