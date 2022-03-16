@@ -100,7 +100,12 @@ window.addEventListener('DOMContentLoaded', () => {
             intro.classList.add('active');
         });
 
-        intro.addEventListener('error', function(e) {
+        intro.addEventListener('emptied', function(e) {
+            intro.remove();
+            introBG.setAttribute('src', src);
+        });
+
+        intro.addEventListener('abort', function(e) {
             intro.remove();
             introBG.setAttribute('src', src);
         });
