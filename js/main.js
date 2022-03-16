@@ -95,12 +95,13 @@ if (intro) {
     introBG.classList.add('active');
     intro.play().then(function() {
         console.log('play');
-    }).catch(function(err) {
+    });
+    /*.catch(function(err) {
         intro.remove();
         let src = introBG.getAttribute('data-src-end');
         introBG.setAttribute('src', src);
         console.log('Ошибка воспроизведения видео');
-    })
+    })*/
 
     // intro.classList.add('active');
     // introBG.classList.add('active')
