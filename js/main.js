@@ -90,30 +90,37 @@ if (windowWidth > 767) {
     }
 }
 
-if (intro) {
-    intro.classList.add('active');
-    introBG.classList.add('active');
-    intro.play().then(function() {
-        console.log('play');
-    });
-    /*.catch(function(err) {
-        intro.remove();
-        let src = introBG.getAttribute('data-src-end');
-        introBG.setAttribute('src', src);
-        console.log('Ошибка воспроизведения видео');
-    })*/
 
-    // intro.classList.add('active');
-    // introBG.classList.add('active')
+window.addEventListener('DOMContentLoaded', () => {
+    if (intro) {
+        intro.play();
+        introBG.classList.add('active');
+        intro.addEventListener('canplaythrough', function(e) {
+            intro.classList.add('active');
+        });
 
-    // intro.play()
-    //     .catch(e => {
-    //         intro.remove();
-    //         let src = introBG.getAttribute('data-src-end');
-    //         introBG.setAttribute('src', src);
-    //         console.log('Ошибка воспроизведения видео');
-    //     })
-}
+
+        // intro.play().then(function() {
+        //     console.log('play');
+        // }).catch(function(err) {
+        //     intro.remove();
+        //     let src = introBG.getAttribute('data-src-end');
+        //     introBG.setAttribute('src', src);
+        //     console.log('Ошибка воспроизведения видео');
+        // })
+
+        // intro.classList.add('active');
+        // introBG.classList.add('active')
+
+        // intro.play()
+        //     .catch(e => {
+        //         intro.remove();
+        //         let src = introBG.getAttribute('data-src-end');
+        //         introBG.setAttribute('src', src);
+        //         console.log('Ошибка воспроизведения видео');
+        //     })
+    }
+});
 
 
 // Валидация формы
