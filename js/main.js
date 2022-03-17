@@ -857,8 +857,11 @@ function accordions() {
 
                 if (accBody.style.maxHeight) {
 
-                    parent.classList.remove('_show');
-                    target.classList.remove('_show');
+
+                    setTimeout(() => {
+                        parent.classList.remove('_show');
+                        target.classList.remove('_show');
+                    }, 500);
 
                     if (accBody.closest('.menu')) {
                         accBody.style.maxHeight = null;
@@ -867,7 +870,7 @@ function accordions() {
                         setTimeout(function() {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                        }, 100);
+                        }, 450);
                     }
 
                 } else {
