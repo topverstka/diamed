@@ -17,6 +17,7 @@
     .form-elem__area {
         border-bottom: 1px solid #DBDBDB;
         color: $accent2;
+        border-radius: 0;
         &:focus {
             color: $second;
             border-bottom: 1px solid var(--second);

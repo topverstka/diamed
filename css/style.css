@@ -10899,6 +10899,7 @@ h6 {
 .first-time .form-elem__area {
   border-bottom: 1px solid #DBDBDB;
   color: var(--accent2);
+  border-radius: 0;
 }
 
 .first-time .form-elem__area:focus {

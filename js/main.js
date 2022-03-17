@@ -976,6 +976,15 @@ function showSubMenu() {
                 }
             }
 
+
+            if (!target.getAttribute('data-sub-menu') && target.classList.contains('menu__link')) {
+                removeAll('[data-menu]', '_show')
+            }
+
+            if (!target.getAttribute('data-d-sub-menu') && target.classList.contains('sub-menu__link')) {
+                removeAll('[data-d-sub-menu]', '_show')
+            }
+
             if (!target.classList.contains('_active') && e.target.classList.contains('menu__link')) {
                 removeAll('.menu__link', '_active')
                 target.classList.add('_active')
