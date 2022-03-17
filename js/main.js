@@ -1058,7 +1058,7 @@ $(arr_variable).each((i, el) => {
     let scrollY = 0;
 
     if (window.innerWidth < 993) {
-        $(el).find('.carousel-nav').attr('data-flickity', `{"asNavFor": "${el + ' .carousel-main' }", "pageDots": false, "imagesLoaded": true, "contain": true,  "draggable": true}`);
+        $(el).find('.carousel-nav').attr('data-flickity', `{"asNavFor": "${el + ' .carousel-main' }", "pageDots": false, "imagesLoaded": true, "contain": true, "draggable": true}`);
     }
 
     $carousel.on('select.flickity', function() {

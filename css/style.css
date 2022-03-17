@@ -8565,6 +8565,19 @@ h6 {
   .carousel-container .carousel-nav .carousel-cell {
     margin-right: 20px;
   }
+  .our_doctors__slider .carousel-main .carousel-cell,
+  .carousel-container .carousel-main .carousel-cell {
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+  .our_doctors__slider .carousel-main .carousel-cell,
+  .carousel-container .carousel-main .carousel-cell {
+    opacity: 0 !important;
+  }
+  .our_doctors__slider .carousel-main .carousel-cell.is-selected,
+  .carousel-container .carousel-main .carousel-cell.is-selected {
+    opacity: 1 !important;
+  }
 }
 
 @media (max-width: 500px) {
@@ -8726,12 +8739,6 @@ h6 {
   .carousel-nav {
     max-width: none;
     padding: 0 0 0 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .our_doctors__slider-all,
-  .carousel-nav {
     margin-top: 20px;
   }
 }
