@@ -9811,6 +9811,11 @@ h6 {
   overflow: hidden;
 }
 
+.cat .tab__roller {
+  height: 99%;
+  top: 0;
+}
+
 @media (max-width: 768px) {
   .cat {
     padding-top: 41px;
@@ -11021,6 +11026,11 @@ h6 {
 .section_information_services {
   padding: 100px 0;
   overflow: hidden;
+}
+
+.section_information_services .tab__roller {
+  top: 0.5px;
+  height: 98%;
 }
 
 @media (max-width: 920px) {
