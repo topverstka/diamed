@@ -22,16 +22,18 @@
     &._show {
         & .accordion_container-list-content__container {
             opacity: 1;
+            // animation: opacity_accordion .3s;
             p,
             a {
                 opacity: 1;
+                //  animation: opacity_accordion .5s;
             }
             // transition: all 0.5s;
             // transition-delay: .1s;
         }
         & .accordion_container-list-content {
             //  transition-delay: .5s;
-            transition: max-height .6s linear, opacity 1s linear;
+            transition: max-height .3s cubic-bezier(0.61, 1.12, 1, 0.99), opacity 1s linear;
             // margin-top: 24px;
             // @media (max-width: 1300px) {
             //     margin-top: 40px;
@@ -51,8 +53,8 @@
     // transition: $tr easy;
     // transition-delay: .5s;
     // transition-property: opacity;
-    transition: all 0.5s;
-    transition-delay: .4s;
+    transition: all .4s ease;
+    transition-delay: .2s;
     // p,
     // a {
     //     transition-delay: .5s;
@@ -104,6 +106,15 @@
     }
 }
 
+@keyframes opacity_accordion {
+    to {
+        opacity: .5;
+    }
+    from {
+        opacity: 1;
+    }
+}
+
 .accordion_container-list-content {
     max-width: 303px;
     width: 100%;
@@ -112,7 +123,7 @@
     margin-left: auto;
     margin-right: 108px;
     // transition: .5s linear;
-    transition: max-height .6s linear, opacity 0s;
+    transition: max-height .5s cubic-bezier(0.61, 1.12, 1, 0.99), opacity 0s;
     @media (max-width: $tablet) {
         margin-right: 97px;
     }

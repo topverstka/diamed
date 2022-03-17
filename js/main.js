@@ -852,8 +852,11 @@ function accordions() {
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
 
+
+
                 parent.classList.toggle('_show')
                 target.classList.toggle('_show')
+
 
                 if (accBody.style.maxHeight) {
 
@@ -870,7 +873,7 @@ function accordions() {
                         setTimeout(function() {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                        }, 450);
+                        }, 250);
                     }
 
                 } else {
@@ -882,9 +885,12 @@ function accordions() {
                             const elemHeader = elem.querySelector('.acc-open')
                             const elemBody = elem.querySelector('.acc-body')
 
+
                             elem.classList.remove('_show')
                             elemHeader.classList.remove('_show')
-                            elemBody.style.maxHeight = null
+                            setTimeout(function() {
+                                elemBody.style.maxHeight = null
+                            }, 250)
                         }
                     }
 
