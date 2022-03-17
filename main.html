@@ -1974,7 +1974,7 @@
             }) {
                 removeError(datepicker)
             }
-        })
+        });
         const timePicker = new AirDatepicker('#datetimepicker2 ', {
             timepicker: true,
             onlyTimepicker: true,
@@ -1990,7 +1990,7 @@
             onHide() {
                 document.querySelector('#datetimepicker2').classList.remove('_focus_input');
             }
-        })
+        });
 
         function removeError(datepicker) {
             const textfield = datepicker.$el
