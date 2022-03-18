@@ -730,7 +730,7 @@ function swipeRoller(tabList) {
         if (tabActive.offsetLeft === 0) {
             roller.style.left = 0
         } else {
-            roller.style.left = tabActive.offsetLeft + 1 + 'px' // Определяем отступ слева у ползунка
+            roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
         }
     } else {
         if (tabActive.offsetLeft === 0) {
