@@ -776,6 +776,9 @@ function swipeRoller(tabList) {
 
     switch (browser) {
         case 'Chrome':
+            if (roller.closest('.first-time')) {
+                roller.closest('.first-time').classList.add('safari-class')
+            }
             if (tabActive.offsetLeft === 0) {
                 roller.style.transform = 'translateX(1px)'
             } else {
