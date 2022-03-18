@@ -79,6 +79,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    height: 42px
 }
 
 .tab {
@@ -122,6 +123,10 @@
     background: #fff;
     border-radius: 12px;
     transition: $tr;
+    &.roller-safari {
+        top: 0;
+        height: 100%
+    }
 }
 
 .tabs__block:not(.swiper-slide) {

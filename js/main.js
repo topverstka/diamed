@@ -722,11 +722,16 @@ function swipeRoller(tabList) {
     const tabActive = tabList.querySelector('.tab._active')
 
     roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
+    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 
     if (tabActive.offsetLeft === 0) {
         roller.style.left = '1px'
     } else {
         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+    }
+
+    if (navigator.userAgent.search(/Safari/) > 0) {
+        roller.classList.add('roller-safari');
     }
 }
 
