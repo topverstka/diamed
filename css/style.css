@@ -11116,6 +11116,10 @@ h6 {
   }
 }
 
+.section_information_services__left {
+  width: 100%;
+}
+
 .section_information_services__list {
   width: 375px;
   background: var(--second);
