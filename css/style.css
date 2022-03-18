@@ -6053,7 +6053,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .tab__roller {
   position: absolute;
   top: 0px;
-  left: 2px;
   width: calc(100% - 4px);
   height: 100%;
   background: #fff;

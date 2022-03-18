@@ -720,11 +720,16 @@ function get_name_browser() {
 
     let ua = navigator.userAgent;
 
-    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
-    if (ua.search(/Firefox/) > 0) return 'Firefox';
-    if (ua.search(/Opera/) > 0) return 'Opera';
-    if (ua.search(/Safari/) > 0) return 'Safari';
-    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    if (ua.match(/Opera|OPR\//)) {
+        return 'Opera';
+    } else {
+        if (ua.search(/Chrome/) > 0) return 'Chrome';
+        if (ua.search(/Firefox/) > 0) return 'Firefox';
+        if (ua.userAgent.match(/Opera|OPR\//)) return 'Opera';
+        if (ua.search(/Safari/) > 0) return 'Safari';
+        if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    }
+
 
     return 'Не определен';
 }
@@ -734,28 +739,76 @@ let browser = get_name_browser();
 
 
 // swipeRoller()
+// function swipeRoller(tabList) {
+//     const roller = tabList.querySelector('.tab__roller')
+//     const tabActive = tabList.querySelector('.tab._active')
+
+//     roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
+//     roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+
+
+//     // console.log(tabActive.getBoundingClientRect().left, tabActive.offsetLeft)
+
+//     if (browser === 'Safari') {
+//         roller.classList.add('roller-safari');
+//         if (tabActive.offsetLeft === 0) {
+//             roller.style.transform = `translateX(0)`
+//         } else {
+//             roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+//         }
+//     } else {
+//         if (tabActive.offsetLeft === 0) {
+//             roller.style.transform = `translateX(0)`
+//         } else {
+//             roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+//         }
+//     }
+
+
+// }
+
 function swipeRoller(tabList) {
     const roller = tabList.querySelector('.tab__roller')
     const tabActive = tabList.querySelector('.tab._active')
 
     roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
-    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+        //roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 
 
-    if (browser === 'Safari') {
-        roller.classList.add('roller-safari');
-        if (tabActive.offsetLeft === 0) {
-            roller.style.left = '1px'
-        } else {
-            roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-        }
-    } else {
-        if (tabActive.offsetLeft === 0) {
-            roller.style.left = 0
-        } else {
-            roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-        }
+    switch (browser) {
+        case 'Safari':
+        case 'Chrome':
+            roller.classList.add('roller-safari');
+            if (tabActive.offsetLeft === 0) {
+                roller.style.transform = 'translateX(1px)'
+            } else {
+                roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+            }
+            break;
+        default:
+            if (tabActive.offsetLeft === 0) {
+                roller.style.left = 0
+            } else {
+                roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+            }
+            break;
+
     }
+
+    // if (browser === 'Safari') {
+    //     roller.classList.add('roller-safari');
+    //     if (tabActive.offsetLeft === 0) {
+    //         roller.style.left = '1px'
+    //     } else {
+    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+    //     }
+    // } else {
+    //     if (tabActive.offsetLeft === 0) {
+    //         roller.style.left = 0
+    //     } else {
+    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+    //     }
+    // }
 
 
 }
