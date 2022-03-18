@@ -10922,8 +10922,9 @@ h6 {
 }
 
 .first-time .tabs__header {
-  margin-top: 34px;
-  margin-bottom: 32px;
+  margin-bottom: 66px;
+  -webkit-transform: translateY(34px);
+          transform: translateY(34px);
 }
 
 .first-time form {

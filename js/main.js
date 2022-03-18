@@ -779,18 +779,10 @@ function swipeRoller(tabList) {
             // if (roller.closest('.first-time')) {
             //     roller.closest('.first-time').classList.add('safari-class')
             // }
-            if (roller.closest('.section_information_services')) {
-                if (tabActive.offsetLeft === 0) {
-                    roller.style.transform = 'translateX(0)'
-                } else {
-                    roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
-                }
+            if (tabActive.offsetLeft === 0) {
+                roller.style.transform = 'translateX(1px)'
             } else {
-                if (tabActive.offsetLeft === 0) {
-                    roller.style.transform = 'translateX(1px)'
-                } else {
-                    roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
-                }
+                roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
             }
             break;
         case 'Safari':
@@ -808,6 +800,21 @@ function swipeRoller(tabList) {
                     roller.style.transform = 'translateX(1px)'
                 } else {
                     roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+                }
+            }
+            break;
+        case 'Firefox':
+            if (roller.closest('.section_information_services')) {
+                if (tabActive.offsetLeft === 0) {
+                    roller.style.left = '1px'
+                } else {
+                    roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+                }
+            } else {
+                if (tabActive.offsetLeft === 0) {
+                    roller.style.left = '1px'
+                } else {
+                    roller.style.left = tabActive.offsetLeft + 1 + 'px' // Определяем отступ слева у ползунка
                 }
             }
             break;
