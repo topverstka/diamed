@@ -76,6 +76,7 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     padding: 30px 12px 12px 0px;
     transition: $tr;
+    border-radius: 0;
     // &:not(:placeholder-shown).form-elem__area:not(:focus) {
     //     // border: 1px solid $accent;
     //     &+.form-elem__label {

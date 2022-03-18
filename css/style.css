@@ -5460,6 +5460,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 30px 12px 12px 0px;
   -webkit-transition: var(--tr);
   transition: var(--tr);
+  border-radius: 0;
 }
 
 .form-elem__label {
