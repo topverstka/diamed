@@ -779,10 +779,18 @@ function swipeRoller(tabList) {
             // if (roller.closest('.first-time')) {
             //     roller.closest('.first-time').classList.add('safari-class')
             // }
-            if (tabActive.offsetLeft === 0) {
-                roller.style.transform = 'translateX(1px)'
+            if (roller.closest('.section_information_services')) {
+                if (tabActive.offsetLeft === 0) {
+                    roller.style.transform = 'translateX(0)'
+                } else {
+                    roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+                }
             } else {
-                roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+                if (tabActive.offsetLeft === 0) {
+                    roller.style.transform = 'translateX(1px)'
+                } else {
+                    roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+                }
             }
             break;
         case 'Safari':
