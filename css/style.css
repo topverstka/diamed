@@ -10912,7 +10912,7 @@ h6 {
   overflow: hidden;
 }
 
-.first-time .tab__roller {
+.first-time:not(.safari-class).tab__roller {
   height: 97%;
   top: 1px;
 }
