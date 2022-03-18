@@ -795,6 +795,12 @@ function swipeRoller(tabList) {
                 } else {
                     roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
                 }
+            } else if (roller.closest('.first-time')) {
+                if (tabActive.offsetLeft === 0) {
+                    roller.style.transform = 'translateX(0)'
+                } else {
+                    roller.style.transform = `translateX(${tabActive.offsetLeft + 1}px)` // Определяем отступ слева у ползунка
+                }
             } else {
                 if (tabActive.offsetLeft === 0) {
                     roller.style.transform = 'translateX(1px)'
