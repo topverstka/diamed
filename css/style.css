@@ -6007,6 +6007,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-align: center;
           align-items: center;
   height: 42px;
+  min-width: 465px;
 }
 
 .tab {
