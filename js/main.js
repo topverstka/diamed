@@ -775,9 +775,17 @@ function swipeRoller(tabList) {
 
 
     switch (browser) {
-        case 'Safari':
         case 'Chrome':
-            roller.classList.add('roller-safari');
+            if (tabActive.offsetLeft === 0) {
+                roller.style.transform = 'translateX(1px)'
+            } else {
+                roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
+            }
+            break;
+        case 'Safari':
+            if (roller.closest('.first-time')) {
+                roller.closest('.first-time').classList.add('safari-class')
+            }
             if (tabActive.offsetLeft === 0) {
                 roller.style.transform = 'translateX(1px)'
             } else {
