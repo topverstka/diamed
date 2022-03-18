@@ -725,7 +725,6 @@ function get_name_browser() {
     } else {
         if (ua.search(/Chrome/) > 0) return 'Chrome';
         if (ua.search(/Firefox/) > 0) return 'Firefox';
-        if (ua.userAgent.match(/Opera|OPR\//)) return 'Opera';
         if (ua.search(/Safari/) > 0) return 'Safari';
         if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
     }
