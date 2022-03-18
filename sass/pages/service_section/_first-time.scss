@@ -3,7 +3,7 @@
     background: $header-bg;
     position: relative;
     overflow: hidden;
-    &:not(.safari-class).tab__roller {
+    &.safari-class .tab__roller {
         height: 97%;
         top: 1px
     }
