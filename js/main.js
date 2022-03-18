@@ -733,39 +733,10 @@ function get_name_browser() {
     return 'Не определен';
 }
 
-// пример использования
 let browser = get_name_browser();
 
 
 // swipeRoller()
-// function swipeRoller(tabList) {
-//     const roller = tabList.querySelector('.tab__roller')
-//     const tabActive = tabList.querySelector('.tab._active')
-
-//     roller.style.width = tabActive.offsetWidth + 'px' // Определяем ширину ползунка
-//     roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
-
-
-//     // console.log(tabActive.getBoundingClientRect().left, tabActive.offsetLeft)
-
-//     if (browser === 'Safari') {
-//         roller.classList.add('roller-safari');
-//         if (tabActive.offsetLeft === 0) {
-//             roller.style.transform = `translateX(0)`
-//         } else {
-//             roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
-//         }
-//     } else {
-//         if (tabActive.offsetLeft === 0) {
-//             roller.style.transform = `translateX(0)`
-//         } else {
-//             roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
-//         }
-//     }
-
-
-// }
-
 function swipeRoller(tabList) {
     const roller = tabList.querySelector('.tab__roller')
     const tabActive = tabList.querySelector('.tab._active')
@@ -776,9 +747,6 @@ function swipeRoller(tabList) {
 
     switch (browser) {
         case 'Chrome':
-            // if (roller.closest('.first-time')) {
-            //     roller.closest('.first-time').classList.add('safari-class')
-            // }
             if (tabActive.offsetLeft === 0) {
                 roller.style.transform = 'translateX(1px)'
             } else {
@@ -786,9 +754,6 @@ function swipeRoller(tabList) {
             }
             break;
         case 'Safari':
-            // if (roller.closest('.first-time')) {
-            //     roller.closest('.first-time').classList.add('safari-class')
-            // }
             if (roller.closest('.section_information_services')) {
                 if (tabActive.offsetLeft === 0) {
                     roller.style.transform = 'translateX(0)'
@@ -833,22 +798,6 @@ function swipeRoller(tabList) {
             break;
 
     }
-
-    // if (browser === 'Safari') {
-    //     roller.classList.add('roller-safari');
-    //     if (tabActive.offsetLeft === 0) {
-    //         roller.style.left = '1px'
-    //     } else {
-    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-    //     }
-    // } else {
-    //     if (tabActive.offsetLeft === 0) {
-    //         roller.style.left = 0
-    //     } else {
-    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-    //     }
-    // }
-
 
 }
 
@@ -1033,29 +982,6 @@ function accordions() {
                     }
                 }
 
-                // if (target.closest('.sub-menu')) {
-                //     setTimeout(function() {
-                //         if (target.closest('_show')) {
-                //             removeAll('.sub-menu__item', '_show')
-                //             removeAll('.sub-menu__link', '_show')
-                //             findAll('.sub-menu__item').forEach(i => i.style.maxHeight = null);
-                //             findAll('.sub-menu__item-list').forEach(i => i.style.maxHeight = null);
-                //             parent.classList.remove('_show')
-                //             target.classList.remove('_show')
-                //             accBody.style.maxHeight = null
-                //             container.style.maxHeight = null
-                //         } else {
-                //             removeAll('.sub-menu__item', '_show')
-                //             removeAll('.sub-menu__link', '_show')
-                //             findAll('.sub-menu__item').forEach(i => i.style.maxHeight = null);
-                //             findAll('.sub-menu__item-list').forEach(i => i.style.maxHeight = null);
-                //             accBody.style.maxHeight = accBody.scrollHeight + 'px';
-                //             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                //             parent.classList.add('_show')
-                //             target.classList.add('_show')
-                //         }
-                //     }, 300)
-                // }
             }
 
 
@@ -1148,23 +1074,7 @@ function showSubMenu() {
                     removeAll('.show-menu-item', '_show');
                     removeAll('.sub-menu__link', '_show');
                 }
-                //  i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').style.maxHeight = i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').scrollHeight + 'px'
 
-                // if (i.classList.contains('_show')) {
-                //     findAll('[data-d-sub-menu]').forEach(i => i.classList.remove('_show'))
-                //     i.classList.remove('_show');
-                //     // i.closest('.sub-menu__item').classList.add('_show');
-                //     i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').style.maxHeight = null
-                //         // accBody.style.maxHeight = accBody.scrollHeight + 'px';
-                //         // container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                // } else {
-
-                //     findAll('[data-d-sub-menu]').forEach(i => i.classList.remove('show'))
-                //     i.closest('.sub-menu__item').classList.add('_show');
-                //     i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').style.maxHeight = 'none'
-                //     i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').style.maxHeight = i.closest('.sub-menu__item').querySelector('.sub-menu__item-list').scrollHeight + 'px'
-                //     i.classList.add('_show');
-                // }
             });
         })
 
