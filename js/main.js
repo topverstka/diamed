@@ -716,6 +716,23 @@ function tabRollers() {
     }
 }
 
+function get_name_browser() {
+
+    let ua = navigator.userAgent;
+
+    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+    if (ua.search(/Firefox/) > 0) return 'Firefox';
+    if (ua.search(/Opera/) > 0) return 'Opera';
+    if (ua.search(/Safari/) > 0) return 'Safari';
+    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+
+    return 'Не определен';
+}
+
+// пример использования
+let browser = get_name_browser();
+
+
 // swipeRoller()
 function swipeRoller(tabList) {
     const roller = tabList.querySelector('.tab__roller')
@@ -725,20 +742,22 @@ function swipeRoller(tabList) {
     roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
 
 
-    if (navigator.userAgent.search(/Safari/) > 0) {
-        roller.classList.add('roller-safari');
-        if (tabActive.offsetLeft === 0) {
-            roller.style.left = '1px'
-        } else {
-            roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-        }
-    } else {
-        if (tabActive.offsetLeft === 0) {
-            roller.style.left = '1px'
-        } else {
-            roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
-        }
-    }
+    // if (browser === 'Safari') {
+    //     roller.classList.add('roller-safari');
+    //     if (tabActive.offsetLeft === 0) {
+    //         roller.style.left = '1px'
+    //     } else {
+    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+    //     }
+    // } else {
+    //     if (tabActive.offsetLeft === 0) {
+    //         roller.style.left = '1px'
+    //     } else {
+    //         roller.style.left = tabActive.offsetLeft + 'px' // Определяем отступ слева у ползунка
+    //     }
+    // }
+
+
 }
 
 tabBlockActive();

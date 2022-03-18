@@ -6051,10 +6051,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .tab__roller {
   position: absolute;
-  top: 1px;
+  top: 0px;
   left: 2px;
   width: calc(100% - 4px);
-  height: 98%;
+  height: 100%;
   background: #fff;
   border-radius: 12px;
   -webkit-transition: var(--tr);
@@ -8306,11 +8306,6 @@ h6 {
   margin-bottom: 80px;
 }
 
-.our_doctors .our_doctors__tabs-container .tab__roller {
-  height: 99%;
-  top: 0px;
-}
-
 @media (min-width: 768px) and (max-width: 992px) {
   .our_doctors .our_doctors__tabs-container .tab {
     font-size: 12px;
@@ -9823,11 +9818,6 @@ h6 {
   overflow: hidden;
 }
 
-.cat .tab__roller {
-  height: 99%;
-  top: 0;
-}
-
 @media (max-width: 768px) {
   .cat {
     padding-top: 41px;
@@ -10922,6 +10912,11 @@ h6 {
   overflow: hidden;
 }
 
+.first-time .tab__roller {
+  height: 97%;
+  top: 1px;
+}
+
 .first-time h2 {
   margin-bottom: 16px;
 }
@@ -11038,11 +11033,6 @@ h6 {
 .section_information_services {
   padding: 100px 0;
   overflow: hidden;
-}
-
-.section_information_services .tab__roller {
-  top: 0.5px;
-  height: 98%;
 }
 
 @media (max-width: 920px) {
