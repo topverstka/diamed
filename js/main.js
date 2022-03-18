@@ -728,7 +728,7 @@ function swipeRoller(tabList) {
     if (navigator.userAgent.search(/Safari/) > 0) {
         roller.classList.add('roller-safari');
         if (tabActive.offsetLeft === 0) {
-            roller.style.left = '1px'
+            roller.style.left = 0
         } else {
             roller.style.left = tabActive.offsetLeft + 1 + 'px' // Определяем отступ слева у ползунка
         }
