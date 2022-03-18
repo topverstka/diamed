@@ -79,8 +79,10 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 42px;
-    min-width: 465px
+    @media (min-width: 992px) {
+        height: 42px;
+        min-width: 465px
+    }
 }
 
 .tab {
@@ -127,6 +129,9 @@
     &.roller-safari {
         top: 0;
         height: 100%
+    }
+    @media (max-width: 992px) {
+        height: 99%
     }
 }
 

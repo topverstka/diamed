@@ -6006,8 +6006,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 42px;
-  min-width: 465px;
+}
+
+@media (min-width: 992px) {
+  .tab__list {
+    height: 42px;
+    min-width: 465px;
+  }
 }
 
 .tab {
@@ -6064,6 +6069,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .tab__roller.roller-safari {
   top: 0;
   height: 100%;
+}
+
+@media (max-width: 992px) {
+  .tab__roller {
+    height: 99%;
+  }
 }
 
 .tabs__block:not(.swiper-slide) {
@@ -7524,6 +7535,14 @@ h6 {
           flex-direction: column;
   padding: 54px 80px 54px 70px;
   background: var(--header-bg);
+}
+
+.menu-right .sub-menu__item._show {
+  margin-bottom: 32px;
+}
+
+.menu-right .sub-menu__item._show .sub-menu__item-list {
+  margin-top: 10px;
 }
 
 @media (max-width: 1300px) {

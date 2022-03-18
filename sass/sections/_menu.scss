@@ -296,6 +296,12 @@
     flex-direction: column;
     padding: 54px 80px 54px 70px;
     background: $header-bg;
+    .sub-menu__item._show {
+        margin-bottom: 32px;
+    }
+    .sub-menu__item._show .sub-menu__item-list {
+        margin-top: 10px
+    }
     @media (max-width: 1300px) {
         padding: 54px 50px;
     }
