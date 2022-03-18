@@ -786,9 +786,9 @@ function swipeRoller(tabList) {
             }
             break;
         case 'Safari':
-            if (roller.closest('.first-time')) {
-                roller.closest('.first-time').classList.add('safari-class')
-            }
+            // if (roller.closest('.first-time')) {
+            //     roller.closest('.first-time').classList.add('safari-class')
+            // }
             if (roller.closest('.section_information_services')) {
                 if (tabActive.offsetLeft === 0) {
                     roller.style.transform = 'translateX(0)'
