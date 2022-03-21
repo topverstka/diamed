@@ -67,9 +67,9 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
-// });
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+});
 
 // Интро
 let windowWidth = window.innerWidth;
@@ -539,8 +539,10 @@ window.onload = function() {
 
         if (bodyScrollTop > 100) {
             stickyHeader.classList.add('fixed');
+            document.querySelector('main').style.marginTop = d.querySelector('.sticky').scrollHeight + 'px';
         } else {
             stickyHeader.classList.remove('fixed');
+            document.querySelector('main').style = null;
         }
     };
 };
