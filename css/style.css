@@ -8131,11 +8131,13 @@ h6 {
 
 .actual_offer__slider {
   overflow: hidden;
+  padding-bottom: 1px;
 }
 
 @media (max-width: 768px) {
   .actual_offer__slider {
     overflow: initial;
+    padding-bottom: 0;
   }
 }
 
