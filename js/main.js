@@ -67,9 +67,9 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+// });
 
 // Интро
 let windowWidth = window.innerWidth;
@@ -80,13 +80,16 @@ let introBG;
 if (windowWidth > 767) {
     intro = find('.intro__media--pc');
     introBG = find('.intro__img--pc');
+    intro.setAttribute('src', intro.dataset.src);
 } else if (windowWidth <= 767) {
     if (windowWidth > windowHeight) {
         intro = find('.intro__media--h');
         introBG = find('.intro__img--h');
+        intro.setAttribute('src', intro.dataset.src);
     } else {
         intro = find('.intro__media--v');
         introBG = find('.intro__img--v');
+        intro.setAttribute('src', intro.dataset.src);
     }
 }
 
