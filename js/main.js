@@ -68,7 +68,7 @@ function paddingTopMainSection() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.intro__media--pc').forEach(i => i.play());
+    document.querySelectorAll('.intro__media').forEach(i => i.play());
 });
 
 // Интро
