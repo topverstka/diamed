@@ -67,10 +67,6 @@ function paddingTopMainSection() {
     main.style.paddingTop = header.scrollHeight + 'px'
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.intro__media').forEach(i => i.play());
-});
-
 // Интро
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -143,6 +139,13 @@ window.addEventListener('DOMContentLoaded', () => {
         //     })
     }
 });
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.intro__media').forEach(i => i.play());
+});
+
 
 
 // Валидация формы
