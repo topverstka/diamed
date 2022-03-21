@@ -5,6 +5,11 @@
     //     top: 0.5px;
     //     height: 98%
     // }
+    // @media (min-width: 992px) {
+    //     .tab__list {
+    //         min-width: 511px;
+    //     }
+    // }
     @media (max-width: $tablet-l) {
         padding: 56px 0;
     }

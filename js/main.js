@@ -748,7 +748,7 @@ function swipeRoller(tabList) {
     switch (browser) {
         case 'Chrome':
             if (tabActive.offsetLeft === 0) {
-                roller.style.transform = 'translateX(0)'
+                roller.style.transform = 'translateX(1px)'
             } else {
                 roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
             }
@@ -1020,54 +1020,10 @@ function labelTextfield() {
                 label.classList.remove('_change-label');
                 input.classList.remove('_focus_input');
             }
-
         })
 
 
     }
-}
-
-const datePicker = new AirDatepicker('#datetimepicker1 ', {
-    minDate: new Date(),
-    onSelect({
-        date,
-        cellType,
-        datepicker
-    }) {
-        removeError(datepicker)
-    },
-    onHide() {
-        if (document.querySelector('#datetimepicker1').value === '' || document.querySelector('#datetimepicker1').value === ' ') {
-            document.querySelector('#datetimepicker1').classList.remove('_focus_input');
-            document.querySelector('#datetimepicker1 + label').classList.remove('_change-label');
-        }
-    }
-});
-const timePicker = new AirDatepicker('#datetimepicker2 ', {
-    timepicker: true,
-    onlyTimepicker: true,
-    minutesStep: 5,
-    onSelect({
-        date,
-        cellType,
-        datepicker
-    }) {
-        removeError(timePicker)
-
-    },
-    onHide() {
-        if (document.querySelector('#datetimepicker2').value === '' || document.querySelector('#datetimepicker2').value === ' ') {
-            document.querySelector('#datetimepicker2').classList.remove('_focus_input');
-            document.querySelector('#datetimepicker2 + label').classList.remove('_change-label');
-        }
-    }
-});
-
-function removeError(datepicker) {
-    const textfield = datepicker.$el
-    const parent = textfield.parentElement
-
-    parent.classList.remove('error')
 }
 
 // Показать подменю
@@ -1154,8 +1110,6 @@ function showSubMenu() {
 
             if (!target.classList.contains('_active') && e.target.classList.contains('menu__link')) {
                 removeAll('.menu__link', '_active')
-                removeAll('[data-sub-menu]', '_show')
-                removeAll('[data-d-sub-menu]', '_show')
                 target.classList.add('_active')
             }
 
