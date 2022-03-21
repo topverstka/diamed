@@ -748,7 +748,7 @@ function swipeRoller(tabList) {
     switch (browser) {
         case 'Chrome':
             if (tabActive.offsetLeft === 0) {
-                roller.style.transform = 'translateX(1px)'
+                roller.style.transform = 'translateX(0)'
             } else {
                 roller.style.transform = `translateX(${tabActive.offsetLeft}px)` // Определяем отступ слева у ползунка
             }
