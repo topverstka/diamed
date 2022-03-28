@@ -1,12 +1,11 @@
 @keyframes header {
     0% {
-        top: -200px;
+        transform: translateY(-200px);
     }
     100% {
-        top: 0;
+        transform: translateY(0);
     }
 }
-
 
 @keyframes showElem {
     from {
@@ -58,8 +57,6 @@
     }
 }
 
-
-
 // Плавное отображение карточек
 .showCard {
     animation-name: showCard;
@@ -69,6 +66,7 @@
         в обратном порядке на каждой нечётной итерации */
     animation-direction: alternate;
 }
+
 @keyframes showCard {
     0% {
         transform: translateY(200px);
@@ -89,14 +87,11 @@
 }
 
 // Аккордеоны
-
-
 [data-animation=number] span {
     position: relative;
     top: -20px;
     opacity: 0;
     transition: $tr;
-
     &._visible {
         opacity: 1;
         top: 0;
@@ -104,34 +99,27 @@
 }
 
 [data-animation=acc] {
-
     &::after {
         width: 0;
         transition: 1.2s;
     }
-
     & .accordion_container-list-title {
         transform: translateX(50px);
         opacity: 0;
         transition: 1s;
     }
-
     & .accordion_container-list-icons-btn {
         transform: rotate(90deg) scale(.6);
         opacity: 0;
     }
-
     &._visible {
-
         &::after {
             width: 100%;
         }
-
         & .accordion_container-list-title {
             transform: translateX(0);
             opacity: 1;
         }
-
         & .accordion_container-list-icons-btn {
             transform: rotate(0) scale(1);
             opacity: 1;
@@ -143,7 +131,6 @@
     opacity: 0;
     transform: translateX(20px);
     transition: .8s;
-
     &._visible {
         opacity: 1;
         transform: translateX(0)

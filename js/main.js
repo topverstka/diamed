@@ -1303,6 +1303,49 @@ $(arr_variable).each((i, el) => {
     setTimeout(function() { flkty.resize(); }, 100);
 });
 
+const datePicker = new AirDatepicker('#datetimepicker1 ', {
+    minDate: new Date(),
+    onSelect({
+        date,
+        cellType,
+        datepicker
+    }) {
+        removeError(datepicker)
+    },
+    onHide() {
+        if (document.querySelector('#datetimepicker1').value === '' || document.querySelector('#datetimepicker1').value === ' ') {
+            document.querySelector('#datetimepicker1').classList.remove('_focus_input');
+            document.querySelector('#datetimepicker1 + label').classList.remove('_change-label');
+        }
+    }
+});
+const timePicker = new AirDatepicker('#datetimepicker2 ', {
+    timepicker: true,
+    onlyTimepicker: true,
+    minutesStep: 5,
+    onSelect({
+        date,
+        cellType,
+        datepicker
+    }) {
+        removeError(timePicker)
+
+    },
+    onHide() {
+        if (document.querySelector('#datetimepicker2').value === '' || document.querySelector('#datetimepicker2').value === ' ') {
+            document.querySelector('#datetimepicker2').classList.remove('_focus_input');
+            document.querySelector('#datetimepicker2 + label').classList.remove('_change-label');
+        }
+    }
+});
+
+function removeError(datepicker) {
+    const textfield = datepicker.$el
+    const parent = textfield.parentElement
+
+    parent.classList.remove('error')
+}
+
 document.querySelector('.form-elem-date').addEventListener('click', () => {
     datePicker.show();
 });
