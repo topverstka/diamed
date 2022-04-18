@@ -1,0 +1,90 @@
+.servces_cost__container {
+    width: 770px;
+    .accordion_container-list {
+        flex-direction: column;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:after {
+            width: 100%;
+            background: #F8F7FC
+        }
+        &._show {
+            &:after {
+                opacity: 0;
+            }
+            .accordion_container-list-picture {
+                background: $second;
+            }
+            .accordion_container-list-icons button {
+                color: transparent;
+                &:after {
+                    content: 'Свернуть';
+                    color: $second;
+                    position: absolute;
+                    right: 28px;
+                }
+                svg {
+                    transform: scale(1, -1);
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .accordion_container-list-picture {
+        margin-right: 24px
+    }
+    .section_information_services__item-table {
+        margin-bottom: 0;
+    }
+    .accordion_container-list-content {
+        margin-left: 0;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .accordion_container-list-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 100%;
+    }
+    .accordion_container-list-icons button {
+        color: $second;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        svg {
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+            transition: $tr
+        }
+    }
+    .accordion_container-list-picture {
+        width: 48px;
+        height: 48px;
+        background: #C4E0E5;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $tr;
+        img {
+            width: 33px
+        }
+    }
+    .accordion_container-list-header {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .accordion_container-list-icons {
+        top: 50%;
+        transform: translateY(-50%);
+        button {
+            display: flex;
+        }
+    }
+    .padding-16 {
+        margin-top: 16px
+    }
+}

@@ -50,9 +50,11 @@ body {
 @import 'components/_modal-search';
 @import 'components/_tabs';
 @import 'components/_accordion';
+@import 'components/_accordion-page';
 @import 'components/_sliders';
 @import 'components/_breadcrumbs';
 @import 'components/_pagination';
+@import 'components/_dropdown';
 // Текстовые компоненты
 @import 'components/text/_text';
 @import 'components/text/_titles';
@@ -78,3 +80,7 @@ body {
 @import 'pages/service_section/_first-time';
 @import 'pages/service_section/_information-services';
 @import 'pages/service_section/_service-articles';
+@import 'pages/our_prices/_our-prices';
+@import 'pages/timetable/_timetable';
+@import 'pages/team/_team';
+@import 'pages/about_clinics/_about_clinics';

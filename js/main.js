@@ -701,7 +701,6 @@ function tabs() {
                 swipeRoller(tabList);
                 if (tab.closest('.form-class')) {
                     tab.closest('.form-class').querySelectorAll('input._req').forEach(el => {
-                        console.log(el)
                         hideError(el)
                     });
                 }
@@ -937,10 +936,24 @@ function accordions() {
                 target.classList.toggle('_show')
 
 
+                if (target.closest('[data-tag="price"]')) {
+
+                    setTimeout(() => {
+                        target.closest('[data-tag="price"]').querySelector('.acc-body').classList.add('padding-16')
+                    }, 200)
+                }
+
 
 
 
                 if (accBody.style.maxHeight) {
+
+                    if (target.closest('[data-tag="price"]')) {
+
+                        setTimeout(() => {
+                            target.closest('[data-tag="price"]').querySelector('.acc-body').classList.remove('padding-16')
+                        }, 550)
+                    }
 
 
                     setTimeout(() => {
@@ -960,12 +973,15 @@ function accordions() {
 
                 } else {
 
+
+
                     if (parent.classList.contains('accordion_container-list') || parent.parentElement.parentElement.classList.contains('menu-left-mobile')) {
                         const adjacentElems = getSiblings(parent)
                         for (let i = 0; i < adjacentElems.length; i++) {
                             const elem = adjacentElems[i]
                             const elemHeader = elem.querySelector('.acc-open')
                             const elemBody = elem.querySelector('.acc-body')
+
 
 
                             elem.classList.remove('_show')
@@ -1352,4 +1368,63 @@ document.querySelector('.form-elem-date').addEventListener('click', () => {
 
 document.querySelector('.form-elem-time').addEventListener('click', () => {
     timePicker.show();
+});
+
+if (document.querySelector('.timetable_table__tables')) {
+    var flktyTimeTable = new Flickity('.timetable_table__tables .carousel', {
+        on: {
+            ready: function() {
+                this.element.style.height = this.element.querySelector('table').offsetHeight + 'px'
+            },
+            change: function(index) {
+                if (flktyTimeTable.selectedIndex === flktyTimeTable.cells.length - 1) {
+                    $('.slider__arrow-next').attr('disabled', 'disabled');
+                } else {
+                    $('.slider__arrow-next').removeAttr('disabled');
+                }
+                if (flktyTimeTable.selectedIndex === 0) {
+                    $('.slider__arrow-prev').attr('disabled', 'disabled');
+                } else {
+                    $('.slider__arrow-prev').removeAttr('disabled');
+                }
+                this.element.style.height = this.element.querySelector('.is-selected table').offsetHeight + 'px'
+            }
+        }
+    });
+
+    $('.slider__arrow-next').on('click', function(e) {
+        flktyTimeTable.next();
+    });
+
+    $('.slider__arrow-prev').on('click', function(e) {
+        flktyTimeTable.previous();
+    });
+
+}
+
+if (document.querySelector('.facts-clinics__slider')) {
+    var flktyFacts = new Flickity('.facts-clinics__slider .carousel', {
+
+
+    });
+}
+
+
+
+
+
+document.querySelector('.dropdown-list-header').addEventListener('click', function(e) {
+    if (!this.closest('.dropdown-list').classList.contains('_show')) {
+        this.closest('.dropdown-list').classList.add('_show');
+        this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.add('_add-padding');
+    } else {
+        this.closest('.dropdown-list').classList.remove('_show');
+        setTimeout(() => this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.remove('_add-padding'), 250);
+    }
+});
+
+window.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('dropdown-list') && !e.target.closest('.dropdown-list')) {
+        document.querySelector('.dropdown-list').classList.remove('_show');
+    }
 });

@@ -348,3 +348,15 @@
         margin: 26px 0 0 0;
     }
 }
+
+// Прозрачная кнопка с бордером
+.btn-border {
+    border: 1px solid $second;
+    border-radius: $radius;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $second;
+    padding: 17px 0;
+    width: 100%;
+}

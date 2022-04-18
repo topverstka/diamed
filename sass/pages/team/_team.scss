@@ -1,0 +1,222 @@
+.line-specialization {
+    margin-top: 40px;
+    .dropdown__box {
+        display: flex;
+        align-items: center;
+    }
+    form {
+        width: 80%;
+        margin-top: 0;
+        margin-left: 16px
+    }
+    .modal-search__submit {
+        margin-left: 18px;
+        max-width: 197px;
+    }
+}
+
+.team-section {
+    margin: 40px 0 108px 0
+}
+
+.team-section__container {
+    position: relative;
+    .tabs__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+.team-section__items {
+    border-radius: 12px;
+    border: 1px solid #F0EFEF;
+    padding: 24px
+}
+
+.team-section__items-top-picture {
+    width: 189px;
+    height: 189px;
+    border-radius: 12px;
+}
+
+.team-section__items-top {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.team-section__items-top-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px
+}
+
+.team-section__items-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+}
+
+.team-section__items-job {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #686868;
+}
+
+.team-section__items-experience {
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.team-section__items-bottom {
+    button {
+        padding: 12px 14px;
+        font-size: 14px;
+        margin-right: 24px
+    }
+}
+
+.team-section__items-bottom {
+    display: flex;
+    align-items: center
+}
+
+// Внутренняя страница команды
+.team-internal {
+    margin-bottom: 100px;
+}
+
+.team-internal__container {
+    display: flex
+}
+
+.team-internal__container-left {
+    span,
+    p {
+        display: block;
+    }
+    .servces_cost__container {
+        margin: 56px 0;
+        width: 100%;
+        .accordion_container-list {
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+        }
+    }
+    .accordion-list-ul {
+        li:not(:last-child) {
+            color: #000;
+            margin-bottom: 24px;
+        }
+    }
+    h1 {
+        width: 85%;
+        line-height: 54px;
+    }
+    .section_information_services__item-table {
+        margin-bottom: 0;
+    }
+}
+
+.team-internal__container-adress {
+    background: #F8F7FC;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px 18px;
+    margin-top: 16px;
+    width: max-content
+}
+
+.team-internal__container-specialization {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4BB9B5;
+    margin-top: 24px
+}
+
+.team-internal__container-experience {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 24px
+}
+
+.team-internal__container-services-picture {
+    width: 48px;
+    height: 48px;
+    background: #C4E0E5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 33px
+    }
+}
+
+.team-internal__container-services-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 24px;
+}
+
+.team-internal__container-services-header {
+    margin-bottom: 40px;
+}
+
+.team-internal__container-services-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.team-internal__container-left .servces_cost__container .padding-16 {
+    margin-top: 36px
+}
+
+.team-internal__container-photo {
+    width: 470px;
+    background: #DAEBEF;
+    border-radius: $radius;
+    position: relative;
+    height: 608px;
+    margin-bottom: 20px;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.team-internal__container-right {
+    margin-left: 74px
+}
+
+.team-internal__container-photo-play {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 70px;
+    height: 70px
+}
+
+.team-internal__container-btn {
+    .btn-border {
+        margin-bottom: 16px;
+    }
+    .btn {
+        width: 100%;
+        padding: 18px 0;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}

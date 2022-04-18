@@ -16,19 +16,16 @@
     }
     cursor: unset;
     @media (min-width: $minHover) {
-
         &:hover {
-            &:enabled{
+            &:enabled {
                 background: $second;
                 cursor: pointer;
                 & svg path {
                     stroke: #fff;
                 }
             }
-            
         }
     }
-
     &:active {
         // background: $second;
         opacity: 0.7;
@@ -44,6 +41,9 @@
         // & svg path {
         //     stroke: #fff;
         // }
+    }
+    &[disabled] {
+        opacity: .4;
     }
     @media (max-width: $tablet-s) {
         width: 32px;

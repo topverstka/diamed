@@ -1,0 +1,68 @@
+.block-about {
+    margin-bottom: 100px;
+}
+
+.block-about__container {
+    display: flex;
+    h1 {
+        margin-bottom: 40px;
+        line-height: 68px;
+    }
+}
+
+.block-about__container-text {
+    display: flex;
+    flex-direction: column;
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 27px
+    }
+    .btn {
+        margin-top: auto;
+    }
+}
+
+.block-about-picture {
+    width: 738px;
+    height: 520px;
+    margin-left: 44px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.block-about__number_proud {
+    &:before {
+        background: no-repeat url(../img/background_digits.png), linear-gradient(89.83deg, #F8F7FC -47.06%, rgba(248, 247, 252, 0) 74.42%);
+        background-size: 136%;
+        background-position: 21% 19%;
+        background-blend-mode: hard-light;
+    }
+    .number_proud__elements-column {
+        display: flex;
+        position: relative;
+        padding: 24px 50px 24px 24px
+    }
+    .number_proud__elements-column-icon {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        right: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .number_proud__elements-column-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        color: #313033;
+    }
+    .number_proud__description {
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 104px;
+    }
+}
