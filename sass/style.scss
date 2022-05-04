@@ -55,6 +55,7 @@ body {
 @import 'components/_breadcrumbs';
 @import 'components/_pagination';
 @import 'components/_dropdown';
+@import 'components/_link';
 // Текстовые компоненты
 @import 'components/text/_text';
 @import 'components/text/_titles';
@@ -84,3 +85,13 @@ body {
 @import 'pages/timetable/_timetable';
 @import 'pages/team/_team';
 @import 'pages/about_clinics/_about_clinics';
+@import 'pages/patient/_patient';
+@import 'pages/news/_news';
+@import 'pages/news/_details_news';
+@import 'pages/vakansion/_vakansion';
+@import 'pages/contacts/_contacts_control';
+@import 'pages/contacts/_contacts';
+@import 'pages/form_patient/_form_patient';
+@import 'pages/otzyvy/_otzyvy';
+@import 'pages/otzyvy/_otzyvy_question';
+@import 'pages/otzyvy/_otzyvy_visit';

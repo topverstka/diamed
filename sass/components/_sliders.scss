@@ -54,3 +54,13 @@
         }
     }
 }
+
+[data-init-slider] {
+    .carousel {
+        overflow: hidden;
+        .previous,
+        .next {
+            display: none
+        }
+    }
+}

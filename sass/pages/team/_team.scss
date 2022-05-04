@@ -7,16 +7,52 @@
     form {
         width: 80%;
         margin-top: 0;
-        margin-left: 16px
+        margin-left: 20px
     }
     .modal-search__submit {
-        margin-left: 18px;
+        margin-left: 20px;
         max-width: 197px;
+    }
+    @media (max-width: $tablet) {
+        .dropdown__box {
+            flex-direction: column;
+        }
+        .dropdown-list {
+            width: 100%;
+            position: relative;
+        }
+        .dropdown-list-header,
+        .dropdown-list-menu {
+            width: 100%
+        }
+        form {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px
+        }
+    }
+    @media (max-width:$mobile-l) {
+        margin-top: 30px;
+        .dropdown-list-header {
+            height: 42px
+        }
+        .dropdown-list-header-text {
+            font-size: 14px
+        }
+        .modal-search__submit {
+            max-width: 90px;
+            padding: 0;
+            height: 40px;
+            margin-left: 10px;
+        }
     }
 }
 
 .team-section {
-    margin: 40px 0 108px 0
+    margin: 40px 0 108px 0;
+    @media (max-width: $mobile-l) {
+        margin: 40px 0 56px 0
+    }
 }
 
 .team-section__container {
@@ -26,29 +62,69 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
+    @media (max-width: $mobile-l) {
+        .tabs__block {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 }
 
 .team-section__items {
     border-radius: 12px;
     border: 1px solid #F0EFEF;
-    padding: 24px
+    padding: 24px;
+    @media (max-width: $tablet) {
+        padding: 15px;
+    }
 }
 
 .team-section__items-top-picture {
     width: 189px;
     height: 189px;
     border-radius: 12px;
+    max-width: 100%
 }
 
 .team-section__items-top {
     display: flex;
     margin-bottom: 32px;
+    @media (max-width: $tablet-ls) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: $tablet-s) {
+        margin-bottom: 20px;
+    }
 }
 
 .team-section__items-top-text {
     display: flex;
     flex-direction: column;
-    margin-left: 24px
+    margin-left: 24px;
+    @media (max-width: $tablet) {
+        margin-left: 0
+    }
+    @media (max-width: $tablet-s) {
+        text-align: left;
+        .team-section__items-header {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+        .team-section__items-job {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        .team-section__items-experience {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 }
 
 .team-section__items-header {
@@ -63,6 +139,9 @@
     font-size: 16px;
     line-height: 24px;
     color: #686868;
+    @media (max-width: $tablet-ls) {
+        margin-bottom: 10px;
+    }
 }
 
 .team-section__items-experience {
@@ -73,25 +152,36 @@
 }
 
 .team-section__items-bottom {
+    display: flex;
+    align-items: center;
     button {
         padding: 12px 14px;
         font-size: 14px;
         margin-right: 24px
     }
-}
-
-.team-section__items-bottom {
-    display: flex;
-    align-items: center
+    @media (max-width:$tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        button {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // Внутренняя страница команды
 .team-internal {
     margin-bottom: 100px;
+    @media (max-width: $mobile-l) {
+        margin-bottom: 56px;
+    }
 }
 
 .team-internal__container {
-    display: flex
+    display: flex;
+    @media (max-width: $tablet-ls) {
+        flex-direction: column-reverse;
+    }
 }
 
 .team-internal__container-left {
@@ -119,6 +209,30 @@
     }
     .section_information_services__item-table {
         margin-bottom: 0;
+    }
+    @media (max-width: $tablet-ls) {
+        margin-top: 20px
+    }
+    @media (max-width: $tablet-s) {
+        h1 {
+            line-height: 29px;
+            width: 100%
+        }
+    }
+    @media (max-width: $mobile-l) {
+        .accordion-list-ul {
+            font-size: 14px;
+            li:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+        .servces_cost__container {
+            margin-bottom: 32px;
+            .accordion_container-list {
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+        }
     }
 }
 
@@ -160,6 +274,13 @@
     img {
         width: 33px
     }
+    @media (max-width: $mobile-l) {
+        width: 32px;
+        height: 32px;
+        img {
+            width: 22px
+        }
+    }
 }
 
 .team-internal__container-services-title {
@@ -167,6 +288,10 @@
     font-size: 20px;
     line-height: 28px;
     margin-left: 24px;
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+        margin-left: 12px
+    }
 }
 
 .team-internal__container-services-header {
@@ -180,7 +305,10 @@
 }
 
 .team-internal__container-left .servces_cost__container .padding-16 {
-    margin-top: 36px
+    margin-top: 36px;
+    @media (max-width: $mobile-l) {
+        margin-top: 20px
+    }
 }
 
 .team-internal__container-photo {
@@ -195,10 +323,22 @@
         top: 0;
         left: 0;
     }
+    @media (max-width: $tablet-ls) {
+        width: 100%;
+        img {
+            object-position: left;
+        }
+    }
+    @media (max-width: $tablet-s) {
+        height: 300px;
+    }
 }
 
 .team-internal__container-right {
-    margin-left: 74px
+    margin-left: 74px;
+    @media (max-width: $tablet-ls) {
+        margin-left: 0
+    }
 }
 
 .team-internal__container-photo-play {
@@ -218,5 +358,13 @@
         padding: 18px 0;
         font-weight: 600;
         font-size: 20px;
+    }
+    @media (max-width: $mobile-l) {
+        button,
+        .btn {
+            font-size: 16px;
+            padding: 0;
+            height: 46px
+        }
     }
 }

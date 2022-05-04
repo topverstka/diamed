@@ -1,5 +1,8 @@
 .block-about {
     margin-bottom: 100px;
+    @media (max-width: $tablet-s) {
+        margin-bottom: 56px;
+    }
 }
 
 .block-about__container {
@@ -7,6 +10,15 @@
     h1 {
         margin-bottom: 40px;
         line-height: 68px;
+    }
+    @media (max-width:$tablet-l) {
+        flex-direction: column;
+    }
+    @media (max-width: $tablet-s) {
+        h1 {
+            margin-bottom: 24px;
+            line-height: 29px
+        }
     }
 }
 
@@ -22,6 +34,20 @@
     .btn {
         margin-top: auto;
     }
+    @media (max-width:1200px) {
+        width: 50%
+    }
+    @media (max-width:$tablet-l) {
+        width: 100%;
+        .btn {
+            margin-top: 20px
+        }
+    }
+    @media (max-width: $tablet-s) {
+        p {
+            font-size: 14px
+        }
+    }
 }
 
 .block-about-picture {
@@ -30,6 +56,18 @@
     margin-left: 44px;
     object-fit: cover;
     border-radius: 12px;
+    @media (max-width: 1200px) {
+        width: 50%;
+        max-width: 100%;
+    }
+    @media (max-width:$tablet-l) {
+        width: 100%;
+        margin: 25px 0 0 0;
+        height: 485px
+    }
+    @media (max-width: $tablet-s) {
+        height: 233px
+    }
 }
 
 .block-about__number_proud {
@@ -38,6 +76,10 @@
         background-size: 136%;
         background-position: 21% 19%;
         background-blend-mode: hard-light;
+    }
+    .number_proud__title {
+        min-width: 438px;
+        max-width: 438px
     }
     .number_proud__elements-column {
         display: flex;
@@ -63,6 +105,258 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        margin-right: 104px;
+    }
+    @media (max-width: $tablet) {
+        .number_proud__elements-column-title {
+            font-size: 14px;
+            line-height: 20px
+        }
+    }
+    @media (max-width:600px) {
+        .number_proud__elements-column {
+            padding: 20px;
+            overflow: hidden;
+        }
+        .number_proud__elements-column-icon {
+            width: 50px;
+            height: 50px
+        }
+    }
+    @media (max-width: $tablet-s) {
+        .number_proud__title {
+            max-width: 100%;
+            min-width: 100%;
+            margin-right: 0;
+        }
+        .number_proud__description {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 24px
+        }
+        .number_proud__elements {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .number_proud__elements-column {
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                grid-column: auto;
+            }
+        }
+    }
+}
+
+.facts-clinics {
+    margin: 156px 0;
+    @media (max-width: $tablet) {
+        margin: 56px 0
+    }
+    @media (max-width:$mobile-l) {
+        margin: 32px 0
+    }
+}
+
+.facts-clinics__arrow {
+    display: flex
+}
+
+.facts-clinics__left-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    .slider__arrow-next {
+        margin-left: 8px
+    }
+    @media (max-width: $tablet-s) {
+        margin-bottom: 24px
+    }
+}
+
+.facts-clinics__container {
+    display: flex;
+    .section_information_services__list {
+        height: max-content;
+        li:last-child {
+            margin-bottom: 0;
+        }
+        .section_information_services__list-title {
+            height: 33px
+        }
+    }
+    @media (max-width: $tablet) {
+        flex-direction: column-reverse;
+    }
+}
+
+.facts-clinics__slider-text {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    @media (max-width:$tablet-s) {
+        font-size: 14px
+    }
+}
+
+.facts-clinics__slider-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.facts-clinics__left {
+    width: 842px;
+    max-width: 100%;
+    margin-right: 64px;
+}
+
+.facts-clinics__slider {
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        .previous,
+        .next {
+            display: none
+        }
+    }
+}
+
+.photo-clinics {
+    height: 706px;
+    background: $header-bg;
+    display: flex;
+    position: relative;
+    .carousel {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 67%;
+    }
+    .carousel-box {
+        height: 100%;
+        img {
+            object-fit: cover;
+        }
+    }
+    .flickity-page-dots {
+        display: none
+    }
+    @media (max-width:$tablet-ls) {
+        height: 450px;
+        flex-direction: column;
+        .carousel {
+            width: 100%;
+            position: static;
+            height: 100%
+        }
+        .photo-clinics__slider {
+            height: 100%
+        }
+    }
+}
+
+.about-clinics__tabs {
+    margin: 100px 0;
+    .tabs__header {
+        margin-bottom: 56px;
+    }
+    .servces_cost__container .accordion_container-list-title {
+        max-width: 460px
+    }
+    .padding-16 {
+        margin-top: 36px
+    }
+    .servces_cost__container .accordion_container-list._show:after {
+        opacity: 1;
+    }
+    .servces_cost__container .accordion_container-list {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+    }
+    @media (min-width: $tablet-ls) {
+        .tab__list {
+            min-width: 410px;
+        }
+    }
+    @media (max-width: $tablet-s) {
+        margin: 32px 0;
+        .tabs__header {
+            margin-bottom: 24px;
+        }
+        .servces_cost__container .accordion_container-list {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+        }
+    }
+}
+
+.accordion-video {
+    height: 522px;
+    position: relative;
+    img {
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $second;
+        opacity: .7;
+        border-radius: 12px;
+    }
+    @media (max-width: $tablet) {
+        height: 300px
+    }
+}
+
+.accordion-video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    @media (max-width: $tablet-s) {
+        svg {
+            width: 70px
+        }
+    }
+}
+
+.photo-clinics__text {
+    margin-top: 56px;
+    .title-section {
+        width: 30%;
+        margin-bottom: 32px;
+    }
+    .facts-clinics__arrow {
+        .slider__arrow-next {
+            margin-left: 8px
+        }
+    }
+    @media (max-width: $tablet-ls) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title-section {
+            overflow: visible;
+        }
+    }
+    @media (max-width: $tablet) {
+        margin: 32px 0;
+        .title-section {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.list-link-pdf {
+    width: 576px;
+    max-width: 100%;
+    a:not(:last-child) {
+        margin-bottom: 24px;
     }
 }

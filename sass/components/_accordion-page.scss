@@ -1,5 +1,6 @@
 .servces_cost__container {
     width: 770px;
+    max-width: 100%;
     .accordion_container-list {
         flex-direction: column;
         padding-bottom: 20px;
@@ -45,7 +46,7 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 28px;
-        max-width: 100%;
+        max-width: 320px
     }
     .accordion_container-list-icons button {
         color: $second;
@@ -78,13 +79,35 @@
         position: relative;
     }
     .accordion_container-list-icons {
-        top: 50%;
-        transform: translateY(-50%);
+        top: auto;
         button {
             display: flex;
         }
     }
     .padding-16 {
         margin-top: 16px
+    }
+    @media (max-width: $tablet-s) {
+        .accordion_container-list-title {
+            max-width: max-content;
+            width: 170px;
+            margin-left: 0;
+            margin-right: auto;
+            font-size: 14px;
+            line-height: 20px;
+            word-wrap: break-word;
+        }
+        .accordion_container-list-picture {
+            margin-right: 16px;
+            width: 32px;
+            height: 32px;
+            img {
+                width: 22px
+            }
+        }
+        .accordion_container-list {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
     }
 }

@@ -10,11 +10,20 @@ h6 {
 .title-main {
     font-size: 56px;
     font-weight: 600;
+    line-height: 68px;
     @media (max-width: 650px) {
         font-size: 42px;
     }
     @media (max-width: $tablet-s) {
         font-size: 32px;
+    }
+}
+
+.first-block-page {
+    .title-main {
+        @media (max-width: 650px) {
+            line-height: 39px
+        }
     }
 }
 

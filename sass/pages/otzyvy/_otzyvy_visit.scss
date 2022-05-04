@@ -1,0 +1,163 @@
+.first-page-visit {
+    margin-top: 56px;
+    @media (max-width: $tablet-s) {
+        margin-top: 16px;
+        .title-main {
+            line-height: 39px;
+        }
+    }
+}
+
+.otzyv-visit-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 40px 0 56px 0;
+    @media (max-width: $tablet-s) {
+        margin: 24px 0;
+        font-size: 14px;
+        line-height: 22px
+    }
+}
+
+.otzyv-visit {
+    .form-footer__privacy {
+        color: #828282;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        a {
+            width: max-content;
+            &:after {
+                background-color: #828282;
+                bottom: 2px
+            }
+        }
+    }
+    .btn {
+        display: block
+    }
+    @media (max-width:$tablet) {
+        .form-footer {
+            position: fixed;
+            bottom: 40px;
+            left: 0;
+            width: 92%;
+            right: 0;
+            margin: auto;
+            .btn {
+                position: static;
+                width: 100%;
+                margin-top: 16px;
+                background: $btn-gray;
+                color: $color-gray;
+                &:focus {
+                    background: $second;
+                    color: #fff
+                }
+            }
+            .form-footer__privacy {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+    @media (max-width: $tablet-s) {
+        .btn {
+            left: 0;
+            right: 0;
+            bottom: 40px;
+            margin: auto;
+            width: 92%;
+            margin: auto;
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 16px 0;
+            position: fixed;
+        }
+    }
+    .form-page {
+        max-width: 100%;
+    }
+}
+
+.otzyv-visit__grade {
+    width: 427px;
+    margin-bottom: 20px;
+    @media (max-width: $tablet-s) {
+        width: 329px;
+        max-width: 100%
+    }
+}
+
+.otzyv-visit__grade-list {
+    display: flex;
+    li {
+        background: #EAE9EF;
+        border-radius: 13px;
+        width: 79px;
+        height: 45px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #686868;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $tr;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 8px
+        }
+        &._active {
+            background: $second;
+            color: #fff;
+            &:hover {
+                background: $second;
+            }
+        }
+        @media (min-width:$minHover) {
+            &:hover {
+                background: #A1DAD8;
+                color: #fff
+            }
+        }
+    }
+    @media (max-width: $tablet-s) {
+        li {
+            width: 63px;
+            height: 36px;
+            font-size: 12px;
+            &:not(:last-child) {
+                margin-right: 4px
+            }
+        }
+    }
+}
+
+.otzyv-visit__grade-text {
+    margin-bottom: 12px;
+    display: block;
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
+
+.otzyv-visit__grade-foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    align-items: center;
+    color: $accent2;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    @media (max-width: $tablet-s) {
+        margin-top: 8px;
+        font-size: 12px
+    }
+}

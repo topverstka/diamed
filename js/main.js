@@ -952,7 +952,7 @@ function accordions() {
 
                         setTimeout(() => {
                             target.closest('[data-tag="price"]').querySelector('.acc-body').classList.remove('padding-16')
-                        }, 550)
+                        }, 300)
                     }
 
 
@@ -1362,16 +1362,88 @@ function removeError(datepicker) {
     parent.classList.remove('error')
 }
 
-document.querySelector('.form-elem-date').addEventListener('click', () => {
-    datePicker.show();
-});
+if (document.querySelector('.form-elem-date')) {
+    document.querySelector('.form-elem-date').addEventListener('click', () => {
+        datePicker.show();
+    });
 
-document.querySelector('.form-elem-time').addEventListener('click', () => {
-    timePicker.show();
-});
+    document.querySelector('.form-elem-time').addEventListener('click', () => {
+        timePicker.show();
+    });
+}
+
+// let flickitiVariable;
+// let sliderView = {
+
+//         targetArrow: [],
+//         arrVariableDynamic: [],
+
+
+//         init(value) {
+//             document.querySelectorAll('[data-init-slider]').forEach(i => {
+//                 let arrowLink = document.querySelector(`[data-init-arrow="${i.dataset.initSlider}"]`);
+//                 this.action(i.dataset.initSlider, i, arrowLink ? arrowLink : false);
+//                 this.targetArrow.push(document.querySelector(`[data-init-arrow="${i.dataset.initSlider}"]`));
+//             });
+//         },
+
+//         getRandomInt(max) {
+//             return Math.floor(Math.random() * max);
+//         },
+
+
+//         action: function(value, element, arrow) {
+//             this.arrVariableDynamic.push("flickitiVariable" + this.getRandomInt(50));
+//             this.arrVariableDynamic[this.arrVariableDynamic.length - 1] = new Flickity(`${value} .carousel`, {
+//                 on: {
+//                     ready: function() {
+//                         this.element.style.height = this.element.querySelector('.carousel-box').offsetHeight + 'px'
+//                     },
+//                     // select: function(e, i) {
+//                     //     console.log(e.selectedIndex)
+//                     // },
+
+//                     change: (index, d) => {
+//                         console.log(this)
+//                         let section = this.arrVariableDynamic[this.arrVariableDynamic.length - 1].$element[0].closest('section');
+//                         if (this.arrVariableDynamic[this.arrVariableDynamic.length - 1].selectedIndex === this.arrVariableDynamic[this.arrVariableDynamic.length - 1].cells.length - 1) {
+//                             $(`.${section.getAttribute('class')} .slider__arrow-next`).attr('disabled', 'disabled');
+//                         } else {
+//                             $(`.${section.getAttribute('class')} .slider__arrow-next`).removeAttr('disabled');
+//                         }
+//                         if (this.arrVariableDynamic[this.arrVariableDynamic.length - 1].selectedIndex === 0) {
+//                             $(`.${section.getAttribute('class')} .slider__arrow-prev`).attr('disabled', 'disabled');
+//                         } else {
+//                             $(`.${section.getAttribute('class')} .slider__arrow-prev`).removeAttr('disabled');
+//                         }
+//                         element.style.height = element.querySelector('.is-selected .carousel-box').offsetHeight + 'px'
+//                     }
+//                 }
+//             });
+
+//             if (arrow) {
+//                 this.arrow(arrow, this.arrVariableDynamic[this.arrVariableDynamic.length - 1]);
+//             }
+//         },
+
+//         arrow(element, el) {
+//             //console.log(this.arrVariableDynamic[this.arrVariableDynamic.length - 1])
+//             $(`[data-init-arrow="${element.dataset.initArrow}"] .slider__arrow-next`).on('click', (e) => {
+//                 el.next();
+//             });
+
+//             $(`[data-init-arrow="${element.dataset.initArrow}"] .slider__arrow-prev`).on('click', (e) => {
+//                 el.previous();
+//             });
+//         }
+//     }
+// if (document.querySelector('[data-init-slider]')) {
+//     sliderView.init();
+// }
 
 if (document.querySelector('.timetable_table__tables')) {
-    var flktyTimeTable = new Flickity('.timetable_table__tables .carousel', {
+    let flktyTimeTable = new Flickity('.timetable_table__tables .carousel', {
+        draggable: false,
         on: {
             ready: function() {
                 this.element.style.height = this.element.querySelector('table').offsetHeight + 'px'
@@ -1403,28 +1475,164 @@ if (document.querySelector('.timetable_table__tables')) {
 }
 
 if (document.querySelector('.facts-clinics__slider')) {
-    var flktyFacts = new Flickity('.facts-clinics__slider .carousel', {
-
-
+    let flktyTimeTable = new Flickity('.facts-clinics__slider .carousel', {
+        on: {
+            ready: function() {
+                this.element.style.height = this.element.querySelector('.carousel-box').offsetHeight + 'px'
+            },
+            change: function(index) {
+                if (flktyTimeTable.selectedIndex === flktyTimeTable.cells.length - 1) {
+                    $('.facts-clinics .slider__arrow-next').attr('disabled', 'disabled');
+                } else {
+                    $('.facts-clinics .slider__arrow-next').removeAttr('disabled');
+                }
+                if (flktyTimeTable.selectedIndex === 0) {
+                    $('.facts-clinics .slider__arrow-prev').attr('disabled', 'disabled');
+                } else {
+                    $('.facts-clinics .slider__arrow-prev').removeAttr('disabled');
+                }
+                this.element.style.height = this.element.querySelector('.is-selected .carousel-box').offsetHeight + 'px'
+            }
+        }
     });
+
+    $('.facts-clinics .slider__arrow-next').on('click', function(e) {
+        flktyTimeTable.next();
+    });
+
+    $('.facts-clinics .slider__arrow-prev').on('click', function(e) {
+        flktyTimeTable.previous();
+    });
+
+    let flktyTimeTablePhoto = new Flickity('.photo-clinics .carousel', {
+        on: {
+            ready: function() {
+                this.element.style.height = this.element.querySelector('.carousel-box').offsetHeight + 'px'
+            },
+            change: function(index) {
+                if (flktyTimeTablePhoto.selectedIndex === flktyTimeTablePhoto.cells.length - 1) {
+                    $('.photo-clinics .slider__arrow-next').attr('disabled', 'disabled');
+                } else {
+                    $('.photo-clinics .slider__arrow-next').removeAttr('disabled');
+                }
+                if (flktyTimeTablePhoto.selectedIndex === 0) {
+                    $('.photo-clinics .slider__arrow-prev').attr('disabled', 'disabled');
+                } else {
+                    $('.photo-clinics .slider__arrow-prev').removeAttr('disabled');
+                }
+                this.element.style.height = this.element.querySelector('.is-selected .carousel-box').offsetHeight + 'px'
+            }
+        }
+    });
+
+    $('.photo-clinics .slider__arrow-next').on('click', function(e) {
+        flktyTimeTablePhoto.next();
+    });
+
+    $('.photo-clinics .slider__arrow-prev').on('click', function(e) {
+        flktyTimeTablePhoto.previous();
+    });
+
 }
 
 
 
 
-
-document.querySelector('.dropdown-list-header').addEventListener('click', function(e) {
-    if (!this.closest('.dropdown-list').classList.contains('_show')) {
-        this.closest('.dropdown-list').classList.add('_show');
-        this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.add('_add-padding');
-    } else {
-        this.closest('.dropdown-list').classList.remove('_show');
-        setTimeout(() => this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.remove('_add-padding'), 250);
-    }
-});
+if (document.querySelector('.dropdown-list-header')) {
+    document.querySelector('.dropdown-list-header').addEventListener('click', function(e) {
+        if (!this.closest('.dropdown-list').classList.contains('_show')) {
+            this.closest('.dropdown-list').classList.add('_show');
+            this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.add('_add-padding');
+        } else {
+            this.closest('.dropdown-list').classList.remove('_show');
+            setTimeout(() => this.closest('.dropdown-list').querySelector('.dropdown-list-ul').classList.remove('_add-padding'), 250);
+        }
+    });
+}
 
 window.addEventListener('click', function(e) {
-    if (!e.target.classList.contains('dropdown-list') && !e.target.closest('.dropdown-list')) {
-        document.querySelector('.dropdown-list').classList.remove('_show');
+    if (find('.dropdown-list')) {
+        if (!e.target.closest('.dropdown-list')) {
+            find('.dropdown-list').classList.remove('_show')
+        }
     }
 });
+
+if (document.querySelector('.otzyv-visit__grade-list')) {
+    document.querySelector('.otzyv-visit__grade-list').addEventListener('click', function(e) {
+        if (e.target.classList.contains('otzyv-visit__grade-list-element')) {
+            if (!e.target.classList.contains('_active')) {
+                this.querySelectorAll('.otzyv-visit__grade-list-element').forEach(i => i.classList.remove('_active'));
+                e.target.classList.add('_active');
+            } else {
+                e.target.classList.remove('_active');
+            }
+        }
+    });
+}
+
+if (typeof(ymaps) === 'object') {
+    ymaps.ready(init);
+}
+
+
+
+function init() {
+
+
+
+    function adress_out(element, adress) {
+        let myMap;
+        myMap = new ymaps.Map(element, {
+            center: [56.49771, 84.97437],
+            zoom: 15
+        });
+        ymaps.geocode(adress, {
+            /**
+             * Опции запроса
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode.xml
+             */
+            // Сортировка результатов от центра окна карты.
+            // boundedBy: myMap.getBounds(),
+            // strictBounds: true,
+            // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy.
+            // Если нужен только один результат, экономим трафик пользователей.
+            results: 1
+        }).then(function(res) {
+            let firstGeoObject = res.geoObjects.get(0),
+                // Координаты геообъекта.
+                coords = firstGeoObject.geometry.getCoordinates(),
+                // Область видимости геообъекта.
+                bounds = firstGeoObject.properties.get('boundedBy');
+
+            firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+            // Получаем строку с адресом и выводим в иконке геообъекта.
+            firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
+
+            // Добавляем первый найденный геообъект на карту.
+            myMap.geoObjects.add(firstGeoObject);
+            // Масштабируем карту на область видимости геообъекта.
+            myMap.setCenter(coords, 17, {
+                // Проверяем наличие тайлов на данном масштабе.
+                checkZoomRange: true
+            });
+            // let myPlacemark = new ymaps.Placemark(coords, {
+            //     iconContent: 'моя метка',
+            //     balloonContent: 'Содержимое балуна <strong>моей метки</strong>'
+            // }, {
+            //     preset: 'islands#violetStretchyIcon'
+            // });
+
+            // myMap.geoObjects.add(myPlacemark);
+        });
+
+
+    }
+
+    findAll('.contacts-page__maps').forEach(i => {
+        let adress = i.closest('.tabs__block').dataset.adress;
+        adress_out(i.id, adress);
+    });
+
+
+}

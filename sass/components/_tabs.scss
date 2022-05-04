@@ -24,6 +24,13 @@
     }
 }
 
+.tabs__cats.tabs__green-background .tab__list .tab._active {
+    @media (max-width: 600px) {
+        background: $second;
+        color: #fff
+    }
+}
+
 .tabs__header {
     position: relative;
     width: fit-content;
@@ -151,5 +158,14 @@
 }
 
 .section-line-tab {
-    margin-top: 40px
+    margin-top: 40px;
+    @media (max-width: $mobile-l) {
+        margin-top: 24px
+    }
+}
+
+.tabs-width-auto {
+    .tab__list {
+        min-width: auto
+    }
 }

@@ -1,10 +1,19 @@
 .timetable_list-doctors {
-    margin: 32px 0 40px 0;
+    margin: 32px 0 20px 0;
+    width: max-content;
     &,
     ul {
         display: flex;
         align-items: center;
     }
+}
+
+.timetable-bottom {
+    margin-top: 20px
+}
+
+.timetable_overflow {
+    overflow-y: auto;
 }
 
 .timetable_list-doctors__all {
@@ -15,6 +24,13 @@
     line-height: 20px;
     padding: 8px 18px;
     border-radius: 5px;
+    &:hover {
+        opacity: 0.9;
+    }
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
 }
 
 .timetable_list-doctors__list {
@@ -23,7 +39,27 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        color: $accent2
+        color: $accent2;
+        &:hover {
+            color: $second;
+            cursor: pointer;
+        }
+    }
+    @media (max-width:$tablet-s) {
+        li {
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 15px;
+        }
+    }
+}
+
+.timetable_table {
+    @media (max-width: $tablet-ls) {
+        width: 1000px
+    }
+    @media (max-width:$tablet-s) {
+        width: 750px
     }
 }
 
@@ -40,6 +76,14 @@
         position: absolute;
         left: 24px;
     }
+    @media (max-width:$tablet-s) {
+        .slider__arrow-next {
+            right: 10px;
+        }
+        .slider__arrow-prev {
+            left: 10px;
+        }
+    }
 }
 
 .timetable_table__header-date {
@@ -48,6 +92,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    @media (max-width: $tablet-s) {
+        justify-content: flex-start;
+        padding-left: 56px;
+    }
 }
 
 .timetable_table__header-day {
@@ -55,14 +103,22 @@
     font-size: 20px;
     line-height: 28px;
     margin-right: 8px;
-    color: $second
+    color: $second;
+    @media (max-width: $tablet-s) {
+        font-size: 15px;
+        line-height: 22px
+    }
 }
 
 .timetable_table__header-all-day {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
-    color: $main
+    color: $main;
+    @media (max-width: $tablet-s) {
+        font-size: 15px;
+        line-height: 22px
+    }
 }
 
 .timetable_table__tables {
@@ -111,6 +167,16 @@
             }
             &.active_day {
                 background: #ECF5F7;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -3px;
+                    width: 3px;
+                    height: 103%;
+                    top: -3px;
+                    z-index: 9;
+                    background: #fff;
+                }
             }
             &:first-child {
                 width: 216px
@@ -122,6 +188,14 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
+            }
+            @media (max-width:$tablet-s) {
+                font-size: 14px;
+                line-height: 19px;
+                span {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
             }
         }
         tr {
@@ -234,8 +308,19 @@
                     text-align: left;
                     padding-top: 8px
                 }
+                @media (max-width:$tablet-s) {
+                    padding: 10px;
+                    font-size: 12px;
+                    .timetable_table__position {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
             }
         }
+    }
+    @media (max-width:$tablet-s) {
+        margin-bottom: 56px;
     }
 }
 
@@ -243,6 +328,9 @@
     height: 100%;
     .carousel {
         overflow: hidden
+    }
+    .flickity-viewport {
+        touch-action: auto !important;
     }
 }
 

@@ -140,3 +140,41 @@
     color: $main;
     pointer-events: none;
 }
+
+.form-page {
+    width: 630px;
+    max-width: 100%;
+    .form-elem {
+        input {
+            border-bottom: 1px solid #DBDBDB;
+            color: $accent2;
+            &:focus {
+                color: $second;
+                border-bottom: 1px solid $second;
+            }
+        }
+        label {
+            color: $accent2;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            bottom: 0;
+            opacity: 1;
+            &._change-label {
+                font-size: 12px;
+                opacity: 1;
+                bottom: 25px;
+                @media (max-width: $tablet-s) {
+                    bottom: 26px;
+                }
+            }
+            @media (max-width: $tablet-s) {
+                font-size: 14px;
+                bottom: 0;
+            }
+        }
+    }
+    .form-footer {
+        margin-top: 40px
+    }
+}

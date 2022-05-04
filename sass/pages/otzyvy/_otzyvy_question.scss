@@ -1,0 +1,157 @@
+.otzyv-page__form {
+    margin-top: 40px;
+    @media (max-width: $mobile-l) {
+        margin-top: 20px
+    }
+}
+
+.otzyv-page__form-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 40px;
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px
+    }
+}
+
+.otzyv-page__form-info {
+    display: flex;
+    &>img {
+        width: 139px;
+        height: 139px;
+        border-radius: 12px;
+        margin-right: 40px
+    }
+    .form-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 43px
+    }
+    .form-elem {
+        &:nth-of-type(-n+2) {
+            width: 305px;
+            flex-basis: auto;
+        }
+        &:nth-of-type(3) {
+            flex-basis: 100%
+        }
+    }
+    @media (max-width:$tablet) {
+        flex-direction: column;
+        &>img {
+            margin-bottom: 15px;
+        }
+        .form-page {
+            flex-direction: column;
+            width: 100%;
+        }
+        .form-elem {
+            &:nth-of-type(-n+2) {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width:$mobile-l) {
+        .form-page {
+            margin-top: 20px
+        }
+    }
+}
+
+.otzyv-page__form-info-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    @media (max-width: $mobile-l) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.otzyv-page__form-info-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $accent2;
+    @media (max-width: $mobile-l) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.section_otzyv__element-comments {
+    padding-top: 32px;
+    border-top: 1px solid $header-bg;
+    margin-left: 77px;
+    margin-top: 32px;
+    @media (max-width: $tablet-s) {
+        margin-left: 27px
+    }
+    @media (max-width:$mobile-l) {
+        padding-top: 24px;
+        margin-top: 24px
+    }
+}
+
+.section_otzyv__element-comments-date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 12px;
+    }
+}
+
+.section_otzyv__element-comments-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $second;
+    margin-bottom: 4px;
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.section_otzyv__element-comments-jobs {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $accent2;
+    margin-bottom: 32px;
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 18px;
+    }
+}
+
+.section_otzyv__element-comments-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    @media (max-width: $tablet-s) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.otzyv-page__question {
+    .section_otzyv__element {
+        padding-bottom: 32px;
+        @media (max-width: $tablet-s) {
+            padding-bottom: 24px
+        }
+    }
+}

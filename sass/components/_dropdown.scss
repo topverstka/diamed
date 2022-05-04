@@ -18,6 +18,9 @@
         width: 22px;
         transition: $tr ease
     }
+    @media (max-width: $mobile-l) {
+        padding: 0 15px
+    }
 }
 
 .dropdown-list {
@@ -30,6 +33,10 @@
             padding-bottom: 32px;
             opacity: 1;
             z-index: 9;
+            @media (max-width: $mobile-l) {
+                height: 145px;
+                padding-bottom: 26px;
+            }
         }
     }
     &._opacity {
@@ -42,6 +49,9 @@
 ._add-padding {
     margin-top: 11px;
     padding: 0 10px 0 24px;
+    @media (max-width: $mobile-l) {
+        padding: 0 10px 0 16px
+    }
 }
 
 .dropdown-list-menu {
@@ -84,6 +94,20 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
+        }
+    }
+    @media (max-width:$mobile-l) {
+        li {
+            font-size: 14px;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &._active {
+                font-size: 14px;
+            }
         }
     }
 }
