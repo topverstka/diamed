@@ -29,7 +29,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        margin-top: 27px
+        margin-top: 37px
     }
     .btn {
         margin-top: auto;
@@ -45,7 +45,8 @@
     }
     @media (max-width: $tablet-s) {
         p {
-            font-size: 14px
+            font-size: 14px;
+            margin-top: 20px
         }
     }
 }
@@ -156,7 +157,8 @@
 }
 
 .facts-clinics__arrow {
-    display: flex
+    display: flex;
+    align-items: center
 }
 
 .facts-clinics__left-header {
@@ -230,7 +232,8 @@
         position: absolute;
         right: 0;
         top: 0;
-        width: 67%;
+        width: 996px;
+        max-width: 100%
     }
     .carousel-box {
         height: 100%;
@@ -259,6 +262,9 @@
     margin: 100px 0;
     .tabs__header {
         margin-bottom: 56px;
+    }
+    .accordion_container-list-content__container img {
+        border-radius: $radius;
     }
     .servces_cost__container .accordion_container-list-title {
         max-width: 460px

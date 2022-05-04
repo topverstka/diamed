@@ -27,9 +27,9 @@
         padding-bottom: 56px;
     }
     @media (max-width: $tablet-s) {
-        .breadcrumbs__item:nth-of-type(2) {
-            display: none
-        }
+        // .breadcrumbs__item:nth-of-type(2) {
+        //     display: none
+        // }
         .breadcrumbs {
             padding: 19px 0 0 0;
             margin-bottom: 35px;

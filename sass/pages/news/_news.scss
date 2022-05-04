@@ -182,5 +182,17 @@
     padding: 16px 24px;
     border-radius: $radius;
     margin: auto;
-    display: flex
+    display: flex;
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.artciles-page {
+    .news-page__container-element-top {
+        height: 214px
+    }
+    .news-page__container-element-bottom {
+        min-height: 156px
+    }
 }

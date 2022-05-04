@@ -7050,6 +7050,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  cursor: pointer;
 }
 
 .dropdown-list-menu li:last-child {
@@ -11165,9 +11166,6 @@ h6 {
 }
 
 @media (max-width: 500px) {
-  .first-block .breadcrumbs__item:nth-of-type(2) {
-    display: none;
-  }
   .first-block .breadcrumbs {
     padding: 19px 0 0 0;
     margin-bottom: 35px;
@@ -11923,6 +11921,9 @@ h6 {
 }
 
 @media (max-width: 375px) {
+  .servces_cost {
+    margin: 56px 0;
+  }
   .servces_cost .accordion_container-list-title {
     width: 150px;
     font-size: 12px;
@@ -12306,6 +12307,7 @@ h6 {
 
 .timetable_table__tables table tr td .timetable_table__name {
   text-align: left;
+  padding-right: 26px;
 }
 
 .timetable_table__tables table tr td .timetable_table__position {
@@ -12538,6 +12540,7 @@ h6 {
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 12px;
+  margin-right: 50px;
 }
 
 .team-section__items-job {
@@ -12631,6 +12634,10 @@ h6 {
   margin-bottom: 32px;
 }
 
+.team-internal__container-left .servces_cost__container .accordion_container-list:after {
+  opacity: 1;
+}
+
 .team-internal__container-left .accordion-list-ul li:not(:last-child) {
   color: #000;
   margin-bottom: 24px;
@@ -12643,6 +12650,10 @@ h6 {
 
 .team-internal__container-left .section_information_services__item-table {
   margin-bottom: 0;
+}
+
+.team-internal__container-left .section_information_services__item-table td {
+  padding: 16px;
 }
 
 @media (max-width: 992px) {
@@ -12777,13 +12788,14 @@ h6 {
   border-radius: var(--radius);
   position: relative;
   height: 608px;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .team-internal__container-photo img {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: var(--radius);
 }
 
 @media (max-width: 992px) {
@@ -12891,7 +12903,7 @@ h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  margin-top: 27px;
+  margin-top: 37px;
 }
 
 .block-about__container-text .btn {
@@ -12916,6 +12928,7 @@ h6 {
 @media (max-width: 500px) {
   .block-about__container-text p {
     font-size: 14px;
+    margin-top: 20px;
   }
 }
 
@@ -13051,6 +13064,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .facts-clinics__left-header {
@@ -13149,7 +13165,8 @@ h6 {
   position: absolute;
   right: 0;
   top: 0;
-  width: 67%;
+  width: 996px;
+  max-width: 100%;
 }
 
 .photo-clinics .carousel-box {
@@ -13189,6 +13206,10 @@ h6 {
 
 .about-clinics__tabs .tabs__header {
   margin-bottom: 56px;
+}
+
+.about-clinics__tabs .accordion_container-list-content__container img {
+  border-radius: var(--radius);
 }
 
 .about-clinics__tabs .servces_cost__container .accordion_container-list-title {
@@ -13875,6 +13896,18 @@ h6 {
   display: flex;
 }
 
+.news-page__btn-all:hover {
+  opacity: .9;
+}
+
+.artciles-page .news-page__container-element-top {
+  height: 214px;
+}
+
+.artciles-page .news-page__container-element-bottom {
+  min-height: 156px;
+}
+
 .details-news-page {
   margin-bottom: 100px;
 }
@@ -14486,8 +14519,9 @@ h6 {
   opacity: 1;
 }
 
-.form-patient .cat-form {
-  max-width: 955px;
+.form-patient form {
+  max-width: 100%;
+  width: 955px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -14585,7 +14619,7 @@ h6 {
   border-radius: 50%;
   background: #fff;
   position: absolute;
-  left: -32.2px;
+  left: -37.2px;
   z-index: 2;
   top: 50%;
   -webkit-transform: translateY(-50%) scale(0);
@@ -14601,7 +14635,7 @@ h6 {
   border-radius: 50%;
   background: var(--accent);
   position: absolute;
-  left: -38px;
+  left: -43px;
   -webkit-transition: var(--tr);
   transition: var(--tr);
 }
@@ -14662,6 +14696,10 @@ h6 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.form-elem__radio-input {
+  margin-left: 46px;
 }
 
 @media (max-width: 768px) {

@@ -132,6 +132,7 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 12px;
+    margin-right: 50px
 }
 
 .team-section__items-job {
@@ -195,6 +196,9 @@
         .accordion_container-list {
             padding-bottom: 32px;
             margin-bottom: 32px;
+            &:after {
+                opacity: 1;
+            }
         }
     }
     .accordion-list-ul {
@@ -209,6 +213,9 @@
     }
     .section_information_services__item-table {
         margin-bottom: 0;
+        td {
+            padding: 16px
+        }
     }
     @media (max-width: $tablet-ls) {
         margin-top: 20px
@@ -317,11 +324,12 @@
     border-radius: $radius;
     position: relative;
     height: 608px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     img {
         position: absolute;
         top: 0;
         left: 0;
+        border-radius: $radius;
     }
     @media (max-width: $tablet-ls) {
         width: 100%;

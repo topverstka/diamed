@@ -1556,6 +1556,11 @@ window.addEventListener('click', function(e) {
             find('.dropdown-list').classList.remove('_show')
         }
     }
+
+    if (e.target.classList.contains('dropdown-list-line')) {
+        find('.dropdown-list-line._active').classList.remove('_active');
+        e.target.classList.add('_active');
+    }
 });
 
 if (document.querySelector('.otzyv-visit__grade-list')) {

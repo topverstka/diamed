@@ -11,8 +11,9 @@
         color: $accent2;
         opacity: 1;
     }
-    .cat-form {
-        max-width: 955px;
+    form {
+        max-width: 100%;
+        width: 955px;
         flex-direction: column;
     }
     .form-elem {
@@ -89,7 +90,7 @@
                     border-radius: 50%;
                     background: #fff;
                     position: absolute;
-                    left: -32.2px;
+                    left: -37.2px;
                     z-index: 2;
                     top: 50%;
                     transform: translateY(-50%) scale(0);
@@ -102,7 +103,7 @@
                     border-radius: 50%;
                     background: $accent;
                     position: absolute;
-                    left: -38px;
+                    left: -43px;
                     transition: $tr;
                 }
             }
@@ -153,6 +154,7 @@
 }
 
 .form-elem__radio-input {
+    margin-left: 46px;
     @media (max-width: $tablet) {
         width: 100%;
         margin-top: 17px;
