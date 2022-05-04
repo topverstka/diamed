@@ -15107,6 +15107,16 @@ h6 {
   }
 }
 
+@media (max-height: 650px) {
+  .otzyv-visit .form-footer {
+    position: static;
+    margin-top: 45px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 500px) {
   .otzyv-visit .btn {
     left: 0;
