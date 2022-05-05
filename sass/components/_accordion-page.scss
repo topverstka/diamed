@@ -16,17 +16,27 @@
             .accordion_container-list-picture {
                 background: $second;
             }
-            .accordion_container-list-icons button {
-                color: transparent;
-                &:after {
-                    content: 'Свернуть';
-                    color: $second;
-                    position: absolute;
-                    right: 28px;
+            .accordion_container-list-icons {
+                overflow: hidden;
+                &._show {
+                    button {
+                        animation: showTitle .4s ease-in;
+                    }
                 }
+                &._add-animation {
+                    button {
+                        animation: showTitle .4s ease-in;
+                    }
+                }
+                // color: transparent;
+                // &:after {
+                //     content: 'Свернуть';
+                //     color: $second;
+                //     position: absolute;
+                //     right: 28px;
+                // }
                 svg {
                     transform: scale(1, -1);
-                    margin-left: 0;
                 }
             }
         }
@@ -48,11 +58,18 @@
         line-height: 28px;
         max-width: 320px
     }
-    .accordion_container-list-icons button {
-        color: $second;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
+    .accordion_container-list-icons {
+        &._add-animation {
+            button {
+                animation: showTitle .4s ease-in;
+            }
+        }
+        button {
+            color: $second;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+        }
         svg {
             width: 16px;
             height: 16px;
@@ -79,10 +96,10 @@
         position: relative;
     }
     .accordion_container-list-icons {
-        top: auto;
-        button {
-            display: flex;
-        }
+        // top: auto;
+        display: flex;
+        position: static;
+        margin-left: auto
     }
     .padding-16 {
         margin-top: 16px

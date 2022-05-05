@@ -136,7 +136,7 @@
     border: 1px solid $outline-card;
     border-radius: 0px 0px $radius $radius;
     padding: 24px;
-    height: calc(100% - 239px);
+    height: calc(100% - 236px);
     min-height: 176px;
     display: flex;
     flex-direction: column;
@@ -150,7 +150,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     color: #828282
 }
 
@@ -158,7 +158,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 19px;
+    margin-bottom: 15px;
     color: #313033;
     @media (max-width: $mobile-m) {
         font-size: 14px

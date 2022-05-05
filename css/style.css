@@ -4826,26 +4826,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @-webkit-keyframes showTitle {
   from {
-    -webkit-transform: translateY(80%);
-            transform: translateY(80%);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes showTitle {
   from {
-    -webkit-transform: translateY(80%);
-            transform: translateY(80%);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -6489,21 +6481,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: var(--second);
 }
 
-.servces_cost__container .accordion_container-list._show .accordion_container-list-icons button {
-  color: transparent;
+.servces_cost__container .accordion_container-list._show .accordion_container-list-icons {
+  overflow: hidden;
 }
 
-.servces_cost__container .accordion_container-list._show .accordion_container-list-icons button:after {
-  content: 'Свернуть';
-  color: var(--second);
-  position: absolute;
-  right: 28px;
+.servces_cost__container .accordion_container-list._show .accordion_container-list-icons._show button {
+  -webkit-animation: showTitle .4s ease-in;
+          animation: showTitle .4s ease-in;
 }
 
-.servces_cost__container .accordion_container-list._show .accordion_container-list-icons button svg {
+.servces_cost__container .accordion_container-list._show .accordion_container-list-icons._add-animation button {
+  -webkit-animation: showTitle .4s ease-in;
+          animation: showTitle .4s ease-in;
+}
+
+.servces_cost__container .accordion_container-list._show .accordion_container-list-icons svg {
   -webkit-transform: scale(1, -1);
           transform: scale(1, -1);
-  margin-left: 0;
 }
 
 .servces_cost__container .accordion_container-list-picture {
@@ -6527,6 +6521,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-width: 320px;
 }
 
+.servces_cost__container .accordion_container-list-icons._add-animation button {
+  -webkit-animation: showTitle .4s ease-in;
+          animation: showTitle .4s ease-in;
+}
+
 .servces_cost__container .accordion_container-list-icons button {
   color: var(--second);
   font-weight: 400;
@@ -6534,7 +6533,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   line-height: 15px;
 }
 
-.servces_cost__container .accordion_container-list-icons button svg {
+.servces_cost__container .accordion_container-list-icons svg {
   width: 16px;
   height: 16px;
   margin-left: 10px;
@@ -6575,13 +6574,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .servces_cost__container .accordion_container-list-icons {
-  top: auto;
-}
-
-.servces_cost__container .accordion_container-list-icons button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: static;
+  margin-left: auto;
 }
 
 .servces_cost__container .padding-16 {
@@ -11914,6 +11911,12 @@ h6 {
   margin-bottom: 40px;
 }
 
+@media (max-width: 992px) {
+  .servces_cost .section_information_services__item-table td:first-child {
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
   .servces_cost {
     margin: 80px 0;
@@ -11924,6 +11927,12 @@ h6 {
   .servces_cost {
     margin: 56px 0;
   }
+  .servces_cost .section_information_services__item-table td:first-child {
+    width: 60%;
+  }
+}
+
+@media (max-width: 350px) {
   .servces_cost .accordion_container-list-title {
     width: 150px;
     font-size: 12px;
@@ -11931,9 +11940,6 @@ h6 {
   .servces_cost .accordion_container-list-picture {
     margin-right: 10px;
   }
-}
-
-@media (max-width: 330px) {
   .servces_cost .accordion_container-list-title {
     width: 120px;
   }
@@ -12939,6 +12945,8 @@ h6 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 @media (max-width: 1200px) {
@@ -12953,6 +12961,8 @@ h6 {
     width: 100%;
     margin: 25px 0 0 0;
     height: 485px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -13213,7 +13223,7 @@ h6 {
 }
 
 .about-clinics__tabs .servces_cost__container .accordion_container-list-title {
-  max-width: 460px;
+  max-width: 500px;
 }
 
 .about-clinics__tabs .padding-16 {
@@ -13834,7 +13844,7 @@ h6 {
   border: 1px solid var(--outline-card);
   border-radius: 0px 0px var(--radius) var(--radius);
   padding: 24px;
-  height: calc(100% - 239px);
+  height: calc(100% - 236px);
   min-height: 176px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13856,7 +13866,7 @@ h6 {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   color: #828282;
 }
 
@@ -13864,7 +13874,7 @@ h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 19px;
+  margin-bottom: 15px;
   color: #313033;
 }
 
@@ -14596,12 +14606,8 @@ h6 {
 }
 
 .form-elem__radio-input-box input:checked + label:before {
-  -webkit-transform: translateY(-50%) scale(1);
-          transform: translateY(-50%) scale(1);
-}
-
-.form-elem__radio-input-box input:checked + label:after {
-  background: var(--second);
+  background: #fff;
+  border: 6px solid var(--second);
 }
 
 .form-elem__radio-input-box label {
@@ -14610,34 +14616,20 @@ h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form-elem__radio-input-box label:before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  left: -37.2px;
-  z-index: 2;
-  top: 50%;
-  -webkit-transform: translateY(-50%) scale(0);
-          transform: translateY(-50%) scale(0);
-  -webkit-transition: var(--tr);
-  transition: var(--tr);
-}
-
-.form-elem__radio-input-box label:after {
   content: '';
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background: var(--accent);
-  position: absolute;
-  left: -43px;
-  -webkit-transition: var(--tr);
-  transition: var(--tr);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  margin-right: 19px;
 }
 
 @media (max-width: 550px) {
@@ -14699,7 +14691,7 @@ h6 {
 }
 
 .form-elem__radio-input {
-  margin-left: 46px;
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {

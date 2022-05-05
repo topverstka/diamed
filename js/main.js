@@ -917,7 +917,10 @@ function accordions() {
     if (find('.acc._show')) {
         const accBody = find('.acc._show').querySelector('.acc-body')
         find('.acc._show').querySelector('.acc-open').classList.add('_show')
-        accBody.style.maxHeight = accBody.scrollHeight + 'px'
+        accBody.style.maxHeight = accBody.scrollHeight + 'px';
+        if (find('.acc._show').hasAttribute('data-tag')) {
+            find('.acc-open._show .accordion-btn').innerText = 'Свернуть';
+        }
     }
 
     window.addEventListener('click', e => {
@@ -929,18 +932,28 @@ function accordions() {
                 const parent = target.closest('.acc')
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
+                const valueTimeout = parent.dataset.timeout;
 
 
 
                 parent.classList.toggle('_show')
-                target.classList.toggle('_show')
+
+
 
 
                 if (target.closest('[data-tag="price"]')) {
-
+                    if (target.closest('[data-tag="price"]').querySelector('.acc-open .accordion-btn').innerText === 'Подробнее') {
+                        target.closest('[data-tag="price"]').querySelector('.acc-open .accordion-btn').innerText = 'Свернуть'
+                    } else {
+                        target.closest('[data-tag="price"]').querySelector('.acc-open .accordion-btn').innerText = 'Подробнее'
+                    }
+                    target.closest('.acc-open').classList.toggle('_show');
+                    target.closest('.acc-open').classList.remove('_add-animation');
                     setTimeout(() => {
                         target.closest('[data-tag="price"]').querySelector('.acc-body').classList.add('padding-16')
-                    }, 200)
+                    }, 0)
+                } else {
+                    target.classList.toggle('_show')
                 }
 
 
@@ -951,8 +964,10 @@ function accordions() {
                     if (target.closest('[data-tag="price"]')) {
 
                         setTimeout(() => {
-                            target.closest('[data-tag="price"]').querySelector('.acc-body').classList.remove('padding-16')
-                        }, 300)
+                            target.closest('[data-tag="price"]').querySelector('.acc-body').classList.remove('padding-16');
+                            target.closest('.acc-open').classList.remove('_add-animation');
+                        }, valueTimeout);
+                        target.closest('.acc-open').classList.add('_add-animation');
                     }
 
 
@@ -984,12 +999,26 @@ function accordions() {
 
 
 
+                            if (target.closest('[data-tag="price"]')) {
+                                elemHeader.querySelector('.accordion-btn').innerText = 'Подробнее'
+                            }
+
                             elem.classList.remove('_show')
                             elemHeader.classList.remove('_show')
                             setTimeout(function() {
                                 elemBody.style.maxHeight = null
                             }, 250)
                         }
+                    }
+
+                    if (target.closest('[data-tag="price"]')) {
+                        [...parent.parentElement.querySelectorAll('.accordion_container-list')].filter(i => {
+                            if (!i.classList.contains('_show')) {
+                                setTimeout(() => {
+                                    i.querySelector('.acc-body').classList.remove('padding-16');
+                                }, valueTimeout);
+                            }
+                        })
                     }
 
 

@@ -57,6 +57,7 @@
     margin-left: 44px;
     object-fit: cover;
     border-radius: 12px;
+    transform: translateY(10px);
     @media (max-width: 1200px) {
         width: 50%;
         max-width: 100%;
@@ -64,7 +65,8 @@
     @media (max-width:$tablet-l) {
         width: 100%;
         margin: 25px 0 0 0;
-        height: 485px
+        height: 485px;
+        transform: translateY(0);
     }
     @media (max-width: $tablet-s) {
         height: 233px
@@ -267,7 +269,7 @@
         border-radius: $radius;
     }
     .servces_cost__container .accordion_container-list-title {
-        max-width: 460px
+        max-width: 500px
     }
     .padding-16 {
         margin-top: 36px

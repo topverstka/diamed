@@ -55,7 +55,7 @@
                             </div>
                             <form action="#" class="modal-search__form">
                                 <div class="modal-search__textfield">
-                                    <input type="text" id="search" placeholder="Поиск...">
+                                    <input type="text" id="search-1" placeholder="Поиск...">
                                     <span class="modal-search__textfield-icon"><svg><use href='./img/sprite.svg#search-form_icon'></use></svg></span>
                                 </div>
                                 <button class="btn modal-search__submit" type="submit">Найти</button>
@@ -833,7 +833,7 @@
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 160ms;"><a href="#" class="link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="">Антистресс-лечение</a></li>
                                     <li class="sub-menu__item show-menu-item" style="animation-delay: 180ms;">
                                         <div class=" sub-menu__item-header">
-                                            <a href="#" class=" link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry" data-d-sub-menu="">Детская стоматология</a>
+                                            <a href="#" class=" link_arrow link_arrow-sub sub-menu__link" data-d-sub-menu="pediatric_dentistry">Детская стоматология</a>
                                         </div>
                                         <ul class="acc-body sub-menu__item-list">
                                             <li class="d-sub-menu__item"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a></li>
@@ -869,8 +869,8 @@
                                     </ul>
                                 </div>
                                 <div class="d-sub-menu__block" data-d-sub-menu="pediatric_dentistry">
-                                    <h3 class="d-sub-menu__title" id="d-sub-menu-title">Детская стоматология</h3>
-                                    <ul class="d-sub-menu__list" id="d-sub-menu" data-menu="d-sub-menu">
+                                    <h3 class="d-sub-menu__title" id="d-sub-menu-title-1">Детская стоматология</h3>
+                                    <ul class="d-sub-menu__list" id="d-sub-menu-1" data-menu="d-sub-menu">
                                         <li class="d-sub-menu__item show-menu-item" style="animation-delay: 20ms;"><a href="#" class="link d-sub-menu__link">Вырвать зуб без боли и слез</a>
                                         </li>
                                         <li class="d-sub-menu__item show-menu-item" style="animation-delay: 40ms;"><a href="#" class="link d-sub-menu__link">Местная анастезия</a></li>
@@ -906,7 +906,7 @@
         </header>
 
         <main class="main">
-            <section class="first-block-page">
+            <div class="first-block-page">
                 <div class="container">
                     <div class="breadcrumbs breadcrumbs-indent breadcrumbs-container">
                         <ul class="breadcrumbs__list">
@@ -916,7 +916,7 @@
                     </div>
                 </div>
 
-            </section>
+            </div>
 
             <section class="block-about">
                 <div class="container">
@@ -1124,7 +1124,7 @@
 
             </section>
 
-            <section class="section-line-tab about-clinics__tabs">
+            <div class="section-line-tab about-clinics__tabs">
                 <div class="container">
                     <div class="our_doctors__tabs-container">
                         <div class="our_doctors__tabs tabs__header tabs__cats tabs__background tabs__green-background">
@@ -1138,17 +1138,17 @@
                         <div class="tabs__block" data-tab-body="ab-cl-1">
                             <div class="servces_cost__container">
                                 <div class="accordion_container">
-                                    <div class="accordion_container-list acc _show" data-tag="price">
+                                    <div class="accordion_container-list acc _show" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Дентальный микроскоп</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  padding-16">
@@ -1167,17 +1167,17 @@
                                         </div>
                                     </div>
 
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Наконечники «KaVo»</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1195,17 +1195,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Аппарат для трехмерного<br> пломбирования каналов «Calamus Dual»</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1223,17 +1223,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Диагностика с помощью<br> ортопантомографа и радиовизиографии</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1251,17 +1251,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Компьютерная система диагностики и<br>анализа заболеваний тканей пародонта <br>«Florida Probe»</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1279,17 +1279,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Компьютерный 3D томограф</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1307,17 +1307,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Использование ультрасовременных <br>дентальных микроскопов</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1335,17 +1335,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Лечение лазером</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1369,17 +1369,17 @@
                         <div class="tabs__block" data-tab-body="ab-cl-2">
                             <div class="servces_cost__container">
                                 <div class="accordion_container">
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Клиника «DиаМеD»</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1398,17 +1398,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Видео-ролик о нашей сети <br>стоматологических клиник «DиаМеD»</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1427,19 +1427,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Профессор Иванов Сергей Юрьевич о нашей <br>новой клинике на Красноармейской, 96.
 
                                             </p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1458,17 +1458,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion_container-list acc" data-tag="price">
+                                    <div class="accordion_container-list acc" data-tag="price" data-timeout="400">
                                         <div class="accordion_container-list-header">
 
                                             <p class="accordion_container-list-title">Видео-ролик о нашей клинике на <br>Фрунзе, 25.</p>
-                                            <div class="accordion_container-list-icons acc-header">
-                                                <button class="acc-open">
-                                                   Подробнее  
-                                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                                                                                                                                     
-                                                </button>
+                                            <div class="accordion_container-list-icons acc-header acc-open">
+                                                <button class="accordion-btn">
+                                           Подробнее                                                                                                                                                                                                                 
+                                        </button>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 6L8 10L12 6" stroke="#4BB9B5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                             </div>
                                         </div>
                                         <div class="accordion_container-list-content acc-body  ">
@@ -1505,7 +1505,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
 
         </main>
@@ -1523,7 +1523,7 @@
                                 <button class="tab" data-tab="footer_cost">На Карташова</button>
                             </div>
                         </div>
-                        <form action="" class="form cat-form" id="make_appointment">
+                        <form action="/" class="form cat-form" id="make_appointment">
                             <div class="form-elem">
                                 <input class="form-elem__area _req" name="name" type="text">
                                 <label class="form-elem__label">Как к вам обращаться?</label>
@@ -1683,9 +1683,9 @@
 
     <script src="./js/libs/jquery.js"></script>
 
-    <script type="text/javascript" src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <script src="./js/libs/air-datepicker.js"></script>

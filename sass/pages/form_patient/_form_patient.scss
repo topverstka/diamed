@@ -70,11 +70,13 @@
                 height: 24px;
                 &:checked+label {
                     &:before {
-                        transform: translateY(-50%) scale(1);
+                        // transform: translateY(-50%) scale(1);
+                        background: #fff;
+                        border: 6px solid var(--second);
                     }
-                    &:after {
-                        background: $second
-                    }
+                    // &:after {
+                    //     background: $second
+                    // }
                 }
             }
             label {
@@ -83,28 +85,28 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
+                display: flex;
+                // &:before {
+                //     content: '';
+                //     width: 12px;
+                //     height: 12px;
+                //     border-radius: 50%;
+                //     background: #fff;
+                //     position: absolute;
+                //     left: -37.2px;
+                //     z-index: 2;
+                //     top: 50%;
+                //     transform: translateY(-50%) scale(0);
+                //     transition: $tr;
+                // }
                 &:before {
-                    content: '';
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: #fff;
-                    position: absolute;
-                    left: -37.2px;
-                    z-index: 2;
-                    top: 50%;
-                    transform: translateY(-50%) scale(0);
-                    transition: $tr;
-                }
-                &:after {
                     content: '';
                     width: 24px;
                     height: 24px;
                     border-radius: 50%;
                     background: $accent;
-                    position: absolute;
-                    left: -43px;
-                    transition: $tr;
+                    transition: .2s ease;
+                    margin-right: 19px
                 }
             }
             @media (max-width:550px) {
@@ -154,7 +156,7 @@
 }
 
 .form-elem__radio-input {
-    margin-left: 46px;
+    margin-left: 0;
     @media (max-width: $tablet) {
         width: 100%;
         margin-top: 17px;
