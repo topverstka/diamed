@@ -6494,13 +6494,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .servces_cost__container .accordion_container-list._show .accordion_container-list-icons._show button {
-  -webkit-animation: showTitle .4s ease-in;
-          animation: showTitle .4s ease-in;
+  -webkit-animation: showElem .4s ease-in;
+          animation: showElem .4s ease-in;
 }
 
 .servces_cost__container .accordion_container-list._show .accordion_container-list-icons._add-animation button {
-  -webkit-animation: showTitle .4s ease-in;
-          animation: showTitle .4s ease-in;
+  -webkit-animation: showElem .4s ease-in;
+          animation: showElem .4s ease-in;
 }
 
 .servces_cost__container .accordion_container-list._show .accordion_container-list-icons svg {
@@ -6530,8 +6530,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .servces_cost__container .accordion_container-list-icons._add-animation button {
-  -webkit-animation: showTitle .4s ease-in;
-          animation: showTitle .4s ease-in;
+  -webkit-animation: showElem .4s ease-in;
+          animation: showElem .4s ease-in;
 }
 
 .servces_cost__container .accordion_container-list-icons button {
