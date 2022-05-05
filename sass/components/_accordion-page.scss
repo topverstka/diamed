@@ -20,12 +20,12 @@
                 overflow: hidden;
                 &._show {
                     button {
-                        animation: showElem .4s ease-in;
+                        animation: showElem .6s ease-in;
                     }
                 }
                 &._add-animation {
                     button {
-                        animation: showElem .4s ease-in;
+                        animation: showElem .6s ease-in;
                     }
                 }
                 // color: transparent;
@@ -61,7 +61,7 @@
     .accordion_container-list-icons {
         &._add-animation {
             button {
-                animation: showElem .4s ease-in;
+                animation: showElem .6s ease-in;
             }
         }
         button {
