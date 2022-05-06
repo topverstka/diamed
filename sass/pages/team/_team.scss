@@ -201,6 +201,9 @@
             }
         }
     }
+    .accordion_container-list-title {
+        max-width: 70%
+    }
     .accordion-list-ul {
         li:not(:last-child) {
             color: #000;
@@ -227,6 +230,9 @@
         }
     }
     @media (max-width: $mobile-l) {
+        .accordion_container-list-title {
+            max-width: 100%
+        }
         .accordion-list-ul {
             font-size: 14px;
             li:not(:last-child) {

@@ -12646,6 +12646,10 @@ h6 {
   opacity: 1;
 }
 
+.team-internal__container-left .accordion_container-list-title {
+  max-width: 70%;
+}
+
 .team-internal__container-left .accordion-list-ul li:not(:last-child) {
   color: #000;
   margin-bottom: 24px;
@@ -12678,6 +12682,9 @@ h6 {
 }
 
 @media (max-width: 425px) {
+  .team-internal__container-left .accordion_container-list-title {
+    max-width: 100%;
+  }
   .team-internal__container-left .accordion-list-ul {
     font-size: 14px;
   }
