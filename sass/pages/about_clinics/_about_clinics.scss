@@ -32,7 +32,7 @@
         margin-top: 37px
     }
     .btn {
-        margin-top: auto;
+        margin-top: 88px;
     }
     @media (max-width:1200px) {
         width: 50%
@@ -234,7 +234,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        width: 996px;
+        width: 67%;
         max-width: 100%
     }
     .carousel-box {
@@ -245,6 +245,16 @@
     }
     .flickity-page-dots {
         display: none
+    }
+    @media (min-width:1600px) {
+        .carousel {
+            width: 65%
+        }
+    }
+    @media (max-width:1300px) {
+        .carousel {
+            width: 65%
+        }
     }
     @media (max-width:$tablet-ls) {
         height: 450px;

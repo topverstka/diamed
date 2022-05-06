@@ -61,7 +61,7 @@
         margin-left: 36px;
         &-box {
             &:not(:last-child) {
-                margin-right: 104px
+                margin-right: 56px
             }
             input {
                 opacity: 0;
@@ -145,7 +145,7 @@
 
 .form-elem__radio-list {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 685px;
     border-bottom: 1px solid $header-bg;
     padding-bottom: 32px;
@@ -169,6 +169,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-right: 24px;
+    margin-bottom: auto;
 }
 
 .form-elem__radio-list-text {

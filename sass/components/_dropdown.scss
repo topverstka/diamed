@@ -85,6 +85,9 @@
         line-height: 24px;
         color: #fff;
         cursor: pointer;
+        &:hover {
+            color: $accent;
+        }
         &:last-child {
             margin-bottom: 16px;
         }

@@ -6722,7 +6722,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .breadcrumbs-indent {
   margin-top: 55px;
-  margin-bottom: 55px;
+  margin-bottom: 56px;
 }
 
 @media (max-width: 768px) {
@@ -6735,16 +6735,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 425px) {
   .breadcrumbs-indent {
     margin-top: 16px;
-    margin-bottom: 32px;
-  }
-}
-
-.breadcrumbs-small-margin {
-  margin-bottom: 41px;
-}
-
-@media (max-width: 425px) {
-  .breadcrumbs-small-margin {
     margin-bottom: 32px;
   }
 }
@@ -7056,6 +7046,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   line-height: 24px;
   color: #fff;
   cursor: pointer;
+}
+
+.dropdown-list-menu li:hover {
+  color: var(--accent);
 }
 
 .dropdown-list-menu li:last-child {
@@ -12921,7 +12915,7 @@ h6 {
 }
 
 .block-about__container-text .btn {
-  margin-top: auto;
+  margin-top: 88px;
 }
 
 @media (max-width: 1200px) {
@@ -13183,7 +13177,7 @@ h6 {
   position: absolute;
   right: 0;
   top: 0;
-  width: 996px;
+  width: 67%;
   max-width: 100%;
 }
 
@@ -13198,6 +13192,18 @@ h6 {
 
 .photo-clinics .flickity-page-dots {
   display: none;
+}
+
+@media (min-width: 1600px) {
+  .photo-clinics .carousel {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .photo-clinics .carousel {
+    width: 65%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -14603,7 +14609,7 @@ h6 {
 }
 
 .form-elem__radio-input-box:not(:last-child) {
-  margin-right: 104px;
+  margin-right: 56px;
 }
 
 .form-elem__radio-input-box input {
@@ -14682,9 +14688,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 685px;
   border-bottom: 1px solid var(--header-bg);
   padding-bottom: 32px;
@@ -14716,6 +14722,7 @@ h6 {
   font-size: 16px;
   line-height: 20px;
   margin-right: 24px;
+  margin-bottom: auto;
 }
 
 .form-elem__radio-list-text {
