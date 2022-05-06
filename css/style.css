@@ -14921,6 +14921,7 @@ h6 {
 .otzyv-page__form-info .form-elem:nth-of-type(3) {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
