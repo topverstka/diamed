@@ -25,6 +25,11 @@
 }
 
 .news-page__container-element {
+    &:hover {
+        .link_arrow:before {
+            transform: rotate(45deg)
+        }
+    }
     &[data-post=news] {
         .news-page__container-element-top {
             &:after {

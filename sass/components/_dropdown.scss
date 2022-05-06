@@ -9,6 +9,13 @@
     height: 52px;
     padding: 0 24px;
     cursor: pointer;
+    transition: $tr;
+    &:hover {
+        opacity: 0.9;
+    }
+    &:active {
+        opacity: 0.8;
+    }
     .dropdown-list-header-text {
         font-weight: 600;
         font-size: 16px;

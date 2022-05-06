@@ -6489,18 +6489,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: var(--second);
 }
 
+.servces_cost__container .accordion_container-list._show .acc-open._show button {
+  -webkit-animation: showElem .6s ease-in;
+          animation: showElem .6s ease-in;
+}
+
+.servces_cost__container .accordion_container-list._show .acc-open._add-animation button {
+  -webkit-animation: showElem .6s ease-in;
+          animation: showElem .6s ease-in;
+}
+
 .servces_cost__container .accordion_container-list._show .accordion_container-list-icons {
   overflow: hidden;
-}
-
-.servces_cost__container .accordion_container-list._show .accordion_container-list-icons._show button {
-  -webkit-animation: showElem .6s ease-in;
-          animation: showElem .6s ease-in;
-}
-
-.servces_cost__container .accordion_container-list._show .accordion_container-list-icons._add-animation button {
-  -webkit-animation: showElem .6s ease-in;
-          animation: showElem .6s ease-in;
 }
 
 .servces_cost__container .accordion_container-list._show .accordion_container-list-icons svg {
@@ -6526,10 +6526,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
+  cursor: pointer;
   max-width: 320px;
 }
 
-.servces_cost__container .accordion_container-list-icons._add-animation button {
+.servces_cost__container .acc-open._add-animation button {
   -webkit-animation: showElem .6s ease-in;
           animation: showElem .6s ease-in;
 }
@@ -6722,7 +6723,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .breadcrumbs-indent {
   margin-top: 55px;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
 }
 
 @media (max-width: 768px) {
@@ -6955,6 +6956,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 52px;
   padding: 0 24px;
   cursor: pointer;
+  -webkit-transition: var(--tr);
+  transition: var(--tr);
+}
+
+.dropdown-list-header:hover {
+  opacity: 0.9;
+}
+
+.dropdown-list-header:active {
+  opacity: 0.8;
 }
 
 .dropdown-list-header .dropdown-list-header-text {
@@ -12707,7 +12718,7 @@ h6 {
   font-size: 12px;
   line-height: 15px;
   padding: 12px 18px;
-  margin-top: 16px;
+  margin-top: 40px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -13379,7 +13390,7 @@ h6 {
   grid-gap: 20px;
   -ms-grid-rows: (197px)[2];
       grid-template-rows: repeat(2, 197px);
-  margin: 126px 0 201px 0;
+  margin: 40px 0 201px 0;
 }
 
 @media (max-width: 1100px) {
@@ -13753,6 +13764,11 @@ h6 {
 
 .jotting-page .news-page__container {
   margin-bottom: 56px;
+}
+
+.news-page__container-element:hover .link_arrow:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .news-page__container-element[data-post=news] .news-page__container-element-top:after {
@@ -14309,7 +14325,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 42px;
+  margin-top: 40px;
 }
 
 .vakansion-detail-page__container .section_information_services__list {

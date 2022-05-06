@@ -250,37 +250,44 @@ function menu() {
 submitAppointment()
 
 function submitAppointment() {
-    const form = document.getElementById('make_appointment')
-    const textfieldElems = form.querySelectorAll('input._req')
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.make_appointment')) {
+            const form = e.target.closest('.make_appointment');
+            const textfieldElems = form.querySelectorAll('input._req');
 
-    for (let i = 0; i < textfieldElems.length; i++) {
-        const textfield = textfieldElems[i]
-        const parent = textfield.parentElement
+            for (let i = 0; i < textfieldElems.length; i++) {
+                const textfield = textfieldElems[i]
+                const parent = textfield.parentElement
 
-        textfield.addEventListener('input', e => {
-            parent.classList.remove('error')
-        })
-    }
+                textfield.addEventListener('input', e => {
+                    parent.classList.remove('error')
+                })
+            }
 
-    form.addEventListener('submit', async e => {
-        e.preventDefault()
+            form.addEventListener('submit', async e => {
+                e.preventDefault()
 
-        if (validForm(form)) {
-            const formData = new FormData()
-            const action = form.getAttribute('action')
+                if (validForm(form)) {
+                    const formData = new FormData()
+                    const action = form.getAttribute('action')
 
-            let response = await fetch(action, {
-                method: 'POST',
-                body: formData
+                    let response = await fetch(action, {
+                        method: 'POST',
+                        body: formData
+                    })
+
+                    if (response.ok) {
+                        alert('Заявка отправлена!')
+                    } else {
+                        alert('Ошибка с сервером! Заявка не отправлена!')
+                    }
+                }
             })
 
-            if (response.ok) {
-                alert('Заявка отправлена!')
-            } else {
-                alert('Ошибка с сервером! Заявка не отправлена!')
-            }
         }
-    })
+    });
+
+
 }
 
 // Отправить заявку на консультацию
@@ -326,7 +333,6 @@ function submitConsultation() {
 function validForm(form) {
     const textfieldElems = form.querySelectorAll('input._req')
     let con = true
-
     for (let i = 0; i < textfieldElems.length; i++) {
         const textfield = textfieldElems[i]
 
@@ -357,6 +363,7 @@ function validForm(form) {
     }
 
     return con
+
 }
 
 function validateEmail(email) {
@@ -928,7 +935,7 @@ function accordions() {
 
         if (target.classList.contains('acc-open') || target.closest('.acc-open')) {
             if ((window.innerWidth > 920 && !target.classList.contains('sub-menu__link')) || window.innerWidth <= 920) {
-                const container = (!target.closest('.acc-body')) ? target.parentElement.parentElement : target.closest('.acc-body')
+                const container = (!target.closest('.acc-body')) ? target.parentElement : target.closest('.acc-body')
                 const parent = target.closest('.acc')
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
@@ -1021,6 +1028,7 @@ function accordions() {
                         })
                     }
 
+                    console.log(container)
 
                     accBody.style.maxHeight = accBody.scrollHeight + 'px';
                     container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';

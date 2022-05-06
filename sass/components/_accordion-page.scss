@@ -16,8 +16,7 @@
             .accordion_container-list-picture {
                 background: $second;
             }
-            .accordion_container-list-icons {
-                overflow: hidden;
+            .acc-open {
                 &._show {
                     button {
                         animation: showElem .6s ease-in;
@@ -28,6 +27,9 @@
                         animation: showElem .6s ease-in;
                     }
                 }
+            }
+            .accordion_container-list-icons {
+                overflow: hidden;
                 // color: transparent;
                 // &:after {
                 //     content: 'Свернуть';
@@ -56,14 +58,17 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 28px;
+        cursor: pointer;
         max-width: 320px
     }
-    .accordion_container-list-icons {
+    .acc-open {
         &._add-animation {
             button {
                 animation: showElem .6s ease-in;
             }
         }
+    }
+    .accordion_container-list-icons {
         button {
             color: $second;
             font-weight: 400;
