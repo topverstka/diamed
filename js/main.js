@@ -935,7 +935,7 @@ function accordions() {
 
         if (target.classList.contains('acc-open') || target.closest('.acc-open')) {
             if ((window.innerWidth > 920 && !target.classList.contains('sub-menu__link')) || window.innerWidth <= 920) {
-                const container = (!target.closest('.acc-body')) ? target.parentElement : target.closest('.acc-body')
+                const container = (!target.closest('.acc-body')) ? target.closest('.accordion_container-list-header') : target.closest('.acc-body')
                 const parent = target.closest('.acc')
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
