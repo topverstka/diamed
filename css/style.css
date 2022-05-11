@@ -7098,12 +7098,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: var(--second);
+  color: var(--main);
+  display: block;
+}
+
+.link-pdf:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
-  display: block;
+}
+
+.link-pdf:focus {
+  opacity: .7;
 }
 
 .link-pdf:after {
@@ -13610,11 +13617,34 @@ h6 {
   margin-bottom: 16px;
 }
 
-.treatment__list-element a {
+.treatment__list-element a.link_arrow {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: var(--second);
+}
+
+.treatment__list-element a.link_arrow:before {
+  top: 5px;
+  min-width: 12px;
+  height: 12px;
+  background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M11.0002 7.66678V11.6669C11.0002 12.0205 10.8598 12.3597 10.6097 12.6097C10.3597 12.8598 10.0205 13.0002 9.66688 13.0002H2.33337C1.97974 13.0002 1.64059 12.8598 1.39053 12.6097C1.14048 12.3597 1 12.0205 1 11.6669V4.33337C1 3.97974 1.14048 3.64059 1.39053 3.39053C1.64059 3.14048 1.97974 3 2.33337 3H6.33346' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/> <path d='M9.00586 1H13.006V5.0001' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/> <path d='M5.66797 8.33351L13.0015 1' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/>/%3E%3C/svg%3E");
+}
+
+.treatment__list-element a.link_arrow:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.treatment__list-element a.link_arrow:hover:before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.treatment__list-element a.link_arrow:focus {
+  opacity: .7;
 }
 
 @media (max-width: 500px) {
@@ -13647,12 +13677,39 @@ h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color: var(--main);
+  position: relative;
+}
+
+.documentation_page__list-element a.link_arrow {
+  color: var(--second);
+}
+
+.documentation_page__list-element a.link_arrow:before {
+  top: 5px;
+  min-width: 12px;
+  height: 12px;
+  background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M11.0002 7.66678V11.6669C11.0002 12.0205 10.8598 12.3597 10.6097 12.6097C10.3597 12.8598 10.0205 13.0002 9.66688 13.0002H2.33337C1.97974 13.0002 1.64059 12.8598 1.39053 12.6097C1.14048 12.3597 1 12.0205 1 11.6669V4.33337C1 3.97974 1.14048 3.64059 1.39053 3.39053C1.64059 3.14048 1.97974 3 2.33337 3H6.33346' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/> <path d='M9.00586 1H13.006V5.0001' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/> <path d='M5.66797 8.33351L13.0015 1' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/>/%3E%3C/svg%3E");
+}
+
+.documentation_page__list-element a.link_arrow:focus {
+  opacity: .7;
+}
+
+.documentation_page__list-element a.link_arrow:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+}
+
+.documentation_page__list-element a.link_arrow:hover:before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.documentation_page__list-element a:hover {
   color: var(--second);
-  position: relative;
 }
 
 .documentation_page__list-element .link_arrow {
@@ -14460,6 +14517,17 @@ h6 {
   color: var(--second);
 }
 
+.accordion-contacts__list-line a:focus {
+  opacity: .7 !important;
+}
+
+.accordion-contacts__list-line a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
 @media (max-width: 425px) {
   .accordion-contacts__list-line {
     font-size: 14px;
@@ -14516,6 +14584,14 @@ h6 {
   display: block;
 }
 
+.contacts-page__body-col a:hover {
+  color: var(--second);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
 .contacts-page__body-col-bottom {
   font-weight: 600;
   font-size: 16px;
@@ -14538,13 +14614,15 @@ h6 {
 }
 
 .contacts-page__maps {
-  height: 798px;
+  height: 686px;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 768px) {
   .contacts-page__maps {
     height: 350px;
+    margin-bottom: 56px;
   }
 }
 

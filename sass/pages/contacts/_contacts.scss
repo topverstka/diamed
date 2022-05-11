@@ -34,6 +34,15 @@
         display: block
     }
     
+    .contacts-page__body-col {
+        a:hover {
+            color: $second;
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+        }
+    }
+    
     .contacts-page__body-col-bottom {
         font-weight: 600;
         font-size: 16px;
@@ -53,9 +62,11 @@
     }
     
     .contacts-page__maps {
-        height: 798px;
+        height: 686px;
         width: 100%;
+        margin-bottom: 100px;
         @media (max-width: $tablet) {
-            height: 350px
+            height: 350px;
+            margin-bottom: 56px;
         }
     }
