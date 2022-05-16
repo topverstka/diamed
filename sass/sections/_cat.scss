@@ -241,10 +241,12 @@
             line-height: 1;
         }
         &:active {
-            opacity: 0.8;
+            opacity: 0.6;
         }
         &:hover {
-            font-weight: bold;
+            &:after {
+                opacity: 1;
+            }
         }
         &:after {
             content: '';
@@ -253,7 +255,9 @@
             height: 1px;
             background-color: #fff;
             position: absolute;
-            bottom: 2px;
+            bottom: 1px;
+            opacity: 0;
+            transition: $tr;
         }
     }
 }

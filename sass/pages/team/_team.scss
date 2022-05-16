@@ -360,12 +360,34 @@
     bottom: 24px;
     right: 24px;
     width: 70px;
-    height: 70px
+    height: 70px;
+    svg rect {
+        transition: $tr;
+    }
+    &:hover {
+        svg rect {
+            fill: #5dc0bd
+        }
+    }
+    &:focus {
+        svg rect {
+            fill: #6fc7c4
+        }
+    }
 }
 
 .team-internal__container-btn {
     .btn-border {
         margin-bottom: 16px;
+        &:hover {
+            background-color: $second;
+            color: #fff
+        }
+        &:focus {
+            background-color: $second;
+            opacity: .7;
+            color: #fff
+        }
     }
     .btn {
         width: 100%;

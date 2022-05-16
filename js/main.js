@@ -940,13 +940,12 @@ function accordions() {
                 const accBody = parent.querySelector('.acc-body')
                 const menuLeft = container.closest('.menu-left-mobile')
                 const valueTimeout = parent.dataset.timeout;
+                let oldYPage = window.pageYOffset;
+                let newYPage = 0;
 
 
 
                 parent.classList.toggle('_show')
-
-
-
 
                 if (target.closest('[data-tag="price"]')) {
                     if (target.closest('[data-tag="price"]').querySelector('.acc-open .accordion-btn').innerText === 'Подробнее') {
@@ -1006,6 +1005,7 @@ function accordions() {
 
 
 
+
                             if (target.closest('[data-tag="price"]')) {
                                 elemHeader.querySelector('.accordion-btn').innerText = 'Подробнее'
                             }
@@ -1028,7 +1028,49 @@ function accordions() {
                         })
                     }
 
-                    console.log(container)
+                    if (window.innerWidth > 920) {
+
+                        if (target.closest('[data-scroll-top')) {
+                            console.log(oldYPage, window.pageYOffset)
+
+                            // setTimeout(() =>
+                            // window.scrollTo({
+                            //     top: window.pageYOffset - (elemBody.scrollHeight + elemHeader.scrollHeight),
+                            //     behavior: "smooth"
+                            // })
+                            // ));
+
+                            // window.scrollTo({
+                            //         top: window.pageYOffset - target.closest('[data-scroll-top').getBoundingClientRect().top,
+                            //         behavior: "smooth"
+                            //     })
+                            // console.log(target.closest('[data-scroll-top').getBoundingClientRect().top)
+                            if (target.closest('[data-scroll-top').getBoundingClientRect().top < 400) {
+                                setTimeout(() => {
+                                    //console.log(target.closest('[data-scroll-top').getBoundingClientRect().top)
+                                    console.log(oldYPage, window.pageYOffset)
+                                        //console.log(target.closest('[data-scroll-top').previousElementSibling)
+                                    let prevTarget = window.pageYOffset;
+                                    let newTarget;
+                                    // document.querySelector('.acc._show').scrollIntoView({ block: "center", behavior: "smooth" });
+                                    // target.closest('[data-scroll-top').scrollIntoView({ block: "center", behavior: "smooth", inline: "start" });
+                                    // document.querySelector('.acc._show').scrollIntoView({ block: "center", behavior: "smooth" });
+
+                                    // window.scrollTo({
+                                    //     top: window.pageYOffset + (document.querySelector('.acc._show').offsetTop - window.pageYOffset),
+                                    //     behavior: "smooth"
+                                    // })
+
+                                    window.scrollTo({
+                                        top: (document.querySelector('.acc._show').offsetTop - 250),
+                                        behavior: "smooth"
+                                    })
+
+                                }, 500)
+                            }
+                        }
+                    }
+
 
                     accBody.style.maxHeight = accBody.scrollHeight + 'px';
                     container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
