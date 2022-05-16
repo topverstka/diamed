@@ -7250,11 +7250,14 @@ h6 {
   position: relative;
   -webkit-transition: all 1s;
   transition: all 1s;
+  z-index: 12;
+}
+
+.header.header_index {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-name: header;
           animation-name: header;
-  z-index: 12;
 }
 
 .header.fixed {
@@ -7262,6 +7265,13 @@ h6 {
   width: 100%;
   top: 0px;
   left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header.fixed-animation {
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
 }
 
 .header_index {

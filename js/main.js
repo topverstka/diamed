@@ -542,17 +542,38 @@ function closeModal(modal) {
 window.onload = function() {
     var stickyHeader = d.querySelector('.sticky');
     var headerOffset = 100;
+    let flage = false;
 
     window.onscroll = function() {
         // body.scrollTop is deprecated and no longer available on Firefox
         var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
         if (bodyScrollTop > 100) {
-            stickyHeader.classList.add('fixed');
-            document.querySelector('main').style.marginTop = d.querySelector('.sticky').scrollHeight + 'px';
+            if (!flage) {
+                stickyHeader.classList.add('fixed-animation');
+                setTimeout(() => {
+                    stickyHeader.classList.remove('fixed-animation')
+                    stickyHeader.classList.add('fixed');
+                    if (!stickyHeader.classList.contains('header_index')) {
+                        document.querySelector('main').style.marginTop = '150px';
+                    }
+                }, 200)
+                flage = true;
+            }
         } else {
-            stickyHeader.classList.remove('fixed');
-            document.querySelector('main').style = null;
+            if (flage) {
+                stickyHeader.classList.add('fixed-animation');
+                setTimeout(() => {
+                        stickyHeader.classList.remove('fixed')
+                        stickyHeader.classList.remove('fixed-animation')
+                        if (!stickyHeader.classList.contains('header_index')) {
+                            document.querySelector('main').style.marginTop = null;
+                        }
+                    }, 200)
+                    // stickyHeader.classList.remove('fixed');
+                flage = false;
+
+            }
         }
     };
 };

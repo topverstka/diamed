@@ -2,14 +2,21 @@
     z-index: 2;
     position: relative;
     transition: all 1s;
-    animation-duration: 3s;
-    animation-name: header;
     z-index: 12;
+    &.header_index {
+        animation-duration: 3s;
+        animation-name: header;
+    }
     &.fixed {
         position: fixed;
         width: 100%;
         top: 0px;
         left: 0;
+        transform: translateY(0);
+    }
+    &.fixed-animation {
+        transform: translateY(-150px);
+        // top: -150px
     }
 }
 
