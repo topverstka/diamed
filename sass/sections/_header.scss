@@ -3,8 +3,9 @@
     position: relative;
     transition: all 1s;
     z-index: 12;
-    &.header_index {
-        animation-duration: 3s;
+    &.header_index,
+    &.animation {
+        animation-duration: 1.3s;
         animation-name: header;
     }
     &.fixed {

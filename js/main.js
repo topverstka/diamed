@@ -551,6 +551,8 @@ window.onload = function() {
         if (bodyScrollTop > 100) {
             if (!flage) {
                 stickyHeader.classList.add('fixed-animation');
+                !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
+
                 setTimeout(() => {
                     stickyHeader.classList.remove('fixed-animation')
                     stickyHeader.classList.add('fixed');
@@ -563,6 +565,7 @@ window.onload = function() {
         } else {
             if (flage) {
                 stickyHeader.classList.add('fixed-animation');
+                stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
                 setTimeout(() => {
                         stickyHeader.classList.remove('fixed')
                         stickyHeader.classList.remove('fixed-animation')
