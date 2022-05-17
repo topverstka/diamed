@@ -544,7 +544,11 @@ window.onload = function() {
     var headerOffset = 100;
     let flage = false;
 
-    // stickyHeader.classList.remove('_active')
+    stickyHeader.classList.remove('_active');
+
+    if (find('.header_index')) {
+        find('.header_index').classList.add('tt');
+    }
 
 
     window.onscroll = function() {

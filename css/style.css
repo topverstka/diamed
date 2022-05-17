@@ -7255,9 +7255,16 @@ h6 {
           transform: translateY(0);
 }
 
-.header.header_index {
+.header.header_page_index {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+.header.tt {
   -webkit-animation: header 2s ease;
           animation: header 2s ease;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .header.animation {
