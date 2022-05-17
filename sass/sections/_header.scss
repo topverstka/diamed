@@ -3,7 +3,7 @@
     position: relative;
     transition: all 1s;
     z-index: 12;
-    transform: translateY(0);
+    // transform: translateY(0);
     &.header_index {
         animation: header 2s ease
     }
@@ -19,7 +19,7 @@
         width: 100%;
         top: 0px;
         left: 0;
-        transform: translateY(0);
+        // transform: translateY(0);
     }
     &.fixed-animation {
         transform: translateY(-150px);

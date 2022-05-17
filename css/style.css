@@ -7251,8 +7251,6 @@ h6 {
   -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 12;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .header.header_index {
@@ -7272,8 +7270,6 @@ h6 {
   width: 100%;
   top: 0px;
   left: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .header.fixed-animation {
