@@ -1000,10 +1000,19 @@ function accordions() {
                         target.closest('.acc-open').classList.add('_add-animation');
                     }
 
+                    if (!target.closest('[data-tag="price"]')) {
+
+                        target.setAttribute('disabled', 'disabled');
+
+                    }
+
 
                     setTimeout(() => {
                         parent.classList.remove('_show');
                         target.classList.remove('_show');
+                        if (!target.closest('[data-tag="price"]')) {
+                            target.removeAttribute('disabled');
+                        }
 
                     }, 500);
 
@@ -1011,15 +1020,10 @@ function accordions() {
                         accBody.style.maxHeight = null;
                         container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
                     } else {
-                        if (!parent.classList.contains('_show')) {
+                        setTimeout(function() {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                        } else {
-                            setTimeout(function() {
-                                accBody.style.maxHeight = null;
-                                container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                            }, 250);
-                        }
+                        }, 250);
                     }
 
                 } else {
