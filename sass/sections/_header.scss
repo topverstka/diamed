@@ -5,10 +5,7 @@
     z-index: 12;
     transform: translateY(0);
     &.header_index {
-        // animation: header 2s ease;
-        &._active {
-            transform: translateY(-200px);
-        }
+        animation: header 2s ease;
     }
     &.header_page_index {
         // transform: translateY(-200px);
