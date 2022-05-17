@@ -3,9 +3,12 @@
     position: relative;
     transition: all 1s;
     z-index: 12;
-    // transform: translateY(0);
+    transform: translateY(0);
     &.header_index {
-        animation: header 2s ease
+        // animation: header 2s ease;
+        &._active {
+            transform: translateY(-200px);
+        }
     }
     &.header_page_index {
         // transform: translateY(-200px);

@@ -544,7 +544,7 @@ window.onload = function() {
     var headerOffset = 100;
     let flage = false;
 
-    stickyHeader.classList.remove('header_page_index')
+    stickyHeader.classList.remove('_active')
 
 
     window.onscroll = function() {
