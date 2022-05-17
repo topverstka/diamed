@@ -7253,7 +7253,14 @@ h6 {
   z-index: 12;
 }
 
-.header.header_index, .header.animation {
+.header.header_index {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: header;
+          animation-name: header;
+}
+
+.header.animation {
   -webkit-animation-duration: 1.3s;
           animation-duration: 1.3s;
   -webkit-animation-name: header;
