@@ -940,8 +940,11 @@ function doAnimWithDelay(array, _class, transition) {
     }, transition)
 }
 
-// Аккордеоны
-accordions()
+window.addEventListener('load', () => {
+    // Аккордеоны
+    accordions()
+});
+
 
 function accordions() {
 
