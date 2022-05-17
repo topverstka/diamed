@@ -554,7 +554,7 @@ window.onload = function() {
         if (bodyScrollTop > 100) {
             if (!flage) {
                 stickyHeader.classList.add('fixed-animation');
-                // !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
+                !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
 
                 setTimeout(() => {
                     stickyHeader.classList.remove('fixed-animation')
