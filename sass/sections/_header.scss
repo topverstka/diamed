@@ -20,7 +20,7 @@
     &.fixed {
         position: fixed;
         width: 100%;
-        top: 0px;
+        transform: translateY(0);
         left: 0;
         // transform: translateY(0);
     }
@@ -32,7 +32,7 @@
 
 .header_index {
     position: absolute;
-    top: 0;
+    transform: translateY(0);
     left: 0;
     width: 100%;
 }

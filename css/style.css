@@ -7270,7 +7270,8 @@ h6 {
 .header.fixed {
   position: fixed;
   width: 100%;
-  top: 0px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   left: 0;
 }
 
@@ -7281,7 +7282,8 @@ h6 {
 
 .header_index {
   position: absolute;
-  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   left: 0;
   width: 100%;
 }
