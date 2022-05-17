@@ -544,6 +544,9 @@ window.onload = function() {
     var headerOffset = 100;
     let flage = false;
 
+    stickyHeader.classList.remove('header_page_index')
+
+
     window.onscroll = function() {
         // body.scrollTop is deprecated and no longer available on Firefox
         var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -551,7 +554,7 @@ window.onload = function() {
         if (bodyScrollTop > 100) {
             if (!flage) {
                 stickyHeader.classList.add('fixed-animation');
-                !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
+                // !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
 
                 setTimeout(() => {
                     stickyHeader.classList.remove('fixed-animation')
@@ -567,13 +570,12 @@ window.onload = function() {
                 stickyHeader.classList.add('fixed-animation');
                 // stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
                 setTimeout(() => {
-                        stickyHeader.classList.remove('fixed')
-                        stickyHeader.classList.remove('fixed-animation')
-                        if (!stickyHeader.classList.contains('header_index')) {
-                            document.querySelector('main').style.marginTop = null;
-                        }
-                    }, 200)
-                    // stickyHeader.classList.remove('fixed');
+                    stickyHeader.classList.remove('fixed')
+                    stickyHeader.classList.remove('fixed-animation')
+                    if (!stickyHeader.classList.contains('header_index')) {
+                        document.querySelector('main').style.marginTop = null;
+                    }
+                }, 200)
                 flage = false;
 
             }

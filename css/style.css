@@ -7251,6 +7251,8 @@ h6 {
   -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 12;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .header.header_index {
@@ -7258,6 +7260,11 @@ h6 {
           animation-duration: 3s;
   -webkit-animation-name: header;
           animation-name: header;
+}
+
+.header.header_page_index {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 
 .header.animation {
