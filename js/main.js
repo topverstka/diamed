@@ -547,7 +547,7 @@ window.onload = function() {
     stickyHeader.classList.remove('_active');
 
     if (find('.header_index')) {
-        find('.header_index').classList.remove('animate');
+        find('.header_index').classList.add('animate');
     }
 
 
