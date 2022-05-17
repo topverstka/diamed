@@ -565,7 +565,7 @@ window.onload = function() {
         } else {
             if (flage) {
                 stickyHeader.classList.add('fixed-animation');
-                stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
+                // stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
                 setTimeout(() => {
                         stickyHeader.classList.remove('fixed')
                         stickyHeader.classList.remove('fixed-animation')
@@ -1004,16 +1004,22 @@ function accordions() {
                     setTimeout(() => {
                         parent.classList.remove('_show');
                         target.classList.remove('_show');
+
                     }, 500);
 
                     if (accBody.closest('.menu')) {
                         accBody.style.maxHeight = null;
                         container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
                     } else {
-                        setTimeout(function() {
+                        if (!parent.classList.contains('_show')) {
                             accBody.style.maxHeight = null;
                             container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
-                        }, 250);
+                        } else {
+                            setTimeout(function() {
+                                accBody.style.maxHeight = null;
+                                container.style.maxHeight = parseInt(container.scrollHeight) + accBody.scrollHeight + 'px';
+                            }, 250);
+                        }
                     }
 
                 } else {
@@ -1054,40 +1060,10 @@ function accordions() {
 
 
                     if (target.closest('[data-scroll-top')) {
-                        console.log(oldYPage, window.pageYOffset)
 
-                        // setTimeout(() =>
-                        // window.scrollTo({
-                        //     top: window.pageYOffset - (elemBody.scrollHeight + elemHeader.scrollHeight),
-                        //     behavior: "smooth"
-                        // })
-                        // ));
-
-                        // window.scrollTo({
-                        //         top: window.pageYOffset - target.closest('[data-scroll-top').getBoundingClientRect().top,
-                        //         behavior: "smooth"
-                        //     })
-                        // console.log(target.closest('[data-scroll-top').getBoundingClientRect().top)
                         if (target.closest('[data-scroll-top').getBoundingClientRect().top < 400) {
 
-
-                            //  console.log(target.closest('[data-scroll-top'))
-
-
                             setTimeout(() => {
-                                //console.log(target.closest('[data-scroll-top').getBoundingClientRect().top)
-                                console.log(oldYPage, window.pageYOffset)
-                                    //console.log(target.closest('[data-scroll-top').previousElementSibling)
-                                let prevTarget = window.pageYOffset;
-                                let newTarget;
-                                // document.querySelector('.acc._show').scrollIntoView({ block: "center", behavior: "smooth" });
-                                // target.closest('[data-scroll-top').scrollIntoView({ block: "center", behavior: "smooth", inline: "start" });
-                                // document.querySelector('.acc._show').scrollIntoView({ block: "center", behavior: "smooth" });
-
-                                // window.scrollTo({
-                                //     top: window.pageYOffset + (document.querySelector('.acc._show').offsetTop - window.pageYOffset),
-                                //     behavior: "smooth"
-                                // })
 
                                 window.scrollTo({
                                     top: (document.querySelector('.acc._show').offsetTop - 250),
