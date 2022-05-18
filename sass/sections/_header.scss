@@ -23,9 +23,9 @@
         animation-name: header;
         animation-duration: 2s;
     }
-    &.header_page_index {
-        transform: translateY(-100%);
-    }
+    // &.header_page_index {
+    //     transform: translateY(-100%);
+    // }
     &.animate {
         animation-fill-mode: forwards;
         animation-name: header;

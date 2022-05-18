@@ -545,10 +545,10 @@ window.onload = function() {
     let flage = false;
 
 
-    if (find('.header_page_index')) {
-        find('.header_page_index').classList.remove('header_page_index')
-        stickyHeader.classList.add('header_main_all')
-    }
+    // if (find('.header_page_index')) {
+    //     find('.header_page_index').classList.remove('header_page_index')
+    //     stickyHeader.classList.add('header_main_all')
+    // }
 
 
 

@@ -7285,11 +7285,6 @@ h6 {
           animation-duration: 2s;
 }
 
-.header.header_page_index {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
 .header.animate {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
