@@ -6,6 +6,7 @@
     transform: translateY(0);
     &.header_index {
         animation: header 2s ease;
+        animation-fill-mode: forwards;
     }
     &.header_page_index {
         transform: translateY(-200px);
