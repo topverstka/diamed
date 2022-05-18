@@ -21,9 +21,9 @@
     //     animation-duration: 2s;
     //     transform-origin: 50% 50%;
     // }
-    // &.header_page_index {
-    //     transform: translateY(-100%);
-    // }
+    &.header_page_index {
+        transform: translateY(-100%);
+    }
     &.animate {
         animation-fill-mode: forwards;
         animation-name: header;
