@@ -5,7 +5,7 @@
     z-index: 12;
     transform: translateY(0);
     &.header_index {
-        // animation: header 2s ease;
+        // animation: header 1s linear 0.01s;
         animation-fill-mode: forwards;
         animation-name: header;
         animation-duration: 2s
