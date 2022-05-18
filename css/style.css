@@ -7293,8 +7293,8 @@ h6 {
 }
 
 .header.animation {
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
   -webkit-animation-name: header-page;
           animation-name: header-page;
 }
@@ -7307,7 +7307,8 @@ h6 {
 }
 
 .header.fixed-animation {
-  top: -150px;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .header_index {

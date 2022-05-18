@@ -34,7 +34,7 @@
         // transform: translateY(0);
     }
     &.animation {
-        animation-duration: 1.3s;
+        animation-duration: .3s;
         animation-name: header-page;
     }
     &.fixed {
@@ -46,9 +46,9 @@
         // transform: translateY(0);
     }
     &.fixed-animation {
-        //transform: translateY(-100px);
+        transform: translateY(-100px);
         // animation-duration: 2s;
-        top: -150px
+        //  top: -150px
     }
 }
 
