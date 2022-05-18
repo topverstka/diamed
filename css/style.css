@@ -4738,8 +4738,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
     -o-transform: translateY(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
     zoom: 1;
   }
 }
@@ -4758,8 +4756,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
     -o-transform: translateY(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
     zoom: 1;
   }
 }
@@ -7276,6 +7272,8 @@ h6 {
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .header.header_page_index {
