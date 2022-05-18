@@ -7252,6 +7252,8 @@ h6 {
   transition: all 1s;
   z-index: 12;
   will-change: transform;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 .header.header_index {

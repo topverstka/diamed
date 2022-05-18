@@ -5,6 +5,8 @@
     z-index: 12;
     // transform: translateY(0);
     will-change: transform;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
     &.header_index {
         // animation: header 1s linear 0.01s;
         animation-fill-mode: forwards;
