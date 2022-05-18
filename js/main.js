@@ -545,9 +545,7 @@ window.onload = function() {
     let flage = false;
 
 
-    // if (find('.header_index')) {
-    //     find('.header_index').classList.add('animate');
-    // }
+
 
 
     window.onscroll = function() {
@@ -556,6 +554,9 @@ window.onload = function() {
 
         if (bodyScrollTop > 100) {
             // stickyHeader.classList.add('fixed');
+            if (find('.header_main_all')) {
+                find('.header_main_all').classList.remove('header_main_all');
+            }
             if (!flage) {
                 stickyHeader.classList.add('fixed-animation');
                 !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
