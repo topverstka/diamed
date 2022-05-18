@@ -19,7 +19,10 @@
         transform: translateY(-100%);
     }
     &.animate {
-        animation: header 2s ease;
+        animation-fill-mode: forwards;
+        animation-name: header;
+        animation-duration: 2s;
+        transform-origin: 50% 50%;
         transform: translateY(0);
     }
     &.animation {
@@ -35,7 +38,7 @@
     }
     &.fixed-animation {
         transform: translateY(-150px);
-        // top: -150px
+        //top: -150px
     }
 }
 
