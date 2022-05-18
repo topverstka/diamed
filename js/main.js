@@ -539,19 +539,15 @@ function closeModal(modal) {
 // sticky header
 
 
+if (find('.header_page_index')) {
+    find('.header_page_index').classList.remove('header_page_index')
+    d.querySelector('.sticky').classList.add('header_main_all')
+}
+
 window.onload = function() {
     var stickyHeader = d.querySelector('.sticky');
     var headerOffset = 100;
     let flage = false;
-
-
-    if (find('.header_page_index')) {
-        find('.header_page_index').classList.remove('header_page_index')
-        stickyHeader.classList.add('header_main_all')
-    }
-
-
-
 
 
     window.onscroll = function() {
