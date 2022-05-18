@@ -4737,6 +4737,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     zoom: 1;
   }
 }
@@ -4754,6 +4756,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     zoom: 1;
   }
 }
