@@ -46,9 +46,9 @@
         // transform: translateY(0);
     }
     &.fixed-animation {
-        transform: translateY(-100px);
+        //transform: translateY(-100px);
         // animation-duration: 2s;
-        //  top: -150px
+        top: -150px
     }
 }
 

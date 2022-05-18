@@ -7307,8 +7307,7 @@ h6 {
 }
 
 .header.fixed-animation {
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  top: -150px;
 }
 
 .header_index {
