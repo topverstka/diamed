@@ -1,9 +1,11 @@
 @keyframes header {
     from {
-        transform: translateY(-200px);
+        // transform: translateY(-200px);
+        top: -200px
     }
     to {
-        transform: translateY(0%);
+        // transform: translateY(0%);
+        top: 0
     }
 }
 
