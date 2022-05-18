@@ -7280,13 +7280,6 @@ h6 {
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  will-change: transform;
-  -webkit-perspective: 1000;
-          perspective: 1000;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 .header.header_page_index {
