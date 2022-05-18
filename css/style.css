@@ -7271,15 +7271,13 @@ h6 {
   z-index: 12;
 }
 
-.header.header_main_all {
+.header.header_index {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-name: header;
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
 }
 
 .header.animate {
@@ -7311,8 +7309,8 @@ h6 {
 .header.fixed-animation {
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .header_index {
