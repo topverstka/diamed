@@ -7256,10 +7256,12 @@ h6 {
 }
 
 .header.header_index {
-  -webkit-animation: header 2s ease;
-          animation: header 2s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-name: header;
+          animation-name: header;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .header.header_page_index {
