@@ -568,7 +568,7 @@ window.onload = function() {
                     stickyHeader.classList.remove('fixed-animation')
                     stickyHeader.classList.add('fixed');
                     if (!stickyHeader.classList.contains('header_index')) {
-                        document.querySelector('main').style.marginTop = '150px';
+                        document.querySelector('main').style.marginTop = stickyHeader.scrollHeight + 'px';
                     }
                 }, 200)
                 flage = true;
