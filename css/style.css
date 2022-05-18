@@ -4742,6 +4742,28 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+@-webkit-keyframes header-page {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes header-page {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 @-webkit-keyframes showElem {
   from {
     opacity: 0;
@@ -7281,8 +7303,8 @@ h6 {
 .header.animation {
   -webkit-animation-duration: 1.3s;
           animation-duration: 1.3s;
-  -webkit-animation-name: header;
-          animation-name: header;
+  -webkit-animation-name: header-page;
+          animation-name: header-page;
 }
 
 .header.fixed {

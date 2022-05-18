@@ -27,7 +27,7 @@
     }
     &.animation {
         animation-duration: 1.3s;
-        animation-name: header;
+        animation-name: header-page;
     }
     &.fixed {
         position: fixed;
@@ -38,7 +38,7 @@
     }
     &.fixed-animation {
         transform: translateY(-150px);
-        //top: -150px
+        // top: -150px
     }
 }
 
