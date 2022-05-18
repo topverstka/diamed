@@ -7268,17 +7268,21 @@ h6 {
 }
 
 .header.header_index {
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   -webkit-animation-name: header;
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 
 .header.header_page_index {
-  -webkit-transform: translateY(-200px);
-          transform: translateY(-200px);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .header.animate {
