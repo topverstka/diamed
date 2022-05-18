@@ -7290,8 +7290,6 @@ h6 {
           animation-duration: 2s;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .header.animation {
@@ -7305,6 +7303,7 @@ h6 {
   position: fixed;
   width: 100%;
   left: 0;
+  top: 0;
 }
 
 .header.fixed-animation {

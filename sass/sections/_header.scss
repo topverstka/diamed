@@ -31,7 +31,7 @@
         animation-name: header;
         animation-duration: 2s;
         transform-origin: 50% 50%;
-        transform: translateY(0);
+        // transform: translateY(0);
     }
     &.animation {
         animation-duration: 1.3s;
@@ -42,6 +42,7 @@
         width: 100%;
         //  transform: translateY(0);
         left: 0;
+        top: 0;
         // transform: translateY(0);
     }
     &.fixed-animation {

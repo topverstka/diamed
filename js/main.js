@@ -562,7 +562,7 @@ window.onload = function() {
             // stickyHeader.classList.add('fixed');
             if (!flage) {
                 stickyHeader.classList.add('fixed-animation');
-                !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
+                // !stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
 
                 setTimeout(() => {
                     stickyHeader.classList.remove('fixed-animation')
@@ -577,7 +577,7 @@ window.onload = function() {
             // stickyHeader.classList.remove('fixed');
             if (flage) {
                 stickyHeader.classList.add('fixed-animation');
-                //stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
+                // stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
                 setTimeout(() => {
                     stickyHeader.classList.remove('fixed')
                     stickyHeader.classList.remove('fixed-animation')
