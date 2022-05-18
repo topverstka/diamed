@@ -4726,8 +4726,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @-webkit-keyframes header {
   from {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
     -webkit-transform: translateY(0%);
@@ -4737,8 +4737,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @keyframes header {
   from {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
     -webkit-transform: translateY(0%);
