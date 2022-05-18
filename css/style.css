@@ -7265,6 +7265,7 @@ h6 {
   -webkit-transition: .5s linear;
   transition: .5s linear;
   z-index: 12;
+  top: 0;
 }
 
 .header.header_index {
