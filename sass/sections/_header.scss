@@ -6,7 +6,7 @@
     // transform: translateY(0);
     &.header_index {
         // animation: header 1s linear 0.01s;
-        animation-fill-mode: forwards;
+        //animation-fill-mode: forwards;
         animation-name: header;
         animation-duration: 2s;
         // transform-origin: 50% 50%;
@@ -43,8 +43,8 @@
         // transform: translateY(0);
     }
     &.fixed-animation {
-        transform: translateY(-50px);
-        animation-duration: 2s;
+        transform: translateY(-100px);
+        // animation-duration: 2s;
         // top: -150px
     }
 }
