@@ -4725,22 +4725,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @-webkit-keyframes header {
-  from {
+  0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  to {
+  80% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
 }
 
 @keyframes header {
-  from {
+  0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  to {
+  80% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
