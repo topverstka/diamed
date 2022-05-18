@@ -1,7 +1,7 @@
 .header {
     z-index: 2;
     position: relative;
-    transition: margin 1s;
+    transition: 1s linear;
     z-index: 12;
     // transform: translateY(0);
     &.header_index {

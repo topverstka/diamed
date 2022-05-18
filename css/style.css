@@ -7262,8 +7262,8 @@ h6 {
 .header {
   z-index: 2;
   position: relative;
-  -webkit-transition: margin 1s;
-  transition: margin 1s;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
   z-index: 12;
 }
 
