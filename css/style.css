@@ -7316,12 +7316,15 @@ h6 {
 .header.fixed-animation {
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
 }
 
 .header_index {
   position: absolute;
   left: 0;
   width: 100%;
+  top: 0;
 }
 
 .header_info {

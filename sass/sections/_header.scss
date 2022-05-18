@@ -38,6 +38,7 @@
     }
     &.fixed-animation {
         transform: translateY(-50px);
+        animation-duration: .3s;
         // top: -150px
     }
 }
@@ -47,6 +48,7 @@
     // transform: translateY(0);
     left: 0;
     width: 100%;
+    top: 0
 }
 
 .header_info {
