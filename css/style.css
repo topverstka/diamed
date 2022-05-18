@@ -4732,10 +4732,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   80% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    zoom: 1;
   }
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    zoom: 1;
   }
 }
 
@@ -4747,10 +4749,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   80% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    zoom: 1;
   }
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    zoom: 1;
   }
 }
 
@@ -7290,8 +7294,6 @@ h6 {
 .header.fixed {
   position: fixed;
   width: 100%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   left: 0;
 }
 
