@@ -7259,9 +7259,6 @@ h6 {
   -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 12;
-  will-change: transform;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
 }
 
 .header.header_index {
@@ -7271,6 +7268,11 @@ h6 {
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  will-change: transform;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .header.header_page_index {
