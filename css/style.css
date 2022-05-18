@@ -7307,8 +7307,6 @@ h6 {
 
 .header_index {
   position: absolute;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   left: 0;
   width: 100%;
 }
