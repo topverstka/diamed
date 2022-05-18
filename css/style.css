@@ -4730,8 +4730,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
             transform: translateY(-200px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -4741,8 +4741,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
             transform: translateY(-200px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
