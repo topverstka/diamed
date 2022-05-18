@@ -1010,19 +1010,13 @@ function accordions() {
                         target.closest('.acc-open').classList.add('_add-animation');
                     }
 
-                    //if (!target.closest('[data-tag="price"]')) {
-
                     target.closest('.acc').style.pointerEvents = 'none'
-
-                    //}
 
 
                     setTimeout(() => {
                         parent.classList.remove('_show');
                         target.classList.remove('_show');
-                        //if (!target.closest('[data-tag="price"]')) {
                         target.closest('.acc').style = null
-                            //}
 
                     }, 500);
 
