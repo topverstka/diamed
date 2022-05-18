@@ -7262,17 +7262,10 @@ h6 {
 }
 
 .header.header_index {
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   -webkit-animation-name: header;
           animation-name: header;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  will-change: transform;
-  -webkit-perspective: 1000;
-          perspective: 1000;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 .header.header_page_index {

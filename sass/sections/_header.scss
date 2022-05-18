@@ -6,12 +6,12 @@
     // transform: translateY(0);
     &.header_index {
         // animation: header 1s linear 0.01s;
-        animation-fill-mode: forwards;
+        //  animation-fill-mode: forwards;
         animation-name: header;
         animation-duration: 2s;
-        will-change: transform;
-        perspective: 1000;
-        backface-visibility: hidden;
+        // will-change: transform;
+        // perspective: 1000;
+        // backface-visibility: hidden;
     }
     &.header_page_index {
         transform: translateY(-200px);
