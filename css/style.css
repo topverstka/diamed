@@ -4730,6 +4730,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
   100% {
     margin-top: 0%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -4739,6 +4741,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
   100% {
     margin-top: 0%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
