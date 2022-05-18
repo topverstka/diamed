@@ -3,7 +3,8 @@
     position: relative;
     transition: all 1s;
     z-index: 12;
-    transform: translateY(0);
+    // transform: translateY(0);
+    will-change: transform;
     &.header_index {
         // animation: header 1s linear 0.01s;
         animation-fill-mode: forwards;
