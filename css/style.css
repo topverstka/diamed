@@ -4726,17 +4726,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @-webkit-keyframes header {
   0% {
+    transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  80% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    zoom: 1;
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
   }
   100% {
+    transform: translateY(0%);
+    -ms-transform: translateY(0%);
     -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
     zoom: 1;
@@ -4745,17 +4746,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @keyframes header {
   0% {
+    transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  80% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    zoom: 1;
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
   }
   100% {
+    transform: translateY(0%);
+    -ms-transform: translateY(0%);
     -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
     zoom: 1;
