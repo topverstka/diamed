@@ -1,38 +1,24 @@
 .header {
-    z-index: 2;
     position: relative;
     transition: .5s linear;
     z-index: 12;
+    position: fixed;
+    left: 0;
+    width: 100%;
     top: 0;
-    // transform: translateY(0);
     &.header_index {
-        // animation: header 1s linear 0.01s;
-        //animation-fill-mode: forwards;
         animation-name: header;
         animation-duration: 2s;
-        //  transform-origin: 50% 50%;
-        // transform: translateY(-200px);
-        // will-change: transform;
-        // perspective: 1000;
-        // backface-visibility: hidden;
     }
     &.header_main_all {
-        // animation-fill-mode: forwards;
-        // animation-name: header;
-        // animation-duration: 2s;
-        // transform-origin: 50% 50%;
         animation-name: header;
         animation-duration: 2s;
     }
-    // &.header_page_index {
-    //     transform: translateY(-100%);
-    // }
     &.animate {
         animation-fill-mode: forwards;
         animation-name: header;
         animation-duration: 2s;
         transform-origin: 50% 50%;
-        // transform: translateY(0);
     }
     &.animation {
         animation-duration: .3s;
@@ -41,24 +27,12 @@
     &.fixed {
         position: fixed;
         width: 100%;
-        //  transform: translateY(0);
         left: 0;
         top: 0;
-        // transform: translateY(0);
     }
     &.fixed-animation {
-        //transform: translateY(-100px);
-        // animation-duration: 2s;
         top: -150px;
     }
-}
-
-.header_index {
-    position: absolute;
-    // transform: translateY(0);
-    left: 0;
-    width: 100%;
-    top: 0
 }
 
 .header_info {

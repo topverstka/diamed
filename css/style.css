@@ -7260,11 +7260,13 @@ h6 {
 }
 
 .header {
-  z-index: 2;
   position: relative;
   -webkit-transition: .5s linear;
   transition: .5s linear;
   z-index: 12;
+  position: fixed;
+  left: 0;
+  width: 100%;
   top: 0;
 }
 
@@ -7309,13 +7311,6 @@ h6 {
 
 .header.fixed-animation {
   top: -150px;
-}
-
-.header_index {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  top: 0;
 }
 
 .header_info {
@@ -10555,6 +10550,15 @@ h6 {
 }
 
 .form-footer__privacy a:after {
+  -webkit-transition: var(--tr);
+  transition: var(--tr);
+}
+
+.form-footer__privacy a:active {
+  opacity: .6;
+}
+
+.form-footer__privacy a:hover:after {
   display: block;
   width: 100%;
   height: 1px;
@@ -10563,14 +10567,6 @@ h6 {
   bottom: 0px;
   left: 0;
   content: '';
-}
-
-.form-footer__privacy a:active {
-  opacity: .8;
-}
-
-.form-footer__privacy a:hover {
-  font-weight: 500;
 }
 
 @media (max-width: 500px) {
@@ -13741,6 +13737,12 @@ h6 {
 .documentation_page__list {
   width: 600px;
   max-width: 100%;
+}
+
+.documentation_page__list-element {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .documentation_page__list-element:not(:last-child) {

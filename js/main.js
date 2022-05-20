@@ -539,59 +539,59 @@ function closeModal(modal) {
 // sticky header
 
 
-window.onload = function() {
-    var stickyHeader = d.querySelector('.sticky');
-    var headerOffset = 100;
-    let flage = false;
+// window.onload = function() {
+//     var stickyHeader = d.querySelector('.sticky');
+//     var headerOffset = 100;
+//     let flage = false;
 
 
-    // if (find('.header_page_index')) {
-    //     find('.header_page_index').classList.remove('header_page_index')
-    //     stickyHeader.classList.add('header_main_all')
-    // }
+//     // if (find('.header_page_index')) {
+//     //     find('.header_page_index').classList.remove('header_page_index')
+//     //     stickyHeader.classList.add('header_main_all')
+//     // }
 
 
 
 
 
-    window.onscroll = function() {
-        // body.scrollTop is deprecated and no longer available on Firefox
-        var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//     window.onscroll = function() {
+//         // body.scrollTop is deprecated and no longer available on Firefox
+//         var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-        if (bodyScrollTop > 100) {
-            // stickyHeader.classList.add('fixed');
-            if (!flage) {
-                stickyHeader.classList.add('fixed-animation');
-                //!stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
+//         if (bodyScrollTop > 100) {
+//             // stickyHeader.classList.add('fixed');
+//             if (!flage) {
+//                 stickyHeader.classList.add('fixed-animation');
+//                 //!stickyHeader.classList.contains('header_index') ? stickyHeader.classList.add('animation') : '';
 
-                setTimeout(() => {
-                    stickyHeader.classList.remove('fixed-animation')
-                    stickyHeader.classList.add('fixed');
-                    if (!stickyHeader.classList.contains('header_index')) {
-                        document.querySelector('main').style.marginTop = stickyHeader.scrollHeight + 'px';
-                    }
-                }, 200)
-                flage = true;
-            }
-        } else {
-            // stickyHeader.classList.remove('fixed');
-            if (flage) {
-                stickyHeader.classList.add('fixed-animation');
-                // stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
-                setTimeout(() => {
-                    stickyHeader.classList.remove('fixed-animation');
-                    stickyHeader.classList.remove('fixed');
+//                 setTimeout(() => {
+//                     stickyHeader.classList.remove('fixed-animation')
+//                     stickyHeader.classList.add('fixed');
+//                     if (!stickyHeader.classList.contains('header_index')) {
+//                         document.querySelector('main').style.marginTop = stickyHeader.scrollHeight + 'px';
+//                     }
+//                 }, 200)
+//                 flage = true;
+//             }
+//         } else {
+//             // stickyHeader.classList.remove('fixed');
+//             if (flage) {
+//                 stickyHeader.classList.add('fixed-animation');
+//                 // stickyHeader.classList.contains('animation') ? stickyHeader.classList.remove('animation') : '';
+//                 setTimeout(() => {
+//                     stickyHeader.classList.remove('fixed-animation');
+//                     stickyHeader.classList.remove('fixed');
 
-                    if (!stickyHeader.classList.contains('header_index')) {
-                        document.querySelector('main').style.marginTop = null;
-                    }
-                }, 200)
-                flage = false;
+//                     if (!stickyHeader.classList.contains('header_index')) {
+//                         document.querySelector('main').style.marginTop = null;
+//                     }
+//                 }, 200)
+//                 flage = false;
 
-            }
-        }
-    };
-};
+//             }
+//         }
+//     };
+// };
 
 
 
