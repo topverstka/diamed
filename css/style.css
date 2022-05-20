@@ -13740,9 +13740,9 @@ h6 {
 }
 
 .documentation_page__list-element {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .documentation_page__list-element:not(:last-child) {
