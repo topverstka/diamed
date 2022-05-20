@@ -58,11 +58,11 @@ function bodyLock(con) {
 }
 
 // Отступ главного экрана на главной странице
-if (find('.header_index')) paddingTopMainSection()
+paddingTopMainSection()
 
 function paddingTopMainSection() {
-    const main = find('.main_top__wrapper')
-    const header = find('.header_index')
+    const main = find('.main_top__wrapper') || find('.wrapper')
+    const header = find('.header')
 
     main.style.paddingTop = header.scrollHeight + 'px'
 }
