@@ -22,8 +22,23 @@
     .form-footer__privacy {
         color: $main;
         line-height: 20px;
-        a:after {
-            background-color: $main
+        a {
+            color: $second;
+            font-weight: 600;
+            &:after {
+                transition: $tr;
+            }
+            &:hover {
+                &:after {
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid $second;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    content: '';
+                }
+            }
         }
     }
     .form-footer {

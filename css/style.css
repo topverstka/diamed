@@ -11508,17 +11508,29 @@ h6 {
 }
 
 .first-time .form-footer__privacy a {
-  text-decoration: underline;
+  color: var(--second);
+  font-weight: 600;
+}
+
+.first-time .form-footer__privacy a:after {
+  -webkit-transition: var(--tr);
+  transition: var(--tr);
 }
 
 @media (min-width: 769px) {
-  .first-time .form-footer__privacy a:hover {
-    font-weight: 500;
+  .first-time .form-footer__privacy a:hover:after {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--second);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: '';
   }
 }
 
 .first-time .form-footer__privacy a:active {
-  opacity: .8;
+  opacity: .6;
 }
 
 @media (max-width: 1100px) {
@@ -14739,8 +14751,24 @@ h6 {
   line-height: 20px;
 }
 
+.form-patient .form-footer__privacy a {
+  color: var(--second);
+  font-weight: 600;
+}
+
 .form-patient .form-footer__privacy a:after {
-  background-color: var(--main);
+  -webkit-transition: var(--tr);
+  transition: var(--tr);
+}
+
+.form-patient .form-footer__privacy a:hover:after {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--second);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
 }
 
 .form-patient .form-footer {
@@ -15293,11 +15321,23 @@ h6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  color: var(--second);
+  font-weight: 600;
 }
 
 .otzyv-visit .form-footer__privacy a:after {
-  background-color: #828282;
-  bottom: 2px;
+  -webkit-transition: var(--tr);
+  transition: var(--tr);
+}
+
+.otzyv-visit .form-footer__privacy a:hover:after {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--second);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
 }
 
 .otzyv-visit .btn {

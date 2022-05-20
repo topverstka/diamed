@@ -39,14 +39,26 @@
         width: 378px;
         max-width: 100%;
         a {
-            text-decoration: underline;
+            color: $second;
+            font-weight: 600;
+            &:after {
+                transition: $tr;
+            }
             @media (min-width: $minHover) {
                 &:hover {
-                    font-weight: 500;
+                    &:after {
+                        display: block;
+                        width: 100%;
+                        border-bottom: 1px solid $second;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        content: '';
+                    }
                 }
             }
             &:active {
-                opacity: .8;
+                opacity: .6;
             }
         }
     }
