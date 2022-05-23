@@ -6495,6 +6495,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: #F8F7FC;
 }
 
+.servces_cost__container .accordion_container-list:hover .accordion_container-list-picture {
+  background: var(--second);
+}
+
 .servces_cost__container .accordion_container-list._show:after {
   opacity: 0;
 }

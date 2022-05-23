@@ -9,6 +9,11 @@
             width: 100%;
             background: #F8F7FC
         }
+        &:hover {
+            .accordion_container-list-picture {
+                background: $second;
+            }
+        }
         &._show {
             &:after {
                 opacity: 0;

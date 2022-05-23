@@ -1072,18 +1072,18 @@ function accordions() {
                     }
 
 
-                    if (target.closest('[data-scroll-top')) {
+                    if (target.closest('[data-tag')) {
 
-                        if (target.closest('[data-scroll-top').getBoundingClientRect().top < 400) {
+                        if (target.closest('[data-tag]').getBoundingClientRect().top < 400) {
 
                             setTimeout(() => {
 
                                 window.scrollTo({
-                                    top: (document.querySelector('.acc._show').offsetTop - 250),
+                                    top: (document.querySelector('.acc._show').offsetTop - 170),
                                     behavior: "smooth"
                                 })
 
-                            }, 500)
+                            }, 700)
                         }
 
                     }
