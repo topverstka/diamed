@@ -1074,9 +1074,9 @@ function accordions() {
 
                     if (target.closest('[data-tag')) {
 
-                        if (target.closest('[data-tag]').getBoundingClientRect().top < 400) {
+                        // if (target.closest('[data-tag]').getBoundingClientRect().top < 400) {
 
-                            setTimeout(() => {
+                        setTimeout(() => {
 
                                 window.scrollTo({
                                     top: (document.querySelector('.acc._show').offsetTop - 170),
@@ -1084,7 +1084,7 @@ function accordions() {
                                 })
 
                             }, 700)
-                        }
+                            // }
 
                     }
 
