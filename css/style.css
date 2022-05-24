@@ -6084,10 +6084,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
         flex-wrap: wrap;
   }
   .tabs__header:not(.tabs__wrapp) .tab {
-    padding: 12px 11px;
+    padding: 12px 9px;
     background: rgba(240, 239, 239, 0.3);
     border-radius: 13px;
-    margin-right: 13px;
+    margin-right: 5px;
     margin-bottom: 10px;
     font-size: 12px;
   }
@@ -13566,26 +13566,6 @@ h6 {
   height: 413px;
 }
 
-.patientam_section__element:hover:after {
-  background: var(--second);
-  opacity: .9;
-}
-
-.patientam_section__element:hover h3,
-.patientam_section__element:hover span {
-  color: #fff;
-}
-
-.patientam_section__element:hover h3 {
-  margin-bottom: 35px;
-}
-
-.patientam_section__element:hover .patientam_section__element-link {
-  height: 17px;
-  opacity: 1;
-  margin-bottom: 3px;
-}
-
 .patientam_section__element:after {
   content: "";
   background: var(--header-bg);
@@ -13604,6 +13584,25 @@ h6 {
   background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
+@media (min-width: 769px) {
+  .patientam_section__element:hover:after {
+    background: var(--second);
+    opacity: .9;
+  }
+  .patientam_section__element:hover h3,
+  .patientam_section__element:hover span {
+    color: #fff;
+  }
+  .patientam_section__element:hover h3 {
+    margin-bottom: 35px;
+  }
+  .patientam_section__element:hover .patientam_section__element-link {
+    height: 17px;
+    opacity: 1;
+    margin-bottom: 3px;
+  }
+}
+
 @media (max-width: 1100px) {
   .patientam_section__element:nth-of-type(1), .patientam_section__element:nth-of-type(2), .patientam_section__element:nth-of-type(3), .patientam_section__element:nth-of-type(4), .patientam_section__element:nth-of-type(5), .patientam_section__element:nth-of-type(6) {
     grid-row: auto;
@@ -13615,9 +13614,6 @@ h6 {
 @media (max-width: 768px) {
   .patientam_section__element {
     padding: 32px 16px 25px 16px;
-  }
-  .patientam_section__element:hover h3 {
-    margin-bottom: 20px;
   }
 }
 
@@ -14161,7 +14157,6 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: auto;
   }
   .details-new-page__content .section_information_services__item-table td {
     width: 60%;
