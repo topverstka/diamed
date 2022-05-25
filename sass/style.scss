@@ -24,6 +24,27 @@ body {
     }
 }
 
+ul:not([class]),
+ol:not([class]) {
+    padding-left: 23px;
+    line-height: 24px;
+    list-style-type: none;
+    li {
+        position: relative;
+        margin-top: 20px;
+        &:after {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 10px;
+            width: 7px;
+            height: 7px;
+            background: var(--second);
+            border-radius: 50%;
+        }
+    }
+}
+
 .wrapper {
     position: relative;
     width: 100%;
