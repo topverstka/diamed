@@ -3,6 +3,9 @@
     overflow: hidden;
     @media (max-width: $tablet) {
         padding-bottom: 80px;
+        .news-link {
+            color: $second
+        }
     }
     @media (max-width: $tablet-s) {
         padding-bottom: 57px;

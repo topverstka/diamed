@@ -6442,6 +6442,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 500px) {
   .accordion_container-list-content .accordion_container-list-link {
     font-size: 12px;
+    color: var(--second);
   }
 }
 
@@ -8511,6 +8512,7 @@ h6 {
 @media (max-width: 768px) {
   .main_top__wrapper-link {
     margin-bottom: 139px;
+    color: var(--second);
   }
 }
 
@@ -10034,6 +10036,9 @@ h6 {
   .news {
     padding-bottom: 80px;
   }
+  .news .news-link {
+    color: var(--second);
+  }
 }
 
 @media (max-width: 500px) {
@@ -10176,6 +10181,9 @@ h6 {
 @media (max-width: 768px) {
   .review {
     padding-bottom: 50px;
+  }
+  .review .link-review {
+    color: var(--second);
   }
 }
 
