@@ -187,5 +187,11 @@
         .modal-work-time__text {
             margin-top: 12px
         }
+        a:hover {
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+            color: $second
+        }
     }
 }

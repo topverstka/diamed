@@ -232,7 +232,7 @@ ol:not([class]) li:after {
   content: '';
   position: absolute;
   left: -23px;
-  top: 10px;
+  top: 9px;
   width: 7px;
   height: 7px;
   background: var(--second);
@@ -6854,9 +6854,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -7172,6 +7172,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 24px;
   height: 24px;
   background: url(../img/icons/pdf.svg);
+}
+
+@media (max-width: 768px) {
+  .link-pdf {
+    color: var(--second);
+  }
 }
 
 @media (max-width: 425px) {
@@ -11803,7 +11809,7 @@ h6 {
   content: '';
   position: absolute;
   left: -23px;
-  top: 10px;
+  top: 9px;
   width: 7px;
   height: 7px;
   background: var(--second);
@@ -14606,6 +14612,14 @@ h6 {
 
 .vakansion-detail-page__info .modal-work-time__list .modal-work-time__text {
   margin-top: 12px;
+}
+
+.vakansion-detail-page__info .modal-work-time__list a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  color: var(--second);
 }
 
 .contact_control {
