@@ -8518,6 +8518,8 @@ h6 {
 @media (max-width: 768px) {
   .main_top__wrapper-link {
     margin-bottom: 139px;
+  }
+  .main_top__wrapper-link.btn {
     color: var(--second);
   }
 }

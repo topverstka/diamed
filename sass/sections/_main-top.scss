@@ -84,7 +84,9 @@
     }
     @media (max-width:$tablet) {
         margin-bottom: 139px;
-        color: $second
+        &.btn {
+            color: $second
+        }
     }
     @media (max-width:$tablet-s) {
         height: 24px;
