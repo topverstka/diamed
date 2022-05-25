@@ -163,6 +163,9 @@
 .our_doctors__more {
     margin: auto 0 52px;
     font-size: 14px;
+    @media (max-width: $tablet) {
+        color: $second
+    }
     @media (max-width: $tablet-ls) {
         display: none;
     }

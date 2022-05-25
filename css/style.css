@@ -6013,6 +6013,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+  .modal-work-time__text a {
+    color: var(--second);
+  }
+}
+
 @media (max-width: 425px) {
   .modal-work-time__text {
     font-size: 14px;
@@ -6598,6 +6604,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .servces_cost__container .accordion_container-list-icons {
@@ -6821,9 +6828,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -7049,8 +7056,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
   z-index: -1;
-  -webkit-transition: var(--tr) ease;
-  transition: var(--tr) ease;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .dropdown-list-menu ul {
@@ -9030,6 +9037,12 @@ h6 {
 .our_doctors__more {
   margin: auto 0 52px;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .our_doctors__more {
+    color: var(--second);
+  }
 }
 
 @media (max-width: 992px) {
@@ -11180,6 +11193,12 @@ h6 {
   margin-top: 32px;
 }
 
+@media (max-width: 768px) {
+  .s-search-card__link {
+    color: var(--second);
+  }
+}
+
 @media (max-width: 425px) {
   .s-search-card__link {
     font-size: 12px;
@@ -11890,6 +11909,7 @@ h6 {
   }
   .service_articles .news-link {
     margin-top: 35px;
+    color: var(--second);
   }
   .service_articles .service_articles__arrows {
     display: -webkit-box;
@@ -12675,6 +12695,9 @@ h6 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .team-section__items-bottom a {
+    color: var(--second);
   }
   .team-section__items-bottom button {
     margin-right: 0;
@@ -13594,7 +13617,8 @@ h6 {
     color: #fff;
   }
   .patientam_section__element:hover h3 {
-    margin-bottom: 35px;
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
   }
   .patientam_section__element:hover .patientam_section__element-link {
     height: 17px;
@@ -13732,6 +13756,7 @@ h6 {
 @media (max-width: 500px) {
   .treatment__list-element a {
     font-size: 14px;
+    color: var(--second);
   }
 }
 
@@ -13808,6 +13833,12 @@ h6 {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media (max-width: 768px) {
+  .documentation_page__list-element a {
+    color: var(--second);
+  }
 }
 
 @media (max-width: 425px) {
@@ -14677,6 +14708,12 @@ h6 {
           text-decoration-line: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+}
+
+@media (max-width: 768px) {
+  .contacts-page__body-col a {
+    color: var(--second);
+  }
 }
 
 .contacts-page__body-col-bottom {

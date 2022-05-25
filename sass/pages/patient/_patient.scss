@@ -79,7 +79,7 @@
                 color: #fff
             }
             h3 {
-                margin-bottom: 35px;
+                transform: translateY(-35px);
             }
             .patientam_section__element-link {
                 height: 17px;
@@ -203,7 +203,8 @@
     }
     @media (max-width: $tablet-s) {
         a {
-            font-size: 14px
+            font-size: 14px;
+            color: $second;
         }
     }
 }
@@ -265,6 +266,11 @@
             position: absolute;
             left: 0;
             top: 0
+        }
+    }
+    @media (max-width: $tablet) {
+        a {
+            color: $second;
         }
     }
     @media (max-width: $mobile-l) {
