@@ -223,6 +223,11 @@ ol:not([class]) > li {
   position: relative;
 }
 
+ol:not([class]) > li strong {
+  font-weight: 600;
+  color: var(--second);
+}
+
 ol:not([class]) > li:before {
   counter-increment: li;
   content: counters(li, ".") ". ";

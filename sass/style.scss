@@ -31,6 +31,10 @@ ol:not([class]) {
     line-height: 24px;
     &>li {
         position: relative;
+        strong {
+            font-weight: 600;
+            color: $second
+        }
         &:before {
             counter-increment: li;
             content: counters(li, ".") ". ";
