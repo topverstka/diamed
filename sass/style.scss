@@ -58,6 +58,10 @@ ol:not([class]) {
                 &:not(:last-child) {
                     margin-bottom: 16px;
                 }
+                &:before {
+                    counter-increment: li;
+                    content: counters(li, ".");
+                }
             }
         }
     }

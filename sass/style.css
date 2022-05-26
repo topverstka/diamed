@@ -258,6 +258,11 @@ ol:not([class]) > li ol > li:not(:last-child) {
   margin-bottom: 16px;
 }
 
+ol:not([class]) > li ol > li:before {
+  counter-increment: li;
+  content: counters(li, ".");
+}
+
 ol:not([class]) ul {
   margin-top: 16px;
 }
