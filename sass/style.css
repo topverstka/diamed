@@ -237,7 +237,7 @@ ol:not([class]) > li:before {
   color: var(--second);
   font-weight: 600;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 21px;
 }
 
 ol:not([class]) > li:not(:last-child) {
@@ -4933,15 +4933,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
   100% {
     transform: translateY(0px);
-  }
-}
-
-@keyframes header-page {
-  0% {
-    margin-top: -100%;
-  }
-  100% {
-    margin-top: 0%;
   }
 }
 
