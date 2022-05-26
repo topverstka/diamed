@@ -214,21 +214,87 @@ body._lock {
   }
 }
 
-ul:not([class]),
 ol:not([class]) {
+  list-style: none;
+  counter-reset: li;
+  padding-left: 23px;
+  line-height: 24px;
+}
+
+ol:not([class]) > li {
+  position: relative;
+}
+
+ol:not([class]) > li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+  position: absolute;
+  left: -23px;
+  top: 2px;
+  color: var(--second);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+ol:not([class]) > li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+ol:not([class]) > li ol {
+  margin-top: 24px;
+  padding-left: 23px;
+  line-height: 24px;
+}
+
+ol:not([class]) > li ol > li {
+  padding-left: 12px;
+}
+
+ol:not([class]) > li ol > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ol:not([class]) ul {
+  margin-top: 16px;
+}
+
+ul:not([class]) {
   padding-left: 23px;
   line-height: 24px;
   list-style-type: none;
 }
 
-ul:not([class]) li,
-ol:not([class]) li {
+ul:not([class]) li {
   position: relative;
-  margin-top: 20px;
 }
 
-ul:not([class]) li:after,
-ol:not([class]) li:after {
+ul:not([class]) li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+ul:not([class]) li strong {
+  font-weight: 600;
+  color: var(--second);
+}
+
+ul:not([class]) li ul {
+  margin-top: 24px;
+}
+
+ul:not([class]) li ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ul:not([class]) li ul li:after {
+  content: '';
+  height: 2px;
+  width: 8px;
+  border-radius: 0;
+  top: 12px;
+}
+
+ul:not([class]) li:after {
   content: '';
   position: absolute;
   left: -23px;

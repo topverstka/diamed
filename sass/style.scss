@@ -24,14 +24,72 @@ body {
     }
 }
 
-ul:not([class]),
 ol:not([class]) {
+    list-style: none;
+    counter-reset: li;
+    padding-left: 23px;
+    line-height: 24px;
+    &>li {
+        position: relative;
+        &:before {
+            counter-increment: li;
+            content: counters(li, ".") ". ";
+            position: absolute;
+            left: -23px;
+            top: 2px;
+            color: $second;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        ol {
+            margin-top: 24px;
+            padding-left: 23px;
+            line-height: 24px;
+            &>li {
+                padding-left: 12px;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    ul {
+        margin-top: 16px;
+    }
+}
+
+ul:not([class]) {
     padding-left: 23px;
     line-height: 24px;
     list-style-type: none;
     li {
         position: relative;
-        margin-top: 20px;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        strong {
+            font-weight: 600;
+            color: $second
+        }
+        ul {
+            margin-top: 24px;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+                &:after {
+                    content: '';
+                    height: 2px;
+                    width: 8px;
+                    border-radius: 0;
+                    top: 12px
+                }
+            }
+        }
         &:after {
             content: '';
             position: absolute;
