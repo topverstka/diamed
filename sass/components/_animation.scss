@@ -1,10 +1,11 @@
 @keyframes header {
     0% {
-        //transform: translateY(-200px);
-        margin-top: -100%
+        transform: translateY(-200px);
+        //margin-top: -100%
     }
     100% {
-        margin-top: 0% //transform: translateY(0px);
+        //margin-top: 0% 
+        transform: translateY(0px);
     }
 }
 
