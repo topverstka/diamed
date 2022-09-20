@@ -2,30 +2,30 @@ $p-desk: 24px;
 $p-mob: 20px;
 
 %container-style {
-    max-width: $container;
-    width: 100%;
-    padding: 0 $p-desk;
-    margin: 0 auto;
-    
-    @media (max-width: $tablet){
-        padding: 0 20px;
-    }
-    
-    @media (max-width: $tablet-s) {
-        padding: 0 $p-mob;
-    }
+  max-width: $container;
+  width: 100%;
+  padding: 0 $p-desk;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $tablet-s) {
+    padding: 0 $p-mob;
+  }
 }
 
 .container {
-    @extend %container-style;
+  @extend %container-style;
 }
 
 .section {
-    margin: 62px 0;
-    @media (max-width: $tablet) {
-        margin: 40px 0;
-    }
-    @media (max-width: $mobile-m) {
-        margin: 30px 0;
-    }
+  margin: 62px 0;
+  @media (max-width: $tablet) {
+    margin: 40px 0;
+  }
+  @media (max-width: $mobile-m) {
+    margin: 30px 0;
+  }
 }

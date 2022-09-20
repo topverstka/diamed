@@ -1,82 +1,84 @@
 // Карточка услуги
 :root {
-    --service-card-outline: #F8F7FC;
+  --service-card-outline: #f8f7fc;
 }
 
 $service-card-outline: var(--service-card-outline);
 .service-card {
-    position: relative;
-    border: 1px solid $service-card-outline;
-    border-radius: $radius2;
-    padding: 32px;
-    overflow: hidden;
-    @media (max-width: $mobile-l) {
-        padding: 20px;
-    }
+  position: relative;
+  border: 1px solid $service-card-outline;
+  border-radius: $radius2;
+  padding: 32px;
+  overflow: hidden;
+  @media (max-width: $mobile-l) {
+    padding: 20px;
+  }
 }
 
 // Шапка карточки
-.service-card__header {}
+.service-card__header {
+}
 
 .service-card__title {
-    position: relative;
-    z-index: 1;
-    width: 90%;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
-    @media (max-width: $mobile-l) {
-        font-size: 16px;
-        line-height: 26px;
-    }
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  @media (max-width: $mobile-l) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 .service-card__icon-bg {
-    position: absolute;
-    top: 0;
-    right: -33px;
-    width: 102px;
-    height: 102px;
-    @media (max-width: $mobile-l) {
-        top: 11px;
-        right: -27px;
-        width: 74px;
-        height: 74px;
-    }
+  position: absolute;
+  top: 0;
+  right: -33px;
+  width: 102px;
+  height: 102px;
+  @media (max-width: $mobile-l) {
+    top: 11px;
+    right: -27px;
+    width: 74px;
+    height: 74px;
+  }
 }
 
 // Тело карточки
 .service-card__body {
-    margin-top: 24px;
-    @media (max-width: $mobile-l) {
-        margin-top: 16px;
-    }
+  margin-top: 24px;
+  @media (max-width: $mobile-l) {
+    margin-top: 16px;
+  }
 }
 
-.servie-card__list {}
+.servie-card__list {
+}
 
 .service-card__item {
-    &:not(:last-child) {
-        margin-bottom: 24px;
-        @media (max-width: $mobile-l) {
-            margin-bottom: 16px;
-        }
+  &:not(:last-child) {
+    margin-bottom: 24px;
+    @media (max-width: $mobile-l) {
+      margin-bottom: 16px;
     }
+  }
 }
 
 .service-card__link {
-    font-size: 16px;
-    font-weight: 500;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    &::after {
-        margin-left: 0;
-        margin-right: 8px;
-    }
-    &:hover::after {
-        transform: rotate(45deg);
-    }
-    @media (max-width: $mobile-l) {
-        font-size: 14px;
-    }
+  font-size: 16px;
+  font-weight: 500;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  &::after {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+  &:hover::after {
+    transform: rotate(45deg);
+  }
+  @media (max-width: $mobile-l) {
+    font-size: 14px;
+  }
 }

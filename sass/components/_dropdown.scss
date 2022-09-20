@@ -1,124 +1,124 @@
 .dropdown-list-header {
-    background: $second;
-    color: #fff;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 305px;
-    height: 52px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: $tr;
-    &:hover {
-        opacity: 0.9;
-    }
-    &:active {
-        opacity: 0.8;
-    }
-    .dropdown-list-header-text {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    svg {
-        width: 22px;
-        transition: $tr ease
-    }
-    @media (max-width: $mobile-l) {
-        padding: 0 15px
-    }
+  background: $second;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 305px;
+  height: 52px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: $tr;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+  .dropdown-list-header-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  svg {
+    width: 22px;
+    transition: $tr ease;
+  }
+  @media (max-width: $mobile-l) {
+    padding: 0 15px;
+  }
 }
 
 .dropdown-list {
-    &._show {
-        svg {
-            transform: scale(1, -1)
-        }
-        .dropdown-list-menu {
-            height: 200px;
-            padding-bottom: 32px;
-            opacity: 1;
-            z-index: 9;
-            @media (max-width: $mobile-l) {
-                height: 145px;
-                padding-bottom: 26px;
-            }
-        }
+  &._show {
+    svg {
+      transform: scale(1, -1);
     }
-    &._opacity {
-        .dropdown-list-menu {
-            opacity: 0;
-        }
+    .dropdown-list-menu {
+      height: 200px;
+      padding-bottom: 32px;
+      opacity: 1;
+      z-index: 9;
+      @media (max-width: $mobile-l) {
+        height: 145px;
+        padding-bottom: 26px;
+      }
     }
+  }
+  &._opacity {
+    .dropdown-list-menu {
+      opacity: 0;
+    }
+  }
 }
 
 ._add-padding {
-    margin-top: 11px;
-    padding: 0 10px 0 24px;
-    @media (max-width: $mobile-l) {
-        padding: 0 10px 0 16px
-    }
+  margin-top: 11px;
+  padding: 0 10px 0 24px;
+  @media (max-width: $mobile-l) {
+    padding: 0 10px 0 16px;
+  }
 }
 
 .dropdown-list-menu {
-    position: absolute;
-    width: 305px;
-    height: 0;
-    background: $second;
-    border-radius: 0 0 8px 8px;
-    z-index: 9;
-    padding-right: 10px;
-    transform: translateY(-6px);
-    z-index: -1;
-    //   opacity: 0;
-    transition: .4s ease;
-    ul {
-        overflow-y: auto;
-        height: 100%;
-        &::-webkit-scrollbar {
-            width: 3px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: #DAEBEF;
-            border-radius: 20px;
-        }
+  position: absolute;
+  width: 305px;
+  height: 0;
+  background: $second;
+  border-radius: 0 0 8px 8px;
+  z-index: 9;
+  padding-right: 10px;
+  transform: translateY(-6px);
+  z-index: -1;
+  //   opacity: 0;
+  transition: 0.4s ease;
+  ul {
+    overflow-y: auto;
+    height: 100%;
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
     }
+    &::-webkit-scrollbar-thumb {
+      background-color: #daebef;
+      border-radius: 20px;
+    }
+  }
+  li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: $accent;
+    }
+    &:last-child {
+      margin-bottom: 16px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    &._active {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: $mobile-l) {
     li {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #fff;
-        cursor: pointer;
-        &:hover {
-            color: $accent;
-        }
-        &:last-child {
-            margin-bottom: 16px;
-        }
-        &:not(:last-child) {
-            margin-bottom: 12px;
-        }
-        &._active {
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 20px;
-        }
+      font-size: 14px;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &._active {
+        font-size: 14px;
+      }
     }
-    @media (max-width:$mobile-l) {
-        li {
-            font-size: 14px;
-            &:not(:last-child) {
-                margin-bottom: 8px;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-            &._active {
-                font-size: 14px;
-            }
-        }
-    }
+  }
 }

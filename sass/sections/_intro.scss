@@ -1,45 +1,45 @@
 .intro {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media (max-width: $tablet-s) {
-        min-height: auto;
-    }
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: $tablet-s) {
+    min-height: auto;
+  }
 }
 
 .intro-bg {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .intro__img {
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
-    position: absolute;
-    display: none;
-    z-index: -1;
-    object-fit: cover;
-    &.active {
-        display: block;
-    }
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  position: absolute;
+  display: none;
+  z-index: -1;
+  object-fit: cover;
+  &.active {
+    display: block;
+  }
 }
 
 .intro__media {
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
-    display: none;
-    position: absolute;
-    &.active {
-        display: block;
-    }
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  display: none;
+  position: absolute;
+  &.active {
+    display: block;
+  }
 }

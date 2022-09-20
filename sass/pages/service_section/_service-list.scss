@@ -1,115 +1,115 @@
 .service-list {
-    padding: 100px 0;
-    @media (max-width: $tablet) {
-        padding: 0 0 56px 0
+  padding: 100px 0;
+  @media (max-width: $tablet) {
+    padding: 0 0 56px 0;
+  }
+  @media (max-width: $tablet-l) {
+    .service-list__enumer-overflow {
+      overflow-x: scroll;
     }
-    @media (max-width: $tablet-l) {
-        .service-list__enumer-overflow {
-            overflow-x: scroll;
-        }
-        // .container {
-        //     padding-right: 0
-        // }
+    // .container {
+    //     padding-right: 0
+    // }
+  }
+  @media (max-width: $tablet-s) {
+    .service-list__enumer-overflow {
+      overflow-x: visible;
     }
-    @media (max-width:$tablet-s) {
-        .service-list__enumer-overflow {
-            overflow-x: visible;
-        }
-    }
+  }
 }
 
 .service-list__header {
-    width: 50%;
-    @media (max-width: $tablet) {
-        width: 90%
-    }
+  width: 50%;
+  @media (max-width: $tablet) {
+    width: 90%;
+  }
 }
 
 .service-list__info {
-    width: 55%;
-    margin: 40px 0 56px 0;
-    font-weight: 400;
-    @media (max-width: $tablet) {
-        width: 92.6%;
-        min-height: 78px;
-    }
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        line-height: 22px;
-        width: 100%;
-        margin: 24px 0 32px 0;
-    }
+  width: 55%;
+  margin: 40px 0 56px 0;
+  font-weight: 400;
+  @media (max-width: $tablet) {
+    width: 92.6%;
+    min-height: 78px;
+  }
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    margin: 24px 0 32px 0;
+  }
 }
 
 .service-list__enumeration {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0 20px;
-    @media (max-width: $tablet-l) {
-        grid-template-columns: repeat(3, 413px);
-    }
-    @media (max-width:$tablet-s) {
-        display: flex;
-        flex-direction: column;
-        grid-gap: 16px 0
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 20px;
+  @media (max-width: $tablet-l) {
+    grid-template-columns: repeat(3, 413px);
+  }
+  @media (max-width: $tablet-s) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px 0;
+  }
 }
 
 .service-list__enumeration-number {
-    background: #F3F8F9;
-    border-radius: 8px;
-    color: $second;
-    font-weight: 600;
-    font-size: 32px;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 13px;
-    top: 12px;
-    @media (max-width: $tablet-s) {
-        font-size: 24px;
-        width: 36px;
-        height: 36px;
-        right: 8px;
-        top: 7px
-    }
+  background: #f3f8f9;
+  border-radius: 8px;
+  color: $second;
+  font-weight: 600;
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 13px;
+  top: 12px;
+  @media (max-width: $tablet-s) {
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    right: 8px;
+    top: 7px;
+  }
 }
 
 .service-list__enumeration-item {
-    background: #F8F7FC;
-    border-radius: 12px;
-    padding: 32px;
-    position: relative;
-    min-height: 334px;
-    @media (max-width: $tablet-s) {
-        padding: 24px 20px;
-        min-height: auto
-    }
+  background: #f8f7fc;
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  min-height: 334px;
+  @media (max-width: $tablet-s) {
+    padding: 24px 20px;
+    min-height: auto;
+  }
 }
 
 .service-list__enumeration-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 16px;
-    width: 90%;
-    color: $accent2;
-    @media (max-width: $tablet-s) {
-        font-size: 16px;
-        line-height: 26px;
-        width: 100%
-    }
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  width: 90%;
+  color: $accent2;
+  @media (max-width: $tablet-s) {
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+  }
 }
 
 .service-list__enumeration-text {
-    font-size: 16px;
-    line-height: 24px;
-    color: $accent2;
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        line-height: 23px;
-    }
+  font-size: 16px;
+  line-height: 24px;
+  color: $accent2;
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    line-height: 23px;
+  }
 }

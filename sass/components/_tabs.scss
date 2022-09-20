@@ -19,153 +19,153 @@
 // }
 .modal-work-time__body .tabs__header:not(.tabs__wrapp) .tab,
 .tabs__cats.tabs__background .tab__list .tab {
-    @media (max-width: 600px) {
-        background: #EAE9EF;
-    }
+  @media (max-width: 600px) {
+    background: #eae9ef;
+  }
 }
 
 .tabs__cats.tabs__green-background .tab__list .tab._active {
-    @media (max-width: 600px) {
-        background: $second;
-        color: #fff
-    }
+  @media (max-width: 600px) {
+    background: $second;
+    color: #fff;
+  }
 }
 
 .tabs__header {
-    position: relative;
-    width: fit-content;
-    background: #EAE9EF;
-    border-radius: 13px;
-    padding: 2px;
-    &.tabs_cat {
-        background: #F0EFEF4D;
-        margin-bottom: 32px;
-        @media (max-width: 600px) {
-            background-color: transparent;
-            margin-bottom: 1px;
-        }
-        & .tab {
-            color: #EAE9EF;
-            @media (max-width: 600px) {
-                background-color: #F0EFEF4D;
-            }
-            &:hover {
-                color: #fff;
-            }
-            &._active {
-                color: #686868;
-            }
-        }
+  position: relative;
+  width: fit-content;
+  background: #eae9ef;
+  border-radius: 13px;
+  padding: 2px;
+  &.tabs_cat {
+    background: #f0efef4d;
+    margin-bottom: 32px;
+    @media (max-width: 600px) {
+      background-color: transparent;
+      margin-bottom: 1px;
     }
-    @media(max-width: 600px) {
-        &:not(.tabs__wrapp) {
-            background-color: transparent;
-            margin-bottom: 1px;
-        }
-        &:not(.tabs__wrapp) .tab__list {
-            flex-wrap: wrap;
-        }
-        &:not(.tabs__wrapp) .tab {
-            padding: 12px 9px;
-            background: rgba(240, 239, 239, 0.3);
-            border-radius: 13px;
-            margin-right: 5px;
-            margin-bottom: 10px;
-            font-size: 12px;
-            &._active {
-                background-color: #fff;
-            }
-        }
-        &:not(.tabs__wrapp) .tab__roller {
-            display: none;
-        }
+    & .tab {
+      color: #eae9ef;
+      @media (max-width: 600px) {
+        background-color: #f0efef4d;
+      }
+      &:hover {
+        color: #fff;
+      }
+      &._active {
+        color: #686868;
+      }
     }
+  }
+  @media (max-width: 600px) {
+    &:not(.tabs__wrapp) {
+      background-color: transparent;
+      margin-bottom: 1px;
+    }
+    &:not(.tabs__wrapp) .tab__list {
+      flex-wrap: wrap;
+    }
+    &:not(.tabs__wrapp) .tab {
+      padding: 12px 9px;
+      background: rgba(240, 239, 239, 0.3);
+      border-radius: 13px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      &._active {
+        background-color: #fff;
+      }
+    }
+    &:not(.tabs__wrapp) .tab__roller {
+      display: none;
+    }
+  }
 }
 
 .tab__list {
-    position: relative;
-    display: flex;
-    align-items: center;
-    @media (min-width: 992px) {
-        height: 42px;
-        min-width: 466px;
-        // min-width: 469px;
-        justify-content: space-between;
-    }
+  position: relative;
+  display: flex;
+  align-items: center;
+  @media (min-width: 992px) {
+    height: 42px;
+    min-width: 466px;
+    // min-width: 469px;
+    justify-content: space-between;
+  }
 }
 
 .tab {
-    position: relative;
-    z-index: 1;
-    font-size: 14px;
-    font-weight: 600;
-    color: #686868;
-    padding: 12px 18px;
-    background: none;
-    border: none;
-    transition: $tr;
-    cursor: pointer;
-    white-space: nowrap;
-    @media (max-width: 600px) {
-        font-size: 12px;
-        padding: 10px 12px;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: #686868;
+  padding: 12px 18px;
+  background: none;
+  border: none;
+  transition: $tr;
+  cursor: pointer;
+  white-space: nowrap;
+  @media (max-width: 600px) {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+  &._active {
+    color: $main;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      color: $second;
     }
-    &:not(:last-child) {
-        margin-right: 4px;
-    }
-    &._active {
-        color: $main;
-    }
-    &:active {
-        opacity: 0.7;
-    }
-    @media (min-width: $minHover) {
-        &:hover {
-            color: $second;
-        }
-    }
+  }
 }
 
 .tab__roller {
-    position: absolute;
-    top: 0px;
-    // left: 2px;
-    width: calc(100% - 4px);
+  position: absolute;
+  top: 0px;
+  // left: 2px;
+  width: calc(100% - 4px);
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  transition: $tr;
+  &.roller-safari {
+    top: 0;
     height: 100%;
-    background: #fff;
-    border-radius: 12px;
-    transition: $tr;
-    &.roller-safari {
-        top: 0;
-        height: 100%
-    }
-    @media (max-width: 992px) {
-        height: 99%
-    }
+  }
+  @media (max-width: 992px) {
+    height: 99%;
+  }
 }
 
 .tabs__block:not(.swiper-slide) {
-    opacity: 0;
-    position: absolute;
-    transition: .8s ease-in-out;
-    top: 0;
-    z-index: -1;
-    &._show {
-        opacity: 1;
-        position: static;
-        z-index: 9;
-    }
+  opacity: 0;
+  position: absolute;
+  transition: 0.8s ease-in-out;
+  top: 0;
+  z-index: -1;
+  &._show {
+    opacity: 1;
+    position: static;
+    z-index: 9;
+  }
 }
 
 .section-line-tab {
-    margin-top: 40px;
-    @media (max-width: $mobile-l) {
-        margin-top: 24px
-    }
+  margin-top: 40px;
+  @media (max-width: $mobile-l) {
+    margin-top: 24px;
+  }
 }
 
 .tabs-width-auto {
-    .tab__list {
-        min-width: auto
-    }
+  .tab__list {
+    min-width: auto;
+  }
 }

@@ -1,97 +1,97 @@
 // Кнока читать подробнее
 .btn {
-    width: fit-content;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    padding: 16px 24px;
-    background: $second;
-    border-radius: $radius;
-    transition: $tr;
-    @media (min-width: $minHover) {
-        &:hover {
-            opacity: 0.9;
-        }
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px 24px;
+  background: $second;
+  border-radius: $radius;
+  transition: $tr;
+  @media (min-width: $minHover) {
+    &:hover {
+      opacity: 0.9;
     }
-    &:active {
-        opacity: 0.8;
-    }
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        padding: 15px 24px;
-    }
+  }
+  &:active {
+    opacity: 0.8;
+  }
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    padding: 15px 24px;
+  }
 }
 
 .btn--white {
-    background-color: #fff;
-    color: $second;
+  background-color: #fff;
+  color: $second;
 }
 
 .btn--green {
-    background-color: $second;
-    color: #fff;
+  background-color: $second;
+  color: #fff;
 }
 
 .btn_disabled {
-    color: $color-gray;
-    background: $btn-gray;
-    pointer-events: none;
+  color: $color-gray;
+  background: $btn-gray;
+  pointer-events: none;
 }
 
 // Кнока подробнее
 .btn_more {
-    width: fit-content;
-    font-size: 16px;
-    font-weight: 600;
-    color: $accent2;
-    padding: 16px 24px;
-    background: $accent;
-    border-radius: $radius;
-    transition: $tr linear;
-    @media (min-width: $minHover) {
-        &:hover {
-            background: $second;
-            color: #fff;
-        }
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 600;
+  color: $accent2;
+  padding: 16px 24px;
+  background: $accent;
+  border-radius: $radius;
+  transition: $tr linear;
+  @media (min-width: $minHover) {
+    &:hover {
+      background: $second;
+      color: #fff;
     }
-    &:active {
-        opacity: 0.7;
-    }
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        padding: 14px 24px;
-    }
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    padding: 14px 24px;
+  }
 }
 
-// Кнопки выбора 
+// Кнопки выбора
 .choice-chips {
-    width: fit-content;
-    font-size: 14px;
-    font-weight: 600;
-    color: $main;
-    padding: 12px 24px;
-    background: #F8F8F8;
-    border-radius: 100px;
-    @media (min-width: $minHover) {
-        &:hover {
-            color: $accent;
-            background: #EFF7F5;
-        }
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+  color: $main;
+  padding: 12px 24px;
+  background: #f8f8f8;
+  border-radius: 100px;
+  @media (min-width: $minHover) {
+    &:hover {
+      color: $accent;
+      background: #eff7f5;
     }
-    &:active {
-        color: #fff;
-        background: $accent;
-    }
-    &._active {
-        color: #fff;
-        background: $accent;
-    }
+  }
+  &:active {
+    color: #fff;
+    background: $accent;
+  }
+  &._active {
+    color: #fff;
+    background: $accent;
+  }
 }
 
 .choice-chips_disabled {
-    color: $second;
-    background: #F8F8F8;
-    pointer-events: none;
+  color: $second;
+  background: #f8f8f8;
+  pointer-events: none;
 }
 
 // Ссылка подробнее
@@ -115,248 +115,251 @@
 //     }
 // }
 .link {
-    @media (min-width: $minHover) {
-        &:hover {
-            color: $accent-hover;
-        }
+  @media (min-width: $minHover) {
+    &:hover {
+      color: $accent-hover;
     }
-    &:active {
-        color: $accent-active;
-    }
+  }
+  &:active {
+    color: $accent-active;
+  }
 }
 
 // Ссылка со стрелкой
 .link_arrow {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-    color: $main;
-    // white-space: nowrap;
-    &:not(.service-card__link)::before {
-        content: '';
-        min-width: 24px;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        margin-right: 8px;
-        transition: $tr;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: $main;
+  // white-space: nowrap;
+  &:not(.service-card__link)::before {
+    content: "";
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: center/contain no-repeat
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    margin-right: 8px;
+    transition: $tr;
+  }
+  &.service-card__link::after {
+    content: "";
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: center/contain no-repeat
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    margin-right: 8px;
+    transition: $tr;
+  }
+  @media (min-width: $tablet-s) {
+    &.main_top__wrapper-link::before {
+      display: none;
     }
-    &.service-card__link::after {
-        content: '';
-        min-width: 24px;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        margin-right: 8px;
-        transition: $tr;
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      &::before {
+        transform: rotate(45deg);
+      }
     }
-    @media (min-width: $tablet-s) {
-        &.main_top__wrapper-link::before {
-            display: none
-        }
-    }
-    @media (min-width: $minHover) {
-        &:hover {
-            &::before {
-                transform: rotate(45deg);
-            }
-        }
-    }
+  }
 }
 
 .menu__wrap .link_arrow {
-    // white-space: nowrap;
-    align-items: flex-start;
-    &:not(.sub-menu__link) {
-        &::before {
-            transform: translateY(3px);
-        }
-    }
-    &::after {
-        display: none
-    }
+  // white-space: nowrap;
+  align-items: flex-start;
+  &:not(.sub-menu__link) {
     &::before {
-        content: '';
-        min-width: 24px;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        margin-right: 8px;
-        transition: $tr;
+      transform: translateY(3px);
     }
-    @media (min-width: $minHover) {
-        &:hover {
-            &::before {
-                transform: rotate(45deg);
-            }
-        }
+  }
+  &::after {
+    display: none;
+  }
+  &::before {
+    content: "";
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: center/contain no-repeat
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    margin-right: 8px;
+    transition: $tr;
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      &::before {
+        transform: rotate(45deg);
+      }
     }
+  }
 }
 
 // Белая ссылка
 .link_arrow-light,
 .menu__wrap .link_arrow-light {
-    color: #fff;
-    opacity: .7;
-    transition: $tr;
-    &::before {
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color: #fff;
+  opacity: 0.7;
+  transition: $tr;
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      opacity: 1;
     }
-    @media (min-width: $minHover) {
-        &:hover {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .menu__wrap .link_arrow._show:before {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 // Ссылка акцентного цвета
 .link_arrow-accent {
-    font-weight: 400;
-    color: $second;
-    opacity: .7;
-    transition: $tr;
+  font-weight: 400;
+  color: $second;
+  opacity: 0.7;
+  transition: $tr;
 }
 
 // Ссылка в sub-menu
 .link_arrow-sub {
-    color: $main;
-    opacity: .7;
-    transition: $tr;
-    &::after {
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color: $main;
+  opacity: 0.7;
+  transition: $tr;
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L16 8' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8H16V16' stroke='%234BB9B5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      opacity: 1;
     }
-    @media (min-width: $minHover) {
-        &:hover {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 // Ссылка отзывы
 .link-review {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  &:hover {
+    .link-review-top {
+      transform: translate(13px, -7px);
+    }
+    .link-review-bottom {
+      transform: translate(0px, 2px);
+    }
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  span {
     display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 14px;
-    &:hover {
-        .link-review-top {
-            transform: translate(13px, -7px);
-        }
-        .link-review-bottom {
-            transform: translate(0px, 2px);
-        }
-    }
-    &:active {
-        opacity: 0.7;
-    }
-    span {
-        display: flex;
-        flex-direction: column;
-        margin-left: 8px;
-    }
-    img {
-        width: 6px;
-        height: 6px;
-        transition: $tr linear;
-    }
-    @media (max-width: $tablet-s) {
-        font-size: 12px;
-    }
+    flex-direction: column;
+    margin-left: 8px;
+  }
+  img {
+    width: 6px;
+    height: 6px;
+    transition: $tr linear;
+  }
+  @media (max-width: $tablet-s) {
+    font-size: 12px;
+  }
 }
 
 .link-review-top {
-    transform: translate(13px, -4px);
+  transform: translate(13px, -4px);
 }
 
 .link-review-bottom {
-    transform: translate(6px, -3px);
+  transform: translate(6px, -3px);
 }
 
 // Ссылка со стрелкой
 .link-arrow {
-    width: fit-content;
-    display: flex;
-    align-items: center;
+  width: fit-content;
+  display: flex;
+  align-items: center;
 }
 
 .link-arrow__text {
-    font-size: 14px;
-    font-weight: 600;
-    transition: $tr;
+  font-size: 14px;
+  font-weight: 600;
+  transition: $tr;
 }
 
 .link-arrow__icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    margin: 0 0 0 8px;
-    svg,
-    svg path {
-        transition: $tr;
-    }
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 0 0 8px;
+  svg,
+  svg path {
+    transition: $tr;
+  }
 }
 
 // Включает hover-эффект при наведении на ссылку
 .link-arrow_hover {
-    @media (min-width: $minHover) {
-        &:hover {
-            & .link-arrow__text {
-                color: $accent;
+  @media (min-width: $minHover) {
+    &:hover {
+      & .link-arrow__text {
+        color: $accent;
+      }
+      & .link-arrow__icon {
+        svg {
+          animation: linkArrowIconHover 0.4s linear forwards;
+          @keyframes linkArrowIconHover {
+            0% {
+              transform: translate(0, 0);
             }
-            & .link-arrow__icon {
-                svg {
-                    animation: linkArrowIconHover .4s linear forwards;
-                    @keyframes linkArrowIconHover {
-                        0% {
-                            transform: translate(0, 0);
-                        }
-                        50% {
-                            transform: translate(4px, 0);
-                        }
-                        100% {
-                            transform: translate(0, 0);
-                        }
-                    }
-                }
-                svg path {
-                    stroke: #fff;
-                }
+            50% {
+              transform: translate(4px, 0);
             }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
         }
+        svg path {
+          stroke: #fff;
+        }
+      }
     }
+  }
 }
 
 // Кнопк/ссылка "Подробнее" у разделов
 .section-more {
-    display: none;
-    @media (max-width: $tablet) {
-        width: 100%;
-        display: block;
-        font-size: 14px;
-        font-weight: 600;
-        text-align: center;
-        padding: 6px 0;
-        margin: 26px 0 0 0;
-    }
+  display: none;
+  @media (max-width: $tablet) {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0;
+    margin: 26px 0 0 0;
+  }
 }
 
 // Прозрачная кнопка с бордером
 .btn-border {
-    border: 1px solid $second;
-    border-radius: $radius;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    color: $second;
-    padding: 17px 0;
-    width: 100%;
+  border: 1px solid $second;
+  border-radius: $radius;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: $second;
+  padding: 17px 0;
+  width: 100%;
 }

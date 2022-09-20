@@ -1,10 +1,10 @@
 // Пользовательские переменные
 :root {
-    --ffMain: 'Montserat';
-    --ffHeader: sans-serif;
-    --tr: .3s; // Плавность перехода
-    --radius: 8px; // border-radius
-    --radius2: 12px; // border-radius
+  --ffMain: "Montserat";
+  --ffHeader: sans-serif;
+  --tr: 0.3s; // Плавность перехода
+  --radius: 8px; // border-radius
+  --radius2: 12px; // border-radius
 }
 
 $ffMain: var(--ffMain);
@@ -26,21 +26,21 @@ $mobile-m: 375px;
 $mobile: 320px;
 // Цвета
 :root {
-    --main: #313033;
-    --second: #4BB9B5;
-    --accent: #EAE9EF;
-    --accent2: #686868;
-    --btn-gray: #F0EFEF;
-    --color-gray: #828282;
-    --header-bg: #F8F7FC;
-    --accent-hover: #44BD99;
-    --accent-active: #37866E;
-    --accent2-active: #C27B29;
-    --outline: #C0C0C0;
-    --outline-card: #F0EFEF;
-    --bg-page: #FFF;
-    --bg-block: #F8F8F8;
-    --error: #E83D3D;
+  --main: #313033;
+  --second: #4bb9b5;
+  --accent: #eae9ef;
+  --accent2: #686868;
+  --btn-gray: #f0efef;
+  --color-gray: #828282;
+  --header-bg: #f8f7fc;
+  --accent-hover: #44bd99;
+  --accent-active: #37866e;
+  --accent2-active: #c27b29;
+  --outline: #c0c0c0;
+  --outline-card: #f0efef;
+  --bg-page: #fff;
+  --bg-block: #f8f8f8;
+  --error: #e83d3d;
 }
 
 $main: var(--main);

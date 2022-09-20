@@ -1,184 +1,184 @@
-@import '_fonts'; // Шрифты
-@import '_variables'; // Переменные
-@import '_reset'; // Сброс css
+@import "_fonts"; // Шрифты
+@import "_variables"; // Переменные
+@import "_reset"; // Сброс css
 // Миксин для перевода px в vw
 @function vw($px) {
-    @return $px/(1920 / 100vw);
+  @return $px/(1920 / 100vw);
 }
 
 body {
-    font-family: $ffMain;
-    color: $main;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.5;
-    background: $bg-page;
-    &._lock {
-        overflow: hidden;
+  font-family: $ffMain;
+  color: $main;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  background: $bg-page;
+  &._lock {
+    overflow: hidden;
+  }
+  @media (min-width: $tablet-l) {
+    &._lock:not(._lock-menu) {
+      padding: 0 calc(16px - (100vw - 100%)) 0 0;
     }
-    @media (min-width:$tablet-l) {
-        &._lock:not(._lock-menu) {
-            padding: 0 calc(16px - (100vw - 100%)) 0 0
-        }
-    }
+  }
 }
 
 ol:not([class]) {
-    list-style: none;
-    counter-reset: li;
-    padding-left: 23px;
-    line-height: 24px;
-    &>li {
-        position: relative;
-        strong {
-            font-weight: 600;
-            color: $second
+  list-style: none;
+  counter-reset: li;
+  padding-left: 23px;
+  line-height: 24px;
+  & > li {
+    position: relative;
+    strong {
+      font-weight: 600;
+      color: $second;
+    }
+    &:before {
+      counter-increment: li;
+      content: counters(li, ".") ". ";
+      position: absolute;
+      left: -23px;
+      top: 2px;
+      color: $second;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    ol {
+      margin-top: 24px;
+      padding-left: 23px;
+      line-height: 24px;
+      & > li {
+        padding-left: 12px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
         }
         &:before {
-            counter-increment: li;
-            content: counters(li, ".") ". ";
-            position: absolute;
-            left: -23px;
-            top: 2px;
-            color: $second;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 21px;
+          counter-increment: li;
+          content: counters(li, ".");
         }
-        &:not(:last-child) {
-            margin-bottom: 24px;
-        }
-        ol {
-            margin-top: 24px;
-            padding-left: 23px;
-            line-height: 24px;
-            &>li {
-                padding-left: 12px;
-                &:not(:last-child) {
-                    margin-bottom: 16px;
-                }
-                &:before {
-                    counter-increment: li;
-                    content: counters(li, ".");
-                }
-            }
-        }
+      }
     }
-    ul {
-        margin-top: 16px;
-    }
+  }
+  ul {
+    margin-top: 16px;
+  }
 }
 
 ul:not([class]) {
-    padding-left: 23px;
-    line-height: 24px;
-    list-style-type: none;
-    li {
-        position: relative;
+  padding-left: 23px;
+  line-height: 24px;
+  list-style-type: none;
+  li {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    strong {
+      font-weight: 600;
+      color: $second;
+    }
+    ul {
+      margin-top: 24px;
+      li {
         &:not(:last-child) {
-            margin-bottom: 24px;
-        }
-        strong {
-            font-weight: 600;
-            color: $second
-        }
-        ul {
-            margin-top: 24px;
-            li {
-                &:not(:last-child) {
-                    margin-bottom: 16px;
-                }
-                &:after {
-                    content: '';
-                    height: 2px;
-                    width: 8px;
-                    border-radius: 0;
-                    top: 12px
-                }
-            }
+          margin-bottom: 16px;
         }
         &:after {
-            content: '';
-            position: absolute;
-            left: -23px;
-            top: 9px;
-            width: 7px;
-            height: 7px;
-            background: var(--second);
-            border-radius: 50%;
+          content: "";
+          height: 2px;
+          width: 8px;
+          border-radius: 0;
+          top: 12px;
         }
+      }
     }
+    &:after {
+      content: "";
+      position: absolute;
+      left: -23px;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      background: var(--second);
+      border-radius: 50%;
+    }
+  }
 }
 
 .wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-@import '_grid'; // Сетка
-@import '_variables';
+@import "_grid"; // Сетка
+@import "_variables";
 // Библиотеки
 //@import 'libs/_aos';
-@import 'libs/_lightgallery';
-@import 'libs/_wow';
-@import 'libs/_swiper';
-@import 'libs/_air-datepicker';
+@import "libs/_lightgallery";
+@import "libs/_wow";
+@import "libs/_swiper";
+@import "libs/_air-datepicker";
 // Анимация
-@import 'components/_animation';
+@import "components/_animation";
 // Компоненты
-@import 'components/_buttons';
-@import 'components/_forms';
-@import 'components/_modal';
-@import 'components/_modal-search';
-@import 'components/_tabs';
-@import 'components/_accordion';
-@import 'components/_accordion-page';
-@import 'components/_sliders';
-@import 'components/_breadcrumbs';
-@import 'components/_pagination';
-@import 'components/_dropdown';
-@import 'components/_link';
+@import "components/_buttons";
+@import "components/_forms";
+@import "components/_modal";
+@import "components/_modal-search";
+@import "components/_tabs";
+@import "components/_accordion";
+@import "components/_accordion-page";
+@import "components/_sliders";
+@import "components/_breadcrumbs";
+@import "components/_pagination";
+@import "components/_dropdown";
+@import "components/_link";
 // Текстовые компоненты
-@import 'components/text/_text';
-@import 'components/text/_titles';
+@import "components/text/_text";
+@import "components/text/_titles";
 // Секции
-@import 'sections/intro';
-@import 'sections/_header';
-@import 'sections/_menu';
-@import 'sections/_main-top';
-@import 'sections/_actual-offer';
-@import 'sections/_our-doctors';
-@import 'sections/_why-choose';
-@import 'sections/_number-proud';
-@import 'sections/_useful';
-@import 'sections/_news';
-@import 'sections/_review';
-@import 'sections/cat';
-@import 'sections/_footer';
+@import "sections/intro";
+@import "sections/_header";
+@import "sections/_menu";
+@import "sections/_main-top";
+@import "sections/_actual-offer";
+@import "sections/_our-doctors";
+@import "sections/_why-choose";
+@import "sections/_number-proud";
+@import "sections/_useful";
+@import "sections/_news";
+@import "sections/_review";
+@import "sections/cat";
+@import "sections/_footer";
 // Страницы
-@import 'pages/services/_services';
-@import 'pages/search/_search';
-@import 'pages/service_section/_first-block';
-@import 'pages/service_section/_service-list';
-@import 'pages/service_section/_first-time';
-@import 'pages/service_section/_information-services';
-@import 'pages/service_section/_service-articles';
-@import 'pages/our_prices/_our-prices';
-@import 'pages/timetable/_timetable';
-@import 'pages/team/_team';
-@import 'pages/about_clinics/_about_clinics';
-@import 'pages/patient/_patient';
-@import 'pages/news/_news';
-@import 'pages/news/_details_news';
-@import 'pages/vakansion/_vakansion';
-@import 'pages/contacts/_contacts_control';
-@import 'pages/contacts/_contacts';
-@import 'pages/form_patient/_form_patient';
-@import 'pages/otzyvy/_otzyvy';
-@import 'pages/otzyvy/_otzyvy_question';
-@import 'pages/otzyvy/_otzyvy_visit';
+@import "pages/services/_services";
+@import "pages/search/_search";
+@import "pages/service_section/_first-block";
+@import "pages/service_section/_service-list";
+@import "pages/service_section/_first-time";
+@import "pages/service_section/_information-services";
+@import "pages/service_section/_service-articles";
+@import "pages/our_prices/_our-prices";
+@import "pages/timetable/_timetable";
+@import "pages/team/_team";
+@import "pages/about_clinics/_about_clinics";
+@import "pages/patient/_patient";
+@import "pages/news/_news";
+@import "pages/news/_details_news";
+@import "pages/vakansion/_vakansion";
+@import "pages/contacts/_contacts_control";
+@import "pages/contacts/_contacts";
+@import "pages/form_patient/_form_patient";
+@import "pages/otzyvy/_otzyvy";
+@import "pages/otzyvy/_otzyvy_question";
+@import "pages/otzyvy/_otzyvy_visit";

@@ -1,58 +1,58 @@
 .servces_cost {
-    margin: 100px 0;
-    h2 {
-        margin-bottom: 40px;
+  margin: 100px 0;
+  h2 {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $tablet-ls) {
+    .section_information_services__item-table {
+      td:first-child {
+        width: 70%;
+      }
     }
-    @media (max-width:$tablet-ls) {
-        .section_information_services__item-table {
-            td:first-child {
-                width: 70%
-            }
-        }
+  }
+  @media (max-width: $tablet) {
+    margin: 80px 0;
+  }
+  @media (max-width: $mobile-m) {
+    margin: 56px 0;
+    .section_information_services__item-table {
+      td:first-child {
+        width: 60%;
+      }
     }
-    @media (max-width: $tablet) {
-        margin: 80px 0
+  }
+  @media (max-width: 350px) {
+    .accordion_container-list-title {
+      width: 150px;
+      font-size: 12px;
     }
-    @media (max-width: $mobile-m) {
-        margin: 56px 0;
-        .section_information_services__item-table {
-            td:first-child {
-                width: 60%
-            }
-        }
+    .accordion_container-list-picture {
+      margin-right: 10px;
     }
-    @media (max-width: 350px) {
-        .accordion_container-list-title {
-            width: 150px;
-            font-size: 12px
-        }
-        .accordion_container-list-picture {
-            margin-right: 10px
-        }
-        .accordion_container-list-title {
-            width: 120px;
-        }
+    .accordion_container-list-title {
+      width: 120px;
     }
+  }
 }
 
 .our-prices {
-    @media (max-width: $tablet) {
-        &.first-block {
-            padding-bottom: 0;
-        }
-        .first-block__background {
-            height: 300px;
-        }
-        .first-block__text {
-            margin-top: 160px
-        }
+  @media (max-width: $tablet) {
+    &.first-block {
+      padding-bottom: 0;
     }
-    @media (max-width: $tablet-s) {
-        .first-block__background {
-            height: 190px;
-        }
-        .first-block__text {
-            margin-top: 130px
-        }
+    .first-block__background {
+      height: 300px;
     }
+    .first-block__text {
+      margin-top: 160px;
+    }
+  }
+  @media (max-width: $tablet-s) {
+    .first-block__background {
+      height: 190px;
+    }
+    .first-block__text {
+      margin-top: 130px;
+    }
+  }
 }

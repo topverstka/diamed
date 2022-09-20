@@ -1,180 +1,181 @@
 .modal-header {
-    // background: rgba(248, 247, 252, .5);
-    //backdrop-filter: blur(5px);
-    opacity: 1;
-    // transition: .1s linear
-    transition: transform .3s linear;
-    transition-delay: .3s linear;
+  // background: rgba(248, 247, 252, .5);
+  //backdrop-filter: blur(5px);
+  opacity: 1;
+  // transition: .1s linear
+  transition: transform 0.3s linear;
+  transition-delay: 0.3s linear;
 }
 
 .modal-header__wrap {
-    align-items: flex-start;
-    padding: 0;
-    transform: translateY(-100%);
-    transition: .3s linear;
+  align-items: flex-start;
+  padding: 0;
+  transform: translateY(-100%);
+  transition: 0.3s linear;
 }
 
 .modal-header__content {
-    max-width: none;
-    width: 100%;
-    background: $header-bg;
-    border-radius: 0;
-    padding: 100px 0;
-    @media (max-width: $tablet) {
-        padding: 40px 0;
+  max-width: none;
+  width: 100%;
+  background: $header-bg;
+  border-radius: 0;
+  padding: 100px 0;
+  @media (max-width: $tablet) {
+    padding: 40px 0;
+  }
+  @media (max-width: $tablet-s) {
+    padding: 32px 20px 40px 20px;
+    .container {
+      padding: 0;
     }
-    @media (max-width:$tablet-s) {
-        padding: 32px 20px 40px 20px;
-        .container {
-            padding: 0
-        }
-    }
+  }
 }
 
 // Шапка поиска
 .modal-header__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.modal-header__title {}
+.modal-header__title {
+}
 
 .modal-header__close {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 32px;
-    height: 32px;
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 32px;
+  height: 32px;
 }
 
 // Форма поиска
 .modal-search__form {
-    display: flex;
-    align-items: center;
-    margin-top: 32px;
-    @media (max-width: $tablet-s) {
-        margin-top: 16px
-    }
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  @media (max-width: $tablet-s) {
+    margin-top: 16px;
+  }
 }
 
 .modal-search__textfield {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 52px;
+  @media (max-width: $mobile-l) {
+    height: 39px;
+  }
+  & input {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 52px;
+    height: 100%;
+    font-size: 16px;
+    color: $main;
+    background: #fff;
+    border-radius: $radius;
+    padding: 0 24px 0 42px;
     @media (max-width: $mobile-l) {
-        height: 39px;
+      font-size: 14px;
+      padding: 0 12px 0 34px;
     }
-    & input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        font-size: 16px;
-        color: $main;
-        background: #fff;
-        border-radius: $radius;
-        padding: 0 24px 0 42px;
-        @media (max-width: $mobile-l) {
-            font-size: 14px;
-            padding: 0 12px 0 34px;
-        }
-        &::placeholder {
-            color: $accent2;
-        }
+    &::placeholder {
+      color: $accent2;
     }
+  }
 }
 
 .modal-search__textfield-icon {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translate(0, -50%);
-    width: 16px;
-    height: 16px;
-    display: flex;
-    pointer-events: none;
-    @media (max-width: $mobile-l) {
-        left: 8px;
-    }
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 16px;
+  display: flex;
+  pointer-events: none;
+  @media (max-width: $mobile-l) {
+    left: 8px;
+  }
 }
 
 .modal-search__submit {
-    max-width: 185px;
-    width: 100%;
-    margin-left: 10px;
-    @media (max-width: $mobile-l) {
-        max-width: 112px;
-        height: 39px;
-        padding: 0 12px;
-    }
+  max-width: 185px;
+  width: 100%;
+  margin-left: 10px;
+  @media (max-width: $mobile-l) {
+    max-width: 112px;
+    height: 39px;
+    padding: 0 12px;
+  }
 }
 
 // Рабочее время
 .modal-work-time__body {
-    margin-top: 32px;
+  margin-top: 32px;
+  @media (max-width: $mobile-l) {
+    margin-top: 16px;
+  }
+  .tabs__header {
+    margin-bottom: 42px;
     @media (max-width: $mobile-l) {
-        margin-top: 16px;
+      margin-bottom: 24px;
     }
-    .tabs__header {
-        margin-bottom: 42px;
-        @media (max-width: $mobile-l) {
-            margin-bottom: 24px;
-        }
-    }
+  }
 }
 
 .modal-work-time__body-container {
-    position: relative;
+  position: relative;
 }
 
 .modal-work-time__list {
-    display: flex;
-    flex-wrap: wrap;
-    // gap: 24px 80px;
-    @media (max-width: $tablet-s) {
-        flex-direction: column;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 24px 80px;
+  @media (max-width: $tablet-s) {
+    flex-direction: column;
+  }
 }
 
 .modal-work-time__block {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-right: 80px;
+  }
+  @media (max-width: $tablet) {
     &:not(:last-child) {
-        margin-right: 80px;
+      margin-bottom: 20px;
     }
-    @media (max-width:$tablet) {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
+  }
+  @media (min-width: $tablet-s) {
+    &:first-child {
+      width: 212px;
     }
-    @media (min-width:$tablet-s) {
-        &:first-child {
-            width: 212px
-        }
-    }
+  }
 }
 
 .modal-work-time__title {
-    font-size: 16px;
-    color: $accent2;
-    @media (max-width: $mobile-l) {
-        font-size: 14px;
-    }
+  font-size: 16px;
+  color: $accent2;
+  @media (max-width: $mobile-l) {
+    font-size: 14px;
+  }
 }
 
 .modal-work-time__text {
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 10px;
-    @media (max-width: $tablet) {
-        a {
-            color: $second;
-        }
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  @media (max-width: $tablet) {
+    a {
+      color: $second;
     }
-    @media (max-width: $mobile-l) {
-        font-size: 14px;
-        margin-top: 8px;
-    }
+  }
+  @media (max-width: $mobile-l) {
+    font-size: 14px;
+    margin-top: 8px;
+  }
 }

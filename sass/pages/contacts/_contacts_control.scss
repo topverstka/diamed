@@ -1,64 +1,64 @@
 .contact_control {
-    margin: 40px 0 100px 0;
-    .servces_cost__container {
-        max-width: 100%
+  margin: 40px 0 100px 0;
+  .servces_cost__container {
+    max-width: 100%;
+  }
+  .servces_cost__container .padding-16 {
+    margin-top: 32px;
+  }
+  .servces_cost__container .accordion_container-list {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    &:after {
+      opacity: 1;
+    }
+  }
+  .servces_cost__container .accordion_container-list-title {
+    max-width: 533px;
+  }
+  @media (max-width: $mobile-l) {
+    margin-bottom: 56px;
+    .servces_cost__container .accordion_container-list {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
     }
     .servces_cost__container .padding-16 {
-        margin-top: 32px
+      margin-top: 24px;
     }
-    .servces_cost__container .accordion_container-list {
-        margin-bottom: 32px;
-        padding-bottom: 32px;
-        &:after {
-            opacity: 1;
-        }
-    }
-    .servces_cost__container .accordion_container-list-title {
-        max-width: 533px
-    }
-    @media (max-width:$mobile-l) {
-        margin-bottom: 56px;
-        .servces_cost__container .accordion_container-list {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-        }
-        .servces_cost__container .padding-16 {
-            margin-top: 24px
-        }
-    }
+  }
 }
 
-@media (max-width:$mobile-l) {
-    .first-block-page .title-h1 {
-        font-size: 24px;
-        line-height: 29px;
-    }
+@media (max-width: $mobile-l) {
+  .first-block-page .title-h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .accordion-contacts__list-line {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  a {
+    font-weight: 600;
+    color: $second;
+    &:focus {
+      opacity: 0.7 !important;
+    }
+    &:hover {
+      text-decoration-line: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+    }
+  }
+  @media (max-width: $mobile-l) {
+    font-size: 14px;
+    line-height: 20px;
     &:not(:last-child) {
-        margin-bottom: 20px;
+      margin-bottom: 10px;
     }
-    a {
-        font-weight: 600;
-        color: $second;
-        &:focus {
-            opacity: .7 !important;
-        }
-        &:hover {
-            text-decoration-line: underline;
-            text-underline-offset: 2px;
-            text-decoration-thickness: 1px;
-        }
-    }
-    @media (max-width:$mobile-l) {
-        font-size: 14px;
-        line-height: 20px;
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
+  }
 }

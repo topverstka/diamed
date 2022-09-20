@@ -1,186 +1,186 @@
 .useful {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    overflow: hidden;
-    @media(max-width: $tablet) {
-        padding-top: 82px;
-        padding-bottom: 95px;
-    }
-    @media(max-width: $tablet-s) {
-        padding-top: 56px;
-        padding-bottom: 55px;
-    }
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  @media (max-width: $tablet) {
+    padding-top: 82px;
+    padding-bottom: 95px;
+  }
+  @media (max-width: $tablet-s) {
+    padding-top: 56px;
+    padding-bottom: 55px;
+  }
 }
 
 .useful-title {
-    margin-bottom: 40px;
-    @media (max-width: $tablet-s) {
-        margin-bottom: 24px;
-    }
+  margin-bottom: 40px;
+  @media (max-width: $tablet-s) {
+    margin-bottom: 24px;
+  }
 }
 
 .useful_wrapp {
-    display: flex;
-    min-height: 308px;
-    &>div:not(:last-child) {
-        margin-right: 20px;
-        @media (max-width: $laptop) {
-            margin: 0;
-        }
-    }
+  display: flex;
+  min-height: 308px;
+  & > div:not(:last-child) {
+    margin-right: 20px;
     @media (max-width: $laptop) {
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px 21px;
+      margin: 0;
     }
-    @media (max-width: 560px) {
-        grid-template-columns: 1fr;
-        gap: 15px 21px;
-    }
+  }
+  @media (max-width: $laptop) {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 21px;
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+    gap: 15px 21px;
+  }
 }
 
 .useful_wrapp__elems {
-    width: 305px;
-    border: 1px solid #F0EFEF;
-    background: #fff;
-    border-radius: $radius2;
-    padding: 30px 48px 32px 32px;
-    @media (min-width: $laptop) and (max-width: 1280px) {
-        padding-right: 32px;
-        display: flex;
-        flex-direction: column;
-        .btn_more {
-            margin-top: auto;
-        }
+  width: 305px;
+  border: 1px solid #f0efef;
+  background: #fff;
+  border-radius: $radius2;
+  padding: 30px 48px 32px 32px;
+  @media (min-width: $laptop) and (max-width: 1280px) {
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    .btn_more {
+      margin-top: auto;
     }
-    @media (max-width: $laptop) {
-        width: auto;
-    }
-    @media (max-width: $tablet-s) {
-        padding: 13px 21px 32px 20px;
-    }
+  }
+  @media (max-width: $laptop) {
+    width: auto;
+  }
+  @media (max-width: $tablet-s) {
+    padding: 13px 21px 32px 20px;
+  }
 }
 
 .useful_wrapp__elems-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 32px;
-    @media (max-width: $tablet-s) {
-        width: 53px;
-        margin-bottom: 15px;
-    }
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+  @media (max-width: $tablet-s) {
+    width: 53px;
+    margin-bottom: 15px;
+  }
 }
 
 .useful_wrapp__elems-header {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 55px;
-    @media (max-width: 1280px) {
-        margin-bottom: 40px;
-    }
-    @media (max-width: $tablet-s) {
-        font-size: 16px;
-        margin-bottom: 42px;
-    }
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 55px;
+  @media (max-width: 1280px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $tablet-s) {
+    font-size: 16px;
+    margin-bottom: 42px;
+  }
 }
 
 .useful_wrapp__smart {
-    width: 630px;
-    background: #F8F7FC;
-    border-radius: $radius2;
-    padding: 32px 32px 37px 32px;
-    position: relative;
-    overflow: hidden;
-    @media (max-width: $laptop) {
-        width: auto;
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    @media (max-width: 560px) {
-        grid-column-start: auto;
-        grid-column-end: auto;
-    }
-    @media (max-width: $tablet-s) {
-        padding: 20px 32px 21px 20px;
-    }
+  width: 630px;
+  background: #f8f7fc;
+  border-radius: $radius2;
+  padding: 32px 32px 37px 32px;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: $laptop) {
+    width: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  @media (max-width: 560px) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  @media (max-width: $tablet-s) {
+    padding: 20px 32px 21px 20px;
+  }
 }
 
 .userful_wrapp__smart-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .userful_wrapp__smart-content-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 16px;
-    @media (max-width: $tablet-s) {
-        font-size: 16px;
-        line-height: 27px;
-    }
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  @media (max-width: $tablet-s) {
+    font-size: 16px;
+    line-height: 27px;
+  }
 }
 
 .userful_wrapp__smart-content-text {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: $accent2;
-    margin-bottom: 63px;
-    width: 280px;
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        line-height: 21px;
-        margin-bottom: 131px;
-    }
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $accent2;
+  margin-bottom: 63px;
+  width: 280px;
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 131px;
+  }
 }
 
 .userful_wrapp__smart-content-ico {
-    width: 28px;
-    height: 31px;
-    @media (max-width: $tablet-s) {
-        width: 23px;
+  width: 28px;
+  height: 31px;
+  @media (max-width: $tablet-s) {
+    width: 23px;
+  }
+  @media (min-width: $minHover) {
+    &:hover {
+      path {
+        fill: #4bb9b5;
+      }
     }
-    @media (min-width: $minHover) {
-        &:hover {
-            path {
-                fill: #4BB9B5
-            }
-        }
-    }
+  }
 }
 
 .useful_wrapp__smart-link {
-    display: flex;
-    align-items: start;
+  display: flex;
+  align-items: start;
+  a:first-child {
+    margin: 0 32px 0 6px;
+  }
+  @media (max-width: $tablet-s) {
     a:first-child {
-        margin: 0 32px 0 6px;
+      margin: 0 24px 0 6px;
     }
-    @media (max-width: $tablet-s) {
-        a:first-child {
-            margin: 0 24px 0 6px;
-        }
-    }
+  }
 }
 
 .useful_wrapp__smart-picture {
-    position: absolute;
-    top: -78px;
-    right: -234px;
-    width: 752px;
-    height: 551px;
-    object-fit: cover;
-    pointer-events: none;
-    @media (max-width: $tablet) {
-        right: -198px;
-    }
-    @media (max-width: $tablet-s) {
-        width: 548px;
-        top: auto;
-        bottom: -151px;
-        right: -167px;
-        height: auto;
-    }
+  position: absolute;
+  top: -78px;
+  right: -234px;
+  width: 752px;
+  height: 551px;
+  object-fit: cover;
+  pointer-events: none;
+  @media (max-width: $tablet) {
+    right: -198px;
+  }
+  @media (max-width: $tablet-s) {
+    width: 548px;
+    top: auto;
+    bottom: -151px;
+    right: -167px;
+    height: auto;
+  }
 }

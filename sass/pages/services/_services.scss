@@ -1,39 +1,39 @@
-@import './_services-main';
-@import './_service-card';
+@import "./_services-main";
+@import "./_service-card";
 
 .services {
-    margin-top: 56px;
+  margin-top: 56px;
 }
 
 .services__wrap {
-    // width: 100%;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // gap: 20px;
-    margin-bottom: 100px;
+  // width: 100%;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // gap: 20px;
+  margin-bottom: 100px;
 }
 
 .services__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: max-content;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
+  gap: 20px;
 
-    @media (max-width: $laptop) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @media (max-width: $tablet) {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    @media (max-width: $mobile-l) {
-        gap: 16px;
-    }
+  @media (max-width: $mobile-l) {
+    gap: 16px;
+  }
 
-    // & .service-card {
-    //     width: 31%;
-    //     float: left;
-    //     margin: 0 20px 20px 0;
-    // }
+  // & .service-card {
+  //     width: 31%;
+  //     float: left;
+  //     margin: 0 20px 20px 0;
+  // }
 }

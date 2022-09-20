@@ -1,11 +1,11 @@
 .service-main__text {
-    max-width: 800px;
-    width: 100%;
-    font-size: 16px;
-    margin-top: 40px;
+  max-width: 800px;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 40px;
 
-    @media (max-width: $mobile-l) {
-        font-size: 14px;
-        margin-top: 24px;
-    }
+  @media (max-width: $mobile-l) {
+    font-size: 14px;
+    margin-top: 24px;
+  }
 }

@@ -1,141 +1,141 @@
 .servces_cost__container {
-    width: 770px;
-    max-width: 100%;
-    .accordion_container-list {
-        flex-direction: column;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        &:after {
-            width: 100%;
-            background: #F8F7FC
-        }
-        &:hover {
-            .accordion_container-list-picture {
-                background: $second;
-            }
-        }
+  width: 770px;
+  max-width: 100%;
+  .accordion_container-list {
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    &:after {
+      width: 100%;
+      background: #f8f7fc;
+    }
+    &:hover {
+      .accordion_container-list-picture {
+        background: $second;
+      }
+    }
+    &._show {
+      &:after {
+        opacity: 0;
+      }
+      .accordion_container-list-picture {
+        background: $second;
+      }
+      .acc-open {
         &._show {
-            &:after {
-                opacity: 0;
-            }
-            .accordion_container-list-picture {
-                background: $second;
-            }
-            .acc-open {
-                &._show {
-                    button {
-                        animation: showElem .6s ease-in;
-                    }
-                }
-                &._add-animation {
-                    button {
-                        animation: showElem .6s ease-in;
-                    }
-                }
-            }
-            .accordion_container-list-icons {
-                overflow: hidden;
-                // color: transparent;
-                // &:after {
-                //     content: 'Свернуть';
-                //     color: $second;
-                //     position: absolute;
-                //     right: 28px;
-                // }
-                svg {
-                    transform: scale(1, -1);
-                }
-            }
+          button {
+            animation: showElem 0.6s ease-in;
+          }
         }
-    }
-    .accordion_container-list-picture {
-        margin-right: 24px
-    }
-    .section_information_services__item-table {
-        margin-bottom: 0;
-    }
-    .accordion_container-list-content {
-        margin-left: 0;
-        max-width: 100%;
-        margin-top: 0;
-    }
-    .accordion_container-list-title {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 28px;
-        cursor: pointer;
-        max-width: 320px
-    }
-    .acc-open {
         &._add-animation {
-            button {
-                animation: showElem .6s ease-in;
-            }
+          button {
+            animation: showElem 0.6s ease-in;
+          }
         }
-    }
-    .accordion_container-list-icons {
-        button {
-            color: $second;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-        }
+      }
+      .accordion_container-list-icons {
+        overflow: hidden;
+        // color: transparent;
+        // &:after {
+        //     content: 'Свернуть';
+        //     color: $second;
+        //     position: absolute;
+        //     right: 28px;
+        // }
         svg {
-            width: 16px;
-            height: 16px;
-            margin-left: 10px;
-            transition: $tr
+          transform: scale(1, -1);
         }
+      }
+    }
+  }
+  .accordion_container-list-picture {
+    margin-right: 24px;
+  }
+  .section_information_services__item-table {
+    margin-bottom: 0;
+  }
+  .accordion_container-list-content {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .accordion_container-list-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    cursor: pointer;
+    max-width: 320px;
+  }
+  .acc-open {
+    &._add-animation {
+      button {
+        animation: showElem 0.6s ease-in;
+      }
+    }
+  }
+  .accordion_container-list-icons {
+    button {
+      color: $second;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 10px;
+      transition: $tr;
+    }
+  }
+  .accordion_container-list-picture {
+    width: 48px;
+    height: 48px;
+    background: #c4e0e5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $tr;
+    img {
+      width: 33px;
+    }
+  }
+  .accordion_container-list-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion_container-list-icons {
+    // top: auto;
+    display: flex;
+    position: static;
+    margin-left: auto;
+  }
+  .padding-16 {
+    margin-top: 16px;
+  }
+  @media (max-width: $tablet-s) {
+    .accordion_container-list-title {
+      max-width: max-content;
+      width: 170px;
+      margin-left: 0;
+      margin-right: auto;
+      font-size: 14px;
+      line-height: 20px;
+      word-wrap: break-word;
     }
     .accordion_container-list-picture {
-        width: 48px;
-        height: 48px;
-        background: #C4E0E5;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: $tr;
-        img {
-            width: 33px
-        }
+      margin-right: 16px;
+      width: 32px;
+      height: 32px;
+      img {
+        width: 22px;
+      }
     }
-    .accordion_container-list-header {
-        display: flex;
-        align-items: center;
-        position: relative;
-        cursor: pointer;
+    .accordion_container-list {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
     }
-    .accordion_container-list-icons {
-        // top: auto;
-        display: flex;
-        position: static;
-        margin-left: auto
-    }
-    .padding-16 {
-        margin-top: 16px
-    }
-    @media (max-width: $tablet-s) {
-        .accordion_container-list-title {
-            max-width: max-content;
-            width: 170px;
-            margin-left: 0;
-            margin-right: auto;
-            font-size: 14px;
-            line-height: 20px;
-            word-wrap: break-word;
-        }
-        .accordion_container-list-picture {
-            margin-right: 16px;
-            width: 32px;
-            height: 32px;
-            img {
-                width: 22px
-            }
-        }
-        .accordion_container-list {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-        }
-    }
+  }
 }

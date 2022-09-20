@@ -1,173 +1,173 @@
 .review {
-    position: relative;
-    background: $header-bg;
-    padding: 66px 0px;
-    overflow: hidden;
-    // background-image: url(../../img/background_reviews.png);
-    // background-repeat: no-repeat;
-    // background-position: 561px 216px;
-    padding-bottom: 63px;
-    @media (max-width: $tablet) {
-        padding-bottom: 50px;
-        .link-review {
-            color: $second
-        }
+  position: relative;
+  background: $header-bg;
+  padding: 66px 0px;
+  overflow: hidden;
+  // background-image: url(../../img/background_reviews.png);
+  // background-repeat: no-repeat;
+  // background-position: 561px 216px;
+  padding-bottom: 63px;
+  @media (max-width: $tablet) {
+    padding-bottom: 50px;
+    .link-review {
+      color: $second;
     }
-    .container {
-        @media (max-width: 1200px) {
-            padding-right: 0;
-        }
-        @media (max-width: $tablet-l) {
-            padding-right: 24px;
-        }
+  }
+  .container {
+    @media (max-width: 1200px) {
+      padding-right: 0;
     }
-    @media (max-width: $tablet-s) {
-        padding-top: 32px;
-        padding-bottom: 32px;
+    @media (max-width: $tablet-l) {
+      padding-right: 24px;
     }
+  }
+  @media (max-width: $tablet-s) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .review__bg-img {
-    position: absolute;
-    top: 216px;
-    left: 561px;
-    opacity: .2;
+  position: absolute;
+  top: 216px;
+  left: 561px;
+  opacity: 0.2;
 }
 
 .review-title {
-    margin-bottom: 32px;
-    width: 85%;
-    @media (max-width: 1200px) {
-        width: 100%;
+  margin-bottom: 32px;
+  width: 85%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+  @media (max-width: $tablet-s) {
+    margin-bottom: 25px;
+    br {
+      display: none;
     }
-    @media (max-width: $tablet-s) {
-        margin-bottom: 25px;
-        br {
-            display: none;
-        }
-    }
+  }
 }
 
 .review__arrows {
-    position: relative;
-    justify-content: flex-end;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .review_wrapp {
-    display: flex;
-    @media (max-width: $tablet-l) {
-        flex-direction: column;
-    }
+  display: flex;
+  @media (max-width: $tablet-l) {
+    flex-direction: column;
+  }
 }
 
 .review_wrapp__btn {
-    margin-top: auto;
-    @media (max-width: $tablet-l) {
-        display: none;
-    }
+  margin-top: auto;
+  @media (max-width: $tablet-l) {
+    display: none;
+  }
 }
 
 .review_wrapp__btn-mobile {
-    display: none;
-    @media (max-width: $tablet-l) {
-        display: block;
-        margin-top: 32px;
-    }
-    @media (max-width: $tablet-s) {
-        margin-top: 36px;
-    }
+  display: none;
+  @media (max-width: $tablet-l) {
+    display: block;
+    margin-top: 32px;
+  }
+  @media (max-width: $tablet-s) {
+    margin-top: 36px;
+  }
 }
 
 .review_wrapp__text {
-    width: 413px;
-    margin-right: 19px;
-    display: flex;
-    flex-direction: column;
-    @media (max-width: $laptop) {
-        max-width: 340px;
-        width: 100%;
-    }
+  width: 413px;
+  margin-right: 19px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $laptop) {
+    max-width: 340px;
+    width: 100%;
+  }
 }
 
 .review_wrapp__slider {
-    width: 848px;
-    overflow-x: hidden;
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-    .swiper-slide {
-        background: #fff;
-        border-radius: $radius2;
-        padding: 24px 24px 24px 24px;
-        @media (max-width: $tablet-s) {
-            padding: 20px;
-        }
-    }
-    @media (max-width: $tablet-l) {
-        width: 100%;
-        margin-top: 32px;
-        overflow: initial;
-    }
+  width: 848px;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  .swiper-slide {
+    background: #fff;
+    border-radius: $radius2;
+    padding: 24px 24px 24px 24px;
     @media (max-width: $tablet-s) {
-        margin-top: 20px;
+      padding: 20px;
     }
+  }
+  @media (max-width: $tablet-l) {
+    width: 100%;
+    margin-top: 32px;
+    overflow: initial;
+  }
+  @media (max-width: $tablet-s) {
+    margin-top: 20px;
+  }
 }
 
 .review_wrapp__slider-name {
-    font-size: 16px;
-    line-height: 24px;
-    color: $accent2;
-    margin-bottom: 24px;
-    display: block;
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        line-height: 22px;
-        margin-bottom: 16px;
-    }
+  font-size: 16px;
+  line-height: 24px;
+  color: $accent2;
+  margin-bottom: 24px;
+  display: block;
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
 }
 
 .review_wrapp__slider-text {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 75px;
-    height: 140px;
-    overflow: hidden;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    @media (max-width: $tablet-s) {
-        font-size: 16px;
-        line-height: 26px;
-        height: 157px;
-        margin-bottom: 24px;
-        -webkit-line-clamp: 6;
-    }
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 75px;
+  height: 140px;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  @media (max-width: $tablet-s) {
+    font-size: 16px;
+    line-height: 26px;
+    height: 157px;
+    margin-bottom: 24px;
+    -webkit-line-clamp: 6;
+  }
 }
 
 .review_wrapp__slider-job {
-    font-size: 16px;
-    line-height: 24px;
-    color: $accent2;
-    margin-bottom: 12px;
-    display: block;
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-    }
+  font-size: 16px;
+  line-height: 24px;
+  color: $accent2;
+  margin-bottom: 12px;
+  display: block;
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+  }
 }
 
 .review_wrapp__slider-name-doctor {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: $second;
-    border-bottom: 1px solid #F0EFEF;
-    padding-bottom: 31px;
-    margin-bottom: 33px;
-    display: block;
-    @media (max-width: $tablet-s) {
-        font-size: 14px;
-        padding-bottom: 19px;
-        margin-bottom: 22px;
-    }
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $second;
+  border-bottom: 1px solid #f0efef;
+  padding-bottom: 31px;
+  margin-bottom: 33px;
+  display: block;
+  @media (max-width: $tablet-s) {
+    font-size: 14px;
+    padding-bottom: 19px;
+    margin-bottom: 22px;
+  }
 }
