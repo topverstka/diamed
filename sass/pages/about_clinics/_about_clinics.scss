@@ -7,30 +7,14 @@
 
 .block-about__container {
   display: flex;
-  h1 {
-    margin-bottom: 40px;
-    line-height: 68px;
-  }
   @media (max-width: $tablet-l) {
     flex-direction: column;
-  }
-  @media (max-width: $tablet-s) {
-    h1 {
-      margin-bottom: 24px;
-      line-height: 29px;
-    }
   }
 }
 
 .block-about__container-text {
   display: flex;
   flex-direction: column;
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 37px;
-  }
   .btn {
     margin-top: 88px;
   }
@@ -40,12 +24,6 @@
   @media (max-width: $tablet-l) {
     width: 100%;
     .btn {
-      margin-top: 20px;
-    }
-  }
-  @media (max-width: $tablet-s) {
-    p {
-      font-size: 14px;
       margin-top: 20px;
     }
   }
@@ -199,13 +177,6 @@
   @media (max-width: $tablet-s) {
     font-size: 14px;
   }
-}
-
-.facts-clinics__slider-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  margin-bottom: 16px;
 }
 
 .facts-clinics__left {

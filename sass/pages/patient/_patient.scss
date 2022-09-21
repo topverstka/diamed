@@ -302,19 +302,6 @@
   max-width: 100%;
 }
 
-.jotting-page-internal__title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: #000;
-  margin-bottom: 24px;
-  @media (max-width: $mobile-l) {
-    font-size: 16px;
-    margin-bottom: 12px;
-    line-height: 22px;
-  }
-}
-
 .jotting-page-internal__text {
   font-weight: 400;
   font-size: 16px;
