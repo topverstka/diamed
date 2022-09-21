@@ -4936,6 +4936,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   overflow: hidden;
   transition: transform 0.4s ease, max-height 0.5s ease-out, overflow-y 0.1s 0.5s;
   transform-origin: top;
+  transform: scale(1, 0);
   z-index: 1;
   padding-right: 10px;
 }
@@ -4944,6 +4945,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-height: 1000px;
   opacity: 1;
   overflow: hidden;
+  transform: scale(1);
 }
 
 .form-elem .b_dropdown__inner::-webkit-scrollbar-thumb {
