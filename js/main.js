@@ -145,6 +145,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 if (customSelect) {
   customSelect("select");
+  setTimeout(() => {
+    const customSelects = document.querySelectorAll(".customSelect");
+    customSelects.forEach((select) => {
+      console.log("select", select);
+      const options = select.querySelectorAll(".custom-select-option");
+      const panel = select.querySelector(".custom-select-panel");
+      const dropdownInner = document.createElement("div");
+      dropdownInner.classList.add("b_dropdown__inner");
+      panel.append(dropdownInner);
+      options.forEach((option) => {
+        dropdownInner.append(option);
+      });
+    });
+  }, 900);
 }
 
 // Валидация формы

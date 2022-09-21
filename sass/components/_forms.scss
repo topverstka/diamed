@@ -33,22 +33,6 @@
 }
 
 .form-elem-time {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
-    width: 29px;
-    height: 29px;
-    background: center bottom/16px 16px no-repeat
-      url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
-    cursor: pointer;
-  }
-  &:hover::after {
-    background: center bottom/16px 16px no-repeat
-      url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
-  }
 }
 
 .form-elem__area._focus_input {
@@ -190,6 +174,29 @@
   color: #fff;
   font-size: 16px;
   line-height: 1.2;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 60%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 19px;
+    height: 19px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+    cursor: pointer;
+  }
+  &:hover::after {
+    background-repeat: no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M4 6L8 10L12 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+.form-elem .is-open .custom-select-opener::after {
+  transform: translate(0, -50%) scale(1, -1);
 }
 
 .form-elem .custom-select-panel {

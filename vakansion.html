@@ -59,7 +59,12 @@
                 </div>
                 <form action="#" class="modal-search__form">
                   <div class="modal-search__textfield">
-                    <input type="text" id="search-1" placeholder="Поиск..." />
+                    <input
+                      type="text"
+                      id="search-1"
+                      placeholder="Поиск..."
+                      name="s"
+                    />
                     <span class="modal-search__textfield-icon"
                       ><svg>
                         <use
@@ -1896,52 +1901,29 @@
 
         <div class="vakansion-page__special line-specialization">
           <div class="container">
-            <div class="dropdown__box">
-              <div class="dropdown-list">
-                <div class="dropdown-list-header">
-                  <p class="dropdown-list-header-text">Специализация</p>
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.5 8.25L11 13.75L16.5 8.25"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div class="dropdown-list-menu">
-                  <ul class="dropdown-list-ul">
-                    <li class="dropdown-list-line _active">Все врачи</li>
-                    <li class="dropdown-list-line">Терапевт</li>
-                    <li class="dropdown-list-line">Хирург</li>
-                    <li class="dropdown-list-line">Ортопед</li>
-                    <li class="dropdown-list-line">Имплантолог</li>
-                    <li class="dropdown-list-line">Имплантолог</li>
-                    <li class="dropdown-list-line">Имплантолог</li>
-                  </ul>
-                </div>
+            <form action="#" class="modal-search__form s-search__search-form">
+              <div class="b_dropdown">
+                <select id="spec" name="time">
+                  <option value="Все врачи">Все врачи</option>
+                  <option value="Терапевт">Терапевт</option>
+                  <option value="Хирург">Хирург</option>
+                  <option value="Ортопед">Ортопед</option>
+                  <option value="Имплантолог">Имплантолог</option>
+                  <option value="Имплантолог">Имплантолог</option>
+                  <option value="Имплантолог">Имплантолог</option>
+                </select>
               </div>
-
-              <form action="#" class="modal-search__form s-search__search-form">
-                <div class="modal-search__textfield">
-                  <input type="text" id="search-2" placeholder="Поиск" />
-                  <span class="modal-search__textfield-icon"
-                    ><svg>
-                      <use href="./img/sprite.svg#search-form_icon"></use></svg
-                  ></span>
-                </div>
-                <button class="btn modal-search__submit" type="submit">
-                  Найти
-                </button>
-              </form>
-            </div>
+              <div class="modal-search__textfield">
+                <input type="text" id="search-2" placeholder="Поиск" />
+                <span class="modal-search__textfield-icon"
+                  ><svg>
+                    <use href="./img/sprite.svg#search-form_icon"></use></svg
+                ></span>
+              </div>
+              <button class="btn modal-search__submit" type="submit">
+                Найти
+              </button>
+            </form>
           </div>
         </div>
 

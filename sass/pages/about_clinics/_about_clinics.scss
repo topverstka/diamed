@@ -252,6 +252,11 @@
       width: 65%;
     }
   }
+  @media (min-width: 2200px) {
+    .carousel {
+      width: 62%;
+    }
+  }
   @media (max-width: 1300px) {
     .carousel {
       width: 65%;
