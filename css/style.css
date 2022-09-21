@@ -4881,6 +4881,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 16px;
   line-height: 1.2;
   position: relative;
+  z-index: 2;
 }
 .form-elem .custom-select-opener::after {
   content: "";
@@ -4917,17 +4918,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .form-elem .custom-select-option.is-selected {
   color: #4bb9b5;
+  font-weight: 600;
 }
 
 .form-elem .custom-select-option.has-focus {
-  background-color: #81c7c5;
-  color: #fff;
+  font-weight: 600;
 }
 
 .form-elem .custom-select-opener::before {
   content: "";
   left: var(--adp-pointer-offset, 14px);
   bottom: calc(100% - var(--pointer-half-size) + 1px);
+}
+
+.form-elem .custom-select-panel {
+  max-height: 1px;
+  overflow: hidden;
+  transition: transform 0.4s ease, max-height 0.5s ease-out, overflow-y 0.1s 0.5s;
+  transform-origin: top;
+  z-index: 1;
+  padding-right: 10px;
+}
+
+.form-elem .is-open .custom-select-panel {
+  max-height: 1000px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.form-elem .b_dropdown__inner::-webkit-scrollbar-thumb {
+  background-color: #4bb0b5;
 }
 
 .modal {
@@ -6166,7 +6186,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 600;
   display: flex;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, border-radius 0.6s ease;
   position: relative;
   z-index: 2;
 }
@@ -6206,16 +6226,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-height: 1px;
   overflow: hidden;
   transition: transform 0.4s ease, max-height 0.5s ease-out, overflow-y 0.1s 0.5s;
-  transform: translateY(-20px);
+  transform-origin: top;
+  transform: scale(1, 0);
   z-index: 1;
 }
-.b_dropdown .custom-select-panel .b_dropdown__inner {
+
+.b_dropdown__inner {
   overflow-y: auto;
   max-height: 10.7em;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.b_dropdown .custom-select-panel .b_dropdown__inner::-webkit-scrollbar {
+
+.b_dropdown__inner::-webkit-scrollbar {
   width: 3px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
@@ -6223,7 +6246,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   left: -10px;
   position: absolute;
 }
-.b_dropdown .custom-select-panel .b_dropdown__inner::-webkit-scrollbar-thumb {
+
+.b_dropdown__inner::-webkit-scrollbar-thumb {
   background-color: #daebef;
   border-radius: 20px;
 }
@@ -6232,7 +6256,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   max-height: 1000px;
   opacity: 1;
   overflow: hidden;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .b_dropdown .custom-select-option {
