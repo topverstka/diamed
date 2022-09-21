@@ -2068,14 +2068,22 @@
                   <label class="form-elem__label">Выберите дату</label>
                   <!-- <p class="form-elem__error">Введите корректную дату</p> -->
                 </div>
-                <div class="form-elem form-elem-time only-digit">
-                  <input
-                    class="form-elem__area _req"
+                <div class="form-elem form-elem-time">
+                  <select
+                    name="form-elem__area"
                     id="datetimepicker2"
                     name="time"
-                    type="text"
-                  />
-                  <label class="form-elem__label">Выберите время</label>
+                  >
+                    <option value="10:00">10:05</option>
+                    <option value="10:10">10:10</option>
+                    <option value="10:15">10:15</option>
+                    <option value="10:20">10:20</option>
+                    <option value="10:25">10:25</option>
+                    <option value="10:30">10:30</option>
+                  </select>
+                  <label class="form-elem__label _change-label"
+                    >Выберите время</label
+                  >
                 </div>
                 <div class="form-elem">
                   <input
@@ -2265,6 +2273,7 @@
     </script> -->
 
     <script src="./js/libs/air-datepicker.js"></script>
+    <script src="./js/libs/custom-select.min.js"></script>
 
     <script src="./js/main.js"></script>
   </body>
