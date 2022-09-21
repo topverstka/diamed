@@ -148,7 +148,6 @@ if (customSelect) {
   setTimeout(() => {
     const customSelects = document.querySelectorAll(".customSelect");
     customSelects.forEach((select) => {
-      console.log("select", select);
       const options = select.querySelectorAll(".custom-select-option");
       const panel = select.querySelector(".custom-select-panel");
       const dropdownInner = document.createElement("div");
@@ -186,8 +185,8 @@ function validationForm() {
 }
 
 // Отправка формы
-// sumbitForm()
-function sumbitForm() {
+// submitForm()
+function submitForm() {
   const form = find(".modal__form");
 
   form.addEventListener("submit", async (e) => {
@@ -269,11 +268,12 @@ function menu() {
 // Отправить заявку на прием врача
 submitAppointment();
 
+let isAppointmentListenerSet = false;
 function submitAppointment() {
   document.addEventListener("click", function (e) {
     if (e.target.closest(".make_appointment")) {
       const form = e.target.closest(".make_appointment");
-      const textfieldElems = form.querySelectorAll("input._req");
+      const textfieldElems = form.querySelectorAll("input[required]");
 
       for (let i = 0; i < textfieldElems.length; i++) {
         const textfield = textfieldElems[i];
@@ -283,29 +283,32 @@ function submitAppointment() {
           parent.classList.remove("error");
         });
       }
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        if (validForm(form)) {
-          const formData = new FormData();
-          const action = form.getAttribute("action");
-
-          let response = await fetch(action, {
-            method: "POST",
-            body: formData,
-          });
-
-          if (response.ok) {
-            alert("Заявка отправлена!");
-          } else {
-            alert("Ошибка с сервером! Заявка не отправлена!");
-          }
-        }
-      });
     }
   });
 }
+document
+  .querySelector(".make_appointment")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    if (validForm(form)) {
+      const formData = new FormData(form);
+      console.log(formData);
+      const action = form.getAttribute("action");
+
+      let response = await fetch(action, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Заявка отправлена!");
+      } else {
+        alert("Ошибка с сервером! Заявка не отправлена!");
+      }
+    }
+  });
 
 // Отправить заявку на консультацию
 submitConsultation();
@@ -314,7 +317,7 @@ function submitConsultation() {
   const form = document.getElementById("form_consultation");
 
   if (form) {
-    const textfieldElems = form.querySelectorAll("input._req");
+    const textfieldElems = form.querySelectorAll("input[required]");
 
     for (let i = 0; i < textfieldElems.length; i++) {
       const textfield = textfieldElems[i];
@@ -347,8 +350,20 @@ function submitConsultation() {
   }
 }
 
+document.addEventListener(
+  "invalid",
+  (function () {
+    return function (e) {
+      e.preventDefault();
+      e.target.focus();
+      const form = e.target.closest("form");
+      validForm(form);
+    };
+  })(),
+  true
+);
 function validForm(form) {
-  const textfieldElems = form.querySelectorAll("input._req");
+  const textfieldElems = form.querySelectorAll("input[required]");
   let con = true;
   for (let i = 0; i < textfieldElems.length; i++) {
     const textfield = textfieldElems[i];
@@ -761,7 +776,7 @@ function tabs() {
         if (tab.closest(".form-class")) {
           tab
             .closest(".form-class")
-            .querySelectorAll("input._req")
+            .querySelectorAll("input[required]")
             .forEach((el) => {
               hideError(el);
             });
