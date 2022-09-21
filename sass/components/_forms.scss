@@ -182,3 +182,35 @@
     margin-top: 40px;
   }
 }
+
+.form-elem .custom-select-opener {
+  background-color: transparent;
+  padding: 30px 12px 12px 0px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.form-elem .custom-select-panel {
+  border: 1px solid var(--adp-border-color);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.form-elem .custom-select-option {
+  background: var(--adp-background-color);
+  cursor: pointer;
+}
+.form-elem .custom-select-option.is-selected {
+  color: #4bb9b5;
+}
+.form-elem .custom-select-option.has-focus {
+  background-color: #81c7c5;
+  color: #fff;
+}
+
+.form-elem .custom-select-opener::before {
+  content: "";
+  left: var(--adp-pointer-offset, 14px);
+  bottom: calc(100% - var(--pointer-half-size) + 1px);
+}

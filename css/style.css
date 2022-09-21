@@ -4100,6 +4100,74 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: opacity var(--adp-overlay-transition-duration) var(--adp-overlay-transition-ease), height 0s, width 0s;
 }
 
+.custom-select-container {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.custom-select-container * {
+  box-sizing: border-box;
+}
+
+.custom-select-container.is-disabled {
+  opacity: 0.333;
+}
+
+.custom-select-opener {
+  background-color: #ccc;
+  padding: 0.5em;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.custom-select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-select-panel {
+  max-height: 0;
+  transition: max-height 0.5s ease-out, overflow-y 0.1s 0.5s;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+}
+
+.custom-select-container.is-open .custom-select-panel {
+  max-height: 10.7em;
+  overflow-y: auto;
+}
+
+.custom-select-option {
+  padding: 0.5em;
+}
+
+.custom-select-option.has-focus {
+  background-color: LightBlue;
+}
+
+.custom-select-option.is-selected::before {
+  content: "✔";
+  padding-right: 0.5em;
+}
+
+.custom-select-optgroup > .custom-select-option {
+  padding-left: 2em;
+}
+
+.custom-select-optgroup::before {
+  content: attr(data-label);
+  display: block;
+  padding: 0.5em;
+  color: #888;
+}
+
 @-webkit-keyframes header {
   0% {
     transform: translateY(-200px);
@@ -4818,6 +4886,40 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .form-page .form-footer {
   margin-top: 40px;
+}
+
+.form-elem .custom-select-opener {
+  background-color: transparent;
+  padding: 30px 12px 12px 0px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.form-elem .custom-select-panel {
+  border: 1px solid var(--adp-border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-elem .custom-select-option {
+  background: var(--adp-background-color);
+  cursor: pointer;
+}
+
+.form-elem .custom-select-option.is-selected {
+  color: #4bb9b5;
+}
+
+.form-elem .custom-select-option.has-focus {
+  background-color: #81c7c5;
+  color: #fff;
+}
+
+.form-elem .custom-select-opener::before {
+  content: "";
+  left: var(--adp-pointer-offset, 14px);
+  bottom: calc(100% - var(--pointer-half-size) + 1px);
 }
 
 .modal {

@@ -143,6 +143,10 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".intro__media").forEach((i) => i.play());
 });
 
+if (customSelect) {
+  customSelect("select");
+}
+
 // Валидация формы
 function validationForm() {
   const name = find("#user_name");
@@ -1086,6 +1090,8 @@ function labelTextfield() {
     const input = parent.querySelector("input, textarea");
     const label = parent.querySelector("label");
 
+    if (!input || !label) continue;
+
     input.addEventListener("focus", (e) => {
       label.classList.add("_change-label");
       if (
@@ -1452,10 +1458,6 @@ function removeError(datepicker) {
 if (document.querySelector(".form-elem-date")) {
   document.querySelector(".form-elem-date").addEventListener("click", () => {
     datePicker.show();
-  });
-
-  document.querySelector(".form-elem-time").addEventListener("click", () => {
-    timePicker.show();
   });
 }
 
